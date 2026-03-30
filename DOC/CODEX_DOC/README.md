@@ -6,6 +6,7 @@
 2. 当前活动 WBS 节点：`WBS 2.1`
 3. 当前阶段状态：`待用户确认`
 4. 当前主线目标：完成 M1 项目底座实施计划并等待用户确认执行方式
+5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## 阅读顺序
 
@@ -15,6 +16,7 @@
 4. [02-WBS-L1-WBS-1.1-项目启动与M1前置规划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02-WBS-L1-WBS-1.1-项目启动与M1前置规划.md)
 5. [2026-03-30-小说剧情管理器设计稿.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-03-30-小说剧情管理器设计稿.md)
 6. [03-WBS-L2-WBS-2.1-M1-项目底座实施计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/开发计划/03-WBS-L2-WBS-2.1-M1-项目底座实施计划.md)
+7. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
 
 ## 协作规则
 
