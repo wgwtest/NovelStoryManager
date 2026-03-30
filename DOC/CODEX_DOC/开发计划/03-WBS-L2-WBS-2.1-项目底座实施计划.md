@@ -1,20 +1,22 @@
-# WBS 2.1 / M1 Project Foundation Implementation Plan
+# WBS 2.1 Project Foundation Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build the first runnable milestone of NovelStoryManager with file-backed single-project storage, a validated schema package, a local service for project create/open/save, and a usable knowledge view with a persistent object library.
+**Goal:** Build the first runnable project foundation of NovelStoryManager with file-backed single-project storage, a validated schema package, a local service for project create/open/save, and a usable knowledge view with a persistent object library.
 
 **Architecture:** Use one npm workspace repository with three focused packages: a shared schema package, a Fastify local service, and a Vite React web client. The service owns file-system reads and writes plus schema validation, while the client renders the persistent left sidebar and knowledge view against HTTP endpoints. View state and object facts stay in separate files from the start.
 
 **Tech Stack:** npm workspaces, TypeScript, React, Vite, Fastify, Zod, Vitest, React Testing Library, Node.js `fs/promises`
 
+**Upstream decision doc:** `DOC/CODEX_DOC/设计稿/2026-03-30-WBS-1.2-技术方案选型.md`
+
 ---
 
 ## Scope Lock
 
-This plan implements `M1` only.
+This plan covers `WBS 2.1` only.
 
-Included in `M1`:
+Included in `WBS 2.1`:
 
 1. Repo workspace bootstrap
 2. Schema v1 and sample project fixture
@@ -23,7 +25,7 @@ Included in `M1`:
 5. Knowledge view with generic object list and detail editing
 6. Placeholder tabs for graph view and track view
 
-Explicitly excluded from `M1`:
+Explicitly excluded from `WBS 2.1`:
 
 1. Relationship graph rendering
 2. Track view drag interactions
@@ -1606,7 +1608,7 @@ async function handleCreateProject() {
 <!-- /home/wgw/CodexProject/NovelStoryManager/README.md -->
 # NovelStoryManager
 
-## M1 startup
+## Project foundation startup
 
 1. Install dependencies with `npm install`
 2. Start the local service with `npm run dev:service`
@@ -1615,10 +1617,10 @@ async function handleCreateProject() {
 
 ## Current milestone
 
-This repository currently targets `M1`: file-backed single-project storage and the knowledge view shell.
+This repository currently targets `WBS 2.1`: file-backed single-project storage and the knowledge view shell.
 ```
 
-- [ ] **Step 4: Run the full M1 verification**
+- [ ] **Step 4: Run the full project foundation verification**
 
 Run: `npm run test && npm run typecheck`
 Expected: PASS across all workspaces with no failing tests and no TypeScript errors
@@ -1653,7 +1655,7 @@ Expected result:
 2. Workspace commands run from repo root
 3. Opening `fixtures/projects/sample-novel` shows a persistent left object library
 4. Editing an object in the knowledge view persists back to the matching JSON file
-5. Graph and track tabs are visible but remain placeholder-only in `M1`
+5. Graph and track tabs are visible but remain placeholder-only in `WBS 2.1`
 
 ## Spec Coverage Check
 
@@ -1662,8 +1664,8 @@ This plan covers the approved design as follows:
 1. File-backed single-novel project: Tasks 2 and 3
 2. Schema validation and import-ready normalized data: Tasks 2 and 3
 3. Persistent left object library: Task 4
-4. Knowledge view as the primary M1 work area: Task 4
+4. Knowledge view as the primary work area: Task 4
 5. Project create/open/save flow: Tasks 3 and 5
 6. Graph and track views deferred but structurally acknowledged: Task 4 placeholders and Scope Lock exclusions
 
-No `M2` graph implementation or `M3` track implementation is included in this plan.
+No graph implementation or track implementation is included in this plan.

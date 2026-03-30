@@ -3,9 +3,9 @@
 ## 当前状态
 
 1. 当前活动文档根：`DOC/CODEX_DOC/`
-2. 当前活动链路：`WBS 0 -> WBS 2 -> WBS 2.1`
+2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.2`
 3. 当前阶段状态：`待用户确认`
-4. 当前主线目标：以 `#8 -> #10 -> #2` 为主线推进 M1 项目底座实施
+4. 当前主线目标：补齐技术方案选型与初始任务拆解，再进入 `WBS 2.1`
 5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## Project 树读取规则
@@ -15,24 +15,34 @@
 3. 可直接执行的实现任务使用叶子 issue，挂在对应父节点下
 4. 只有不存在稳定父子关系的任务，才允许在同层并列
 
+## 推进规则
+
+1. 主导航轴只使用 `WBS` 树，不再额外维护里程碑轴
+2. 任务先后通过 `Depends On` 表达
+3. 时间规划通过 `Start Date` 和 `Target Date` 表达
+4. 当前主线应当能够从根节点一路下钻到叶子节点
+
 ## 阅读顺序
 
 1. [00-本地工程策略映射.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/00-本地工程策略映射.md)
 2. [00-工程总体分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/00-工程总体分析.md)
 3. [01-WBS-L0-NovelStoryManager-研发总纲.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/01-WBS-L0-NovelStoryManager-研发总纲.md)
-4. [02-WBS-L1-WBS-1.1-项目启动与M1前置规划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02-WBS-L1-WBS-1.1-项目启动与M1前置规划.md)
-5. [2026-03-30-小说剧情管理器设计稿.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-03-30-小说剧情管理器设计稿.md)
-6. [03-WBS-L2-WBS-2.1-M1-项目底座实施计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/开发计划/03-WBS-L2-WBS-2.1-M1-项目底座实施计划.md)
-7. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
+4. [02-WBS-L1-WBS-1.1-产品边界确认与文档归档.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02-WBS-L1-WBS-1.1-产品边界确认与文档归档.md)
+5. [03-WBS-L1-WBS-1.2-技术方案选型.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03-WBS-L1-WBS-1.2-技术方案选型.md)
+6. [04-WBS-L1-WBS-1.3-初始任务拆解与时间规划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/04-WBS-L1-WBS-1.3-初始任务拆解与时间规划.md)
+7. [2026-03-30-小说剧情管理器设计稿.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-03-30-小说剧情管理器设计稿.md)
+8. [2026-03-30-WBS-1.2-技术方案选型.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-03-30-WBS-1.2-技术方案选型.md)
+9. [03-WBS-L2-WBS-2.1-项目底座实施计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/开发计划/03-WBS-L2-WBS-2.1-项目底座实施计划.md)
+10. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
 
 ## 协作规则
 
 1. 先读最新稳定计划和设计稿，再进入实现。
 2. 稳定计划按 WBS 节点命名，不使用“当前阶段计划”作为稳定文件名。
-3. 里程碑 `M1 / M2 / M3 / M4` 仅作为验证门，不作为顶层分解轴。
-4. 用户未明确验收前，阶段状态只记为 `待人工验收` 或 `待用户确认`。
-5. 验收、自测、交接文档分别进入固定目录，不散落在文档根。
-6. GitHub Project 如存在父子结构，必须优先按 WBS 树组织，不使用扁平 issue 列表代替分解关系。
+3. 用户未明确验收前，阶段状态只记为 `待人工验收` 或 `待用户确认`。
+4. 验收、自测、交接文档分别进入固定目录，不散落在文档根。
+5. GitHub Project 如存在父子结构，必须优先按 WBS 树组织，不使用扁平 issue 列表代替分解关系。
+6. 技术选型、任务拆解、时间安排都应先在 `WBS 1` 收敛，再进入实现节点。
 
 ## 目录说明
 
