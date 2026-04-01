@@ -1,43 +1,35 @@
 # WBS 0 NovelStoryManager 研发总纲
 
-目标：
+工作目标：
 
-- 作为整个项目的树形根节点，承载顶层 WBS 结构、阶段划分和路线总览。
+- 维护整个项目的顶层 WBS 树和当前主线，让 GitHub Project、issue 树和本地文档始终表达同一条研发路线。
 
-Owner：
+工作内容：
 
-- Codex
+- 维护 `WBS 1` 到 `WBS 6` 作为顶层直接子节点的树结构。
+- 维护当前主线在 README、WBS 总纲和 GitHub Project 中的一致性。
+- 发现任务树、依赖关系或时间规划漂移时，推动对应节点修正。
 
-Write Scope：
+潜在难点：
 
-- GitHub Project 结构
-- 顶层 WBS issue 树
-- 文档索引与总纲回链
+- GitHub Project、issue 正文和本地文档容易出现三处漂移。
+- 父子结构正确，不代表当前主线表达清楚，仍然需要同步状态与日期。
 
 Depends On：
 
 - 已确认的产品设计稿
 
-验收入口：
+成果物：
 
-- 主入口：GitHub Project `NovelStoryManager Delivery Roadmap`
-- 辅助入口：`DOC/CODEX_DOC/01-WBS-L0-NovelStoryManager-研发总纲.md`
+- `#8` 根 issue
+- GitHub Project `NovelStoryManager Delivery Roadmap`
+- `DOC/CODEX_DOC/01-WBS-L0-NovelStoryManager-研发总纲.md`
 
-验收标准：
+验收方法：
 
-- 存在一个顶层根 issue
-- `WBS 1` 到 `WBS 6` 作为其直接子 issue
-- 叶子 issue 继续挂在对应父节点下
-
-输出物：
-
-- 顶层树形 issue
-- Project 内可见的父子层级
-
-证据链接：
-
-- WBS 总纲：<https://github.com/wgwtest/NovelStoryManager/blob/main/DOC/CODEX_DOC/01-WBS-L0-NovelStoryManager-%E7%A0%94%E5%8F%91%E6%80%BB%E7%BA%B2.md>
-- Project：<https://github.com/users/wgwtest/projects/3>
+- 人工核验 `#8` 的直接子 issue 为 `#9 #10 #11 #12 #13 #14`。
+- 人工核验 [01-WBS-L0-NovelStoryManager-研发总纲.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/01-WBS-L0-NovelStoryManager-研发总纲.md) 中存在顶层 WBS 和当前活动链路。
+- 人工核验 GitHub Project 中当前主线可以从根节点一路下钻到当前叶子节点。
 
 当前状态：
 
