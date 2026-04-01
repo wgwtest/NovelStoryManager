@@ -37,13 +37,19 @@
 3. 代码类 issue 的 `验收方法` 应写成命令、步骤和预期结果
 4. 不再使用空泛的 `验收入口 / 验收标准` 组合
 
+## 文档分工规则
+
+1. `WBS` 节点说明页用于记录节点定位、状态、完成标准和正文入口，不重复承载完整正文内容
+2. `设计稿/` 中的专题文档才是需求、方案、模型等正文成果物
+3. 当同一 `WBS` 同时存在节点说明页和正文时，issue 的 `成果物` 优先写正文，不把节点说明页和正文并列成同级交付物
+
 ## 阅读顺序
 
 1. [00-本地工程策略映射.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/00-本地工程策略映射.md)
 2. [00-工程总体分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/00-工程总体分析.md)
 3. [01-WBS-L0-NovelStoryManager-研发总纲.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/01-WBS-L0-NovelStoryManager-研发总纲.md)
 4. [02-WBS-L1-WBS-1.1-产品边界确认与文档归档.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02-WBS-L1-WBS-1.1-产品边界确认与文档归档.md)
-5. [03-WBS-L1-WBS-1.2-技术方案选型.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03-WBS-L1-WBS-1.2-技术方案选型.md)
+5. [03-WBS-L1-WBS-1.2-技术方案节点说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03-WBS-L1-WBS-1.2-技术方案节点说明.md)
 6. [04-WBS-L1-WBS-1.3-初始任务拆解与时间规划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/04-WBS-L1-WBS-1.3-初始任务拆解与时间规划.md)
 7. [2026-03-30-小说剧情管理器设计稿.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-03-30-小说剧情管理器设计稿.md)
 8. [2026-03-30-WBS-1.2-技术方案选型.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-03-30-WBS-1.2-技术方案选型.md)
