@@ -5,7 +5,7 @@
 1. 当前活动文档根：`DOC/CODEX_DOC/`
 2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.2`
 3. 当前阶段状态：`待用户确认`
-4. 当前主线目标：补齐技术方案选型与初始任务拆解，再进入 `WBS 2.1`
+4. 当前主线目标：先补齐信息架构、低保真原型和高风险交互验证，再冻结技术方案并拆解进入实现前的任务
 5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## Project 树读取规则
@@ -43,6 +43,7 @@
 2. `设计稿/` 中的专题文档才是需求、方案、模型等正文成果物
 3. 当同一 `WBS` 同时存在节点说明页和正文时，issue 的 `成果物` 优先写正文，不把节点说明页和正文并列成同级交付物
 4. 当前已经显式命名为“节点说明”的本地 `WBS` 文档，应默认按导航文档理解，而不是正文成果物
+5. 对强交互工作台，技术方案选型必须以后续原型目标和交互验证为输入，不允许绕过原型直接冻结交互栈
 
 ## 阅读顺序
 
@@ -50,12 +51,18 @@
 2. [00-工程总体分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/00-工程总体分析.md)
 3. [01-WBS-L0-NovelStoryManager-研发总纲节点说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/01-WBS-L0-NovelStoryManager-研发总纲节点说明.md)
 4. [02-WBS-L1-WBS-1.1-产品边界确认与文档归档节点说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02-WBS-L1-WBS-1.1-产品边界确认与文档归档节点说明.md)
-5. [03-WBS-L1-WBS-1.2-技术方案节点说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03-WBS-L1-WBS-1.2-技术方案节点说明.md)
-6. [04-WBS-L1-WBS-1.3-初始任务拆解与时间规划节点说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/04-WBS-L1-WBS-1.3-初始任务拆解与时间规划节点说明.md)
-7. [2026-03-30-小说剧情管理器设计稿.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-03-30-小说剧情管理器设计稿.md)
-8. [2026-03-30-WBS-1.2-技术方案选型.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-03-30-WBS-1.2-技术方案选型.md)
-9. [03-WBS-L2-WBS-2.1-项目底座实施计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/开发计划/03-WBS-L2-WBS-2.1-项目底座实施计划.md)
-10. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
+5. [03-WBS-L1-WBS-1.2-信息架构与页面分解节点说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03-WBS-L1-WBS-1.2-信息架构与页面分解节点说明.md)
+6. [2026-04-01-WBS-1.2-信息架构与页面分解.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-04-01-WBS-1.2-信息架构与页面分解.md)
+7. [04-WBS-L1-WBS-1.3-低保真原型设计节点说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/04-WBS-L1-WBS-1.3-低保真原型设计节点说明.md)
+8. [2026-04-01-WBS-1.3-低保真原型设计.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-04-01-WBS-1.3-低保真原型设计.md)
+9. [05-WBS-L1-WBS-1.4-高风险交互原型验证节点说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/05-WBS-L1-WBS-1.4-高风险交互原型验证节点说明.md)
+10. [2026-04-01-WBS-1.4-高风险交互原型验证.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-04-01-WBS-1.4-高风险交互原型验证.md)
+11. [06-WBS-L1-WBS-1.5-技术方案选型节点说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06-WBS-L1-WBS-1.5-技术方案选型节点说明.md)
+12. [2026-04-01-WBS-1.5-技术方案选型.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-04-01-WBS-1.5-技术方案选型.md)
+13. [07-WBS-L1-WBS-1.6-初始任务拆解与时间规划节点说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/07-WBS-L1-WBS-1.6-初始任务拆解与时间规划节点说明.md)
+14. [03-WBS-L2-WBS-2.1-项目底座实施计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/开发计划/03-WBS-L2-WBS-2.1-项目底座实施计划.md)
+15. [2026-03-30-小说剧情管理器设计稿.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-03-30-小说剧情管理器设计稿.md)
+16. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
 
 ## 协作规则
 
@@ -64,7 +71,7 @@
 3. 用户未明确验收前，阶段状态只记为 `待人工验收` 或 `待用户确认`。
 4. 验收、自测、交接文档分别进入固定目录，不散落在文档根。
 5. GitHub Project 如存在父子结构，必须优先按 WBS 树组织，不使用扁平 issue 列表代替分解关系。
-6. 技术选型、任务拆解、时间安排都应先在 `WBS 1` 收敛，再进入实现节点。
+6. 信息架构、原型、技术选型、任务拆解都应先在 `WBS 1` 收敛，再进入实现节点。
 
 ## 目录说明
 

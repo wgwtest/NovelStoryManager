@@ -4,11 +4,16 @@
 
 **Goal:** Build the first runnable project foundation of NovelStoryManager with file-backed single-project storage, a validated schema package, a local service for project create/open/save, and a usable knowledge view with a persistent object library.
 
-**Architecture:** Use one npm workspace repository with three focused packages: a shared schema package, a Fastify local service, and a Vite React web client. The service owns file-system reads and writes plus schema validation, while the client renders the persistent left sidebar and knowledge view against HTTP endpoints. View state and object facts stay in separate files from the start.
+**Architecture:** Use one npm workspace repository with three focused packages: a shared schema package, a Fastify local service, and a Vite React web client. The service owns file-system reads and writes plus schema validation, while the client renders the persistent left sidebar, workbench tabs, and knowledge view against HTTP endpoints. View state and object facts stay in separate files from the start.
 
-**Tech Stack:** npm workspaces, TypeScript, React, Vite, Fastify, Zod, Vitest, React Testing Library, Node.js `fs/promises`
+**Tech Stack:** npm workspaces, TypeScript, React, Vite, Fastify, Zod, react-resizable-panels, Vitest, React Testing Library, Node.js `fs/promises`
 
-**Upstream decision doc:** `DOC/CODEX_DOC/设计稿/2026-03-30-WBS-1.2-技术方案选型.md`
+**Upstream docs:**
+
+1. `DOC/CODEX_DOC/设计稿/2026-04-01-WBS-1.2-信息架构与页面分解.md`
+2. `DOC/CODEX_DOC/设计稿/2026-04-01-WBS-1.3-低保真原型设计.md`
+3. `DOC/CODEX_DOC/设计稿/2026-04-01-WBS-1.4-高风险交互原型验证.md`
+4. `DOC/CODEX_DOC/设计稿/2026-04-01-WBS-1.5-技术方案选型.md`
 
 ---
 
