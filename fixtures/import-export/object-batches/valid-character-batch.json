@@ -1,0 +1,34 @@
+{
+  "bundleType": "object-batch",
+  "bundleVersion": "1.0.0",
+  "exportMeta": {
+    "sourceProjectId": "sample-novel",
+    "exportedAt": "2026-04-02T00:00:00.000Z"
+  },
+  "scope": {
+    "targetProjectId": "sample-novel",
+    "objectTypes": [
+      "characters"
+    ]
+  },
+  "objects": {
+    "characters": [
+      {
+        "id": "char_hemu",
+        "name": "何牧",
+        "aliases": [],
+        "tags": [
+          "新角色"
+        ],
+        "summary": "从外部批量导入的角色。",
+        "status": "active",
+        "identity": "青云宗外门弟子",
+        "factionRefs": [
+          "faction_qingyun"
+        ],
+        "realmState": "炼气境二层",
+        "notes": "用于对象级导入测试"
+      }
+    ]
+  }
+}

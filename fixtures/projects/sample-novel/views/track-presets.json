@@ -1,0 +1,12 @@
+[
+  {
+    "id": "default-tracks",
+    "name": "默认轨道预设",
+    "grouping": "character",
+    "laneOrder": [
+      "char_suxuan",
+      "char_linwan"
+    ],
+    "zoom": 1
+  }
+]

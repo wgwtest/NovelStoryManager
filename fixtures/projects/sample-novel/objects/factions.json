@@ -1,0 +1,17 @@
+[
+  {
+    "id": "faction_qingyun",
+    "name": "青云宗",
+    "aliases": [],
+    "tags": [
+      "宗门"
+    ],
+    "summary": "北境中等宗门，擅长剑诀与风雷法。",
+    "type": "sect",
+    "goal": "守住北境灵脉",
+    "status": "active",
+    "locationRefs": [
+      "loc_qingyun_peak"
+    ]
+  }
+]

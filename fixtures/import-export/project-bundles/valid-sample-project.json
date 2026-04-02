@@ -1,0 +1,278 @@
+{
+  "bundleType": "project-bundle",
+  "bundleVersion": "1.0.0",
+  "exportMeta": {
+    "sourceProjectId": "sample-novel",
+    "exportedAt": "2026-04-02T00:00:00.000Z"
+  },
+  "project": {
+    "manifest": {
+      "projectId": "sample-novel",
+      "title": "青云劫火录",
+      "description": "用于 WBS 2.1 的单项目样例工程",
+      "objectTypes": [
+        "characters",
+        "factions",
+        "locations",
+        "items",
+        "realm-systems",
+        "events",
+        "relations",
+        "clues",
+        "arcs"
+      ]
+    },
+    "schemaVersion": {
+      "version": "1.0.0"
+    },
+    "objects": {
+      "characters": [
+        {
+          "id": "char_suxuan",
+          "name": "苏玄",
+          "aliases": [],
+          "tags": [
+            "主角",
+            "寒门"
+          ],
+          "summary": "寒门出身的少年修士，正在青云宗外门求存。",
+          "status": "active",
+          "identity": "青云宗外门弟子",
+          "factionRefs": [
+            "faction_qingyun"
+          ],
+          "realmState": "炼气境三层",
+          "notes": "首版演示对象"
+        },
+        {
+          "id": "char_linwan",
+          "name": "林晚",
+          "aliases": [],
+          "tags": [
+            "配角",
+            "丹修"
+          ],
+          "summary": "善于炼丹与情报搜集的内门弟子。",
+          "status": "active",
+          "identity": "青云宗内门弟子",
+          "factionRefs": [
+            "faction_qingyun"
+          ],
+          "realmState": "筑基境初期",
+          "notes": ""
+        }
+      ],
+      "factions": [
+        {
+          "id": "faction_qingyun",
+          "name": "青云宗",
+          "aliases": [],
+          "tags": [
+            "宗门"
+          ],
+          "summary": "北境中等宗门，擅长剑诀与风雷法。",
+          "type": "sect",
+          "goal": "守住北境灵脉",
+          "status": "active",
+          "locationRefs": [
+            "loc_qingyun_peak"
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "loc_qingyun_peak",
+          "name": "青云峰",
+          "aliases": [],
+          "tags": [
+            "宗门驻地"
+          ],
+          "summary": "青云宗主峰，外门与内门都依附于此。",
+          "type": "mountain-sect",
+          "controllerRef": "faction_qingyun",
+          "traits": [
+            "风雷灵脉"
+          ],
+          "status": "active"
+        }
+      ],
+      "items": [
+        {
+          "id": "item_fire-token",
+          "name": "残火令",
+          "aliases": [],
+          "tags": [
+            "线索物品"
+          ],
+          "summary": "一枚残破令牌，似乎与上古火脉有关。",
+          "type": "token",
+          "ownerRef": "char_suxuan",
+          "origin": "外门试炼谷",
+          "status": "active",
+          "traits": [
+            "微弱火灵波动"
+          ]
+        }
+      ],
+      "realm-systems": [
+        {
+          "id": "realm_northern-path",
+          "name": "北境炼气体系",
+          "type": "cultivation",
+          "summary": "以炼气、筑基、金丹为前三境。",
+          "levels": [
+            "炼气",
+            "筑基",
+            "金丹"
+          ],
+          "rules": [
+            "需借灵脉吐纳",
+            "破境常伴雷火异象"
+          ],
+          "tags": [
+            "主修体系"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "id": "event_trial-valley",
+          "name": "试炼谷夺令",
+          "aliases": [],
+          "tags": [
+            "主线事件"
+          ],
+          "summary": "苏玄在试炼谷意外得到残火令。",
+          "type": "discovery",
+          "participantRefs": [
+            "char_suxuan",
+            "char_linwan"
+          ],
+          "locationRefs": [
+            "loc_qingyun_peak"
+          ],
+          "factionRefs": [
+            "faction_qingyun"
+          ],
+          "itemRefs": [
+            "item_fire-token"
+          ],
+          "timeAnchor": "卷一-早期",
+          "preconditions": [
+            "外门试炼开始"
+          ],
+          "results": [
+            "苏玄获得残火令"
+          ],
+          "arcRefs": [
+            "arc_fire-vein"
+          ],
+          "clueRefs": [
+            "clue_hidden-fire"
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "id": "rel_linwan-guides-suxuan",
+          "type": "mentor",
+          "sourceRef": "char_linwan",
+          "targetRef": "char_suxuan",
+          "direction": "forward",
+          "strength": 0.72,
+          "startAnchor": "卷一-早期",
+          "endAnchor": "",
+          "summary": "林晚在试炼前后多次照应苏玄。",
+          "tags": [
+            "人物关系"
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "id": "clue_hidden-fire",
+          "name": "隐火灵脉线索",
+          "summary": "残火令指向一条被封锁的火脉。",
+          "status": "hidden",
+          "objectRefs": [
+            "item_fire-token",
+            "loc_qingyun_peak"
+          ],
+          "eventRefs": [
+            "event_trial-valley"
+          ],
+          "revealCondition": "火灵波动再次显现",
+          "tags": [
+            "伏笔"
+          ]
+        }
+      ],
+      "arcs": [
+        {
+          "id": "arc_fire-vein",
+          "name": "隐火灵脉主线",
+          "summary": "围绕残火令与隐火灵脉展开的主线。",
+          "status": "active",
+          "eventRefs": [
+            "event_trial-valley"
+          ],
+          "objectRefs": [
+            "char_suxuan",
+            "item_fire-token",
+            "loc_qingyun_peak"
+          ],
+          "tags": [
+            "主线"
+          ]
+        }
+      ]
+    },
+    "views": {
+      "graph-layouts": [
+        {
+          "id": "default-graph",
+          "name": "默认关系图",
+          "positions": {
+            "char_suxuan": {
+              "x": 120,
+              "y": 80
+            },
+            "char_linwan": {
+              "x": 360,
+              "y": 120
+            },
+            "faction_qingyun": {
+              "x": 250,
+              "y": 260
+            }
+          },
+          "zoom": 1
+        }
+      ],
+      "track-presets": [
+        {
+          "id": "default-tracks",
+          "name": "默认轨道预设",
+          "grouping": "character",
+          "laneOrder": [
+            "char_suxuan",
+            "char_linwan",
+            "arc_fire-vein"
+          ],
+          "zoom": 1
+        }
+      ],
+      "saved-filters": [
+        {
+          "id": "filter-main-cast",
+          "name": "主角相关",
+          "objectType": "characters",
+          "query": "苏",
+          "tags": [
+            "主角"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "projectId": "sample-novel",
+  "title": "青云劫火录",
+  "description": "用于 WBS 2.1 的单项目样例工程",
+  "objectTypes": [
+    "characters",
+    "factions",
+    "locations",
+    "items",
+    "realm-systems",
+    "events",
+    "relations",
+    "clues",
+    "arcs"
+  ]
+}

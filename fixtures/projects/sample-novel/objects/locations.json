@@ -1,0 +1,17 @@
+[
+  {
+    "id": "loc_qingyun_peak",
+    "name": "青云峰",
+    "aliases": [],
+    "tags": [
+      "宗门驻地"
+    ],
+    "summary": "青云宗主峰，外门与内门都依附于此。",
+    "type": "mountain-sect",
+    "controllerRef": "faction_qingyun",
+    "traits": [
+      "风雷灵脉"
+    ],
+    "status": "active"
+  }
+]

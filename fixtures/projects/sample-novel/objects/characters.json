@@ -1,0 +1,36 @@
+[
+  {
+    "id": "char_suxuan",
+    "name": "苏玄",
+    "aliases": [],
+    "tags": [
+      "主角",
+      "寒门"
+    ],
+    "summary": "寒门出身的少年修士，正在青云宗外门求存。",
+    "status": "active",
+    "identity": "青云宗外门弟子",
+    "factionRefs": [
+      "faction_qingyun"
+    ],
+    "realmState": "炼气境三层",
+    "notes": "首版演示对象"
+  },
+  {
+    "id": "char_linwan",
+    "name": "林晚",
+    "aliases": [],
+    "tags": [
+      "配角",
+      "丹修"
+    ],
+    "summary": "善于炼丹与情报搜集的内门弟子。",
+    "status": "active",
+    "identity": "青云宗内门弟子",
+    "factionRefs": [
+      "faction_qingyun"
+    ],
+    "realmState": "筑基境初期",
+    "notes": ""
+  }
+]

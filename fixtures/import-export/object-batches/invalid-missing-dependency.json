@@ -1,0 +1,34 @@
+{
+  "bundleType": "object-batch",
+  "bundleVersion": "1.0.0",
+  "exportMeta": {
+    "sourceProjectId": "sample-novel",
+    "exportedAt": "2026-04-02T00:00:00.000Z"
+  },
+  "scope": {
+    "targetProjectId": "sample-novel",
+    "objectTypes": [
+      "characters"
+    ]
+  },
+  "objects": {
+    "characters": [
+      {
+        "id": "char_orphan",
+        "name": "孤身修士",
+        "aliases": [],
+        "tags": [
+          "坏样例"
+        ],
+        "summary": "引用了不存在的宗门。",
+        "status": "active",
+        "identity": "散修",
+        "factionRefs": [
+          "faction_missing"
+        ],
+        "realmState": "炼气境一层",
+        "notes": ""
+      }
+    ]
+  }
+}

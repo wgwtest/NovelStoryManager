@@ -3,9 +3,9 @@
 ## 当前状态
 
 1. 当前活动文档根：`DOC/CODEX_DOC/`
-2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.2`
-3. 当前阶段状态：`待用户确认`
-4. 当前主线目标：先补齐信息架构、低保真原型和高风险交互验证，再冻结技术方案并拆解进入实现前的任务
+2. 当前活动链路：`WBS 0 -> WBS 6 -> WBS 6.1`
+3. 当前阶段状态：`待人工验收`
+4. 当前主线目标：`WBS 6.1` 已进入待人工验收，当前主线已覆盖三主视图与首版观察输出层
 5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## Project 树读取规则
@@ -29,13 +29,17 @@
 1. 常驻字段只保留：`Status`、`Work Type`、`Start Date`、`Target Date`
 2. 树关系优先通过原生父 issue / 子 issue 表达
 3. 依赖关系优先写入 issue 契约正文
+4. 用户明确给出“通过 / 已确认 / 验收通过”后，必须在同一轮把对应节点的 `Status` 同步到 GitHub Project
 
 ## Issue 契约规则
 
 1. 每个 WBS issue 都必须至少写清：`工作目标`、`工作内容`、`潜在难点`、`Depends On`、`成果物`、`验收方法`、`当前状态`、`上级节点`
 2. 文档类 issue 的 `验收方法` 应写成人工核验文件和条目的方法
 3. 代码类 issue 的 `验收方法` 应写成命令、步骤和预期结果
-4. 不再使用空泛的 `验收入口 / 验收标准` 组合
+4. `WBS` 叶子节点名称必须直接体现业务对象、规范对象或实现对象，避免使用信息量不足的抽象词
+5. 数据规范、文件规范、导入导出类 issue 的 `成果物` 必须至少同时点名：规范正文路径、实现文件路径、测试夹具路径
+6. 数据规范、文件规范、导入导出类 issue 的 `验收方法` 必须至少覆盖：正样例、反样例、往返一致性测试
+7. 不再使用空泛的 `验收入口 / 验收标准` 组合
 
 ## 文档分工规则
 
@@ -44,6 +48,7 @@
 3. 当同一 `WBS` 同时存在节点说明页和正文时，issue 的 `成果物` 优先写正文，不把节点说明页和正文并列成同级交付物
 4. 当前已经显式命名为“节点说明”的本地 `WBS` 文档，应默认按导航文档理解，而不是正文成果物
 5. 对强交互工作台，技术方案选型必须以后续原型目标和交互验证为输入，不允许绕过原型直接冻结交互栈
+6. 当某个 `WBS` 节点的主要价值是“规范本身”时，应优先把 `设计稿/` 下的规范正文作为主要成果物，而不是只保留抽象 issue 标题
 
 ## 阅读顺序
 
@@ -61,8 +66,14 @@
 12. [2026-04-01-WBS-1.5-技术方案选型.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-04-01-WBS-1.5-技术方案选型.md)
 13. [07-WBS-L1-WBS-1.6-初始任务拆解与时间规划节点说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/07-WBS-L1-WBS-1.6-初始任务拆解与时间规划节点说明.md)
 14. [03-WBS-L2-WBS-2.1-项目底座实施计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/开发计划/03-WBS-L2-WBS-2.1-项目底座实施计划.md)
-15. [2026-03-30-小说剧情管理器设计稿.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-03-30-小说剧情管理器设计稿.md)
-16. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
+15. [2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md)
+16. [04-WBS-L2-WBS-2.2-数据规范与导入导出规范计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/开发计划/04-WBS-L2-WBS-2.2-数据规范与导入导出规范计划.md)
+17. [05-WBS-L2-WBS-3.1-知识库主视图增强计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/开发计划/05-WBS-L2-WBS-3.1-知识库主视图增强计划.md)
+18. [06-WBS-L2-WBS-4.1-关系图工作台计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/开发计划/06-WBS-L2-WBS-4.1-关系图工作台计划.md)
+19. [07-WBS-L2-WBS-5.1-多轨编排视图计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/开发计划/07-WBS-L2-WBS-5.1-多轨编排视图计划.md)
+20. [08-WBS-L2-WBS-6.1-观察输出层计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/开发计划/08-WBS-L2-WBS-6.1-观察输出层计划.md)
+21. [2026-03-30-小说剧情管理器设计稿.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/设计稿/2026-03-30-小说剧情管理器设计稿.md)
+22. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
 
 ## 协作规则
 
@@ -72,6 +83,7 @@
 4. 验收、自测、交接文档分别进入固定目录，不散落在文档根。
 5. GitHub Project 如存在父子结构，必须优先按 WBS 树组织，不使用扁平 issue 列表代替分解关系。
 6. 信息架构、原型、技术选型、任务拆解都应先在 `WBS 1` 收敛，再进入实现节点。
+7. 如果用户已在聊天或文稿评阅中明确判定“通过”，必须同步更新 Project、issue 契约和本地状态文本，不允许只改一层。
 
 ## 目录说明
 

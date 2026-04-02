@@ -1,0 +1,19 @@
+[
+  {
+    "id": "arc_fire-vein",
+    "name": "隐火灵脉主线",
+    "summary": "围绕残火令与隐火灵脉展开的主线。",
+    "status": "active",
+    "eventRefs": [
+      "event_trial-valley"
+    ],
+    "objectRefs": [
+      "char_suxuan",
+      "item_fire-token",
+      "loc_qingyun_peak"
+    ],
+    "tags": [
+      "主线"
+    ]
+  }
+]

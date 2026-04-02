@@ -1,0 +1,38 @@
+[
+  {
+    "id": "event_trial-valley",
+    "name": "试炼谷夺令",
+    "aliases": [],
+    "tags": [
+      "主线事件"
+    ],
+    "summary": "苏玄在试炼谷意外得到残火令。",
+    "type": "discovery",
+    "participantRefs": [
+      "char_suxuan",
+      "char_linwan"
+    ],
+    "locationRefs": [
+      "loc_qingyun_peak"
+    ],
+    "factionRefs": [
+      "faction_qingyun"
+    ],
+    "itemRefs": [
+      "item_fire-token"
+    ],
+    "timeAnchor": "卷一-早期",
+    "preconditions": [
+      "外门试炼开始"
+    ],
+    "results": [
+      "苏玄获得残火令"
+    ],
+    "arcRefs": [
+      "arc_fire-vein"
+    ],
+    "clueRefs": [
+      "clue_hidden-fire"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "rel_linwan-guides-suxuan",
+    "type": "mentor",
+    "sourceRef": "char_linwan",
+    "targetRef": "char_suxuan",
+    "direction": "forward",
+    "strength": 0.72,
+    "startAnchor": "卷一-早期",
+    "endAnchor": "",
+    "summary": "林晚在试炼前后多次照应苏玄。",
+    "tags": [
+      "人物关系"
+    ]
+  }
+]
