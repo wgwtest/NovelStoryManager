@@ -1,0 +1,45 @@
+[
+  {
+    "id": "default-graph",
+    "name": "默认关系图",
+    "positions": {
+      "char_suxuan": {
+        "x": 98,
+        "y": 99
+      },
+      "char_linwan": {
+        "x": 461,
+        "y": 9
+      },
+      "faction_qingyun": {
+        "x": 208,
+        "y": 569
+      },
+      "loc_qingyun_peak": {
+        "x": 866,
+        "y": 311
+      },
+      "item_fire-token": {
+        "x": 456,
+        "y": 627
+      },
+      "realm_northern-path": {
+        "x": 108,
+        "y": 764
+      },
+      "event_trial-valley": {
+        "x": 759,
+        "y": 96
+      },
+      "clue_hidden-fire": {
+        "x": 716,
+        "y": 565
+      },
+      "arc_fire-vein": {
+        "x": 37,
+        "y": 328
+      }
+    },
+    "zoom": 1
+  }
+]

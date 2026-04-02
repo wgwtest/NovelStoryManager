@@ -1,0 +1,11 @@
+[
+  {
+    "id": "filter-main-cast",
+    "name": "主角相关",
+    "objectType": "characters",
+    "query": "苏",
+    "tags": [
+      "主角"
+    ]
+  }
+]

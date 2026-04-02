@@ -1,0 +1,18 @@
+[
+  {
+    "id": "item_fire-token",
+    "name": "残火令",
+    "aliases": [],
+    "tags": [
+      "线索物品"
+    ],
+    "summary": "一枚残破令牌，似乎与上古火脉有关。",
+    "type": "token",
+    "ownerRef": "char_suxuan",
+    "origin": "外门试炼谷",
+    "status": "active",
+    "traits": [
+      "微弱火灵波动"
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "clue_hidden-fire",
+    "name": "隐火灵脉线索",
+    "summary": "残火令指向一条被封锁的火脉。",
+    "status": "hidden",
+    "objectRefs": [
+      "item_fire-token",
+      "loc_qingyun_peak"
+    ],
+    "eventRefs": [
+      "event_trial-valley"
+    ],
+    "revealCondition": "火灵波动再次显现",
+    "tags": [
+      "伏笔"
+    ]
+  }
+]
