@@ -3,9 +3,9 @@
 ## 当前状态
 
 1. 当前活动文档根：`DOC/CODEX_DOC/`
-2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.8 -> WBS 1.8.2`
-3. 当前阶段状态：`WBS 1.8 方案待人工验收；WBS 1.8.1 已自测通过待人工验收；WBS 1.8.2 已完成拖拽稳定性、动态连线与端口高亮提示自测，待人工验收；WBS 3.1 仍待人工验收`
-4. 当前主线目标：等待人工复核 BaseLab 中三种基座的拖拽稳定性、动态连线能力、端口 hover/source/target 提示，以及主工作台与实验入口的解耦结果
+2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.7 -> WBS 1.7.1`
+3. 当前阶段状态：`WBS 1.7 与 WBS 1.7.1 已按 Pencil 评阅意见完成子节点拆分与 GitHub 同步，待人工验收；WBS 1.7.2 待开发；WBS 1.8 方案待人工验收；WBS 1.8.1 已自测通过待人工验收；WBS 1.8.2 已完成拖拽稳定性、动态连线与端口高亮提示自测，待人工验收；WBS 3.1 仍待人工验收`
+4. 当前主线目标：等待人工复核 WBS 1.7 子树中的 Pencil 补充路线、方案细化边界与 GitHub 树形同步结果，同时等待人工复核 BaseLab 中三种基座的拖拽稳定性、动态连线能力、端口 hover/source/target 提示，以及主工作台与实验入口的解耦结果
 5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## 文档组织原则
@@ -94,26 +94,31 @@
 15. [08-WBS-1.6-初始任务拆解与时间规划-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08-WBS-1.6-初始任务拆解与时间规划-研制计划.md)
 16. [2026-04-03-WBS-1.7-中高保真原型设计与生成方案.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.7-中高保真原型设计与生成方案.md)
 17. [08A-WBS-1.7-中高保真原型设计与生成方案-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08A-WBS-1.7-中高保真原型设计与生成方案-研制计划.md)
-18. [2026-04-03-WBS-1.8-BaseLab验证工具构建方案.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.8-BaseLab验证工具构建方案.md)
-19. [08B-WBS-1.8-BaseLab验证工具构建方案-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08B-WBS-1.8-BaseLab验证工具构建方案-研制计划.md)
-20. [08C-WBS-1.8.1-BaseLab独立应用底座-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08C-WBS-1.8.1-BaseLab独立应用底座-研制计划.md)
-21. [08D-WBS-1.8.2-WBS-3.1实验迁移与入口解耦-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08D-WBS-1.8.2-WBS-3.1实验迁移与入口解耦-研制计划.md)
-22. [10-WBS-2.1-项目底座实施-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/10-WBS-2.1-项目底座实施-研制计划.md)
-23. [2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/04_研发文档/01_数据规范/2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md)
-24. [11-WBS-2.2-数据规范与导入导出规范-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/11-WBS-2.2-数据规范与导入导出规范-研制计划.md)
-25. [12-WBS-3-三视图共性机制-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/12-WBS-3-三视图共性机制-研制计划.md)
-26. [13-WBS-3.1-交互画布与渲染基座选型-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/13-WBS-3.1-交互画布与渲染基座选型-研制计划.md)
-27. [17-WBS-4-知识库工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/17-WBS-4-知识库工作台-研制计划.md)
-28. [22-WBS-5-关系图工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/22-WBS-5-关系图工作台-研制计划.md)
-29. [27-WBS-6-多轨编排视图-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/27-WBS-6-多轨编排视图-研制计划.md)
-30. [32-WBS-7-观察输出层-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/32-WBS-7-观察输出层-研制计划.md)
-31. [2026-04-03-010206-验收意见与计划重排分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-010206-验收意见与计划重排分析.md)
-32. [2026-04-03-094110-GitHub评论优化分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-094110-GitHub评论优化分析.md)
-33. [2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md)
-34. [2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md)
-35. [2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md)
-36. [2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/01_会话交接/2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md)
-37. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
+18. [2026-04-03-WBS-1.7.1-中高保真原型草稿方案细化.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.7.1-中高保真原型草稿方案细化.md)
+19. [08A1-WBS-1.7.1-中高保真原型草稿方案细化-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08A1-WBS-1.7.1-中高保真原型草稿方案细化-研制计划.md)
+20. [2026-04-03-WBS-1.7.2-Pencil截面图与页面设计稿说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.7.2-Pencil截面图与页面设计稿说明.md)
+21. [08A2-WBS-1.7.2-Pencil截面图与页面设计稿-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08A2-WBS-1.7.2-Pencil截面图与页面设计稿-研制计划.md)
+22. [2026-04-03-WBS-1.8-BaseLab验证工具构建方案.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.8-BaseLab验证工具构建方案.md)
+23. [08B-WBS-1.8-BaseLab验证工具构建方案-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08B-WBS-1.8-BaseLab验证工具构建方案-研制计划.md)
+24. [08C-WBS-1.8.1-BaseLab独立应用底座-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08C-WBS-1.8.1-BaseLab独立应用底座-研制计划.md)
+25. [08D-WBS-1.8.2-WBS-3.1实验迁移与入口解耦-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08D-WBS-1.8.2-WBS-3.1实验迁移与入口解耦-研制计划.md)
+26. [10-WBS-2.1-项目底座实施-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/10-WBS-2.1-项目底座实施-研制计划.md)
+27. [2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/04_研发文档/01_数据规范/2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md)
+28. [11-WBS-2.2-数据规范与导入导出规范-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/11-WBS-2.2-数据规范与导入导出规范-研制计划.md)
+29. [12-WBS-3-三视图共性机制-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/12-WBS-3-三视图共性机制-研制计划.md)
+30. [13-WBS-3.1-交互画布与渲染基座选型-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/13-WBS-3.1-交互画布与渲染基座选型-研制计划.md)
+31. [17-WBS-4-知识库工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/17-WBS-4-知识库工作台-研制计划.md)
+32. [22-WBS-5-关系图工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/22-WBS-5-关系图工作台-研制计划.md)
+33. [27-WBS-6-多轨编排视图-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/27-WBS-6-多轨编排视图-研制计划.md)
+34. [32-WBS-7-观察输出层-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/32-WBS-7-观察输出层-研制计划.md)
+35. [2026-04-03-010206-验收意见与计划重排分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-010206-验收意见与计划重排分析.md)
+36. [2026-04-03-094110-GitHub评论优化分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-094110-GitHub评论优化分析.md)
+37. [2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md)
+38. [2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md)
+39. [2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md)
+40. [2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/01_会话交接/2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md)
+41. [2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md)
+42. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
 
 ## 协作规则
 
