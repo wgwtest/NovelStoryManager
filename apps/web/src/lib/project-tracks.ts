@@ -3,9 +3,9 @@ import type {
   ObjectTypeName,
   ProjectData
 } from "@novelstory/schema";
+import { createCanvasViewport } from "@novelstory/view-core";
 
 import { getObjectDisplayName } from "./object-display.js";
-import { createCanvasViewport } from "./view-canvas.js";
 
 export const trackGroupingOptions = [
   {

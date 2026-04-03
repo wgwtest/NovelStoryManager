@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "scripts": {
+    "dev:base-lab": "npm run dev --workspace @novelstory/base-lab",
     "dev:web": "npm run dev --workspace @novelstory/web",
     "dev:service": "npm run dev --workspace @novelstory/service",
     "build": "npm run build --workspaces --if-present",

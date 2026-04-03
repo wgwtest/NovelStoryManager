@@ -12,7 +12,6 @@ import {
   saveTrackPreset,
   type LoadedProject
 } from "./api/projects.js";
-import BaseSelectionLab from "./components/BaseSelectionLab.js";
 import GraphView from "./components/GraphView.js";
 import ObjectInspector from "./components/ObjectInspector.js";
 import KnowledgeView from "./components/KnowledgeView.js";
@@ -21,7 +20,6 @@ import TracksView from "./components/TracksView.js";
 import { getObjectDisplayName } from "./lib/object-display.js";
 
 type AppTab = "Knowledge" | "Graph" | "Tracks";
-type AppSurface = "workbench" | "base-lab";
 type EditableObject = StoryObject & Record<string, unknown>;
 
 function buildDraftObject(
@@ -118,7 +116,6 @@ function mergeObjectIntoProject(
 export default function App() {
   const [loadedProject, setLoadedProject] = useState<LoadedProject | null>(null);
   const [activeTab, setActiveTab] = useState<AppTab>("Knowledge");
-  const [activeSurface, setActiveSurface] = useState<AppSurface>("workbench");
   const [activeObjectType, setActiveObjectType] =
     useState<ObjectTypeName>("characters");
   const [objectFilterQuery, setObjectFilterQuery] = useState("");
@@ -546,145 +543,127 @@ export default function App() {
         </div>
 
         <div className="topbar-actions">
-          <button
-            className={
-              activeSurface === "base-lab"
-                ? "toolbar-button topbar-mode-button toolbar-button-active"
-                : "toolbar-button topbar-mode-button"
-            }
-            onClick={() => setActiveSurface("base-lab")}
-            type="button"
-          >
-            WBS 3.1 Base Lab
-          </button>
-
           <div className="status-pill" aria-live="polite">
             {statusMessage}
           </div>
         </div>
       </header>
 
-      {activeSurface === "base-lab" ? (
-        <BaseSelectionLab onBack={() => setActiveSurface("workbench")} />
-      ) : (
-        <>
-          <nav className="tab-strip" aria-label="Workbench tabs" role="tablist">
-            {(["Knowledge", "Graph", "Tracks"] as AppTab[]).map((tab) => (
-              <button
-                key={tab}
-                aria-selected={activeTab === tab}
-                className={activeTab === tab ? "tab-button tab-button-active" : "tab-button"}
-                onClick={() => setActiveTab(tab)}
-                role="tab"
-                type="button"
-              >
-                {tab}
-              </button>
-            ))}
-          </nav>
+      <nav className="tab-strip" aria-label="Workbench tabs" role="tablist">
+        {(["Knowledge", "Graph", "Tracks"] as AppTab[]).map((tab) => (
+          <button
+            key={tab}
+            aria-selected={activeTab === tab}
+            className={activeTab === tab ? "tab-button tab-button-active" : "tab-button"}
+            onClick={() => setActiveTab(tab)}
+            role="tab"
+            type="button"
+          >
+            {tab}
+          </button>
+        ))}
+      </nav>
 
-          <Group id="novel-story-manager-shell" orientation="horizontal">
-            <Panel defaultSize={22} minSize={18}>
-              {loadedProject ? (
-                <ObjectLibrary
-                  activeObjectType={activeObjectType}
-                  filterQuery={objectFilterQuery}
-                  filteredCount={filteredObjects.length}
-                  items={filteredObjects}
-                  onCreateObject={() => {
-                    void handleCreateObject();
-                  }}
-                  onChangeFilterQuery={setObjectFilterQuery}
-                  onSelectObject={handleSelectObject}
-                  onSelectObjectType={handleSelectObjectType}
-                  project={loadedProject.project}
-                  selectedObjectId={selectedObjectId}
-                />
-              ) : (
-                <aside className="panel object-library">
-                  <div className="panel-header">
-                    <h2>Object Library</h2>
-                  </div>
-                </aside>
-              )}
-            </Panel>
+      <Group id="novel-story-manager-shell" orientation="horizontal">
+        <Panel defaultSize={22} minSize={18}>
+          {loadedProject ? (
+            <ObjectLibrary
+              activeObjectType={activeObjectType}
+              filterQuery={objectFilterQuery}
+              filteredCount={filteredObjects.length}
+              items={filteredObjects}
+              onCreateObject={() => {
+                void handleCreateObject();
+              }}
+              onChangeFilterQuery={setObjectFilterQuery}
+              onSelectObject={handleSelectObject}
+              onSelectObjectType={handleSelectObjectType}
+              project={loadedProject.project}
+              selectedObjectId={selectedObjectId}
+            />
+          ) : (
+            <aside className="panel object-library">
+              <div className="panel-header">
+                <h2>Object Library</h2>
+              </div>
+            </aside>
+          )}
+        </Panel>
 
-            <Separator className="resize-handle" />
+        <Separator className="resize-handle" />
 
-            <Panel defaultSize={48} minSize={35}>
-              {loadedProject && activeTab === "Knowledge" ? (
-                <KnowledgeView
-                  activeObjectType={activeObjectType}
-                  items={filteredObjects}
-                  onSelectObject={handleSelectObject}
-                  selectedObjectId={selectedObjectId}
-                />
-              ) : loadedProject && activeTab === "Graph" ? (
-                <GraphView
-                  activeObjectType={activeObjectType}
-                  isSavingLayout={isSavingGraphLayout}
-                  onCreateObject={() => {
-                    void handleCreateObject();
-                  }}
-                  onCreateRelation={(targetObjectId) => {
-                    void handleCreateRelation(targetObjectId);
-                  }}
-                  onSaveLayout={(layout) => {
-                    void handleSaveGraphLayout(layout);
-                  }}
-                  onSelectObject={handleSelectGraphObject}
-                  project={loadedProject.project}
-                  selectedObjectId={selectedObjectId}
-                />
-              ) : loadedProject && activeTab === "Tracks" ? (
-                <TracksView
-                  isSavingPreset={isSavingTrackPreset}
-                  isSavingChapterSlice={isSavingChapterSlice}
-                  onCreateEvent={() => {
-                    void handleCreateObject("events");
-                  }}
-                  onMoveEvent={(eventId, changes) => {
-                    void handleMoveEvent(eventId, changes);
-                  }}
-                  onSaveChapterSlice={(slice) => {
-                    void handleSaveChapterSlice(slice);
-                  }}
-                  onSavePreset={(preset) => {
-                    void handleSaveTrackPreset(preset);
-                  }}
-                  onSelectObject={handleSelectGraphObject}
-                  project={loadedProject.project}
-                  selectedObjectId={selectedObjectId}
-                />
-              ) : (
-                <section className="panel placeholder-panel">
-                  <div className="panel-header">
-                    <h2>{activeTab}</h2>
-                  </div>
-                  <p>
-                    {activeTab} view will be implemented in a later WBS node.
-                  </p>
-                </section>
-              )}
-            </Panel>
+        <Panel defaultSize={48} minSize={35}>
+          {loadedProject && activeTab === "Knowledge" ? (
+            <KnowledgeView
+              activeObjectType={activeObjectType}
+              items={filteredObjects}
+              onSelectObject={handleSelectObject}
+              selectedObjectId={selectedObjectId}
+            />
+          ) : loadedProject && activeTab === "Graph" ? (
+            <GraphView
+              activeObjectType={activeObjectType}
+              isSavingLayout={isSavingGraphLayout}
+              onCreateObject={() => {
+                void handleCreateObject();
+              }}
+              onCreateRelation={(targetObjectId) => {
+                void handleCreateRelation(targetObjectId);
+              }}
+              onSaveLayout={(layout) => {
+                void handleSaveGraphLayout(layout);
+              }}
+              onSelectObject={handleSelectGraphObject}
+              project={loadedProject.project}
+              selectedObjectId={selectedObjectId}
+            />
+          ) : loadedProject && activeTab === "Tracks" ? (
+            <TracksView
+              isSavingPreset={isSavingTrackPreset}
+              isSavingChapterSlice={isSavingChapterSlice}
+              onCreateEvent={() => {
+                void handleCreateObject("events");
+              }}
+              onMoveEvent={(eventId, changes) => {
+                void handleMoveEvent(eventId, changes);
+              }}
+              onSaveChapterSlice={(slice) => {
+                void handleSaveChapterSlice(slice);
+              }}
+              onSavePreset={(preset) => {
+                void handleSaveTrackPreset(preset);
+              }}
+              onSelectObject={handleSelectGraphObject}
+              project={loadedProject.project}
+              selectedObjectId={selectedObjectId}
+            />
+          ) : (
+            <section className="panel placeholder-panel">
+              <div className="panel-header">
+                <h2>{activeTab}</h2>
+              </div>
+              <p>
+                {activeTab} view will be implemented in a later WBS node.
+              </p>
+            </section>
+          )}
+        </Panel>
 
-            <Separator className="resize-handle" />
+        <Separator className="resize-handle" />
 
-            <Panel defaultSize={30} minSize={24}>
-              <ObjectInspector
-                draftObject={draftObject}
-                isSaving={isSaving}
-                onDraftChange={handleDraftChange}
-                onJumpToReference={handleJumpToReference}
-                onSaveObject={() => {
-                  void handleSaveObject();
-                }}
-                project={loadedProject?.project ?? null}
-              />
-            </Panel>
-          </Group>
-        </>
-      )}
+        <Panel defaultSize={30} minSize={24}>
+          <ObjectInspector
+            draftObject={draftObject}
+            isSaving={isSaving}
+            onDraftChange={handleDraftChange}
+            onJumpToReference={handleJumpToReference}
+            onSaveObject={() => {
+              void handleSaveObject();
+            }}
+            project={loadedProject?.project ?? null}
+          />
+        </Panel>
+      </Group>
     </div>
   );
 }

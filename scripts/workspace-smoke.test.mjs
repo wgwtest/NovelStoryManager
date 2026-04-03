@@ -9,6 +9,7 @@ test("workspace package.json declares the required workspaces and scripts", asyn
   assert.equal(pkg.name, "novel-story-manager");
   assert.equal(pkg.private, true);
   assert.deepEqual(pkg.workspaces, ["apps/*", "packages/*"]);
+  assert.equal(typeof pkg.scripts["dev:base-lab"], "string");
   assert.equal(typeof pkg.scripts["dev:web"], "string");
   assert.equal(typeof pkg.scripts["dev:service"], "string");
   assert.equal(typeof pkg.scripts.typecheck, "string");

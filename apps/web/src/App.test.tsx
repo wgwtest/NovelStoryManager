@@ -906,39 +906,14 @@ describe("App", () => {
     });
   });
 
-  it("opens the WBS 3.1 base lab and renders three comparison stages", async () => {
-    const user = userEvent.setup();
-
+  it("keeps the main workbench focused on the three product tabs", async () => {
     render(<App />);
 
     await screen.findByRole("button", { name: "苏玄" });
-    await user.click(screen.getByRole("button", { name: "WBS 3.1 Base Lab" }));
 
     expect(
-      await screen.findByRole("heading", { name: "WBS 3.1 基座对比验证" })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("region", { name: "DOM + CSS 验证画布" })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("region", { name: "DOM + SVG 验证画布" })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("region", { name: "Canvas 验证画布" })
-    ).toBeInTheDocument();
-  });
-
-  it("returns from the base lab back to the three main workbench tabs", async () => {
-    const user = userEvent.setup();
-
-    render(<App />);
-
-    await screen.findByRole("button", { name: "苏玄" });
-    await user.click(screen.getByRole("button", { name: "WBS 3.1 Base Lab" }));
-    await screen.findByRole("heading", { name: "WBS 3.1 基座对比验证" });
-
-    await user.click(screen.getByRole("button", { name: "Back to Workbench" }));
-
+      screen.queryByRole("button", { name: "WBS 3.1 Base Lab" })
+    ).not.toBeInTheDocument();
     expect(screen.getByRole("tab", { name: "Knowledge" })).toBeInTheDocument();
     expect(screen.getByRole("tab", { name: "Graph" })).toBeInTheDocument();
     expect(screen.getByRole("tab", { name: "Tracks" })).toBeInTheDocument();

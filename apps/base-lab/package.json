@@ -1,5 +1,5 @@
 {
-  "name": "@novelstory/web",
+  "name": "@novelstory/base-lab",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,11 +9,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@novelstory/schema": "file:../../packages/schema",
     "@novelstory/view-core": "file:../../packages/view-core",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-resizable-panels": "^4.8.0"
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",

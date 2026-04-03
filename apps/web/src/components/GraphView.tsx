@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 
 import type { ObjectTypeName, ProjectData } from "@novelstory/schema";
+import {
+  panCanvasViewport,
+  resizeCanvasViewport,
+  zoomCanvasViewport
+} from "@novelstory/view-core";
 
 import {
   buildGraphConnectionState,
@@ -9,11 +14,6 @@ import {
   filterGraphBySelection,
   type GraphLayoutDraft
 } from "../lib/project-graph.js";
-import {
-  panCanvasViewport,
-  resizeCanvasViewport,
-  zoomCanvasViewport
-} from "../lib/view-canvas.js";
 
 type GraphViewProps = {
   activeObjectType: ObjectTypeName;

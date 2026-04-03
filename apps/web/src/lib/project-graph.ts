@@ -4,9 +4,9 @@ import {
   type ProjectData,
   type StoryObject
 } from "@novelstory/schema";
+import { createCanvasViewport } from "@novelstory/view-core";
 
 import { getObjectDisplayName } from "./object-display.js";
-import { createCanvasViewport } from "./view-canvas.js";
 
 export type GraphNode = {
   id: string;

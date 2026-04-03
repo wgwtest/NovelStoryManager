@@ -31,13 +31,6 @@ export function panCanvasViewport<T extends CanvasViewport>(
     deltaX: number;
     deltaY: number;
   }
-): T;
-export function panCanvasViewport<T extends CanvasViewport>(
-  viewport: T,
-  input: {
-    deltaX: number;
-    deltaY: number;
-  }
 ): T {
   return {
     ...viewport,
@@ -52,13 +45,6 @@ export function resizeCanvasViewport<T extends CanvasViewport>(
     canvasWidth: number;
     canvasHeight: number;
   }
-): T;
-export function resizeCanvasViewport<T extends CanvasViewport>(
-  viewport: T,
-  input: {
-    canvasWidth: number;
-    canvasHeight: number;
-  }
 ): T {
   return {
     ...viewport,
@@ -67,10 +53,6 @@ export function resizeCanvasViewport<T extends CanvasViewport>(
   };
 }
 
-export function zoomCanvasViewport<T extends CanvasViewport>(
-  viewport: T,
-  nextZoom: number
-): T;
 export function zoomCanvasViewport<T extends CanvasViewport>(
   viewport: T,
   nextZoom: number

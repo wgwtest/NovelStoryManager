@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 
 import type { ObjectTypeName, ProjectData } from "@novelstory/schema";
+import {
+  panCanvasViewport,
+  resizeCanvasViewport,
+  zoomCanvasViewport
+} from "@novelstory/view-core";
 
 import {
   buildObservationData,
@@ -16,11 +21,6 @@ import {
   type TrackGrouping,
   type TrackPresetDraft
 } from "../lib/project-tracks.js";
-import {
-  panCanvasViewport,
-  resizeCanvasViewport,
-  zoomCanvasViewport
-} from "../lib/view-canvas.js";
 
 type TracksViewProps = {
   isSavingChapterSlice: boolean;

@@ -6,7 +6,7 @@ import {
   resizeCanvasViewport,
   zoomCanvasViewport,
   type CanvasViewport
-} from "../lib/view-canvas.js";
+} from "@novelstory/view-core";
 
 type BaseSelectionLabProps = {
   onBack: () => void;
@@ -888,7 +888,7 @@ export default function BaseSelectionLab(props: BaseSelectionLabProps) {
         </div>
 
         <button className="toolbar-button toolbar-button-primary" onClick={props.onBack} type="button">
-          Back to Workbench
+          Back to BaseLab
         </button>
       </div>
 
