@@ -32,5 +32,29 @@
     ],
     "realmState": "筑基境初期",
     "notes": ""
+  },
+  {
+    "id": "char_new_003",
+    "name": "新角色3",
+    "aliases": [],
+    "tags": [],
+    "summary": "",
+    "status": "active",
+    "identity": "",
+    "factionRefs": [],
+    "realmState": "",
+    "notes": ""
+  },
+  {
+    "id": "char_new_004",
+    "name": "新角色4",
+    "aliases": [],
+    "tags": [],
+    "summary": "",
+    "status": "active",
+    "identity": "",
+    "factionRefs": [],
+    "realmState": "",
+    "notes": ""
   }
 ]
