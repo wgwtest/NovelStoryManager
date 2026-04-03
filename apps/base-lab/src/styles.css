@@ -1065,14 +1065,45 @@ textarea {
 
 .base-lab-port-button {
   border: 0;
+  border-radius: 999px;
   background: transparent;
   cursor: crosshair;
-  padding: 0;
+  padding: 4px 8px;
   text-align: left;
+  transition:
+    background-color 160ms ease,
+    box-shadow 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+  margin: -4px -8px;
+}
+
+.base-lab-port-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(33, 78, 71, 0.18);
 }
 
 .base-lab-port-button-output {
   justify-content: flex-end;
+}
+
+.base-lab-port-button[data-port-tone="hover"] {
+  background: rgba(55, 93, 143, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(55, 93, 143, 0.18);
+  color: #294a69;
+}
+
+.base-lab-port-button[data-port-tone="source"] {
+  background: rgba(173, 92, 44, 0.13);
+  box-shadow: inset 0 0 0 1px rgba(173, 92, 44, 0.22);
+  color: #874621;
+  transform: translateX(1px);
+}
+
+.base-lab-port-button[data-port-tone="target"] {
+  background: rgba(33, 78, 71, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(33, 78, 71, 0.22);
+  color: #214e47;
 }
 
 .base-lab-node-core {
@@ -1090,6 +1121,31 @@ textarea {
   border-radius: 999px;
   background: #fffdf9;
   flex: 0 0 auto;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.base-lab-port-button[data-port-tone="hover"] .base-lab-port-dot {
+  border-color: #375d8f;
+  background: #eef4fb;
+  box-shadow: 0 0 0 6px rgba(55, 93, 143, 0.12);
+}
+
+.base-lab-port-button[data-port-tone="source"] .base-lab-port-dot {
+  border-color: #ad5c2c;
+  background: #f7dfd2;
+  box-shadow: 0 0 0 7px rgba(173, 92, 44, 0.16);
+  transform: scale(1.08);
+}
+
+.base-lab-port-button[data-port-tone="target"] .base-lab-port-dot {
+  border-color: #214e47;
+  background: #e4f1ec;
+  box-shadow: 0 0 0 7px rgba(33, 78, 71, 0.16);
+  transform: scale(1.08);
 }
 
 .base-lab-node-footer {
@@ -1104,6 +1160,7 @@ textarea {
 
 .base-lab-canvas-surface {
   display: block;
+  cursor: crosshair;
 }
 
 .base-lab-observation-list {

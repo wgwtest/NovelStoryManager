@@ -16,6 +16,7 @@ import {
   getNodePosition,
   getPendingEdgePoints,
   getPortAnchor,
+  getPortTone,
   getSelectedCoordinates,
   headerHeight,
   labNodes,
@@ -23,9 +24,13 @@ import {
   nodeWidth,
   portRadius,
   resolveStagePoint,
+  setHoveredPort,
   startPendingEdge,
   updatePendingEdge,
+  type LabPortKind,
+  type PortHandle,
   type Position,
+  type PortTone,
   type StageState
 } from "../lib/base-selection-lab.js";
 
@@ -75,6 +80,71 @@ const canvasObservations = [
   "节点、端口和标签不会自然进入可访问性树，自动化只能退回坐标语义。",
   "更适合作为后续性能型候选，而不是当前第一版主交互层。"
 ];
+
+function createPortHandle(
+  kind: LabPortKind,
+  nodeId: string,
+  portName: string
+): PortHandle {
+  return {
+    kind,
+    nodeId,
+    portName
+  };
+}
+
+function getCanvasPortAppearance(
+  kind: LabPortKind,
+  tone: PortTone
+): {
+  dotFill: string;
+  dotRadius: number;
+  dotStroke: string;
+  haloFill: string | null;
+  haloRadius: number;
+  labelFill: string;
+} {
+  const baseFill = kind === "input" ? "#efe3ca" : "#d9ebdf";
+
+  switch (tone) {
+    case "hover":
+      return {
+        dotFill: "#eef4fb",
+        dotRadius: portRadius + 0.5,
+        dotStroke: "#375d8f",
+        haloFill: "rgba(55, 93, 143, 0.16)",
+        haloRadius: portRadius + 5,
+        labelFill: "#294a69"
+      };
+    case "source":
+      return {
+        dotFill: "#f7dfd2",
+        dotRadius: portRadius + 1,
+        dotStroke: "#ad5c2c",
+        haloFill: "rgba(173, 92, 44, 0.2)",
+        haloRadius: portRadius + 7,
+        labelFill: "#874621"
+      };
+    case "target":
+      return {
+        dotFill: "#e4f1ec",
+        dotRadius: portRadius + 1,
+        dotStroke: "#214e47",
+        haloFill: "rgba(33, 78, 71, 0.2)",
+        haloRadius: portRadius + 7,
+        labelFill: "#214e47"
+      };
+    default:
+      return {
+        dotFill: baseFill,
+        dotRadius: portRadius,
+        dotStroke: kind === "input" ? "rgba(111, 88, 49, 0.42)" : "rgba(33, 78, 71, 0.4)",
+        haloFill: null,
+        haloRadius: 0,
+        labelFill: "#3e463f"
+      };
+  }
+}
 
 function getLineStyle(points: {
   x1: number;
@@ -290,12 +360,41 @@ function DomStage(props: DomStageProps) {
         aria-label={props.regionLabel}
         className="base-lab-stage"
         onPointerDown={(event) => {
+          setStageState((current) => setHoveredPort(current, null));
           setDragState({
             kind: "canvas",
             originOffsetX: stageState.offsetX,
             originOffsetY: stageState.offsetY,
             startX: event.clientX,
             startY: event.clientY
+          });
+        }}
+        onPointerLeave={() => {
+          setStageState((current) => setHoveredPort(current, null));
+        }}
+        onPointerMove={(event) => {
+          const bounds = event.currentTarget.getBoundingClientRect();
+          const {
+            clientX,
+            clientY
+          } = event;
+
+          setStageState((current) => {
+            if (dragState && dragState.kind !== "edge") {
+              return setHoveredPort(current, null);
+            }
+
+            const point = resolveStagePoint(
+              current,
+              bounds,
+              clientX,
+              clientY
+            );
+
+            return setHoveredPort(
+              current,
+              findPortHandle(current, point, dragState?.kind === "edge" ? "input" : undefined)
+            );
           });
         }}
         ref={regionRef}
@@ -381,18 +480,28 @@ function DomStage(props: DomStageProps) {
                   className={isSelected ? "base-lab-node base-lab-node-active" : "base-lab-node"}
                   key={node.id}
                   onClick={() =>
-                    setStageState((current) => ({
-                      ...current,
-                      selectedNodeId: node.id
-                    }))
+                    setStageState((current) =>
+                      setHoveredPort(
+                        {
+                          ...current,
+                          selectedNodeId: node.id
+                        },
+                        null
+                      )
+                    )
                   }
                   onPointerDown={(event) => {
                     event.preventDefault();
                     event.stopPropagation();
-                    setStageState((current) => ({
-                      ...current,
-                      selectedNodeId: node.id
-                    }));
+                    setStageState((current) =>
+                      setHoveredPort(
+                        {
+                          ...current,
+                          selectedNodeId: node.id
+                        },
+                        null
+                      )
+                    );
                     setDragState({
                       kind: "node",
                       nodeId: node.id,
@@ -417,35 +526,48 @@ function DomStage(props: DomStageProps) {
 
                   <div className="base-lab-node-body">
                     <div className="base-lab-port-column">
-                      {node.inputs.map((port) => (
-                        <button
-                          aria-label={`${node.label} input ${port}`}
-                          className="base-lab-port-row base-lab-port-button"
-                          key={`${node.id}-${port}-input`}
-                          onPointerDown={(event) => {
-                            event.stopPropagation();
-                          }}
-                          onPointerUp={(event) => {
-                            if (dragState?.kind !== "edge") {
-                              return;
-                            }
+                      {node.inputs.map((port) => {
+                        const handle = createPortHandle("input", node.id, port);
+                        const tone = getPortTone(stageState, handle);
 
-                            event.preventDefault();
-                            event.stopPropagation();
-                            setStageState((current) =>
-                              connectPendingEdge(current, {
-                                targetId: node.id,
-                                targetPort: port
-                              })
-                            );
-                            setDragState(null);
-                          }}
-                          type="button"
-                        >
-                          <span className="base-lab-port-dot" />
-                          <span>{port}</span>
-                        </button>
-                      ))}
+                        return (
+                          <button
+                            aria-label={`${node.label} input ${port}`}
+                            className="base-lab-port-row base-lab-port-button"
+                            data-port-tone={tone}
+                            key={`${node.id}-${port}-input`}
+                            onBlur={() => {
+                              setStageState((current) => setHoveredPort(current, null));
+                            }}
+                            onFocus={() => {
+                              setStageState((current) => setHoveredPort(current, handle));
+                            }}
+                            onPointerDown={(event) => {
+                              event.stopPropagation();
+                              setStageState((current) => setHoveredPort(current, handle));
+                            }}
+                            onPointerUp={(event) => {
+                              if (dragState?.kind !== "edge") {
+                                return;
+                              }
+
+                              event.preventDefault();
+                              event.stopPropagation();
+                              setStageState((current) =>
+                                connectPendingEdge(current, {
+                                  targetId: node.id,
+                                  targetPort: port
+                                })
+                              );
+                              setDragState(null);
+                            }}
+                            type="button"
+                          >
+                            <span className="base-lab-port-dot" />
+                            <span>{port}</span>
+                          </button>
+                        );
+                      })}
                     </div>
 
                     <div className="base-lab-node-core">
@@ -454,54 +576,69 @@ function DomStage(props: DomStageProps) {
                     </div>
 
                     <div className="base-lab-port-column base-lab-port-column-output">
-                      {node.outputs.map((port) => (
-                        <button
-                          aria-label={`${node.label} output ${port}`}
-                          className="base-lab-port-row base-lab-port-button base-lab-port-button-output"
-                          key={`${node.id}-${port}-output`}
-                          onPointerDown={(event) => {
-                            const bounds = regionRef.current?.getBoundingClientRect();
+                      {node.outputs.map((port) => {
+                        const handle = createPortHandle("output", node.id, port);
+                        const tone = getPortTone(stageState, handle);
 
-                            if (!bounds) {
-                              return;
-                            }
+                        return (
+                          <button
+                            aria-label={`${node.label} output ${port}`}
+                            className="base-lab-port-row base-lab-port-button base-lab-port-button-output"
+                            data-port-tone={tone}
+                            key={`${node.id}-${port}-output`}
+                            onBlur={() => {
+                              setStageState((current) => setHoveredPort(current, null));
+                            }}
+                            onFocus={() => {
+                              setStageState((current) => setHoveredPort(current, handle));
+                            }}
+                            onPointerDown={(event) => {
+                              const bounds = regionRef.current?.getBoundingClientRect();
 
-                            event.preventDefault();
-                            event.stopPropagation();
-                            const point = resolveStagePoint(
-                              stageState,
-                              bounds,
-                              event.clientX,
-                              event.clientY
-                            );
-                            setStageState((current) =>
-                              startPendingEdge(
-                                {
-                                  ...current,
-                                  selectedNodeId: node.id
-                                },
-                                {
-                                  currentX: point.x,
-                                  currentY: point.y,
-                                  sourceId: node.id,
-                                  sourcePort: port
-                                }
-                              )
-                            );
-                            setDragState({
-                              kind: "edge",
-                              stageBounds: {
-                                left: bounds.left,
-                                top: bounds.top
+                              if (!bounds) {
+                                return;
                               }
-                            });
-                          }}
-                          type="button"
-                        >
-                          <span>{port}</span>
-                          <span className="base-lab-port-dot" />
-                        </button>
-                      ))}
+
+                              event.preventDefault();
+                              event.stopPropagation();
+                              const point = resolveStagePoint(
+                                stageState,
+                                bounds,
+                                event.clientX,
+                                event.clientY
+                              );
+                              setStageState((current) =>
+                                startPendingEdge(
+                                  setHoveredPort(
+                                    {
+                                      ...current,
+                                      selectedNodeId: node.id
+                                    },
+                                    handle
+                                  ),
+                                  {
+                                    currentX: point.x,
+                                    currentY: point.y,
+                                    sourceId: node.id,
+                                    sourcePort: port
+                                  }
+                                )
+                              );
+                              setDragState({
+                                kind: "edge",
+                                stageBounds: {
+                                  left: bounds.left,
+                                  top: bounds.top
+                                }
+                              });
+                            }}
+                            type="button"
+                          >
+                            <span>{port}</span>
+                            <span className="base-lab-port-dot" />
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
 
@@ -654,24 +791,48 @@ function CanvasStage() {
       context.font = "12px Noto Sans SC, sans-serif";
       node.inputs.forEach((port) => {
         const anchor = getPortAnchor(stageState, node.id, "input", port);
+        const tone = getPortTone(stageState, createPortHandle("input", node.id, port));
+        const appearance = getCanvasPortAppearance("input", tone);
+
+        if (appearance.haloFill) {
+          context.beginPath();
+          context.fillStyle = appearance.haloFill;
+          context.arc(anchor.x, anchor.y, appearance.haloRadius, 0, Math.PI * 2);
+          context.fill();
+        }
 
         context.beginPath();
-        context.fillStyle = "#efe3ca";
-        context.arc(anchor.x, anchor.y, portRadius, 0, Math.PI * 2);
+        context.fillStyle = appearance.dotFill;
+        context.strokeStyle = appearance.dotStroke;
+        context.lineWidth = tone === "idle" ? 1.5 : 2.5;
+        context.arc(anchor.x, anchor.y, appearance.dotRadius, 0, Math.PI * 2);
         context.fill();
-        context.fillStyle = "#3e463f";
+        context.stroke();
+        context.fillStyle = appearance.labelFill;
         context.fillText(port, position.x + 22, anchor.y + 4);
       });
 
       node.outputs.forEach((port) => {
         const anchor = getPortAnchor(stageState, node.id, "output", port);
         const textWidth = context.measureText(port).width;
+        const tone = getPortTone(stageState, createPortHandle("output", node.id, port));
+        const appearance = getCanvasPortAppearance("output", tone);
+
+        if (appearance.haloFill) {
+          context.beginPath();
+          context.fillStyle = appearance.haloFill;
+          context.arc(anchor.x, anchor.y, appearance.haloRadius, 0, Math.PI * 2);
+          context.fill();
+        }
 
         context.beginPath();
-        context.fillStyle = "#d9ebdf";
-        context.arc(anchor.x, anchor.y, portRadius, 0, Math.PI * 2);
+        context.fillStyle = appearance.dotFill;
+        context.strokeStyle = appearance.dotStroke;
+        context.lineWidth = tone === "idle" ? 1.5 : 2.5;
+        context.arc(anchor.x, anchor.y, appearance.dotRadius, 0, Math.PI * 2);
         context.fill();
-        context.fillStyle = "#3e463f";
+        context.stroke();
+        context.fillStyle = appearance.labelFill;
         context.fillText(port, position.x + nodeWidth - textWidth - 22, anchor.y + 4);
       });
 
@@ -775,10 +936,13 @@ function CanvasStage() {
             if (outputHandle) {
               setStageState((current) =>
                 startPendingEdge(
-                  {
-                    ...current,
-                    selectedNodeId: outputHandle.nodeId
-                  },
+                  setHoveredPort(
+                    {
+                      ...current,
+                      selectedNodeId: outputHandle.nodeId
+                    },
+                    outputHandle
+                  ),
                   {
                     currentX: point.x,
                     currentY: point.y,
@@ -802,10 +966,15 @@ function CanvasStage() {
             if (hitNodeId) {
               const position = getNodePosition(stageState, hitNodeId);
 
-              setStageState((current) => ({
-                ...current,
-                selectedNodeId: hitNodeId
-              }));
+              setStageState((current) =>
+                setHoveredPort(
+                  {
+                    ...current,
+                    selectedNodeId: hitNodeId
+                  },
+                  null
+                )
+              );
               setDragState({
                 kind: "node",
                 nodeId: hitNodeId,
@@ -817,12 +986,41 @@ function CanvasStage() {
               return;
             }
 
+            setStageState((current) => setHoveredPort(current, null));
             setDragState({
               kind: "canvas",
               originOffsetX: stageState.offsetX,
               originOffsetY: stageState.offsetY,
               startX: event.clientX,
               startY: event.clientY
+            });
+          }}
+          onPointerLeave={() => {
+            setStageState((current) => setHoveredPort(current, null));
+          }}
+          onPointerMove={(event) => {
+            const bounds = event.currentTarget.getBoundingClientRect();
+            const {
+              clientX,
+              clientY
+            } = event;
+
+            setStageState((current) => {
+              if (dragState && dragState.kind !== "edge") {
+                return setHoveredPort(current, null);
+              }
+
+              const point = resolveStagePoint(
+                current,
+                bounds,
+                clientX,
+                clientY
+              );
+
+              return setHoveredPort(
+                current,
+                findPortHandle(current, point, dragState?.kind === "edge" ? "input" : undefined)
+              );
             });
           }}
           onPointerUp={(event) => {

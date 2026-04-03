@@ -3,7 +3,13 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import BaseSelectionLab from "./BaseSelectionLab.js";
 
-function createCanvasContextStub(): CanvasRenderingContext2D {
+type CanvasContextStub = CanvasRenderingContext2D & {
+  arc: ReturnType<typeof vi.fn>;
+};
+
+let canvasContextStub: CanvasContextStub;
+
+function createCanvasContextStub(): CanvasContextStub {
   return {
     arc: vi.fn(),
     beginPath: vi.fn(),
@@ -24,13 +30,14 @@ function createCanvasContextStub(): CanvasRenderingContext2D {
     setTransform: vi.fn(),
     stroke: vi.fn(),
     translate: vi.fn()
-  } as unknown as CanvasRenderingContext2D;
+  } as unknown as CanvasContextStub;
 }
 
 beforeEach(() => {
   vi.restoreAllMocks();
+  canvasContextStub = createCanvasContextStub();
   vi.spyOn(HTMLCanvasElement.prototype, "getContext").mockImplementation(() =>
-    createCanvasContextStub()
+    canvasContextStub
   );
 });
 
@@ -79,5 +86,57 @@ describe("BaseSelectionLab", () => {
     });
 
     expect(container.querySelectorAll(".base-lab-svg-edge")).toHaveLength(4);
+  });
+
+  it("shows hover, source and target tones on DOM ports", () => {
+    render(<BaseSelectionLab onBack={() => {}} />);
+    const svgRegion = screen.getByRole("region", { name: "DOM + SVG 验证画布" });
+    const outputButton = within(svgRegion).getByRole("button", {
+      name: "Detect Token output state"
+    });
+    const inputButton = within(svgRegion).getByRole("button", {
+      name: "Trigger Arc input signal"
+    });
+
+    fireEvent.pointerMove(svgRegion, {
+      clientX: 622,
+      clientY: 316
+    });
+
+    expect(outputButton).toHaveAttribute("data-port-tone", "hover");
+
+    fireEvent.pointerDown(outputButton, {
+      clientX: 622,
+      clientY: 316
+    });
+    fireEvent.pointerMove(window, {
+      clientX: 758,
+      clientY: 442
+    });
+    fireEvent.pointerMove(svgRegion, {
+      clientX: 758,
+      clientY: 442
+    });
+
+    expect(outputButton).toHaveAttribute("data-port-tone", "source");
+    expect(inputButton).toHaveAttribute("data-port-tone", "target");
+  });
+
+  it("draws a halo ring when hovering a canvas port", () => {
+    const { container } = render(<BaseSelectionLab onBack={() => {}} />);
+    const canvas = container.querySelector(".base-lab-canvas-surface");
+
+    expect(canvas).not.toBeNull();
+
+    canvasContextStub.arc.mockClear();
+
+    fireEvent.pointerMove(canvas!, {
+      clientX: 622,
+      clientY: 316
+    });
+
+    const hasHaloArc = canvasContextStub.arc.mock.calls.some((args) => Number(args[2]) > 6);
+
+    expect(hasHaloArc).toBe(true);
   });
 });

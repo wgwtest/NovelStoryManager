@@ -33,8 +33,11 @@ export type PendingEdge = {
   sourcePort: string;
 };
 
+export type PortTone = "idle" | "hover" | "source" | "target";
+
 export type StageState = CanvasViewport & {
   edges: LabEdge[];
+  hoveredPort: PortHandle | null;
   nextEdgeId: number;
   pendingEdge: PendingEdge | null;
   positions: Record<string, Position>;
@@ -149,6 +152,7 @@ export function createStageState(): StageState {
       zoom: 1
     }),
     edges: structuredClone(defaultLabEdges),
+    hoveredPort: null,
     nextEdgeId: 1,
     pendingEdge: null,
     positions: structuredClone(initialPositions),
@@ -305,6 +309,53 @@ export function findPortHandle(
   }
 
   return null;
+}
+
+function isSamePortHandle(left: PortHandle | null, right: PortHandle | null): boolean {
+  return (
+    left?.kind === right?.kind &&
+    left?.nodeId === right?.nodeId &&
+    left?.portName === right?.portName
+  );
+}
+
+export function setHoveredPort(
+  stageState: StageState,
+  hoveredPort: PortHandle | null
+): StageState {
+  if (isSamePortHandle(stageState.hoveredPort, hoveredPort)) {
+    return stageState;
+  }
+
+  return {
+    ...stageState,
+    hoveredPort
+  };
+}
+
+export function getPortTone(stageState: StageState, portHandle: PortHandle): PortTone {
+  if (
+    stageState.pendingEdge &&
+    portHandle.kind === "output" &&
+    portHandle.nodeId === stageState.pendingEdge.sourceId &&
+    portHandle.portName === stageState.pendingEdge.sourcePort
+  ) {
+    return "source";
+  }
+
+  if (
+    stageState.pendingEdge &&
+    portHandle.kind === "input" &&
+    isSamePortHandle(stageState.hoveredPort, portHandle)
+  ) {
+    return "target";
+  }
+
+  if (isSamePortHandle(stageState.hoveredPort, portHandle)) {
+    return "hover";
+  }
+
+  return "idle";
 }
 
 export function startPendingEdge(

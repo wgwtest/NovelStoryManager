@@ -4,8 +4,10 @@ import {
   connectPendingEdge,
   createStageState,
   findPortHandle,
+  getPortTone,
   getNodePosition,
   getPendingEdgePoints,
+  setHoveredPort,
   startPendingEdge,
   updatePendingEdge,
   type Position
@@ -73,5 +75,51 @@ describe("base selection lab stage helpers", () => {
       targetId: "trigger-arc",
       targetPort: "signal"
     });
+  });
+
+  it("tracks hover, source and target tones for port hints", () => {
+    const stageState = createStageState();
+    const hovering = setHoveredPort(stageState, {
+      kind: "output",
+      nodeId: "detect-token",
+      portName: "state"
+    });
+
+    expect(
+      getPortTone(hovering, {
+        kind: "output",
+        nodeId: "detect-token",
+        portName: "state"
+      })
+    ).toBe("hover");
+
+    const dragging = setHoveredPort(
+      startPendingEdge(hovering, {
+        currentX: 590,
+        currentY: 288,
+        sourceId: "detect-token",
+        sourcePort: "state"
+      }),
+      {
+        kind: "input",
+        nodeId: "trigger-arc",
+        portName: "signal"
+      }
+    );
+
+    expect(
+      getPortTone(dragging, {
+        kind: "output",
+        nodeId: "detect-token",
+        portName: "state"
+      })
+    ).toBe("source");
+    expect(
+      getPortTone(dragging, {
+        kind: "input",
+        nodeId: "trigger-arc",
+        portName: "signal"
+      })
+    ).toBe("target");
   });
 });
