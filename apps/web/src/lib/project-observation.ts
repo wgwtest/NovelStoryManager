@@ -21,6 +21,10 @@ export const observationModeOptions = [
   {
     value: "arc",
     label: "Arc"
+  },
+  {
+    value: "chapter",
+    label: "Chapter"
   }
 ] as const;
 
@@ -39,6 +43,11 @@ export type ObservationSlice = {
   label: string;
   objectType: Exclude<ObjectTypeName, "relations">;
   eventCards: ObservationEventCard[];
+  relatedCharacters: string[];
+  relatedLocations: string[];
+  relatedArcs: string[];
+  summary?: string;
+  text?: string;
 };
 
 type ObservationConfig = {
@@ -53,6 +62,9 @@ const observationConfigByMode: Record<ObservationMode, ObservationConfig> = {
     collectionType: "arcs",
     objectType: "arcs",
     pickRefs: (event) => event.arcRefs
+  },
+  chapter: {
+    objectType: "events"
   },
   character: {
     collectionType: "characters",
@@ -95,7 +107,10 @@ function buildTimeObservationSlices(project: ProjectData): ObservationSlice[] {
         id: sliceId,
         label: event.timeAnchor || observationConfigByMode.time.defaultLabel || "未标注时间",
         objectType: "events",
-        eventCards: []
+        eventCards: [],
+        relatedCharacters: [],
+        relatedLocations: [],
+        relatedArcs: []
       });
     }
 
@@ -134,8 +149,97 @@ function buildObjectObservationSlices(
       id: item.id,
       label: getObjectDisplayName(item),
       objectType: config.objectType,
-      eventCards: eventCardsBySliceId.get(item.id) ?? []
+      eventCards: eventCardsBySliceId.get(item.id) ?? [],
+      relatedCharacters: [],
+      relatedLocations: [],
+      relatedArcs: []
     }));
+}
+
+function buildChapterObservationSlices(project: ProjectData): ObservationSlice[] {
+  const eventById = new Map(project.objects.events.map((event) => [
+    event.id,
+    event
+  ]));
+  const characterById = new Map(project.objects.characters.map((character) => [
+    character.id,
+    character
+  ]));
+  const locationById = new Map(project.objects.locations.map((location) => [
+    location.id,
+    location
+  ]));
+  const arcById = new Map(project.objects.arcs.map((arc) => [
+    arc.id,
+    arc
+  ]));
+
+  return [...project.views["chapter-slices"]]
+    .sort((left, right) => left.order - right.order)
+    .map((slice) => {
+      const events = slice.eventRefs
+        .map((eventId) => eventById.get(eventId))
+        .filter((event): event is ProjectData["objects"]["events"][number] => Boolean(event));
+      const relatedCharacterNames = new Set<string>();
+      const relatedLocationNames = new Set<string>();
+      const relatedArcNames = new Set<string>();
+
+      slice.focusObjectRefs.forEach((objectId) => {
+        const character = characterById.get(objectId);
+        const location = locationById.get(objectId);
+        const arc = arcById.get(objectId);
+
+        if (character) {
+          relatedCharacterNames.add(getObjectDisplayName(character));
+        }
+
+        if (location) {
+          relatedLocationNames.add(getObjectDisplayName(location));
+        }
+
+        if (arc) {
+          relatedArcNames.add(getObjectDisplayName(arc));
+        }
+      });
+
+      events.forEach((event) => {
+        event.participantRefs.forEach((characterId) => {
+          const character = characterById.get(characterId);
+
+          if (character) {
+            relatedCharacterNames.add(getObjectDisplayName(character));
+          }
+        });
+
+        event.locationRefs.forEach((locationId) => {
+          const location = locationById.get(locationId);
+
+          if (location) {
+            relatedLocationNames.add(getObjectDisplayName(location));
+          }
+        });
+
+        event.arcRefs.forEach((arcId) => {
+          const arc = arcById.get(arcId);
+
+          if (arc) {
+            relatedArcNames.add(getObjectDisplayName(arc));
+          }
+        });
+      });
+
+      return {
+        id: slice.id,
+        label: slice.title,
+        objectType: "events" as const,
+        eventCards: events.map((event) => createEventCard(event)),
+        relatedCharacters: [...relatedCharacterNames],
+        relatedLocations: [...relatedLocationNames],
+        relatedArcs: [...relatedArcNames],
+        summary: slice.summary,
+        text: slice.text
+      };
+    });
 }
 
 export function buildObservationData(
@@ -150,12 +254,14 @@ export function buildObservationData(
 } {
   const slices = mode === "time"
     ? buildTimeObservationSlices(project)
-    : buildObjectObservationSlices(project, mode);
+    : mode === "chapter"
+      ? buildChapterObservationSlices(project)
+      : buildObjectObservationSlices(project, mode);
 
   return {
     chapterDimension: {
-      title: "Chapter Dimension",
-      description: "Reserved for future structured chapter slices."
+      title: "Chapter Management",
+      description: "Structured chapter slices derived from the current world model."
     },
     slices
   };

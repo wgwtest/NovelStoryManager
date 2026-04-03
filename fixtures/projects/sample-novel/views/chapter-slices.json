@@ -1,0 +1,19 @@
+[
+  {
+    "id": "chapter-001",
+    "title": "第一章 残火令现",
+    "summary": "苏玄在试炼谷获得残火令，第一次接触隐火灵脉主线。",
+    "text": "苏玄原以为这只是一次平平无奇的外门试炼，直到那枚残火令在血色暮光中发出低鸣。",
+    "sourceMode": "time",
+    "eventRefs": [
+      "event_trial-valley"
+    ],
+    "focusObjectRefs": [
+      "char_suxuan",
+      "char_linwan",
+      "loc_qingyun_peak",
+      "arc_fire-vein"
+    ],
+    "order": 1
+  }
+]

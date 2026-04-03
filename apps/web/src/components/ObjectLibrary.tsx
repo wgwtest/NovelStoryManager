@@ -7,6 +7,7 @@ type ObjectLibraryProps = {
   filterQuery: string;
   filteredCount: number;
   items: StoryObject[];
+  onCreateObject: () => void;
   onChangeFilterQuery: (value: string) => void;
   project: ProjectData;
   selectedObjectId: string;
@@ -22,6 +23,12 @@ export default function ObjectLibrary(props: ObjectLibraryProps) {
       <div className="panel-header">
         <h2>Object Library</h2>
         <span>{props.filteredCount} / {totalCount} items</span>
+      </div>
+
+      <div className="object-library-actions">
+        <button className="toolbar-button toolbar-button-primary" onClick={props.onCreateObject} type="button">
+          Create Object
+        </button>
       </div>
 
       <div className="object-type-list" aria-label="Object types">

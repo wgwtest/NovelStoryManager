@@ -23,6 +23,7 @@
     "views": {
       "graph-layouts": [],
       "track-presets": [],
+      "chapter-slices": [],
       "saved-filters": []
     }
   }

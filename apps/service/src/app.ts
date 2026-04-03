@@ -2,12 +2,14 @@ import Fastify from "fastify";
 import { z } from "zod";
 
 import {
+  chapterSliceSchema,
   graphLayoutSchema,
   objectTypeNameSchema,
   trackPresetSchema
 } from "@novelstory/schema";
 
 import {
+  createObject,
   createProject,
   exportObjectBatch,
   exportProjectBundle,
@@ -16,6 +18,7 @@ import {
   loadProject,
   ProjectStoreValidationError,
   updateGraphLayout,
+  updateChapterSlice,
   updateTrackPreset,
   updateObject
 } from "./lib/project-store.js";
@@ -29,6 +32,12 @@ const createProjectBodySchema = z.object({
   projectId: z.string().min(1),
   title: z.string().min(1),
   description: z.string().optional()
+});
+
+const createObjectBodySchema = z.object({
+  projectPath: z.string().min(1),
+  objectType: objectTypeNameSchema,
+  seed: z.record(z.string(), z.unknown()).optional()
 });
 
 const exportProjectBodySchema = z.object({
@@ -65,6 +74,11 @@ const updateGraphLayoutBodySchema = z.object({
 const updateTrackPresetBodySchema = z.object({
   projectPath: z.string().min(1),
   preset: trackPresetSchema
+});
+
+const updateChapterSliceBodySchema = z.object({
+  projectPath: z.string().min(1),
+  slice: chapterSliceSchema
 });
 
 function isErrnoException(error: unknown): error is NodeJS.ErrnoException {
@@ -136,6 +150,29 @@ export function buildApp(input: { sampleProjectPath: string }) {
     };
   });
 
+  app.post("/api/projects/object", async (request, reply) => {
+    const body = createObjectBodySchema.parse(request.body);
+
+    reply.code(201);
+
+    if (body.seed !== undefined) {
+      return {
+        object: await createObject({
+          projectPath: body.projectPath,
+          objectType: body.objectType,
+          seed: body.seed
+        })
+      };
+    }
+
+    return {
+      object: await createObject({
+        projectPath: body.projectPath,
+        objectType: body.objectType
+      })
+    };
+  });
+
   app.patch("/api/projects/graph-layout", async (request) => {
     const body = updateGraphLayoutBodySchema.parse(request.body);
 
@@ -149,6 +186,14 @@ export function buildApp(input: { sampleProjectPath: string }) {
 
     return {
       preset: await updateTrackPreset(body)
+    };
+  });
+
+  app.patch("/api/projects/chapter-slice", async (request) => {
+    const body = updateChapterSliceBodySchema.parse(request.body);
+
+    return {
+      slice: await updateChapterSlice(body)
     };
   });
 

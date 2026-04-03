@@ -46,6 +46,9 @@ async function readProjectFixture(): Promise<ProjectData> {
     "track-presets": await readJsonFixture(
       "projects/sample-novel/views/track-presets.json"
     ),
+    "chapter-slices": await readJsonFixture(
+      "projects/sample-novel/views/chapter-slices.json"
+    ),
     "saved-filters": await readJsonFixture(
       "projects/sample-novel/views/saved-filters.json"
     )
@@ -162,6 +165,20 @@ describe("project bundle schema", () => {
     );
 
     expect(bundle.project.manifest.projectId).toBe("sample-novel");
+  });
+
+  it("accepts the rich project bundle fixture with view state coverage", async () => {
+    const bundle = parseProjectBundle(
+      await readJsonFixture(
+        "import-export/project-bundles/sample-rich-project.json"
+      )
+    );
+
+    expect(bundle.project.views["graph-layouts"][0]?.canvasWidth).toBeGreaterThan(0);
+    expect(bundle.project.views["track-presets"][0]?.canvasWidth).toBeGreaterThan(0);
+    expect(bundle.project.views["chapter-slices"][0]?.eventRefs).toContain(
+      "event_trial-valley"
+    );
   });
 
   it("rejects a project bundle with a missing manifest", async () => {

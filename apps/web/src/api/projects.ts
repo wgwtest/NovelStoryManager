@@ -1,4 +1,9 @@
-import type { ObjectTypeName, ProjectData, StoryObject } from "@novelstory/schema";
+import type {
+  ChapterSlice,
+  ObjectTypeName,
+  ProjectData,
+  StoryObject
+} from "@novelstory/schema";
 
 export type LoadedProject = {
   projectPath: string;
@@ -25,6 +30,23 @@ export async function saveProjectObject(input: {
 }): Promise<StoryObject> {
   const response = await fetch("/api/projects/object", {
     method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(input)
+  });
+  const payload = await parseJsonResponse<{ object: StoryObject }>(response);
+
+  return payload.object;
+}
+
+export async function createProjectObject(input: {
+  projectPath: string;
+  objectType: ObjectTypeName;
+  seed?: Record<string, unknown>;
+}): Promise<StoryObject> {
+  const response = await fetch("/api/projects/object", {
+    method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
@@ -69,4 +91,22 @@ export async function saveTrackPreset(input: {
   }>(response);
 
   return payload.preset;
+}
+
+export async function saveChapterSlice(input: {
+  projectPath: string;
+  slice: ChapterSlice;
+}): Promise<ChapterSlice> {
+  const response = await fetch("/api/projects/chapter-slice", {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(input)
+  });
+  const payload = await parseJsonResponse<{
+    slice: ChapterSlice;
+  }>(response);
+
+  return payload.slice;
 }

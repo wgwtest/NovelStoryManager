@@ -86,6 +86,83 @@ describe("buildApp", () => {
     await app.close();
   });
 
+  it("creates a new object in the requested collection", async () => {
+    const app = buildApp({
+      sampleProjectPath: path.join(workingDir, "sample-novel")
+    });
+
+    const response = await app.inject({
+      method: "POST",
+      url: "/api/projects/object",
+      payload: {
+        projectPath: path.join(workingDir, "sample-novel"),
+        objectType: "characters",
+        seed: {
+          name: "顾明川",
+          summary: "新建角色"
+        }
+      }
+    });
+
+    expect(response.statusCode).toBe(201);
+    expect(response.json().object.name).toBe("顾明川");
+
+    const raw = await readFile(
+      path.join(workingDir, "sample-novel", "objects", "characters.json"),
+      "utf8"
+    );
+    const collection = JSON.parse(raw) as Array<{ id: string; name: string }>;
+
+    expect(collection.some((item) => item.name === "顾明川")).toBe(true);
+
+    await app.close();
+  });
+
+  it("creates a relation object for graph edge editing", async () => {
+    const app = buildApp({
+      sampleProjectPath: path.join(workingDir, "sample-novel")
+    });
+
+    const response = await app.inject({
+      method: "POST",
+      url: "/api/projects/object",
+      payload: {
+        projectPath: path.join(workingDir, "sample-novel"),
+        objectType: "relations",
+        seed: {
+          type: "alliance",
+          sourceRef: "char_suxuan",
+          targetRef: "char_linwan",
+          summary: "新建关系"
+        }
+      }
+    });
+
+    expect(response.statusCode).toBe(201);
+    expect(response.json().object.type).toBe("alliance");
+
+    const raw = await readFile(
+      path.join(workingDir, "sample-novel", "objects", "relations.json"),
+      "utf8"
+    );
+    const collection = JSON.parse(raw) as Array<{
+      sourceRef: string;
+      targetRef: string;
+      type: string;
+    }>;
+
+    expect(
+      collection.some(
+        (item) =>
+          item.sourceRef === "char_suxuan" &&
+          item.targetRef === "char_linwan" &&
+          item.type === "alliance"
+      )
+    ).toBe(true);
+
+    await app.close();
+  });
+
   it("creates a new empty project on disk", async () => {
     const app = buildApp({
       sampleProjectPath: path.join(workingDir, "sample-novel")
@@ -332,7 +409,7 @@ describe("buildApp", () => {
       laneOrder: string[];
     }>;
 
-    expect(presets.find((preset) => preset.id === "default-tracks")).toEqual({
+    expect(presets.find((preset) => preset.id === "default-tracks")).toMatchObject({
       id: "default-tracks",
       grouping: "arc",
       laneOrder: [
@@ -347,6 +424,52 @@ describe("buildApp", () => {
       "utf8"
     );
     expect(eventsAfter).toBe(eventsBefore);
+
+    await app.close();
+  });
+
+  it("persists an edited chapter slice back to the view files", async () => {
+    const app = buildApp({
+      sampleProjectPath: path.join(workingDir, "sample-novel")
+    });
+
+    const response = await app.inject({
+      method: "PATCH",
+      url: "/api/projects/chapter-slice",
+      payload: {
+        projectPath: path.join(workingDir, "sample-novel"),
+        slice: {
+          id: "chapter-001",
+          title: "第一章 残火令现",
+          summary: "修订版摘要",
+          text: "修订版章节正文",
+          sourceMode: "time",
+          eventRefs: [
+            "event_trial-valley"
+          ],
+          focusObjectRefs: [
+            "char_suxuan",
+            "char_linwan"
+          ],
+          order: 1
+        }
+      }
+    });
+
+    expect(response.statusCode).toBe(200);
+
+    const raw = await readFile(
+      path.join(workingDir, "sample-novel", "views", "chapter-slices.json"),
+      "utf8"
+    );
+    const slices = JSON.parse(raw) as Array<{ id: string; text: string; summary: string }>;
+
+    expect(
+      slices.find((slice) => slice.id === "chapter-001")
+    ).toMatchObject({
+      summary: "修订版摘要",
+      text: "修订版章节正文"
+    });
 
     await app.close();
   });

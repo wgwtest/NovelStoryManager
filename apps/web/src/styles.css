@@ -113,6 +113,14 @@ textarea {
   gap: 12px;
 }
 
+.object-library-actions,
+.graph-meta {
+  display: flex;
+  gap: 12px;
+  padding: 0 16px;
+  flex-wrap: wrap;
+}
+
 .object-type-list {
   display: flex;
   flex-wrap: wrap;
@@ -223,6 +231,11 @@ textarea {
   overflow: auto;
 }
 
+.graph-stage {
+  position: relative;
+  transform-origin: top left;
+}
+
 .graph-edges {
   position: absolute;
   inset: 0;
@@ -249,8 +262,8 @@ textarea {
 
 .graph-nodes {
   position: relative;
-  min-width: 820px;
-  min-height: 520px;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .graph-node {
@@ -285,6 +298,15 @@ textarea {
   background: #edf5f2;
 }
 
+.graph-node-connected {
+  border-color: #6a8e87;
+}
+
+.graph-node small {
+  color: #8a4a34;
+  font-size: 11px;
+}
+
 .tracks-toolbar {
   display: flex;
   align-items: center;
@@ -317,10 +339,44 @@ textarea {
 }
 
 .tracks-workspace {
+  overflow: auto;
+  padding: 0 16px 16px;
+}
+
+.tracks-stage {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 0 16px 16px;
+  transform-origin: top left;
+}
+
+.tracks-timeline {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 0 0 8px;
+}
+
+.timeline-anchor,
+.canvas-size-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.timeline-anchor {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #f1f8fb;
+  color: #214e47;
+}
+
+.canvas-size-field input {
+  border: 1px solid rgba(34, 31, 29, 0.12);
+  border-radius: 12px;
+  background: #fffefb;
+  padding: 8px 10px;
 }
 
 .observation-panel {
@@ -365,6 +421,32 @@ textarea {
 .chapter-dimension-placeholder p {
   margin: 0;
   color: #6b6357;
+}
+
+.chapter-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.chapter-editor label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chapter-editor input,
+.chapter-editor textarea {
+  border: 1px solid rgba(34, 31, 29, 0.12);
+  border-radius: 12px;
+  background: #fffefb;
+  padding: 10px 12px;
+}
+
+.chapter-editor textarea {
+  min-height: 140px;
+  resize: vertical;
 }
 
 .track-lane {
@@ -458,6 +540,27 @@ textarea {
   font-size: 13px;
   line-height: 1.5;
   margin: 0;
+}
+
+.observation-related-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.observation-related-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.observation-related-group strong {
+  color: #214e47;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .knowledge-table {

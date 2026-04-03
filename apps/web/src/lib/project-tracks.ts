@@ -1,9 +1,11 @@
 import type {
+  Event,
   ObjectTypeName,
   ProjectData
 } from "@novelstory/schema";
 
 import { getObjectDisplayName } from "./object-display.js";
+import { createCanvasViewport } from "./view-canvas.js";
 
 export const trackGroupingOptions = [
   {
@@ -33,6 +35,7 @@ export type TrackEventCard = {
   objectType: "events";
   summary: string;
   timeAnchor: string;
+  timeIndex: number;
 };
 
 export type TrackLane = {
@@ -84,7 +87,7 @@ function createDefaultTrackPreset(): TrackPresetDraft {
     name: "默认轨道预设",
     grouping: "character",
     laneOrder: [],
-    zoom: 1
+    ...createCanvasViewport()
   };
 }
 
@@ -180,10 +183,17 @@ export function buildTrackData(
   eventPlacements: number;
   lanes: TrackLane[];
   preset: TrackPresetDraft;
+  timelineAnchors: string[];
 } {
   const normalizedPreset = normalizeTrackPreset(project, preset);
+  const normalizedViewport = createCanvasViewport(normalizedPreset);
   const config = getTrackGroupingConfig(normalizedPreset.grouping);
   const laneObjects = getLaneObjects(project, normalizedPreset.grouping);
+  const timelineAnchors = Array.from(
+    new Set(
+      project.objects.events.map((event) => event.timeAnchor || "未标注时间")
+    )
+  );
   const laneMap = new Map<string, TrackLane>(
     laneObjects.map((lane) => [
       lane.id,
@@ -223,7 +233,11 @@ export function buildTrackData(
         label: event.name,
         objectType: "events",
         summary: event.summary,
-        timeAnchor: event.timeAnchor
+        timeAnchor: event.timeAnchor,
+        timeIndex: Math.max(
+          timelineAnchors.indexOf(event.timeAnchor || "未标注时间"),
+          0
+        )
       });
     });
   });
@@ -243,6 +257,46 @@ export function buildTrackData(
   return {
     eventPlacements,
     lanes,
-    preset: normalizedPreset
+    preset: {
+      ...normalizedPreset,
+      ...normalizedViewport
+    },
+    timelineAnchors
   };
+}
+
+export function buildEventPatchForLaneDrop(input: {
+  event: Event;
+  grouping: TrackGrouping;
+  sourceLaneId?: string;
+  targetLaneId: string;
+}): Partial<Event> {
+  function replaceLaneRef(refs: string[]): string[] {
+    const nextRefs = refs.filter((ref) => ref !== input.sourceLaneId);
+
+    if (!nextRefs.includes(input.targetLaneId)) {
+      nextRefs.unshift(input.targetLaneId);
+    }
+
+    return nextRefs;
+  }
+
+  switch (input.grouping) {
+    case "character":
+      return {
+        participantRefs: replaceLaneRef(input.event.participantRefs)
+      };
+    case "location":
+      return {
+        locationRefs: replaceLaneRef(input.event.locationRefs)
+      };
+    case "faction":
+      return {
+        factionRefs: replaceLaneRef(input.event.factionRefs)
+      };
+    case "arc":
+      return {
+        arcRefs: replaceLaneRef(input.event.arcRefs)
+      };
+  }
 }

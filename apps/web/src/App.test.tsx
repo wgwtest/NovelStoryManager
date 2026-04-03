@@ -243,7 +243,28 @@ const sampleProjectResponse = {
             "char_suxuan",
             "char_linwan"
           ],
-          zoom: 1
+          zoom: 1,
+          canvasWidth: 1400,
+          canvasHeight: 820,
+          offsetX: 0,
+          offsetY: 0
+        }
+      ],
+      "chapter-slices": [
+        {
+          id: "chapter-001",
+          title: "第一章 残火令现",
+          summary: "苏玄获得残火令",
+          text: "这是章节正文",
+          sourceMode: "time",
+          eventRefs: [
+            "event_trial-valley"
+          ],
+          focusObjectRefs: [
+            "char_suxuan",
+            "char_linwan"
+          ],
+          order: 1
         }
       ],
       "saved-filters": []
@@ -267,16 +288,80 @@ describe("App", () => {
 
         if (url.endsWith("/api/projects/object") && init?.method === "PATCH") {
           const payload = JSON.parse(String(init.body));
+          const baseCollection = sampleProjectResponse.project.objects[
+            payload.objectType as keyof typeof sampleProjectResponse.project.objects
+          ] as Array<Record<string, unknown>>;
+          const baseObject =
+            baseCollection.find((item) => item.id === payload.objectId) ??
+            sampleProjectResponse.project.objects.characters[0];
 
           return new Response(
             JSON.stringify({
               object: {
-                ...sampleProjectResponse.project.objects.characters[0],
+                ...baseObject,
                 ...payload.changes
               }
             }),
             {
               status: 200
+            }
+          );
+        }
+
+        if (url.endsWith("/api/projects/object") && init?.method === "POST") {
+          const payload = JSON.parse(String(init.body));
+          const object =
+            payload.objectType === "events"
+              ? {
+                  id: "event_new_002",
+                  name: payload.seed?.name ?? "新事件",
+                  aliases: [],
+                  tags: [],
+                  summary: payload.seed?.summary ?? "",
+                  type: payload.seed?.type ?? "event",
+                  participantRefs: payload.seed?.participantRefs ?? [],
+                  locationRefs: payload.seed?.locationRefs ?? [],
+                  factionRefs: payload.seed?.factionRefs ?? [],
+                  itemRefs: payload.seed?.itemRefs ?? [],
+                  timeAnchor: payload.seed?.timeAnchor ?? "",
+                  preconditions: payload.seed?.preconditions ?? [],
+                  results: payload.seed?.results ?? [],
+                  arcRefs: payload.seed?.arcRefs ?? [],
+                  clueRefs: payload.seed?.clueRefs ?? []
+                }
+              : payload.objectType === "relations"
+                ? {
+                    id: "rel_new_002",
+                    type: payload.seed?.type ?? "association",
+                    sourceRef: payload.seed?.sourceRef,
+                    targetRef: payload.seed?.targetRef,
+                    direction: "forward",
+                    strength: 0.5,
+                    startAnchor: "",
+                    endAnchor: "",
+                    summary: payload.seed?.summary ?? "",
+                    tags: []
+                  }
+                : {
+                    id: payload.objectType === "characters" ? "char_new_003" : "obj_new_001",
+                    aliases: [],
+                    tags: [],
+                    summary: payload.seed?.summary ?? "",
+                    status: "active",
+                    identity: "",
+                    factionRefs: [],
+                    realmState: "",
+                    notes: "",
+                    name: payload.seed?.name ?? "新对象",
+                    ...payload.seed
+                  };
+
+          return new Response(
+            JSON.stringify({
+              object
+            }),
+            {
+              status: 201
             }
           );
         }
@@ -300,6 +385,19 @@ describe("App", () => {
           return new Response(
             JSON.stringify({
               preset: payload.preset
+            }),
+            {
+              status: 200
+            }
+          );
+        }
+
+        if (url.endsWith("/api/projects/chapter-slice") && init?.method === "PATCH") {
+          const payload = JSON.parse(String(init.body));
+
+          return new Response(
+            JSON.stringify({
+              slice: payload.slice
             }),
             {
               status: 200
@@ -599,9 +697,9 @@ describe("App", () => {
       ).toBeInTheDocument()
     );
 
-    expect(screen.getByRole("heading", { name: "Chapter Dimension" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Chapter Management" })).toBeInTheDocument();
     expect(
-      screen.getByText("Reserved for future structured chapter slices.")
+      screen.getByText("Structured chapter slices derived from the current world model.")
     ).toBeInTheDocument();
   });
 
@@ -620,5 +718,164 @@ describe("App", () => {
       expect(screen.getByDisplayValue("青云宗")).toBeInTheDocument()
     );
     expect(screen.getByLabelText("Summary")).toHaveValue("北境中等宗门");
+  });
+
+  it("creates a new object from the left object library", async () => {
+    const user = userEvent.setup();
+
+    render(<App />);
+
+    await screen.findByRole("button", { name: "苏玄" });
+    await user.click(screen.getByRole("button", { name: "Create Object" }));
+
+    await waitFor(() =>
+      expect(
+        vi
+          .mocked(fetch)
+          .mock.calls.some(
+            ([input, init]) =>
+              String(input).endsWith("/api/projects/object") &&
+              init?.method === "POST"
+          )
+      ).toBe(true)
+    );
+  });
+
+  it("renders chapter observations and saves chapter text", async () => {
+    const user = userEvent.setup();
+
+    render(<App />);
+
+    await screen.findByRole("button", { name: "苏玄" });
+    await user.click(screen.getByRole("tab", { name: "Tracks" }));
+    await user.selectOptions(screen.getByLabelText("Observation Mode"), "chapter");
+
+    await waitFor(() =>
+      expect(
+        screen.getByRole("heading", { name: "第一章 残火令现" })
+      ).toBeInTheDocument()
+    );
+
+    const chapterSlice = screen.getByRole("region", {
+      name: "Observation Slice 第一章 残火令现"
+    });
+
+    expect(within(chapterSlice).getByText("苏玄")).toBeInTheDocument();
+    expect(within(chapterSlice).getByText("林晚")).toBeInTheDocument();
+    expect(within(chapterSlice).getByText("青云峰")).toBeInTheDocument();
+    expect(within(chapterSlice).getByText("隐火灵脉主线")).toBeInTheDocument();
+
+    fireEvent.change(screen.getByLabelText("Chapter Text"), {
+      target: {
+        value: "修订后的章节正文"
+      }
+    });
+    await user.click(screen.getByRole("button", { name: "Save Chapter" }));
+
+    await waitFor(() =>
+      expect(
+        vi
+          .mocked(fetch)
+          .mock.calls.some(
+            ([input, init]) =>
+              String(input).endsWith("/api/projects/chapter-slice") &&
+              init?.method === "PATCH"
+          )
+      ).toBe(true)
+    );
+  });
+
+  it("creates event objects from the tracks toolbar", async () => {
+    const user = userEvent.setup();
+
+    render(<App />);
+
+    await screen.findByRole("button", { name: "苏玄" });
+    await user.click(screen.getByRole("tab", { name: "Tracks" }));
+    await user.click(screen.getByRole("button", { name: "Create Event" }));
+
+    await waitFor(() => {
+      const request = vi
+        .mocked(fetch)
+        .mock.calls.find(
+          ([input, init]) =>
+            String(input).endsWith("/api/projects/object") &&
+            init?.method === "POST"
+        );
+
+      expect(request).toBeDefined();
+
+      const payload = JSON.parse(String(request?.[1]?.body)) as {
+        objectType: string;
+      };
+
+      expect(payload.objectType).toBe("events");
+    });
+  });
+
+  it("moves an event card to another lane and persists the updated refs", async () => {
+    const user = userEvent.setup();
+
+    render(<App />);
+
+    await screen.findByRole("button", { name: "苏玄" });
+    await user.click(screen.getByRole("tab", { name: "Tracks" }));
+
+    const tracksWorkspace = await screen.findByRole("region", {
+      name: "Tracks Workspace"
+    });
+    const sourceLane = within(tracksWorkspace).getByRole("region", {
+      name: "Track Lane 苏玄"
+    });
+    const targetLane = within(tracksWorkspace).getByRole("region", {
+      name: "Track Lane 林晚"
+    });
+    const dataTransfer = {
+      store: new Map<string, string>(),
+      clearData() {
+        this.store.clear();
+      },
+      getData(type: string) {
+        return this.store.get(type) ?? "";
+      },
+      setData(type: string, value: string) {
+        this.store.set(type, value);
+      }
+    };
+
+    fireEvent.dragStart(
+      within(sourceLane).getByRole("button", {
+        name: /试炼谷夺令/
+      }),
+      { dataTransfer }
+    );
+    fireEvent.drop(targetLane, { dataTransfer });
+
+    await waitFor(() => {
+      const request = vi
+        .mocked(fetch)
+        .mock.calls.find(
+          ([input, init]) =>
+            String(input).endsWith("/api/projects/object") &&
+            init?.method === "PATCH" &&
+            JSON.parse(String(init.body)).objectType === "events"
+        );
+
+      expect(request).toBeDefined();
+
+      const payload = JSON.parse(String(request?.[1]?.body)) as {
+        changes: {
+          participantRefs: string[];
+        };
+        objectId: string;
+        objectType: string;
+      };
+
+      expect(payload.objectType).toBe("events");
+      expect(payload.objectId).toBe("event_trial-valley");
+      expect(payload.changes.participantRefs).toEqual([
+        "char_linwan"
+      ]);
+    });
   });
 });

@@ -6,6 +6,7 @@ import {
 } from "@novelstory/schema";
 
 import { getObjectDisplayName } from "./object-display.js";
+import { createCanvasViewport } from "./view-canvas.js";
 
 export type GraphNode = {
   id: string;
@@ -146,8 +147,9 @@ export function ensureGraphLayout(
     id: "default-graph",
     name: "默认关系图",
     positions: {},
-    zoom: 1
+    ...createCanvasViewport()
   };
+  const normalizedViewport = createCanvasViewport(baseLayout);
 
   const positions = {
     ...baseLayout.positions
@@ -166,8 +168,34 @@ export function ensureGraphLayout(
 
   return {
     ...baseLayout,
+    ...normalizedViewport,
     positions
   };
+}
+
+export function buildGraphConnectionState(input: {
+  edges: GraphEdge[];
+  selectedObjectId: string;
+}): Set<string> {
+  if (!input.selectedObjectId) {
+    return new Set<string>();
+  }
+
+  const connectedIds = new Set<string>([
+    input.selectedObjectId
+  ]);
+
+  input.edges.forEach((edge) => {
+    if (
+      edge.sourceId === input.selectedObjectId ||
+      edge.targetId === input.selectedObjectId
+    ) {
+      connectedIds.add(edge.sourceId);
+      connectedIds.add(edge.targetId);
+    }
+  });
+
+  return connectedIds;
 }
 
 export function filterGraphBySelection(input: {

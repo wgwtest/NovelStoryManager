@@ -15,6 +15,7 @@ export const objectTypeNames = [
 export const viewFileNames = [
   "graph-layouts",
   "track-presets",
+  "chapter-slices",
   "saved-filters"
 ] as const;
 
@@ -65,6 +66,7 @@ function createEmptyViewCollectionsInput() {
   return {
     "graph-layouts": [],
     "track-presets": [],
+    "chapter-slices": [],
     "saved-filters": []
   };
 }
@@ -266,7 +268,11 @@ export const graphLayoutSchema = z.object({
       y: z.number()
     })
   ),
-  zoom: z.number().positive().default(1)
+  zoom: z.number().positive().default(1),
+  canvasWidth: z.number().int().min(640).default(1200),
+  canvasHeight: z.number().int().min(480).default(800),
+  offsetX: z.number().default(0),
+  offsetY: z.number().default(0)
 });
 
 export const trackPresetSchema = z.object({
@@ -274,7 +280,28 @@ export const trackPresetSchema = z.object({
   name: nonEmptyString,
   grouping: z.string().default("character"),
   laneOrder: stringListSchema,
-  zoom: z.number().positive().default(1)
+  zoom: z.number().positive().default(1),
+  canvasWidth: z.number().int().min(640).default(1400),
+  canvasHeight: z.number().int().min(480).default(820),
+  offsetX: z.number().default(0),
+  offsetY: z.number().default(0)
+});
+
+export const chapterSliceSchema = z.object({
+  id: nonEmptyString,
+  title: nonEmptyString,
+  summary: z.string().default(""),
+  text: z.string().default(""),
+  sourceMode: z.enum([
+    "time",
+    "character",
+    "location",
+    "arc",
+    "custom"
+  ]).default("time"),
+  eventRefs: refListSchema,
+  focusObjectRefs: refListSchema,
+  order: z.number().int().nonnegative().default(0)
 });
 
 export const savedFilterSchema = z.object({
@@ -318,6 +345,7 @@ export const objectCollectionsSchema = z.object({
 export const viewCollectionsSchema = z.object({
   "graph-layouts": z.array(graphLayoutSchema),
   "track-presets": z.array(trackPresetSchema),
+  "chapter-slices": z.array(chapterSliceSchema),
   "saved-filters": z.array(savedFilterSchema)
 });
 
@@ -672,6 +700,40 @@ function validateProjectData(
       });
     });
   });
+
+  project.views["chapter-slices"].forEach((slice, index) => {
+    slice.eventRefs.forEach((ref, refIndex) => {
+      addMissingRefIssue({
+        ref,
+        messagePrefix: "Broken reference in chapter-slices.eventRefs:",
+        path: [
+          "views",
+          "chapter-slices",
+          index,
+          "eventRefs",
+          refIndex
+        ],
+        allowedIds: idsByType.events,
+        ctx
+      });
+    });
+
+    slice.focusObjectRefs.forEach((ref, refIndex) => {
+      addMissingRefIssue({
+        ref,
+        messagePrefix: "Broken reference in chapter-slices.focusObjectRefs:",
+        path: [
+          "views",
+          "chapter-slices",
+          index,
+          "focusObjectRefs",
+          refIndex
+        ],
+        allowedIds: allObjectIds,
+        ctx
+      });
+    });
+  });
 }
 
 const projectDataSchemaBase = z.object({
@@ -838,6 +900,7 @@ export type PartialObjectCollections = z.infer<typeof objectBatchCollectionsSche
 export type ProjectData = z.infer<typeof projectDataSchema>;
 export type ProjectBundle = z.infer<typeof projectBundleSchema>;
 export type ObjectBatch = z.infer<typeof objectBatchSchema>;
+export type ChapterSlice = z.infer<typeof chapterSliceSchema>;
 
 export type StoryObject =
   | Character

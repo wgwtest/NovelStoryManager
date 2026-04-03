@@ -8,6 +8,7 @@ import {
   type ObservationMode
 } from "../lib/project-observation.js";
 import {
+  buildEventPatchForLaneDrop,
   buildTrackData,
   ensureTrackPreset,
   trackGroupingOptions,
@@ -15,9 +16,21 @@ import {
   type TrackGrouping,
   type TrackPresetDraft
 } from "../lib/project-tracks.js";
+import {
+  panCanvasViewport,
+  resizeCanvasViewport,
+  zoomCanvasViewport
+} from "../lib/view-canvas.js";
 
 type TracksViewProps = {
+  isSavingChapterSlice: boolean;
   isSavingPreset: boolean;
+  onCreateEvent: () => void;
+  onMoveEvent: (
+    eventId: string,
+    changes: Partial<ProjectData["objects"]["events"][number]>
+  ) => void;
+  onSaveChapterSlice: (slice: ProjectData["views"]["chapter-slices"][number]) => void;
   onSavePreset: (preset: TrackPresetDraft) => void;
   onSelectObject: (objectType: ObjectTypeName, objectId: string) => void;
   project: ProjectData;
@@ -29,10 +42,25 @@ export default function TracksView(props: TracksViewProps) {
     ensureTrackPreset(props.project)
   );
   const [observationMode, setObservationMode] = useState<ObservationMode>("time");
+  const [selectedChapterId, setSelectedChapterId] = useState(
+    props.project.views["chapter-slices"][0]?.id ?? ""
+  );
+  const [chapterDraft, setChapterDraft] = useState(
+    props.project.views["chapter-slices"][0] ?? null
+  );
 
   useEffect(() => {
     setPresetDraft((current) => ensureTrackPreset(props.project, current.id));
   }, [props.project]);
+
+  useEffect(() => {
+    const nextChapter = props.project.views["chapter-slices"].find(
+      (slice) => slice.id === selectedChapterId
+    ) ?? props.project.views["chapter-slices"][0] ?? null;
+
+    setSelectedChapterId(nextChapter?.id ?? "");
+    setChapterDraft(nextChapter);
+  }, [props.project, selectedChapterId]);
 
   const trackData = buildTrackData(props.project, presetDraft);
   const observationData = buildObservationData(props.project, observationMode);
@@ -75,6 +103,10 @@ export default function TracksView(props: TracksViewProps) {
       </div>
 
       <div className="tracks-toolbar">
+        <button className="toolbar-button" onClick={props.onCreateEvent} type="button">
+          Create Event
+        </button>
+
         <label className="tracks-grouping-field">
           Track Grouping
           <select
@@ -120,6 +152,58 @@ export default function TracksView(props: TracksViewProps) {
         <button
           className="toolbar-button"
           onClick={() =>
+            setPresetDraft((current) => zoomCanvasViewport(current, current.zoom - 0.1))
+          }
+          type="button"
+        >
+          Zoom Out
+        </button>
+
+        <button
+          className="toolbar-button"
+          onClick={() =>
+            setPresetDraft((current) => zoomCanvasViewport(current, current.zoom + 0.1))
+          }
+          type="button"
+        >
+          Zoom In
+        </button>
+
+        <label className="canvas-size-field">
+          Canvas Width
+          <input
+            onChange={(event) =>
+              setPresetDraft((current) =>
+                resizeCanvasViewport(current, {
+                  canvasWidth: Number(event.target.value),
+                  canvasHeight: current.canvasHeight
+                })
+              )
+            }
+            type="number"
+            value={trackData.preset.canvasWidth}
+          />
+        </label>
+
+        <label className="canvas-size-field">
+          Canvas Height
+          <input
+            onChange={(event) =>
+              setPresetDraft((current) =>
+                resizeCanvasViewport(current, {
+                  canvasWidth: current.canvasWidth,
+                  canvasHeight: Number(event.target.value)
+                })
+              )
+            }
+            type="number"
+            value={trackData.preset.canvasHeight}
+          />
+        </label>
+
+        <button
+          className="toolbar-button"
+          onClick={() =>
             setPresetDraft(ensureTrackPreset(props.project, trackData.preset.id))
           }
           type="button"
@@ -137,8 +221,41 @@ export default function TracksView(props: TracksViewProps) {
         </button>
       </div>
 
-      <div className="tracks-workspace" role="region" aria-label="Tracks Workspace">
-        {trackData.lanes.map((lane, index) => {
+      <div
+        className="tracks-workspace"
+        onWheel={(event) => {
+          if (!event.shiftKey) {
+            return;
+          }
+
+          event.preventDefault();
+          setPresetDraft((current) =>
+            panCanvasViewport(current, {
+              deltaX: -event.deltaX,
+              deltaY: -event.deltaY
+            })
+          );
+        }}
+        role="region"
+        aria-label="Tracks Workspace"
+      >
+        <div
+          className="tracks-stage"
+          style={{
+            height: `${trackData.preset.canvasHeight}px`,
+            transform: `translate(${trackData.preset.offsetX}px, ${trackData.preset.offsetY}px) scale(${trackData.preset.zoom})`,
+            width: `${trackData.preset.canvasWidth}px`
+          }}
+        >
+          <div className="tracks-timeline">
+            {trackData.timelineAnchors.map((anchor) => (
+              <span className="timeline-anchor" key={anchor}>
+                {anchor}
+              </span>
+            ))}
+          </div>
+
+          {trackData.lanes.map((lane, index) => {
           const isPersistableLane =
             lane.persistable && trackData.preset.laneOrder.includes(lane.id);
 
@@ -146,7 +263,39 @@ export default function TracksView(props: TracksViewProps) {
             <section
               aria-label={`Track Lane ${lane.label}`}
               className="track-lane"
+              data-lane-id={lane.id}
               key={lane.id}
+              onDragOver={(event) => {
+                event.preventDefault();
+              }}
+              onDrop={(event) => {
+                event.preventDefault();
+                const eventId = event.dataTransfer.getData("text/plain");
+                const sourceLaneId =
+                  event.dataTransfer.getData("application/x-novelstory-lane") ||
+                  undefined;
+                const droppedEvent = props.project.objects.events.find(
+                  (item) => item.id === eventId
+                );
+
+                if (!droppedEvent) {
+                  return;
+                }
+
+                if (lane.persistable && lane.id !== sourceLaneId) {
+                  props.onMoveEvent(
+                    droppedEvent.id,
+                    buildEventPatchForLaneDrop({
+                      event: droppedEvent,
+                      grouping: trackData.preset.grouping as TrackGrouping,
+                      ...(sourceLaneId ? { sourceLaneId } : {}),
+                      targetLaneId: lane.id
+                    })
+                  );
+                }
+
+                props.onSelectObject("events", droppedEvent.id);
+              }}
               role="region"
             >
               <div className="track-lane-header">
@@ -198,7 +347,15 @@ export default function TracksView(props: TracksViewProps) {
                           ? "track-event-card track-event-card-active"
                           : "track-event-card"
                       }
+                      draggable
                       key={`${lane.id}:${eventCard.id}`}
+                      onDragStart={(event) => {
+                        event.dataTransfer.setData("text/plain", eventCard.id);
+                        event.dataTransfer.setData(
+                          "application/x-novelstory-lane",
+                          lane.id
+                        );
+                      }}
                       onClick={() =>
                         props.onSelectObject(eventCard.objectType, eventCard.id)
                       }
@@ -206,6 +363,9 @@ export default function TracksView(props: TracksViewProps) {
                     >
                       <strong>{eventCard.label}</strong>
                       <span className="track-event-meta">{eventCard.timeAnchor || "未标注时间"}</span>
+                      <span className="track-event-meta">
+                        T{eventCard.timeIndex + 1}
+                      </span>
                       <span className="track-event-summary">{eventCard.summary}</span>
                     </button>
                   ))}
@@ -215,7 +375,8 @@ export default function TracksView(props: TracksViewProps) {
               )}
             </section>
           );
-        })}
+          })}
+        </div>
       </div>
 
       <section className="observation-panel">
@@ -274,6 +435,49 @@ export default function TracksView(props: TracksViewProps) {
                     </button>
                   ))}
                 </div>
+
+                {slice.relatedCharacters.length > 0 ? (
+                  <div className="observation-related-group">
+                    <strong>Characters</strong>
+                    <div className="observation-related-list">
+                      {slice.relatedCharacters.map((name) => (
+                        <span className="reference-chip" key={`${slice.id}:character:${name}`}>
+                          {name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+
+                {slice.relatedLocations.length > 0 ? (
+                  <div className="observation-related-group">
+                    <strong>Locations</strong>
+                    <div className="observation-related-list">
+                      {slice.relatedLocations.map((name) => (
+                        <span className="reference-chip" key={`${slice.id}:location:${name}`}>
+                          {name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+
+                {slice.relatedArcs.length > 0 ? (
+                  <div className="observation-related-group">
+                    <strong>Arcs</strong>
+                    <div className="observation-related-list">
+                      {slice.relatedArcs.map((name) => (
+                        <span className="reference-chip" key={`${slice.id}:arc:${name}`}>
+                          {name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+
+                {slice.summary ? (
+                  <p className="track-event-summary">{slice.summary}</p>
+                ) : null}
               </section>
             ))
           ) : (
@@ -284,6 +488,55 @@ export default function TracksView(props: TracksViewProps) {
         <section className="chapter-dimension-placeholder">
           <h3>{observationData.chapterDimension.title}</h3>
           <p>{observationData.chapterDimension.description}</p>
+
+          {observationMode === "chapter" && chapterDraft ? (
+            <div className="chapter-editor">
+              <label>
+                Chapter Summary
+                <input
+                  onChange={(event) =>
+                    setChapterDraft((current) =>
+                      current
+                        ? {
+                            ...current,
+                            summary: event.target.value
+                          }
+                        : current
+                    )
+                  }
+                  type="text"
+                  value={chapterDraft.summary}
+                />
+              </label>
+
+              <label>
+                Chapter Text
+                <textarea
+                  aria-label="Chapter Text"
+                  onChange={(event) =>
+                    setChapterDraft((current) =>
+                      current
+                        ? {
+                            ...current,
+                            text: event.target.value
+                          }
+                        : current
+                    )
+                  }
+                  value={chapterDraft.text}
+                />
+              </label>
+
+              <button
+                className="toolbar-button toolbar-button-primary"
+                disabled={props.isSavingChapterSlice}
+                onClick={() => props.onSaveChapterSlice(chapterDraft)}
+                type="button"
+              >
+                Save Chapter
+              </button>
+            </div>
+          ) : null}
         </section>
       </section>
     </section>

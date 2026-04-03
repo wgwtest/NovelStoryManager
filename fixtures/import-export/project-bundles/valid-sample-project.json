@@ -246,7 +246,11 @@
               "y": 260
             }
           },
-          "zoom": 1
+          "zoom": 1,
+          "canvasWidth": 1200,
+          "canvasHeight": 800,
+          "offsetX": 0,
+          "offsetY": 0
         }
       ],
       "track-presets": [
@@ -259,9 +263,14 @@
             "char_linwan",
             "arc_fire-vein"
           ],
-          "zoom": 1
+          "zoom": 1,
+          "canvasWidth": 1400,
+          "canvasHeight": 820,
+          "offsetX": 0,
+          "offsetY": 0
         }
       ],
+      "chapter-slices": [],
       "saved-filters": [
         {
           "id": "filter-main-cast",

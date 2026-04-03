@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import {
+  chapterSliceSchema,
   createObjectBatch,
   createProjectBundle,
   collectionSchemaByType,
@@ -45,6 +46,170 @@ function viewFilePath(
 }
 
 export class ProjectStoreValidationError extends Error {}
+
+const objectIdPrefixByType: Record<ObjectTypeName, string> = {
+  characters: "char",
+  factions: "faction",
+  locations: "loc",
+  items: "item",
+  "realm-systems": "realm",
+  events: "event",
+  relations: "rel",
+  clues: "clue",
+  arcs: "arc"
+};
+
+function buildNextObjectId(
+  collection: Array<{ id: string }>,
+  objectType: ObjectTypeName
+): string {
+  const prefix = objectIdPrefixByType[objectType];
+  let counter = collection.length + 1;
+
+  while (true) {
+    const candidate = `${prefix}_new_${String(counter).padStart(3, "0")}`;
+
+    if (!collection.some((item) => item.id === candidate)) {
+      return candidate;
+    }
+
+    counter += 1;
+  }
+}
+
+function getAnyExistingObjectId(project: ProjectData): string | undefined {
+  for (const objectType of objectTypeNames) {
+    const first = project.objects[objectType][0];
+
+    if (first) {
+      return first.id;
+    }
+  }
+
+  return undefined;
+}
+
+function createDefaultObjectSeed(
+  project: ProjectData,
+  objectType: ObjectTypeName,
+  id: string,
+  index: number
+): Record<string, unknown> {
+  const fallbackRef = getAnyExistingObjectId(project);
+
+  switch (objectType) {
+    case "characters":
+      return {
+        id,
+        name: `新角色${index}`,
+        aliases: [],
+        tags: [],
+        summary: "",
+        status: "active",
+        identity: "",
+        factionRefs: [],
+        realmState: "",
+        notes: ""
+      };
+    case "factions":
+      return {
+        id,
+        name: `新势力${index}`,
+        aliases: [],
+        tags: [],
+        summary: "",
+        type: "faction",
+        goal: "",
+        status: "active",
+        locationRefs: []
+      };
+    case "locations":
+      return {
+        id,
+        name: `新地点${index}`,
+        aliases: [],
+        tags: [],
+        summary: "",
+        type: "location",
+        traits: [],
+        status: "active"
+      };
+    case "items":
+      return {
+        id,
+        name: `新物品${index}`,
+        aliases: [],
+        tags: [],
+        summary: "",
+        type: "item",
+        origin: "",
+        status: "active",
+        traits: []
+      };
+    case "realm-systems":
+      return {
+        id,
+        name: `新体系${index}`,
+        type: "realm-system",
+        summary: "",
+        levels: [],
+        rules: [],
+        tags: []
+      };
+    case "events":
+      return {
+        id,
+        name: `新事件${index}`,
+        aliases: [],
+        tags: [],
+        summary: "",
+        type: "event",
+        participantRefs: [],
+        locationRefs: [],
+        factionRefs: [],
+        itemRefs: [],
+        timeAnchor: "",
+        preconditions: [],
+        results: [],
+        arcRefs: [],
+        clueRefs: []
+      };
+    case "relations":
+      return {
+        id,
+        type: "association",
+        sourceRef: fallbackRef ?? "char_suxuan",
+        targetRef: fallbackRef ?? "char_suxuan",
+        direction: "forward",
+        strength: 0.5,
+        startAnchor: "",
+        endAnchor: "",
+        summary: "",
+        tags: []
+      };
+    case "clues":
+      return {
+        id,
+        name: `新线索${index}`,
+        summary: "",
+        status: "hidden",
+        objectRefs: [],
+        eventRefs: [],
+        revealCondition: "",
+        tags: []
+      };
+    case "arcs":
+      return {
+        id,
+        name: `新剧情线${index}`,
+        summary: "",
+        status: "active",
+        eventRefs: [],
+        objectRefs: [],
+        tags: []
+      };
+  }
+}
 
 function setProjectCollection<TObjectType extends ObjectTypeName>(
   collections: ProjectData["objects"],
@@ -279,6 +444,34 @@ export async function updateObject(input: {
   return updatedObject;
 }
 
+export async function createObject(input: {
+  projectPath: string;
+  objectType: ObjectTypeName;
+  seed?: Record<string, unknown>;
+}): Promise<StoryObject> {
+  const project = await loadProject(input.projectPath);
+  const collection = project.objects[input.objectType];
+  const nextId = buildNextObjectId(collection, input.objectType);
+  const schema = collectionSchemaByType[input.objectType];
+  const nextObject = schema.parse({
+    ...createDefaultObjectSeed(
+      project,
+      input.objectType,
+      nextId,
+      collection.length + 1
+    ),
+    ...(input.seed ?? {}),
+    id: String((input.seed as { id?: string } | undefined)?.id ?? nextId)
+  }) as StoryObject;
+
+  await writeJsonFile(objectFilePath(input.projectPath, input.objectType), [
+    ...collection,
+    nextObject
+  ]);
+
+  return nextObject;
+}
+
 export async function updateGraphLayout(input: {
   projectPath: string;
   layout: ProjectData["views"]["graph-layouts"][number];
@@ -343,4 +536,37 @@ export async function updateTrackPreset(input: {
   );
 
   return nextPreset;
+}
+
+export async function updateChapterSlice(input: {
+  projectPath: string;
+  slice: ProjectData["views"]["chapter-slices"][number];
+}): Promise<ProjectData["views"]["chapter-slices"][number]> {
+  const project = await loadProject(input.projectPath);
+  const nextSlice = chapterSliceSchema.parse(input.slice);
+  const existingSlices = project.views["chapter-slices"];
+  const index = existingSlices.findIndex((slice) => slice.id === nextSlice.id);
+  const nextSlices = index === -1
+    ? [
+        ...existingSlices,
+        nextSlice
+      ]
+    : existingSlices.map((slice, sliceIndex) =>
+        sliceIndex === index ? nextSlice : slice
+      );
+
+  const nextProject = parseProjectData({
+    ...project,
+    views: {
+      ...project.views,
+      "chapter-slices": nextSlices
+    }
+  });
+
+  await writeJsonFile(
+    viewFilePath(input.projectPath, "chapter-slices"),
+    nextProject.views["chapter-slices"]
+  );
+
+  return nextSlice;
 }

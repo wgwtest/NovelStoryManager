@@ -4,7 +4,9 @@ import { Group, Panel, Separator } from "react-resizable-panels";
 import type { ObjectTypeName, ProjectData, StoryObject } from "@novelstory/schema";
 
 import {
+  createProjectObject,
   fetchSampleProject,
+  saveChapterSlice,
   saveGraphLayout,
   saveProjectObject,
   saveTrackPreset,
@@ -86,6 +88,31 @@ function parseDraftFieldValue(currentValue: unknown, value: string): unknown {
   return value;
 }
 
+function mergeObjectIntoProject(
+  loadedProject: LoadedProject,
+  objectType: ObjectTypeName,
+  object: StoryObject
+): LoadedProject {
+  const currentCollection = loadedProject.project.objects[objectType] as StoryObject[];
+  const nextCollection = currentCollection.some((item) => item.id === object.id)
+    ? currentCollection.map((item) => (item.id === object.id ? object : item))
+    : [
+        ...currentCollection,
+        object
+      ];
+
+  return {
+    ...loadedProject,
+    project: {
+      ...loadedProject.project,
+      objects: {
+        ...loadedProject.project.objects,
+        [objectType]: nextCollection
+      }
+    }
+  } as LoadedProject;
+}
+
 export default function App() {
   const [loadedProject, setLoadedProject] = useState<LoadedProject | null>(null);
   const [activeTab, setActiveTab] = useState<AppTab>("Knowledge");
@@ -98,6 +125,7 @@ export default function App() {
   const [isSaving, setIsSaving] = useState(false);
   const [isSavingGraphLayout, setIsSavingGraphLayout] = useState(false);
   const [isSavingTrackPreset, setIsSavingTrackPreset] = useState(false);
+  const [isSavingChapterSlice, setIsSavingChapterSlice] = useState(false);
 
   const filteredObjects = loadedProject
     ? loadedProject.project.objects[activeObjectType].filter((item) =>
@@ -259,6 +287,42 @@ export default function App() {
     }
   }
 
+  async function handleCreateObject(objectTypeOverride?: ObjectTypeName) {
+    if (!loadedProject) {
+      return;
+    }
+
+    const targetObjectType = objectTypeOverride ?? activeObjectType;
+
+    setIsSaving(true);
+    setStatusMessage("Creating object...");
+
+    try {
+      const object = await createProjectObject({
+        projectPath: loadedProject.projectPath,
+        objectType: targetObjectType
+      });
+      const createdObject = object as EditableObject;
+      const nextProject = mergeObjectIntoProject(
+        loadedProject,
+        targetObjectType,
+        createdObject
+      );
+
+      setActiveObjectType(targetObjectType);
+      setLoadedProject(nextProject);
+      setSelectedObjectId(createdObject.id);
+      setDraftObject(createdObject);
+      setStatusMessage("Object created.");
+    } catch (error) {
+      setStatusMessage(
+        error instanceof Error ? error.message : "Failed to create object."
+      );
+    } finally {
+      setIsSaving(false);
+    }
+  }
+
   async function handleSaveGraphLayout(
     layout: ProjectData["views"]["graph-layouts"][number]
   ) {
@@ -304,6 +368,37 @@ export default function App() {
       );
     } finally {
       setIsSavingGraphLayout(false);
+    }
+  }
+
+  async function handleMoveEvent(
+    eventId: string,
+    changes: Partial<ProjectData["objects"]["events"][number]>
+  ) {
+    if (!loadedProject) {
+      return;
+    }
+
+    setStatusMessage("Moving event...");
+
+    try {
+      const savedEvent = await saveProjectObject({
+        projectPath: loadedProject.projectPath,
+        objectType: "events",
+        objectId: eventId,
+        changes
+      });
+      const nextProject = mergeObjectIntoProject(loadedProject, "events", savedEvent);
+
+      setActiveObjectType("events");
+      setLoadedProject(nextProject);
+      setSelectedObjectId(savedEvent.id);
+      setDraftObject(savedEvent as EditableObject);
+      setStatusMessage("Event moved.");
+    } catch (error) {
+      setStatusMessage(
+        error instanceof Error ? error.message : "Failed to move event."
+      );
     }
   }
 
@@ -353,6 +448,92 @@ export default function App() {
     }
   }
 
+  async function handleCreateRelation(targetObjectId: string) {
+    if (!loadedProject || !selectedObjectId || selectedObjectId === targetObjectId) {
+      return;
+    }
+
+    setStatusMessage("Creating graph relation...");
+
+    try {
+      const object = await createProjectObject({
+        projectPath: loadedProject.projectPath,
+        objectType: "relations",
+        seed: {
+          type: "association",
+          sourceRef: selectedObjectId,
+          targetRef: targetObjectId,
+          summary: "由关系图创建"
+        }
+      });
+
+      setLoadedProject({
+        ...loadedProject,
+        project: {
+          ...loadedProject.project,
+          objects: {
+            ...loadedProject.project.objects,
+            relations: [
+              ...loadedProject.project.objects.relations,
+              object as ProjectData["objects"]["relations"][number]
+            ]
+          }
+        }
+      });
+      setStatusMessage("Graph relation created.");
+    } catch (error) {
+      setStatusMessage(
+        error instanceof Error ? error.message : "Failed to create graph relation."
+      );
+    }
+  }
+
+  async function handleSaveChapterSlice(
+    slice: ProjectData["views"]["chapter-slices"][number]
+  ) {
+    if (!loadedProject) {
+      return;
+    }
+
+    setIsSavingChapterSlice(true);
+    setStatusMessage("Saving chapter slice...");
+
+    try {
+      const savedSlice = await saveChapterSlice({
+        projectPath: loadedProject.projectPath,
+        slice
+      });
+      const existingSlices = loadedProject.project.views["chapter-slices"];
+      const sliceIndex = existingSlices.findIndex((item) => item.id === savedSlice.id);
+      const nextSlices = sliceIndex === -1
+        ? [
+            ...existingSlices,
+            savedSlice
+          ]
+        : existingSlices.map((item, index) =>
+            index === sliceIndex ? savedSlice : item
+          );
+
+      setLoadedProject({
+        ...loadedProject,
+        project: {
+          ...loadedProject.project,
+          views: {
+            ...loadedProject.project.views,
+            "chapter-slices": nextSlices
+          }
+        }
+      });
+      setStatusMessage("Chapter slice saved.");
+    } catch (error) {
+      setStatusMessage(
+        error instanceof Error ? error.message : "Failed to save chapter slice."
+      );
+    } finally {
+      setIsSavingChapterSlice(false);
+    }
+  }
+
   return (
     <div className="app-shell">
       <header className="topbar">
@@ -389,6 +570,9 @@ export default function App() {
               filterQuery={objectFilterQuery}
               filteredCount={filteredObjects.length}
               items={filteredObjects}
+              onCreateObject={() => {
+                void handleCreateObject();
+              }}
               onChangeFilterQuery={setObjectFilterQuery}
               onSelectObject={handleSelectObject}
               onSelectObjectType={handleSelectObjectType}
@@ -416,7 +600,14 @@ export default function App() {
             />
           ) : loadedProject && activeTab === "Graph" ? (
             <GraphView
+              activeObjectType={activeObjectType}
               isSavingLayout={isSavingGraphLayout}
+              onCreateObject={() => {
+                void handleCreateObject();
+              }}
+              onCreateRelation={(targetObjectId) => {
+                void handleCreateRelation(targetObjectId);
+              }}
               onSaveLayout={(layout) => {
                 void handleSaveGraphLayout(layout);
               }}
@@ -427,6 +618,16 @@ export default function App() {
           ) : loadedProject && activeTab === "Tracks" ? (
             <TracksView
               isSavingPreset={isSavingTrackPreset}
+              isSavingChapterSlice={isSavingChapterSlice}
+              onCreateEvent={() => {
+                void handleCreateObject("events");
+              }}
+              onMoveEvent={(eventId, changes) => {
+                void handleMoveEvent(eventId, changes);
+              }}
+              onSaveChapterSlice={(slice) => {
+                void handleSaveChapterSlice(slice);
+              }}
               onSavePreset={(preset) => {
                 void handleSaveTrackPreset(preset);
               }}
