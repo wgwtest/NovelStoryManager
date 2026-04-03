@@ -3,9 +3,9 @@
 ## 当前状态
 
 1. 当前活动文档根：`DOC/CODEX_DOC/`
-2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.7 -> WBS 1.7.1`
-3. 当前阶段状态：`WBS 1.7 与 WBS 1.7.1 已按 Pencil 评阅意见完成子节点拆分与 GitHub 同步，待人工验收；WBS 1.7.2 待开发；WBS 1.8 方案待人工验收；WBS 1.8.1 已自测通过待人工验收；WBS 1.8.2 已完成拖拽稳定性、动态连线与端口高亮提示自测，待人工验收；WBS 3.1 仍待人工验收`
-4. 当前主线目标：等待人工复核 WBS 1.7 子树中的 Pencil 补充路线、方案细化边界与 GitHub 树形同步结果，同时等待人工复核 BaseLab 中三种基座的拖拽稳定性、动态连线能力、端口 hover/source/target 提示，以及主工作台与实验入口的解耦结果
+2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.7 -> WBS 1.7.2`
+3. 当前阶段状态：`WBS 1.7 已按最新评论切换为 Pencil + Codex 直接协同设计路线，开发中；WBS 1.7.1 已补充页面语义、中文命名与布局规则，待人工验收；WBS 1.7.2 已进入 Pencil 直接设计稿准备阶段，开发中；WBS 1.8 方案待人工验收；WBS 1.8.1 已自测通过待人工验收；WBS 1.8.2 已完成拖拽稳定性、动态连线与端口高亮提示自测，待人工验收；WBS 3.1 仍待人工验收`
+4. 当前主线目标：根据 GitHub 上的口述评论，先把主工作台的中文命名、栏目职责、对象库分类与白色中性工作台规则讲清楚，再推进 Pencil 直接页面设计稿
 5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## 文档组织原则
@@ -118,7 +118,8 @@
 39. [2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md)
 40. [2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/01_会话交接/2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md)
 41. [2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md)
-42. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
+42. [2026-04-04-003541-WBS-1.7-口述评论转写与Pencil直设路线分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-04-003541-WBS-1.7-口述评论转写与Pencil直设路线分析.md)
+43. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
 
 ## 协作规则
 
