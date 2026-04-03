@@ -4,6 +4,30 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import App from "./App.js";
 
+function createCanvasContextStub(): CanvasRenderingContext2D {
+  return {
+    arc: vi.fn(),
+    beginPath: vi.fn(),
+    bezierCurveTo: vi.fn(),
+    clearRect: vi.fn(),
+    fill: vi.fn(),
+    fillRect: vi.fn(),
+    fillText: vi.fn(),
+    lineTo: vi.fn(),
+    measureText: vi.fn((text: string) => ({
+      width: text.length * 7
+    })),
+    moveTo: vi.fn(),
+    restore: vi.fn(),
+    roundRect: vi.fn(),
+    save: vi.fn(),
+    scale: vi.fn(),
+    setTransform: vi.fn(),
+    stroke: vi.fn(),
+    translate: vi.fn()
+  } as unknown as CanvasRenderingContext2D;
+}
+
 const sampleProjectResponse = {
   projectPath: "/tmp/sample-novel",
   project: {
@@ -275,6 +299,9 @@ const sampleProjectResponse = {
 describe("App", () => {
   beforeEach(() => {
     vi.restoreAllMocks();
+    vi
+      .spyOn(HTMLCanvasElement.prototype, "getContext")
+      .mockImplementation(() => createCanvasContextStub());
     vi.stubGlobal(
       "fetch",
       vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
@@ -877,5 +904,43 @@ describe("App", () => {
         "char_linwan"
       ]);
     });
+  });
+
+  it("opens the WBS 3.1 base lab and renders three comparison stages", async () => {
+    const user = userEvent.setup();
+
+    render(<App />);
+
+    await screen.findByRole("button", { name: "苏玄" });
+    await user.click(screen.getByRole("button", { name: "WBS 3.1 Base Lab" }));
+
+    expect(
+      await screen.findByRole("heading", { name: "WBS 3.1 基座对比验证" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("region", { name: "DOM + CSS 验证画布" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("region", { name: "DOM + SVG 验证画布" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("region", { name: "Canvas 验证画布" })
+    ).toBeInTheDocument();
+  });
+
+  it("returns from the base lab back to the three main workbench tabs", async () => {
+    const user = userEvent.setup();
+
+    render(<App />);
+
+    await screen.findByRole("button", { name: "苏玄" });
+    await user.click(screen.getByRole("button", { name: "WBS 3.1 Base Lab" }));
+    await screen.findByRole("heading", { name: "WBS 3.1 基座对比验证" });
+
+    await user.click(screen.getByRole("button", { name: "Back to Workbench" }));
+
+    expect(screen.getByRole("tab", { name: "Knowledge" })).toBeInTheDocument();
+    expect(screen.getByRole("tab", { name: "Graph" })).toBeInTheDocument();
+    expect(screen.getByRole("tab", { name: "Tracks" })).toBeInTheDocument();
   });
 });

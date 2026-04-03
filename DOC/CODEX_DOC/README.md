@@ -3,9 +3,9 @@
 ## 当前状态
 
 1. 当前活动文档根：`DOC/CODEX_DOC/`
-2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.7`
-3. 当前阶段状态：`评论优化中`
-4. 当前主线目标：吸收最新 GitHub issue 评论，补入中高保真原型设计节点，并明确三视图渲染基座与蓝图节点风格约束
+2. 当前活动链路：`WBS 0 -> WBS 3 -> WBS 3.1`
+3. 当前阶段状态：`WBS 3.1 已自测，待人工验收`
+4. 当前主线目标：吸收最新 GitHub issue 评论，补齐交互基座对比验证页，并同步更新选型设计与执行契约
 5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## 文档组织原则

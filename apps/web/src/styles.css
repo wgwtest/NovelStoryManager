@@ -50,6 +50,14 @@ textarea {
   padding: 20px 24px;
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .topbar h1 {
   margin: 0;
   font-size: 28px;
@@ -65,6 +73,10 @@ textarea {
   border-radius: 999px;
   background: #2f5f58;
   color: #f7f5ee;
+}
+
+.topbar-mode-button {
+  min-height: 42px;
 }
 
 .tab-strip {
@@ -719,12 +731,316 @@ textarea {
   background: rgba(34, 31, 29, 0.16);
 }
 
+.base-lab-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: auto;
+  padding: 0 0 24px;
+}
+
+.base-lab-header {
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.base-lab-eyebrow,
+.base-lab-card-kicker {
+  margin: 0 0 6px;
+  color: #8b4a34;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.base-lab-intro {
+  margin: 8px 0 0;
+  max-width: 760px;
+  color: #655b4d;
+}
+
+.base-lab-scoreboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  padding: 0 16px;
+}
+
+.base-lab-score-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid rgba(31, 59, 77, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 251, 245, 0.94);
+  box-shadow: 0 8px 20px rgba(79, 57, 32, 0.05);
+  padding: 16px;
+}
+
+.base-lab-score-item strong {
+  color: #214e47;
+}
+
+.base-lab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.base-lab-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid rgba(31, 59, 77, 0.12);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at top right, rgba(244, 232, 206, 0.35), transparent 32%),
+    rgba(255, 252, 247, 0.94);
+  box-shadow: 0 12px 28px rgba(79, 57, 32, 0.08);
+  padding: 16px;
+}
+
+.base-lab-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.base-lab-card-header h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.base-lab-card-badge {
+  border-radius: 999px;
+  background: #edf5f2;
+  color: #214e47;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.base-lab-card-summary {
+  margin: 0;
+  color: #655b4d;
+}
+
+.base-lab-toolbar {
+  padding: 0;
+}
+
+.base-lab-meta {
+  padding: 0;
+  color: #5a534a;
+  font-size: 13px;
+}
+
+.base-lab-stage {
+  position: relative;
+  overflow: auto;
+  min-height: 420px;
+  border: 1px solid rgba(34, 31, 29, 0.08);
+  border-radius: 18px;
+  background:
+    linear-gradient(rgba(34, 31, 29, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 31, 29, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(249, 242, 231, 0.96));
+  background-size: 28px 28px, 28px 28px, auto;
+  cursor: grab;
+}
+
+.base-lab-stage:active {
+  cursor: grabbing;
+}
+
+.base-lab-stage-inner {
+  position: relative;
+  transform-origin: top left;
+}
+
+.base-lab-svg-layer,
+.base-lab-css-edge-layer,
+.base-lab-node-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.base-lab-svg-layer,
+.base-lab-css-edge-layer {
+  pointer-events: none;
+}
+
+.base-lab-svg-layer {
+  overflow: visible;
+}
+
+.base-lab-svg-edge path {
+  fill: none;
+  stroke: rgba(33, 78, 71, 0.68);
+  stroke-width: 3;
+}
+
+.base-lab-svg-edge text {
+  fill: #5b544a;
+  font-size: 12px;
+  text-anchor: middle;
+}
+
+.base-lab-css-edge {
+  position: absolute;
+  transform-origin: left center;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(55, 93, 143, 0.75), rgba(138, 89, 54, 0.72));
+}
+
+.base-lab-css-edge-label {
+  position: absolute;
+  top: -24px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(255, 251, 245, 0.95);
+  color: #5b544a;
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px 8px;
+}
+
+.base-lab-node-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.base-lab-node {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 228px;
+  min-height: 138px;
+  border: 1px solid rgba(34, 31, 29, 0.1);
+  border-radius: 20px;
+  background: #fffaf1;
+  box-shadow: 0 10px 24px rgba(79, 57, 32, 0.09);
+  color: #1d1f25;
+  cursor: grab;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+}
+
+.base-lab-node:active {
+  cursor: grabbing;
+}
+
+.base-lab-node-active {
+  border-color: #214e47;
+  box-shadow: 0 0 0 2px rgba(33, 78, 71, 0.14), 0 14px 28px rgba(79, 57, 32, 0.12);
+}
+
+.base-lab-node-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  background: var(--lab-accent, #375d8f);
+  color: #faf6ef;
+  padding: 10px 14px;
+}
+
+.base-lab-node-header span {
+  font-size: 12px;
+  opacity: 0.88;
+}
+
+.base-lab-node-body {
+  display: grid;
+  grid-template-columns: 1fr 84px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 0 14px;
+}
+
+.base-lab-port-column,
+.base-lab-node-core {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.base-lab-port-column-output {
+  align-items: flex-end;
+}
+
+.base-lab-port-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #5e564c;
+  font-size: 12px;
+}
+
+.base-lab-node-core {
+  justify-content: center;
+  padding-top: 4px;
+  color: #7a7063;
+  font-size: 12px;
+  text-align: center;
+}
+
+.base-lab-port-dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(33, 78, 71, 0.46);
+  border-radius: 999px;
+  background: #fffdf9;
+  flex: 0 0 auto;
+}
+
+.base-lab-node-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid rgba(34, 31, 29, 0.06);
+  color: #74695c;
+  font-size: 12px;
+  padding: 10px 14px 12px;
+}
+
+.base-lab-canvas-surface {
+  display: block;
+}
+
+.base-lab-observation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+  color: #5c5448;
+}
+
 @media (max-width: 900px) {
   .topbar {
     flex-direction: column;
   }
 
+  .topbar-actions {
+    justify-content: flex-start;
+  }
+
   .panel {
     min-height: 360px;
+  }
+
+  .base-lab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .base-lab-card-header,
+  .base-lab-header {
+    flex-direction: column;
   }
 }
