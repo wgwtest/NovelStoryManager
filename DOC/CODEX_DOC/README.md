@@ -62,6 +62,8 @@
 3. 文件名保持业务语义，不因目录编号而重复追加序号
 4. 后续新增同层目录时，必须先确认顺序位再创建目录
 5. 如果在已稳定序列中插入补充节点，为避免大面积历史链接失效，可在前一序号后追加字母后缀，例如 `08A-WBS-...`
+6. `02_设计说明/` 下的稳定设计正文默认以 `WBS-节点编号-主题.md` 命名，不在文件名前保留日期
+7. 无法直接归属具体节点的总设计稿，也应优先挂到最贴近的 `WBS` 编号下，避免同层出现“日期稿”和 `WBS` 稿并存
 
 ## 文档分工规则
 
@@ -79,26 +81,26 @@
 
 1. [00-本地工程策略映射.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/00-本地工程策略映射.md)
 2. [00-工程总体分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/01_需求分析/00-工程总体分析.md)
-3. [2026-03-30-小说剧情管理器设计稿.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-03-30-小说剧情管理器设计稿.md)
+3. [WBS-1.1-小说剧情管理器设计稿.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/WBS-1.1-小说剧情管理器设计稿.md)
 4. [01-WBS-0-NovelStoryManager-研发总纲-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/01-WBS-0-NovelStoryManager-研发总纲-研制计划.md)
 5. [02-WBS-1-需求与方案-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/02-WBS-1-需求与方案-研制计划.md)
 6. [03-WBS-1.1-产品边界确认与文档归档-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/03-WBS-1.1-产品边界确认与文档归档-研制计划.md)
-7. [2026-04-01-WBS-1.2-信息架构与页面分解.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-01-WBS-1.2-信息架构与页面分解.md)
+7. [WBS-1.2-信息架构与页面分解.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/WBS-1.2-信息架构与页面分解.md)
 8. [04-WBS-1.2-信息架构与页面分解-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/04-WBS-1.2-信息架构与页面分解-研制计划.md)
-9. [2026-04-01-WBS-1.3-低保真原型设计.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-01-WBS-1.3-低保真原型设计.md)
+9. [WBS-1.3-低保真原型设计.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/WBS-1.3-低保真原型设计.md)
 10. [05-WBS-1.3-低保真原型设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/05-WBS-1.3-低保真原型设计-研制计划.md)
-11. [2026-04-01-WBS-1.4-高风险交互原型验证.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-01-WBS-1.4-高风险交互原型验证.md)
+11. [WBS-1.4-高风险交互原型验证.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/WBS-1.4-高风险交互原型验证.md)
 12. [06-WBS-1.4-高风险交互原型验证-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/06-WBS-1.4-高风险交互原型验证-研制计划.md)
-13. [2026-04-01-WBS-1.5-技术方案选型.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-01-WBS-1.5-技术方案选型.md)
+13. [WBS-1.5-技术方案选型.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/WBS-1.5-技术方案选型.md)
 14. [07-WBS-1.5-技术方案选型-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/07-WBS-1.5-技术方案选型-研制计划.md)
 15. [08-WBS-1.6-初始任务拆解与时间规划-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08-WBS-1.6-初始任务拆解与时间规划-研制计划.md)
-16. [2026-04-03-WBS-1.7-中高保真原型设计与生成方案.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.7-中高保真原型设计与生成方案.md)
+16. [WBS-1.7-中高保真原型设计与生成方案.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/WBS-1.7-中高保真原型设计与生成方案.md)
 17. [08A-WBS-1.7-中高保真原型设计与生成方案-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08A-WBS-1.7-中高保真原型设计与生成方案-研制计划.md)
-18. [2026-04-03-WBS-1.7.1-中高保真原型草稿方案细化.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.7.1-中高保真原型草稿方案细化.md)
+18. [WBS-1.7.1-中高保真原型草稿方案细化.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/WBS-1.7.1-中高保真原型草稿方案细化.md)
 19. [08A1-WBS-1.7.1-中高保真原型草稿方案细化-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08A1-WBS-1.7.1-中高保真原型草稿方案细化-研制计划.md)
-20. [2026-04-03-WBS-1.7.2-Pencil截面图与页面设计稿说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.7.2-Pencil截面图与页面设计稿说明.md)
+20. [WBS-1.7.2-Pencil截面图与页面设计稿说明.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/WBS-1.7.2-Pencil截面图与页面设计稿说明.md)
 21. [08A2-WBS-1.7.2-Pencil截面图与页面设计稿-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08A2-WBS-1.7.2-Pencil截面图与页面设计稿-研制计划.md)
-22. [2026-04-03-WBS-1.8-BaseLab验证工具构建方案.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.8-BaseLab验证工具构建方案.md)
+22. [WBS-1.8-BaseLab验证工具构建方案.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/WBS-1.8-BaseLab验证工具构建方案.md)
 23. [08B-WBS-1.8-BaseLab验证工具构建方案-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08B-WBS-1.8-BaseLab验证工具构建方案-研制计划.md)
 24. [08C-WBS-1.8.1-BaseLab独立应用底座-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08C-WBS-1.8.1-BaseLab独立应用底座-研制计划.md)
 25. [08D-WBS-1.8.2-WBS-3.1实验迁移与入口解耦-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08D-WBS-1.8.2-WBS-3.1实验迁移与入口解耦-研制计划.md)

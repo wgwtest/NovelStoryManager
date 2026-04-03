@@ -41,7 +41,7 @@
 
 ## 成果物
 
-- `DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.8-BaseLab验证工具构建方案.md`
+- `DOC/CODEX_DOC/02_设计说明/WBS-1.8-BaseLab验证工具构建方案.md`
 - `DOC/CODEX_DOC/03_研制计划/08B-WBS-1.8-BaseLab验证工具构建方案-研制计划.md`
 - `DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md`
 - `DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md`

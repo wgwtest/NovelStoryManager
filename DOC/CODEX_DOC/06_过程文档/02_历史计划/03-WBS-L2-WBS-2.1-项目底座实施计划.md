@@ -10,10 +10,10 @@
 
 **Upstream docs:**
 
-1. `DOC/CODEX_DOC/02_设计说明/2026-04-01-WBS-1.2-信息架构与页面分解.md`
-2. `DOC/CODEX_DOC/02_设计说明/2026-04-01-WBS-1.3-低保真原型设计.md`
-3. `DOC/CODEX_DOC/02_设计说明/2026-04-01-WBS-1.4-高风险交互原型验证.md`
-4. `DOC/CODEX_DOC/02_设计说明/2026-04-01-WBS-1.5-技术方案选型.md`
+1. `DOC/CODEX_DOC/02_设计说明/WBS-1.2-信息架构与页面分解.md`
+2. `DOC/CODEX_DOC/02_设计说明/WBS-1.3-低保真原型设计.md`
+3. `DOC/CODEX_DOC/02_设计说明/WBS-1.4-高风险交互原型验证.md`
+4. `DOC/CODEX_DOC/02_设计说明/WBS-1.5-技术方案选型.md`
 
 ---
 

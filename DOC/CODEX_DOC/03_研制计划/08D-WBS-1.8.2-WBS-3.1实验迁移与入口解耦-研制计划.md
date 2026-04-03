@@ -41,7 +41,7 @@
 
 - `DOC/CODEX_DOC/03_研制计划/08D-WBS-1.8.2-WBS-3.1实验迁移与入口解耦-研制计划.md`
 - `DOC/CODEX_DOC/03_研制计划/13-WBS-3.1-交互画布与渲染基座选型-研制计划.md`
-- `DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-3.1-交互画布与渲染基座选型.md`
+- `DOC/CODEX_DOC/02_设计说明/WBS-3.1-交互画布与渲染基座选型.md`
 - `apps/base-lab/src/lib/base-selection-lab.ts`
 - `apps/base-lab/src/lib/base-selection-lab.test.ts`
 - `apps/base-lab/src/components/BaseSelectionLab.tsx`
