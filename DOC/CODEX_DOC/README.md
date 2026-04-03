@@ -3,9 +3,9 @@
 ## 当前状态
 
 1. 当前活动文档根：`DOC/CODEX_DOC/`
-2. 当前活动链路：`WBS 0 -> WBS 3 -> WBS 3.1`
-3. 当前阶段状态：`WBS 3.1 已自测，待人工验收`
-4. 当前主线目标：吸收最新 GitHub issue 评论，补齐交互基座对比验证页，并同步更新选型设计与执行契约
+2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.8`
+3. 当前阶段状态：`WBS 1.8 已出方案，待人工验收；WBS 3.1 仍待人工验收`
+4. 当前主线目标：吸收最新 GitHub issue 评论，将单节点验证页上升为跨节点 BaseLab 验证工具方案，并创建新的 WBS 设计节点
 5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## 文档组织原则
@@ -94,18 +94,21 @@
 15. [08-WBS-1.6-初始任务拆解与时间规划-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08-WBS-1.6-初始任务拆解与时间规划-研制计划.md)
 16. [2026-04-03-WBS-1.7-中高保真原型设计与生成方案.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.7-中高保真原型设计与生成方案.md)
 17. [08A-WBS-1.7-中高保真原型设计与生成方案-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08A-WBS-1.7-中高保真原型设计与生成方案-研制计划.md)
-18. [10-WBS-2.1-项目底座实施-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/10-WBS-2.1-项目底座实施-研制计划.md)
-19. [2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/04_研发文档/01_数据规范/2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md)
-20. [11-WBS-2.2-数据规范与导入导出规范-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/11-WBS-2.2-数据规范与导入导出规范-研制计划.md)
-21. [12-WBS-3-三视图共性机制-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/12-WBS-3-三视图共性机制-研制计划.md)
-22. [13-WBS-3.1-交互画布与渲染基座选型-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/13-WBS-3.1-交互画布与渲染基座选型-研制计划.md)
-23. [17-WBS-4-知识库工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/17-WBS-4-知识库工作台-研制计划.md)
-24. [22-WBS-5-关系图工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/22-WBS-5-关系图工作台-研制计划.md)
-25. [27-WBS-6-多轨编排视图-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/27-WBS-6-多轨编排视图-研制计划.md)
-26. [32-WBS-7-观察输出层-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/32-WBS-7-观察输出层-研制计划.md)
-27. [2026-04-03-010206-验收意见与计划重排分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-010206-验收意见与计划重排分析.md)
-28. [2026-04-03-094110-GitHub评论优化分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-094110-GitHub评论优化分析.md)
-29. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
+18. [2026-04-03-WBS-1.8-BaseLab验证工具构建方案.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.8-BaseLab验证工具构建方案.md)
+19. [08B-WBS-1.8-BaseLab验证工具构建方案-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08B-WBS-1.8-BaseLab验证工具构建方案-研制计划.md)
+20. [10-WBS-2.1-项目底座实施-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/10-WBS-2.1-项目底座实施-研制计划.md)
+21. [2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/04_研发文档/01_数据规范/2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md)
+22. [11-WBS-2.2-数据规范与导入导出规范-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/11-WBS-2.2-数据规范与导入导出规范-研制计划.md)
+23. [12-WBS-3-三视图共性机制-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/12-WBS-3-三视图共性机制-研制计划.md)
+24. [13-WBS-3.1-交互画布与渲染基座选型-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/13-WBS-3.1-交互画布与渲染基座选型-研制计划.md)
+25. [17-WBS-4-知识库工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/17-WBS-4-知识库工作台-研制计划.md)
+26. [22-WBS-5-关系图工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/22-WBS-5-关系图工作台-研制计划.md)
+27. [27-WBS-6-多轨编排视图-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/27-WBS-6-多轨编排视图-研制计划.md)
+28. [32-WBS-7-观察输出层-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/32-WBS-7-观察输出层-研制计划.md)
+29. [2026-04-03-010206-验收意见与计划重排分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-010206-验收意见与计划重排分析.md)
+30. [2026-04-03-094110-GitHub评论优化分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-094110-GitHub评论优化分析.md)
+31. [2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md)
+32. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
 
 ## 协作规则
 
