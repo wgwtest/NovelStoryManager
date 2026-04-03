@@ -3,9 +3,9 @@
 ## 当前状态
 
 1. 当前活动文档根：`DOC/CODEX_DOC/`
-2. 当前活动链路：`WBS 0 -> WBS 7 -> WBS 7.3`
-3. 当前阶段状态：`待用户测试`
-4. 当前主线目标：`WBS 3-7` 对应的三视图共性层、知识库、关系图、多轨视图与观察输出层编码已完成，等待人工测试与验收意见
+2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.7`
+3. 当前阶段状态：`评论优化中`
+4. 当前主线目标：吸收最新 GitHub issue 评论，补入中高保真原型设计节点，并明确三视图渲染基座与蓝图节点风格约束
 5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## 文档组织原则
@@ -61,6 +61,7 @@
 2. 已存在二级目录的分类目录，同样使用固定顺序前缀
 3. 文件名保持业务语义，不因目录编号而重复追加序号
 4. 后续新增同层目录时，必须先确认顺序位再创建目录
+5. 如果在已稳定序列中插入补充节点，为避免大面积历史链接失效，可在前一序号后追加字母后缀，例如 `08A-WBS-...`
 
 ## 文档分工规则
 
@@ -91,17 +92,20 @@
 13. [2026-04-01-WBS-1.5-技术方案选型.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-01-WBS-1.5-技术方案选型.md)
 14. [07-WBS-1.5-技术方案选型-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/07-WBS-1.5-技术方案选型-研制计划.md)
 15. [08-WBS-1.6-初始任务拆解与时间规划-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08-WBS-1.6-初始任务拆解与时间规划-研制计划.md)
-16. [10-WBS-2.1-项目底座实施-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/10-WBS-2.1-项目底座实施-研制计划.md)
-17. [2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/04_研发文档/01_数据规范/2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md)
-18. [11-WBS-2.2-数据规范与导入导出规范-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/11-WBS-2.2-数据规范与导入导出规范-研制计划.md)
-19. [12-WBS-3-三视图共性机制-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/12-WBS-3-三视图共性机制-研制计划.md)
-20. [13-WBS-3.1-交互画布与渲染基座选型-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/13-WBS-3.1-交互画布与渲染基座选型-研制计划.md)
-21. [17-WBS-4-知识库工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/17-WBS-4-知识库工作台-研制计划.md)
-22. [22-WBS-5-关系图工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/22-WBS-5-关系图工作台-研制计划.md)
-23. [27-WBS-6-多轨编排视图-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/27-WBS-6-多轨编排视图-研制计划.md)
-24. [32-WBS-7-观察输出层-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/32-WBS-7-观察输出层-研制计划.md)
-25. [2026-04-03-010206-验收意见与计划重排分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-010206-验收意见与计划重排分析.md)
-26. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
+16. [2026-04-03-WBS-1.7-中高保真原型设计与生成方案.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/02_设计说明/2026-04-03-WBS-1.7-中高保真原型设计与生成方案.md)
+17. [08A-WBS-1.7-中高保真原型设计与生成方案-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/08A-WBS-1.7-中高保真原型设计与生成方案-研制计划.md)
+18. [10-WBS-2.1-项目底座实施-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/10-WBS-2.1-项目底座实施-研制计划.md)
+19. [2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/04_研发文档/01_数据规范/2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md)
+20. [11-WBS-2.2-数据规范与导入导出规范-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/11-WBS-2.2-数据规范与导入导出规范-研制计划.md)
+21. [12-WBS-3-三视图共性机制-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/12-WBS-3-三视图共性机制-研制计划.md)
+22. [13-WBS-3.1-交互画布与渲染基座选型-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/13-WBS-3.1-交互画布与渲染基座选型-研制计划.md)
+23. [17-WBS-4-知识库工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/17-WBS-4-知识库工作台-研制计划.md)
+24. [22-WBS-5-关系图工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/22-WBS-5-关系图工作台-研制计划.md)
+25. [27-WBS-6-多轨编排视图-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/27-WBS-6-多轨编排视图-研制计划.md)
+26. [32-WBS-7-观察输出层-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/32-WBS-7-观察输出层-研制计划.md)
+27. [2026-04-03-010206-验收意见与计划重排分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-010206-验收意见与计划重排分析.md)
+28. [2026-04-03-094110-GitHub评论优化分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-094110-GitHub评论优化分析.md)
+29. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
 
 ## 协作规则
 
@@ -115,6 +119,7 @@
 8. 默认直接在 `main` 分支推进和提交；只有用户明确要求隔离分支，或当前改动需要高风险隔离试验时，才建立功能分支
 9. GitHub Issue / Project 中引用仓库文件时，只写仓库相对路径；本地目录结构一旦调整，必须同轮同步这些路径，不保留旧目录名或 `/home/...` 绝对路径
 10. 收到验收批注意见后，必须先形成 `06_过程文档/03_验收意见处理/` 文档，再决定改计划还是改代码
+11. 已验收节点如因新增评阅意见需要补子节点，优先新增补充节点，不回改已稳定节点编号
 
 ## 目录说明
 
