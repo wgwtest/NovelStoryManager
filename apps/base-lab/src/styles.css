@@ -959,12 +959,22 @@ textarea {
   text-anchor: middle;
 }
 
+.base-lab-svg-edge-preview path {
+  stroke: rgba(173, 92, 44, 0.78);
+  stroke-width: 2.5;
+}
+
 .base-lab-css-edge {
   position: absolute;
   transform-origin: left center;
   height: 4px;
   border-radius: 999px;
   background: linear-gradient(90deg, rgba(55, 93, 143, 0.75), rgba(138, 89, 54, 0.72));
+}
+
+.base-lab-css-edge-preview {
+  background: linear-gradient(90deg, rgba(173, 92, 44, 0.9), rgba(214, 145, 76, 0.82));
+  opacity: 0.92;
 }
 
 .base-lab-css-edge-label {
@@ -1051,6 +1061,18 @@ textarea {
   gap: 6px;
   color: #5e564c;
   font-size: 12px;
+}
+
+.base-lab-port-button {
+  border: 0;
+  background: transparent;
+  cursor: crosshair;
+  padding: 0;
+  text-align: left;
+}
+
+.base-lab-port-button-output {
+  justify-content: flex-end;
 }
 
 .base-lab-node-core {

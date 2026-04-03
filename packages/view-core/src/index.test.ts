@@ -4,6 +4,7 @@ import {
   clampCanvasZoom,
   createCanvasViewport,
   panCanvasViewport,
+  panCanvasViewportFromOrigin,
   resizeCanvasViewport,
   zoomCanvasViewport
 } from "./index.js";
@@ -42,5 +43,22 @@ describe("view-core viewport helpers", () => {
     expect(resized.canvasWidth).toBe(640);
     expect(resized.canvasHeight).toBe(480);
     expect(zoomed.zoom).toBe(0.4);
+  });
+
+  it("recomputes pan from the original viewport offset instead of accumulating drift", () => {
+    const viewport = createCanvasViewport({
+      offsetX: 32,
+      offsetY: 28
+    });
+
+    const moved = panCanvasViewportFromOrigin(viewport, {
+      deltaX: 140,
+      deltaY: 60,
+      originOffsetX: 32,
+      originOffsetY: 28
+    });
+
+    expect(moved.offsetX).toBe(172);
+    expect(moved.offsetY).toBe(88);
   });
 });

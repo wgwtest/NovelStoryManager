@@ -39,6 +39,22 @@ export function panCanvasViewport<T extends CanvasViewport>(
   };
 }
 
+export function panCanvasViewportFromOrigin<T extends CanvasViewport>(
+  viewport: T,
+  input: {
+    deltaX: number;
+    deltaY: number;
+    originOffsetX: number;
+    originOffsetY: number;
+  }
+): T {
+  return {
+    ...viewport,
+    offsetX: input.originOffsetX + input.deltaX,
+    offsetY: input.originOffsetY + input.deltaY
+  };
+}
+
 export function resizeCanvasViewport<T extends CanvasViewport>(
   viewport: T,
   input: {

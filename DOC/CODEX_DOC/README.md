@@ -4,8 +4,8 @@
 
 1. 当前活动文档根：`DOC/CODEX_DOC/`
 2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.8 -> WBS 1.8.2`
-3. 当前阶段状态：`WBS 1.8 方案待人工验收；WBS 1.8.1、WBS 1.8.2 已自测通过，待人工验收；WBS 3.1 仍待人工验收`
-4. 当前主线目标：完成 BaseLab 独立应用落地与 WBS 3.1 实验迁移，等待人工复核新入口与主工作台解耦结果
+3. 当前阶段状态：`WBS 1.8 方案待人工验收；WBS 1.8.1 已自测通过待人工验收；WBS 1.8.2 已完成拖拽与动态连线修正后自测，待人工验收；WBS 3.1 仍待人工验收`
+4. 当前主线目标：等待人工复核 BaseLab 中三种基座的拖拽稳定性、动态连线能力，以及主工作台与实验入口的解耦结果
 5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## 文档组织原则
@@ -111,7 +111,9 @@
 32. [2026-04-03-094110-GitHub评论优化分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-094110-GitHub评论优化分析.md)
 33. [2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md)
 34. [2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md)
-35. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
+35. [2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md)
+36. [2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/01_会话交接/2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md)
+37. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
 
 ## 协作规则
 

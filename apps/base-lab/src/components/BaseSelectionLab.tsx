@@ -1,42 +1,36 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 
 import {
-  createCanvasViewport,
-  panCanvasViewport,
+  panCanvasViewportFromOrigin,
   resizeCanvasViewport,
   zoomCanvasViewport,
-  type CanvasViewport
 } from "@novelstory/view-core";
+import {
+  clearPendingEdge,
+  connectPendingEdge,
+  createStageState,
+  findHitNodeId,
+  findPortHandle,
+  getEdgePoints,
+  getNodeById,
+  getNodePosition,
+  getPendingEdgePoints,
+  getPortAnchor,
+  getSelectedCoordinates,
+  headerHeight,
+  labNodes,
+  nodeHeight,
+  nodeWidth,
+  portRadius,
+  resolveStagePoint,
+  startPendingEdge,
+  updatePendingEdge,
+  type Position,
+  type StageState
+} from "../lib/base-selection-lab.js";
 
 type BaseSelectionLabProps = {
   onBack: () => void;
-};
-
-type LabNode = {
-  accent: string;
-  category: string;
-  id: string;
-  inputs: string[];
-  label: string;
-  outputs: string[];
-  status: string;
-};
-
-type LabEdge = {
-  id: string;
-  label: string;
-  sourceId: string;
-  targetId: string;
-};
-
-type Position = {
-  x: number;
-  y: number;
-};
-
-type StageState = CanvasViewport & {
-  positions: Record<string, Position>;
-  selectedNodeId: string;
 };
 
 type DragState =
@@ -48,6 +42,13 @@ type DragState =
       startY: number;
     }
   | {
+      kind: "edge";
+      stageBounds: {
+        left: number;
+        top: number;
+      };
+    }
+  | {
       kind: "node";
       nodeId: string;
       originX: number;
@@ -56,116 +57,6 @@ type DragState =
       startY: number;
     }
   | null;
-
-const nodeWidth = 228;
-const nodeHeight = 138;
-const headerHeight = 36;
-const portStartOffset = 62;
-const portRowHeight = 28;
-const portRadius = 6;
-
-const labNodes: LabNode[] = [
-  {
-    accent: "#375d8f",
-    category: "Scene",
-    id: "scene-entry",
-    inputs: [
-      "enter",
-      "context"
-    ],
-    label: "Scene Entry",
-    outputs: [
-      "lead",
-      "token"
-    ],
-    status: "Stable"
-  },
-  {
-    accent: "#8a5936",
-    category: "Event",
-    id: "detect-token",
-    inputs: [
-      "trigger",
-      "evidence"
-    ],
-    label: "Detect Token",
-    outputs: [
-      "clue",
-      "state"
-    ],
-    status: "Dragged"
-  },
-  {
-    accent: "#2f6f63",
-    category: "Clue",
-    id: "reveal-clue",
-    inputs: [
-      "input",
-      "memory"
-    ],
-    label: "Reveal Clue",
-    outputs: [
-      "branch",
-      "focus"
-    ],
-    status: "Selectable"
-  },
-  {
-    accent: "#86503c",
-    category: "Arc",
-    id: "trigger-arc",
-    inputs: [
-      "signal",
-      "link"
-    ],
-    label: "Trigger Arc",
-    outputs: [
-      "result",
-      "echo"
-    ],
-    status: "Observe"
-  }
-];
-
-const labEdges: LabEdge[] = [
-  {
-    id: "edge-scene-token",
-    label: "lead",
-    sourceId: "scene-entry",
-    targetId: "detect-token"
-  },
-  {
-    id: "edge-token-clue",
-    label: "clue",
-    sourceId: "detect-token",
-    targetId: "reveal-clue"
-  },
-  {
-    id: "edge-clue-arc",
-    label: "branch",
-    sourceId: "reveal-clue",
-    targetId: "trigger-arc"
-  }
-];
-
-const initialPositions: Record<string, Position> = {
-  "detect-token": {
-    x: 372,
-    y: 198
-  },
-  "reveal-clue": {
-    x: 688,
-    y: 122
-  },
-  "scene-entry": {
-    x: 88,
-    y: 92
-  },
-  "trigger-arc": {
-    x: 716,
-    y: 352
-  }
-};
 
 const domCssObservations = [
   "节点与端口保留 DOM 语义，按钮、文本和可访问性最直白。",
@@ -185,74 +76,18 @@ const canvasObservations = [
   "更适合作为后续性能型候选，而不是当前第一版主交互层。"
 ];
 
-function createStageState(): StageState {
-  return {
-    ...createCanvasViewport({
-      canvasHeight: 620,
-      canvasWidth: 1080,
-      offsetX: 32,
-      offsetY: 28,
-      zoom: 1
-    }),
-    positions: structuredClone(initialPositions),
-    selectedNodeId: "detect-token"
-  };
-}
-
-function getNodeById(nodeId: string): LabNode {
-  const node = labNodes.find((item) => item.id === nodeId);
-
-  if (!node) {
-    throw new Error(`Unknown lab node: ${nodeId}`);
-  }
-
-  return node;
-}
-
-function getSelectedCoordinates(stageState: StageState): string {
-  const position = getNodePosition(stageState, stageState.selectedNodeId);
-
-  return `${Math.round(position.x)}, ${Math.round(position.y)}`;
-}
-
-function getNodePosition(stageState: StageState, nodeId: string): Position {
-  const position = stageState.positions[nodeId];
-
-  if (!position) {
-    throw new Error(`Unknown node position: ${nodeId}`);
-  }
-
-  return position;
-}
-
-function getPortY(position: Position, index: number): number {
-  return position.y + portStartOffset + index * portRowHeight;
-}
-
-function getEdgePoints(stageState: StageState, edge: LabEdge) {
-  const sourceNode = getNodeById(edge.sourceId);
-  const targetNode = getNodeById(edge.targetId);
-  const sourcePosition = getNodePosition(stageState, edge.sourceId);
-  const targetPosition = getNodePosition(stageState, edge.targetId);
-
-  const sourceIndex = Math.min(sourceNode.outputs.length - 1, 0);
-  const targetIndex = Math.min(targetNode.inputs.length - 1, 0);
-
-  return {
-    x1: sourcePosition.x + nodeWidth - 12,
-    x2: targetPosition.x + 12,
-    y1: getPortY(sourcePosition, sourceIndex),
-    y2: getPortY(targetPosition, targetIndex)
-  };
-}
-
-function getEdgeLineStyle(stageState: StageState, edge: LabEdge) {
+function getLineStyle(points: {
+  x1: number;
+  x2: number;
+  y1: number;
+  y2: number;
+}) {
   const {
     x1,
     x2,
     y1,
     y2
-  } = getEdgePoints(stageState, edge);
+  } = points;
   const dx = x2 - x1;
   const dy = y2 - y1;
   const length = Math.sqrt(dx * dx + dy * dy);
@@ -268,49 +103,21 @@ function getEdgeLineStyle(stageState: StageState, edge: LabEdge) {
   };
 }
 
-function getBezierPath(stageState: StageState, edge: LabEdge): string {
+function getBezierPath(points: {
+  x1: number;
+  x2: number;
+  y1: number;
+  y2: number;
+}): string {
   const {
     x1,
     x2,
     y1,
     y2
-  } = getEdgePoints(stageState, edge);
+  } = points;
   const bend = Math.max(72, Math.abs(x2 - x1) * 0.35);
 
   return `M ${x1} ${y1} C ${x1 + bend} ${y1}, ${x2 - bend} ${y2}, ${x2} ${y2}`;
-}
-
-function resolveStagePoint(
-  stageState: StageState,
-  bounds: DOMRect,
-  clientX: number,
-  clientY: number
-): Position {
-  return {
-    x: (clientX - bounds.left - stageState.offsetX) / stageState.zoom,
-    y: (clientY - bounds.top - stageState.offsetY) / stageState.zoom
-  };
-}
-
-function findHitNodeId(stageState: StageState, point: Position): string | null {
-  const orderedNodes = [
-    ...labNodes
-  ].reverse();
-
-  for (const node of orderedNodes) {
-    const position = getNodePosition(stageState, node.id);
-
-    if (
-      point.x >= position.x &&
-      point.x <= position.x + nodeWidth &&
-      point.y >= position.y &&
-      point.y <= position.y + nodeHeight
-    ) {
-      return node.id;
-    }
-  }
-
-  return null;
 }
 
 function useInteractiveStageState() {
@@ -327,9 +134,25 @@ function useInteractiveStageState() {
     function handlePointerMove(event: PointerEvent) {
       setStageState((current) => {
         if (activeDrag.kind === "canvas") {
-          return panCanvasViewport(current, {
-            deltaX: event.clientX - activeDrag.startX - activeDrag.originOffsetX,
-            deltaY: event.clientY - activeDrag.startY - activeDrag.originOffsetY
+          return panCanvasViewportFromOrigin(current, {
+            deltaX: event.clientX - activeDrag.startX,
+            deltaY: event.clientY - activeDrag.startY,
+            originOffsetX: activeDrag.originOffsetX,
+            originOffsetY: activeDrag.originOffsetY
+          });
+        }
+
+        if (activeDrag.kind === "edge") {
+          const point = resolveStagePoint(
+            current,
+            activeDrag.stageBounds,
+            event.clientX,
+            event.clientY
+          );
+
+          return updatePendingEdge(current, {
+            currentX: point.x,
+            currentY: point.y
           });
         }
 
@@ -347,6 +170,10 @@ function useInteractiveStageState() {
     }
 
     function handlePointerUp() {
+      if (activeDrag.kind === "edge") {
+        setStageState((current) => clearPendingEdge(current));
+      }
+
       setDragState(null);
     }
 
@@ -360,6 +187,7 @@ function useInteractiveStageState() {
   }, [dragState]);
 
   return {
+    dragState,
     setDragState,
     setStageState,
     stageState
@@ -375,11 +203,14 @@ type DomStageProps = {
 };
 
 function DomStage(props: DomStageProps) {
+  const regionRef = useRef<HTMLDivElement | null>(null);
   const {
+    dragState,
     setDragState,
     setStageState,
     stageState
   } = useInteractiveStageState();
+  const pendingPoints = getPendingEdgePoints(stageState);
 
   return (
     <article className="base-lab-card">
@@ -467,6 +298,7 @@ function DomStage(props: DomStageProps) {
             startY: event.clientY
           });
         }}
+        ref={regionRef}
         role="region"
       >
         <div
@@ -479,28 +311,28 @@ function DomStage(props: DomStageProps) {
         >
           {props.edgeMode === "svg" ? (
             <svg aria-hidden="true" className="base-lab-svg-layer">
-              {labEdges.map((edge) => {
-                const {
-                  x1,
-                  x2,
-                  y1,
-                  y2
-                } = getEdgePoints(stageState, edge);
+              {stageState.edges.map((edge) => {
+                const points = getEdgePoints(stageState, edge);
 
                 return (
                   <g className="base-lab-svg-edge" key={edge.id}>
-                    <path d={getBezierPath(stageState, edge)} />
-                    <text x={(x1 + x2) / 2} y={(y1 + y2) / 2 - 8}>
+                    <path d={getBezierPath(points)} />
+                    <text x={(points.x1 + points.x2) / 2} y={(points.y1 + points.y2) / 2 - 8}>
                       {edge.label}
                     </text>
                   </g>
                 );
               })}
+              {pendingPoints ? (
+                <g className="base-lab-svg-edge base-lab-svg-edge-preview">
+                  <path d={getBezierPath(pendingPoints)} />
+                </g>
+              ) : null}
             </svg>
           ) : (
             <div aria-hidden="true" className="base-lab-css-edge-layer">
-              {labEdges.map((edge) => {
-                const edgeStyle = getEdgeLineStyle(stageState, edge);
+              {stageState.edges.map((edge) => {
+                const edgeStyle = getLineStyle(getEdgePoints(stageState, edge));
 
                 return (
                   <div
@@ -524,6 +356,17 @@ function DomStage(props: DomStageProps) {
                   </div>
                 );
               })}
+              {pendingPoints ? (
+                <div
+                  className="base-lab-css-edge base-lab-css-edge-preview"
+                  style={{
+                    left: `${getLineStyle(pendingPoints).left}px`,
+                    top: `${getLineStyle(pendingPoints).top}px`,
+                    width: `${getLineStyle(pendingPoints).length}px`,
+                    transform: getLineStyle(pendingPoints).transform
+                  }}
+                />
+              ) : null}
             </div>
           )}
 
@@ -533,7 +376,7 @@ function DomStage(props: DomStageProps) {
               const isSelected = node.id === stageState.selectedNodeId;
 
               return (
-                <button
+                <div
                   aria-label={node.label}
                   className={isSelected ? "base-lab-node base-lab-node-active" : "base-lab-node"}
                   key={node.id}
@@ -559,12 +402,13 @@ function DomStage(props: DomStageProps) {
                       startY: event.clientY
                     });
                   }}
+                  role="button"
                   style={{
                     "--lab-accent": node.accent,
                     left: `${position.x}px`,
                     top: `${position.y}px`
                   } as CSSProperties}
-                  type="button"
+                  tabIndex={0}
                 >
                   <div className="base-lab-node-header">
                     <strong>{node.label}</strong>
@@ -574,24 +418,89 @@ function DomStage(props: DomStageProps) {
                   <div className="base-lab-node-body">
                     <div className="base-lab-port-column">
                       {node.inputs.map((port) => (
-                        <div className="base-lab-port-row" key={`${node.id}-${port}-input`}>
+                        <button
+                          aria-label={`${node.label} input ${port}`}
+                          className="base-lab-port-row base-lab-port-button"
+                          key={`${node.id}-${port}-input`}
+                          onPointerDown={(event) => {
+                            event.stopPropagation();
+                          }}
+                          onPointerUp={(event) => {
+                            if (dragState?.kind !== "edge") {
+                              return;
+                            }
+
+                            event.preventDefault();
+                            event.stopPropagation();
+                            setStageState((current) =>
+                              connectPendingEdge(current, {
+                                targetId: node.id,
+                                targetPort: port
+                              })
+                            );
+                            setDragState(null);
+                          }}
+                          type="button"
+                        >
                           <span className="base-lab-port-dot" />
                           <span>{port}</span>
-                        </div>
+                        </button>
                       ))}
                     </div>
 
                     <div className="base-lab-node-core">
                       <span>Viewport linked</span>
-                      <span>Drag to compare</span>
+                      <span>Drag or wire</span>
                     </div>
 
                     <div className="base-lab-port-column base-lab-port-column-output">
                       {node.outputs.map((port) => (
-                        <div className="base-lab-port-row" key={`${node.id}-${port}-output`}>
+                        <button
+                          aria-label={`${node.label} output ${port}`}
+                          className="base-lab-port-row base-lab-port-button base-lab-port-button-output"
+                          key={`${node.id}-${port}-output`}
+                          onPointerDown={(event) => {
+                            const bounds = regionRef.current?.getBoundingClientRect();
+
+                            if (!bounds) {
+                              return;
+                            }
+
+                            event.preventDefault();
+                            event.stopPropagation();
+                            const point = resolveStagePoint(
+                              stageState,
+                              bounds,
+                              event.clientX,
+                              event.clientY
+                            );
+                            setStageState((current) =>
+                              startPendingEdge(
+                                {
+                                  ...current,
+                                  selectedNodeId: node.id
+                                },
+                                {
+                                  currentX: point.x,
+                                  currentY: point.y,
+                                  sourceId: node.id,
+                                  sourcePort: port
+                                }
+                              )
+                            );
+                            setDragState({
+                              kind: "edge",
+                              stageBounds: {
+                                left: bounds.left,
+                                top: bounds.top
+                              }
+                            });
+                          }}
+                          type="button"
+                        >
                           <span>{port}</span>
                           <span className="base-lab-port-dot" />
-                        </div>
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -600,7 +509,7 @@ function DomStage(props: DomStageProps) {
                     <span>{node.status}</span>
                     <span>{Math.round(position.x)}, {Math.round(position.y)}</span>
                   </div>
-                </button>
+                </div>
               );
             })}
           </div>
@@ -619,10 +528,12 @@ function DomStage(props: DomStageProps) {
 function CanvasStage() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const {
+    dragState,
     setDragState,
     setStageState,
     stageState
   } = useInteractiveStageState();
+  const pendingPoints = getPendingEdgePoints(stageState);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -671,25 +582,49 @@ function CanvasStage() {
     context.translate(stageState.offsetX, stageState.offsetY);
     context.scale(stageState.zoom, stageState.zoom);
 
-    for (const edge of labEdges) {
-      const {
-        x1,
-        x2,
-        y1,
-        y2
-      } = getEdgePoints(stageState, edge);
-      const bend = Math.max(72, Math.abs(x2 - x1) * 0.35);
+    for (const edge of stageState.edges) {
+      const points = getEdgePoints(stageState, edge);
+      const bend = Math.max(72, Math.abs(points.x2 - points.x1) * 0.35);
 
       context.beginPath();
-      context.moveTo(x1, y1);
-      context.bezierCurveTo(x1 + bend, y1, x2 - bend, y2, x2, y2);
+      context.moveTo(points.x1, points.y1);
+      context.bezierCurveTo(
+        points.x1 + bend,
+        points.y1,
+        points.x2 - bend,
+        points.y2,
+        points.x2,
+        points.y2
+      );
       context.strokeStyle = "rgba(42, 88, 99, 0.78)";
       context.lineWidth = 3;
       context.stroke();
 
       context.fillStyle = "#31414f";
       context.font = "12px Noto Sans SC, sans-serif";
-      context.fillText(edge.label, (x1 + x2) / 2 - 10, (y1 + y2) / 2 - 10);
+      context.fillText(
+        edge.label,
+        (points.x1 + points.x2) / 2 - 10,
+        (points.y1 + points.y2) / 2 - 10
+      );
+    }
+
+    if (pendingPoints) {
+      const bend = Math.max(72, Math.abs(pendingPoints.x2 - pendingPoints.x1) * 0.35);
+
+      context.beginPath();
+      context.moveTo(pendingPoints.x1, pendingPoints.y1);
+      context.bezierCurveTo(
+        pendingPoints.x1 + bend,
+        pendingPoints.y1,
+        pendingPoints.x2 - bend,
+        pendingPoints.y2,
+        pendingPoints.x2,
+        pendingPoints.y2
+      );
+      context.strokeStyle = "rgba(173, 92, 44, 0.72)";
+      context.lineWidth = 2.5;
+      context.stroke();
     }
 
     for (const node of labNodes) {
@@ -717,25 +652,27 @@ function CanvasStage() {
 
       context.fillStyle = "#3e463f";
       context.font = "12px Noto Sans SC, sans-serif";
-      node.inputs.forEach((port, index) => {
-        const portY = getPortY(position, index);
+      node.inputs.forEach((port) => {
+        const anchor = getPortAnchor(stageState, node.id, "input", port);
+
         context.beginPath();
         context.fillStyle = "#efe3ca";
-        context.arc(position.x + 10, portY, portRadius, 0, Math.PI * 2);
+        context.arc(anchor.x, anchor.y, portRadius, 0, Math.PI * 2);
         context.fill();
         context.fillStyle = "#3e463f";
-        context.fillText(port, position.x + 22, portY + 4);
+        context.fillText(port, position.x + 22, anchor.y + 4);
       });
 
-      node.outputs.forEach((port, index) => {
-        const portY = getPortY(position, index);
+      node.outputs.forEach((port) => {
+        const anchor = getPortAnchor(stageState, node.id, "output", port);
         const textWidth = context.measureText(port).width;
+
         context.beginPath();
         context.fillStyle = "#d9ebdf";
-        context.arc(position.x + nodeWidth - 10, portY, portRadius, 0, Math.PI * 2);
+        context.arc(anchor.x, anchor.y, portRadius, 0, Math.PI * 2);
         context.fill();
         context.fillStyle = "#3e463f";
-        context.fillText(port, position.x + nodeWidth - textWidth - 22, portY + 4);
+        context.fillText(port, position.x + nodeWidth - textWidth - 22, anchor.y + 4);
       });
 
       context.fillStyle = "#6c6254";
@@ -833,6 +770,33 @@ function CanvasStage() {
           onPointerDown={(event) => {
             const bounds = event.currentTarget.getBoundingClientRect();
             const point = resolveStagePoint(stageState, bounds, event.clientX, event.clientY);
+            const outputHandle = findPortHandle(stageState, point, "output");
+
+            if (outputHandle) {
+              setStageState((current) =>
+                startPendingEdge(
+                  {
+                    ...current,
+                    selectedNodeId: outputHandle.nodeId
+                  },
+                  {
+                    currentX: point.x,
+                    currentY: point.y,
+                    sourceId: outputHandle.nodeId,
+                    sourcePort: outputHandle.portName
+                  }
+                )
+              );
+              setDragState({
+                kind: "edge",
+                stageBounds: {
+                  left: bounds.left,
+                  top: bounds.top
+                }
+              });
+              return;
+            }
+
             const hitNodeId = findHitNodeId(stageState, point);
 
             if (hitNodeId) {
@@ -860,6 +824,27 @@ function CanvasStage() {
               startX: event.clientX,
               startY: event.clientY
             });
+          }}
+          onPointerUp={(event) => {
+            if (dragState?.kind !== "edge") {
+              return;
+            }
+
+            const bounds = event.currentTarget.getBoundingClientRect();
+            const point = resolveStagePoint(stageState, bounds, event.clientX, event.clientY);
+            const inputHandle = findPortHandle(stageState, point, "input");
+
+            if (!inputHandle) {
+              return;
+            }
+
+            setStageState((current) =>
+              connectPendingEdge(current, {
+                targetId: inputHandle.nodeId,
+                targetPort: inputHandle.portName
+              })
+            );
+            setDragState(null);
           }}
           ref={canvasRef}
         />
