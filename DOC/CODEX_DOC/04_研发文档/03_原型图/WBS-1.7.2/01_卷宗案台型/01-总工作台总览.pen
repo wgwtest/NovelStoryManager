@@ -1,0 +1,2594 @@
+{
+  "version": "2.10",
+  "children": [
+    {
+      "type": "frame",
+      "id": "dosov0",
+      "x": 80,
+      "y": 80,
+      "name": "总工作台总览",
+      "width": 1600,
+      "height": 1000,
+      "clip": true,
+      "cornerRadius": 24,
+      "fill": "#F4F6FA",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "dosov1",
+          "name": "顶部栏",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#D6DEE8"
+          },
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "padding": [
+            18,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "dosov2",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dosov3",
+                  "content": "知识编辑器",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700",
+                  "fill": "#17212B"
+                },
+                {
+                  "type": "text",
+                  "id": "dosov4",
+                  "content": "项目 / 青云劫火录 · 卷宗案台型 · 总工作台总览",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "fill": "#66758A"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dosov5",
+              "layout": "horizontal",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dosov6",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#F5F8FC",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6DEE8"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dosov7",
+                      "content": "导入",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#66758A"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dosov8",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#F5F8FC",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6DEE8"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dosov9",
+                      "content": "导出",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#66758A"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dosova",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#D8E4FF",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#2457C5"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dosovb",
+                      "content": "已保存",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#173B8A"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dosovc",
+          "name": "主体区",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "#F8FAFD",
+          "layout": "horizontal",
+          "children": [
+            {
+              "type": "frame",
+              "id": "dosovd",
+              "name": "对象库列",
+              "width": 292,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": {
+                  "right": 1
+                },
+                "fill": "#D6DEE8"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                16,
+                16
+              ],
+              "clip": true,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dosove",
+                  "content": "对象库",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "fill": "#17212B"
+                },
+                {
+                  "type": "frame",
+                  "id": "dosovi",
+                  "name": "搜索区",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6DEE8"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dosovf",
+                      "content": "搜索对象、规格化键、标签",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#66758A"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosovg",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 14,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosovh",
+                          "content": "输入对象名或关系键",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dosov1b",
+                  "name": "分类区",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6DEE8"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dosovj",
+                      "content": "分类",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#66758A"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosovk",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#D8E4FF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2457C5"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosovl",
+                          "content": "人物",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#173B8A"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosovm",
+                          "content": "24",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#173B8A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosovn",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosovo",
+                          "content": "势力",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosovp",
+                          "content": "11",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosovq",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosovr",
+                          "content": "地点",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosovs",
+                          "content": "18",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosovt",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosovu",
+                          "content": "物品",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosovv",
+                          "content": "13",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosovw",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosovx",
+                          "content": "境界体系",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosovy",
+                          "content": "7",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosovz",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov10",
+                          "content": "事件",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov11",
+                          "content": "26",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov12",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov13",
+                          "content": "关系",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov14",
+                          "content": "31",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov15",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov16",
+                          "content": "线索",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov17",
+                          "content": "14",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov18",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov19",
+                          "content": "剧情弧",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov1a",
+                          "content": "9",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dosov1k",
+                  "name": "动作区",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6DEE8"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dosov1c",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov1d",
+                          "content": "已建模对象",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov1e",
+                          "content": "153",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov1f",
+                      "layout": "horizontal",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dosov1g",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#D8E4FF",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#2457C5"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov1h",
+                              "content": "新建对象",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#173B8A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov1i",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#F5F8FC",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6DEE8"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov1j",
+                              "content": "批量导入",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#66758A"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dosov21",
+                  "name": "对象列表",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6DEE8"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dosov1l",
+                      "content": "列表",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#66758A"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov1m",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2457C5"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov1n",
+                          "content": "柳云澜",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov1o",
+                          "content": "人物 / 主视角",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov1p",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov1q",
+                          "content": "赤霄盟",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov1r",
+                          "content": "势力 / 对立阵营",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov1s",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov1t",
+                          "content": "北陵渡口伏击",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov1u",
+                          "content": "事件 / 主冲突",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov1v",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov1w",
+                          "content": "劫火印",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov1x",
+                          "content": "物品 / 核心线索",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov1y",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov1z",
+                          "content": "劫火入世",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov20",
+                          "content": "剧情弧 / 主弧",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dosov22",
+              "name": "主视图区",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#F8FAFD",
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                18,
+                18
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dosov23",
+                  "name": "标签栏",
+                  "layout": "horizontal",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dosov24",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#D8E4FF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2457C5"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov25",
+                          "content": "知识库",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#173B8A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov26",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov27",
+                          "content": "关系图",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov28",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov29",
+                          "content": "轨道",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#66758A"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dosov4l",
+                  "name": "视图导语",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6DEE8"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dosov4c",
+                      "content": "卷宗案台型 · 总工作台总览",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "700",
+                      "fill": "#17212B"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dosov4d",
+                      "content": "把对象建模当作卷宗整理工作，主工作区强调记录索引、字段矩阵和详情抽屉。总工作台先回答“当前世界模型覆盖到哪里”。",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500",
+                      "fill": "#66758A",
+                      "width": "fill_container",
+                      "textGrowth": "fixed-width"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov4e",
+                      "layout": "horizontal",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dosov4f",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#D8E4FF",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#2457C5"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov4g",
+                              "content": "卷宗视角",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#173B8A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov4h",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#F5F8FC",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6DEE8"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov4i",
+                              "content": "字段审校",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#66758A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov4j",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#F5F8FC",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6DEE8"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov4k",
+                              "content": "引用追踪",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#66758A"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dosov4m",
+                  "layout": "horizontal",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dosov4q",
+                      "name": "已建卷宗卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov4n",
+                          "content": "已建卷宗",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov4o",
+                          "content": "153",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov4p",
+                          "content": "对象库不是写作页，而是项目对象卷宗库。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov4u",
+                      "name": "待补字段卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov4r",
+                          "content": "待补字段",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov4s",
+                          "content": "12",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov4t",
+                          "content": "字段矩阵直接暴露缺项，便于人工补建模。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov4y",
+                      "name": "待补引用卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov4v",
+                          "content": "待补引用",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov4w",
+                          "content": "08",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov4x",
+                          "content": "关系和切片都回指卷宗记录。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dosov2a",
+                  "layout": "horizontal",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dosov2r",
+                      "name": "卷宗目录",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": 260,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov2b",
+                          "content": "卷宗目录",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov2c",
+                          "layout": "vertical",
+                          "width": "fill_container",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            12
+                          ],
+                          "cornerRadius": 12,
+                          "fill": "#F5F8FC",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#2457C5"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov2d",
+                              "content": "柳云澜",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "700",
+                              "fill": "#17212B"
+                            },
+                            {
+                              "type": "text",
+                              "id": "dosov2e",
+                              "content": "人物 / 主视角",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500",
+                              "fill": "#66758A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov2f",
+                          "layout": "vertical",
+                          "width": "fill_container",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            12
+                          ],
+                          "cornerRadius": 12,
+                          "fill": "#FFFFFF",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6DEE8"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov2g",
+                              "content": "赤霄盟",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "700",
+                              "fill": "#17212B"
+                            },
+                            {
+                              "type": "text",
+                              "id": "dosov2h",
+                              "content": "势力 / 对立阵营",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500",
+                              "fill": "#66758A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov2i",
+                          "layout": "vertical",
+                          "width": "fill_container",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            12
+                          ],
+                          "cornerRadius": 12,
+                          "fill": "#FFFFFF",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6DEE8"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov2j",
+                              "content": "北陵渡口伏击",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "700",
+                              "fill": "#17212B"
+                            },
+                            {
+                              "type": "text",
+                              "id": "dosov2k",
+                              "content": "事件 / 主冲突",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500",
+                              "fill": "#66758A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov2l",
+                          "layout": "vertical",
+                          "width": "fill_container",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            12
+                          ],
+                          "cornerRadius": 12,
+                          "fill": "#FFFFFF",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6DEE8"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov2m",
+                              "content": "劫火印",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "700",
+                              "fill": "#17212B"
+                            },
+                            {
+                              "type": "text",
+                              "id": "dosov2n",
+                              "content": "物品 / 核心线索",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500",
+                              "fill": "#66758A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov2o",
+                          "layout": "vertical",
+                          "width": "fill_container",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            12
+                          ],
+                          "cornerRadius": 12,
+                          "fill": "#FFFFFF",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6DEE8"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov2p",
+                              "content": "劫火入世",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "700",
+                              "fill": "#17212B"
+                            },
+                            {
+                              "type": "text",
+                              "id": "dosov2q",
+                              "content": "剧情弧 / 主弧",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500",
+                              "fill": "#66758A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov2s",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 14,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dosov3v",
+                          "name": "字段矩阵",
+                          "layout": "vertical",
+                          "gap": 12,
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 18,
+                          "padding": [
+                            16,
+                            16,
+                            16,
+                            16
+                          ],
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6DEE8"
+                          },
+                          "clip": false,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov2t",
+                              "content": "字段矩阵",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "700",
+                              "fill": "#17212B"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "dosov2u",
+                              "layout": "vertical",
+                              "gap": 8,
+                              "width": "fill_container",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "dosov2v",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F8FC",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov2w",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov2x",
+                                          "content": "对象",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#66758A"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov2y",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov2z",
+                                          "content": "建模状态",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#66758A"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov30",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov31",
+                                          "content": "引用切片",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#66758A"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov32",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov33",
+                                          "content": "最近改动",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#66758A"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dosov34",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov35",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov36",
+                                          "content": "柳云澜",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov37",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov38",
+                                          "content": "已完成",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov39",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3a",
+                                          "content": "S-12 / S-14",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3b",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3c",
+                                          "content": "刚刚",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dosov3d",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3e",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3f",
+                                          "content": "赤霄盟",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3g",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3h",
+                                          "content": "待补关系",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3i",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3j",
+                                          "content": "S-09",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3k",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3l",
+                                          "content": "8 分钟前",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dosov3m",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3n",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3o",
+                                          "content": "劫火印",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3p",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3q",
+                                          "content": "待补来源",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3r",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3s",
+                                          "content": "S-12 / S-16",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3t",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3u",
+                                          "content": "12 分钟前",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov3z",
+                          "name": "卷宗审校进度卡片",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 18,
+                          "padding": [
+                            16,
+                            16,
+                            16,
+                            16
+                          ],
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6DEE8"
+                          },
+                          "clip": false,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov3w",
+                              "content": "卷宗审校进度",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#66758A"
+                            },
+                            {
+                              "type": "text",
+                              "id": "dosov3x",
+                              "content": "76%",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "700",
+                              "fill": "#17212B"
+                            },
+                            {
+                              "type": "text",
+                              "id": "dosov3y",
+                              "content": "卷宗工作流会优先暴露缺字段和缺引用对象。",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#66758A",
+                              "width": "fill_container",
+                              "textGrowth": "fixed-width"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov4b",
+                      "name": "记录详情抽屉",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "width": 320,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov40",
+                          "content": "记录详情抽屉",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov41",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov42",
+                              "content": "身份",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#66758A"
+                            },
+                            {
+                              "type": "text",
+                              "id": "dosov43",
+                              "content": "散修 / 主视角",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#17212B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov44",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov45",
+                              "content": "当前境界",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#66758A"
+                            },
+                            {
+                              "type": "text",
+                              "id": "dosov46",
+                              "content": "化炁中段",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#17212B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov47",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov48",
+                              "content": "首次出现",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#66758A"
+                            },
+                            {
+                              "type": "text",
+                              "id": "dosov49",
+                              "content": "第一卷 第一章",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#17212B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov4a",
+                          "content": "当前抽屉与右侧检查器不同：抽屉承载当前记录主内容，检查器承载跨视图辅助信息。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dosov4z",
+              "name": "检查器列",
+              "width": 336,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": {
+                  "left": 1
+                },
+                "fill": "#D6DEE8"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                16,
+                16
+              ],
+              "clip": true,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dosov50",
+                  "content": "检查器",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "fill": "#17212B"
+                },
+                {
+                  "type": "frame",
+                  "id": "dosov56",
+                  "name": "对象摘要",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6DEE8"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dosov51",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov52",
+                          "content": "柳云澜",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dosov53",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#D8E4FF",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#2457C5"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dosov54",
+                              "content": "人物",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#173B8A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "dosov55",
+                      "content": "已建模",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#66758A"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dosov5h",
+                  "name": "基础字段",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6DEE8"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dosov57",
+                      "content": "基础字段",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#66758A"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov58",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov59",
+                          "content": "身份",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov5a",
+                          "content": "散修 / 主视角",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov5b",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov5c",
+                          "content": "当前境界",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov5d",
+                          "content": "化炁中段",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov5e",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dosov5f",
+                          "content": "首次出现",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#66758A"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov5g",
+                          "content": "第一卷 第一章",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#17212B"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dosov5s",
+                  "name": "引用与跳转",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6DEE8"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dosov5i",
+                      "content": "引用与跳转",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#66758A"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov5j",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "dosov5k",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#2457C5"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov5l",
+                          "content": "关联事件：北陵渡口伏击、青崖城夜审",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#17212B",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov5m",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "dosov5n",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#2457C5"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov5o",
+                          "content": "关联剧情弧：劫火入世",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#17212B",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dosov5p",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F8FC",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6DEE8"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "dosov5q",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#2457C5"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dosov5r",
+                          "content": "引用切片：S-12、S-14",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#17212B",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dosov5v",
+                  "name": "视图提示",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6DEE8"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dosov5t",
+                      "content": "总工作台先回答“当前世界模型覆盖到哪里”。",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#17212B",
+                      "width": "fill_container",
+                      "textGrowth": "fixed-width"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dosov5u",
+                      "content": "当前套系：卷宗案台型",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#66758A"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

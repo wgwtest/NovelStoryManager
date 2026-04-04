@@ -1,0 +1,2359 @@
+{
+  "version": "2.10",
+  "children": [
+    {
+      "type": "frame",
+      "id": "comtr0",
+      "x": 80,
+      "y": 80,
+      "name": "轨道页",
+      "width": 1600,
+      "height": 1000,
+      "clip": true,
+      "cornerRadius": 24,
+      "fill": "#F2F7F7",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "comtr1",
+          "name": "顶部栏",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#D4E4E4"
+          },
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "padding": [
+            18,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "comtr2",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "comtr3",
+                  "content": "知识编辑器",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700",
+                  "fill": "#162628"
+                },
+                {
+                  "type": "text",
+                  "id": "comtr4",
+                  "content": "项目 / 青云劫火录 · 总控指挥型 · 轨道页",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "fill": "#65787B"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "comtr5",
+              "layout": "horizontal",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "comtr6",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#EDF5F5",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D4E4E4"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "comtr7",
+                      "content": "导入",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#65787B"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comtr8",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#EDF5F5",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D4E4E4"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "comtr9",
+                      "content": "导出",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#65787B"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comtra",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#D6EFF0",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#0A6C6F"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "comtrb",
+                      "content": "已保存",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#0A4E51"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "comtrc",
+          "name": "主体区",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "#F7FBFB",
+          "layout": "horizontal",
+          "children": [
+            {
+              "type": "frame",
+              "id": "comtrd",
+              "name": "对象库列",
+              "width": 290,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": {
+                  "right": 1
+                },
+                "fill": "#D4E4E4"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                16,
+                16
+              ],
+              "clip": true,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "comtre",
+                  "content": "对象库",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "fill": "#162628"
+                },
+                {
+                  "type": "frame",
+                  "id": "comtri",
+                  "name": "搜索区",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D4E4E4"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "comtrf",
+                      "content": "搜索对象、规格化键、标签",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#65787B"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtrg",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 14,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtrh",
+                          "content": "输入对象名或关系键",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comtr1b",
+                  "name": "分类区",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D4E4E4"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "comtrj",
+                      "content": "分类",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#65787B"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtrk",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#D6EFF0",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#0A6C6F"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtrl",
+                          "content": "人物",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#0A4E51"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtrm",
+                          "content": "24",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#0A4E51"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtrn",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtro",
+                          "content": "势力",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtrp",
+                          "content": "11",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtrq",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtrr",
+                          "content": "地点",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtrs",
+                          "content": "18",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtrt",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtru",
+                          "content": "物品",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtrv",
+                          "content": "13",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtrw",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtrx",
+                          "content": "境界体系",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtry",
+                          "content": "7",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtrz",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr10",
+                          "content": "事件",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr11",
+                          "content": "26",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr12",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr13",
+                          "content": "关系",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr14",
+                          "content": "31",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr15",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr16",
+                          "content": "线索",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr17",
+                          "content": "14",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr18",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr19",
+                          "content": "剧情弧",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr1a",
+                          "content": "9",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comtr1k",
+                  "name": "动作区",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D4E4E4"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "comtr1c",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr1d",
+                          "content": "已建模对象",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr1e",
+                          "content": "153",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr1f",
+                      "layout": "horizontal",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "comtr1g",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#D6EFF0",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#0A6C6F"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "comtr1h",
+                              "content": "新建对象",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#0A4E51"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "comtr1i",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#EDF5F5",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D4E4E4"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "comtr1j",
+                              "content": "批量导入",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#65787B"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comtr21",
+                  "name": "对象列表",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D4E4E4"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "comtr1l",
+                      "content": "列表",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#65787B"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr1m",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#0A6C6F"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr1n",
+                          "content": "北陵渡口伏击",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr1o",
+                          "content": "事件 / 第 12 日",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr1p",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr1q",
+                          "content": "地脉异动",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr1r",
+                          "content": "事件 / 第 13 日",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr1s",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr1t",
+                          "content": "柳云澜观察切片",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr1u",
+                          "content": "观察 / 主视角",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr1v",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr1w",
+                          "content": "沈照雪观察切片",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr1x",
+                          "content": "观察 / 侧视角",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr1y",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr1z",
+                          "content": "劫火印现身",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr20",
+                          "content": "事件 / 第 14 日",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "comtr22",
+              "name": "主视图区",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#F7FBFB",
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                18,
+                18
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "comtr23",
+                  "name": "标签栏",
+                  "layout": "horizontal",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "comtr24",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr25",
+                          "content": "知识库",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr26",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr27",
+                          "content": "关系图",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#65787B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr28",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#D6EFF0",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#0A6C6F"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr29",
+                          "content": "轨道",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#0A4E51"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comtr2j",
+                  "name": "视图导语",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D4E4E4"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "comtr2a",
+                      "content": "总控指挥型 · 轨道页",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "700",
+                      "fill": "#162628"
+                    },
+                    {
+                      "type": "text",
+                      "id": "comtr2b",
+                      "content": "把三主视图统一收拢到一个总控工作面，重点检查覆盖、联动和输出切片。轨道页强调多时间线、多空间线和观察切片的并行排布。",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500",
+                      "fill": "#65787B",
+                      "width": "fill_container",
+                      "textGrowth": "fixed-width"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr2c",
+                      "layout": "horizontal",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "comtr2d",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#D6EFF0",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#0A6C6F"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "comtr2e",
+                              "content": "全局总控",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#0A4E51"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "comtr2f",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#EDF5F5",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D4E4E4"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "comtr2g",
+                              "content": "联动监视",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#65787B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "comtr2h",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#EDF5F5",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D4E4E4"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "comtr2i",
+                              "content": "切片输出",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#65787B"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comtr2k",
+                  "layout": "horizontal",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "comtr2o",
+                      "name": "全局覆盖总览卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr2l",
+                          "content": "全局覆盖总览",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr2m",
+                          "content": "76%",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr2n",
+                          "content": "覆盖率不是写作进度，而是世界模型可观测程度。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr2s",
+                      "name": "跨视图联动卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr2p",
+                          "content": "跨视图联动",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr2q",
+                          "content": "3 / 3",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr2r",
+                          "content": "知识库、关系图、轨道需要能互相追跳。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr2w",
+                      "name": "待补输出卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr2t",
+                          "content": "待补输出",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr2u",
+                          "content": "06",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr2v",
+                          "content": "输出切片只是一层观察结果。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comtr2x",
+                  "layout": "horizontal",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "comtr2y",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 14,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr2z",
+                          "content": "全局覆盖总览",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "comtr30",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "comtr37",
+                              "name": "联动监视窗",
+                              "layout": "vertical",
+                              "gap": 8,
+                              "width": "fill_container",
+                              "fill": "#FFFFFF",
+                              "cornerRadius": 18,
+                              "padding": [
+                                16,
+                                16,
+                                16,
+                                16
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#D4E4E4"
+                              },
+                              "clip": false,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "comtr31",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "comtr32",
+                                      "content": "联动监视窗",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#0A4E51"
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "comtr33",
+                                      "layout": "horizontal",
+                                      "width": "fit_content",
+                                      "height": "fit_content",
+                                      "padding": [
+                                        7,
+                                        12
+                                      ],
+                                      "cornerRadius": 999,
+                                      "fill": "#D6EFF0",
+                                      "stroke": {
+                                        "thickness": 1,
+                                        "fill": "#0A6C6F"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "comtr34",
+                                          "content": "轨道",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#0A4E51"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "comtr35",
+                                  "content": "主时间带",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 15,
+                                  "fontWeight": "700",
+                                  "fill": "#162628"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "comtr36",
+                                  "content": "第 12 日到第 14 日拥挤，需要拆轨。",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "500",
+                                  "fill": "#65787B",
+                                  "width": "fill_container",
+                                  "textGrowth": "fixed-width"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "comtr3e",
+                              "name": "联动监视窗",
+                              "layout": "vertical",
+                              "gap": 8,
+                              "width": "fill_container",
+                              "fill": "#FFFFFF",
+                              "cornerRadius": 18,
+                              "padding": [
+                                16,
+                                16,
+                                16,
+                                16
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#D4E4E4"
+                              },
+                              "clip": false,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "comtr38",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "comtr39",
+                                      "content": "联动监视窗",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#0A4E51"
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "comtr3a",
+                                      "layout": "horizontal",
+                                      "width": "fit_content",
+                                      "height": "fit_content",
+                                      "padding": [
+                                        7,
+                                        12
+                                      ],
+                                      "cornerRadius": 999,
+                                      "fill": "#D6EFF0",
+                                      "stroke": {
+                                        "thickness": 1,
+                                        "fill": "#0A6C6F"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "comtr3b",
+                                          "content": "轨道",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#0A4E51"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "comtr3c",
+                                  "content": "观察切片",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 15,
+                                  "fontWeight": "700",
+                                  "fill": "#162628"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "comtr3d",
+                                  "content": "沈照雪视角仍偏弱。",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "500",
+                                  "fill": "#65787B",
+                                  "width": "fill_container",
+                                  "textGrowth": "fixed-width"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "comtr3f",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "comtr3m",
+                              "name": "联动监视窗",
+                              "layout": "vertical",
+                              "gap": 8,
+                              "width": "fill_container",
+                              "fill": "#FFFFFF",
+                              "cornerRadius": 18,
+                              "padding": [
+                                16,
+                                16,
+                                16,
+                                16
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#D4E4E4"
+                              },
+                              "clip": false,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "comtr3g",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "comtr3h",
+                                      "content": "联动监视窗",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#0A4E51"
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "comtr3i",
+                                      "layout": "horizontal",
+                                      "width": "fit_content",
+                                      "height": "fit_content",
+                                      "padding": [
+                                        7,
+                                        12
+                                      ],
+                                      "cornerRadius": 999,
+                                      "fill": "#D6EFF0",
+                                      "stroke": {
+                                        "thickness": 1,
+                                        "fill": "#0A6C6F"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "comtr3j",
+                                          "content": "联动",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#0A4E51"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "comtr3k",
+                                  "content": "地点并行",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 15,
+                                  "fontWeight": "700",
+                                  "fill": "#162628"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "comtr3l",
+                                  "content": "青崖城与北陵渡口存在交叠。",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "500",
+                                  "fill": "#65787B",
+                                  "width": "fill_container",
+                                  "textGrowth": "fixed-width"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "comtr3t",
+                              "name": "联动监视窗",
+                              "layout": "vertical",
+                              "gap": 8,
+                              "width": "fill_container",
+                              "fill": "#FFFFFF",
+                              "cornerRadius": 18,
+                              "padding": [
+                                16,
+                                16,
+                                16,
+                                16
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#D4E4E4"
+                              },
+                              "clip": false,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "comtr3n",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "comtr3o",
+                                      "content": "联动监视窗",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#0A4E51"
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "comtr3p",
+                                      "layout": "horizontal",
+                                      "width": "fit_content",
+                                      "height": "fit_content",
+                                      "padding": [
+                                        7,
+                                        12
+                                      ],
+                                      "cornerRadius": 999,
+                                      "fill": "#D6EFF0",
+                                      "stroke": {
+                                        "thickness": 1,
+                                        "fill": "#0A6C6F"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "comtr3q",
+                                          "content": "联动",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#0A4E51"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "comtr3r",
+                                  "content": "输出排序",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 15,
+                                  "fontWeight": "700",
+                                  "fill": "#162628"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "comtr3s",
+                                  "content": "切片 T-14-C 与 T-14-D 顺序待定。",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "500",
+                                  "fill": "#65787B",
+                                  "width": "fill_container",
+                                  "textGrowth": "fixed-width"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr48",
+                      "name": "输出切片指挥板",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "width": 340,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr3u",
+                          "content": "输出切片指挥板",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "comtr3v",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "comtr3w",
+                              "content": "主输出",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#65787B"
+                            },
+                            {
+                              "type": "text",
+                              "id": "comtr3x",
+                              "content": "T-12-A / 北陵渡口伏击",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#162628"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "comtr3y",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "comtr3z",
+                              "content": "并行输出",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#65787B"
+                            },
+                            {
+                              "type": "text",
+                              "id": "comtr40",
+                              "content": "T-14-C / 劫火印现身",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#162628"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "comtr41",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "comtr42",
+                              "content": "观察输出",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#65787B"
+                            },
+                            {
+                              "type": "text",
+                              "id": "comtr43",
+                              "content": "S-14 / 沈照雪视角",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#162628"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "comtr44",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "comtr45",
+                              "content": "风险提示",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#65787B"
+                            },
+                            {
+                              "type": "text",
+                              "id": "comtr46",
+                              "content": "主时间轨仍有 2 处空洞",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#162628"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr47",
+                          "content": "这块板的职责不是写章节，而是统筹哪些切片已经可以被观察层消费。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "comtr49",
+              "name": "检查器列",
+              "width": 338,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": {
+                  "left": 1
+                },
+                "fill": "#D4E4E4"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                16,
+                16
+              ],
+              "clip": true,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "comtr4a",
+                  "content": "检查器",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "fill": "#162628"
+                },
+                {
+                  "type": "frame",
+                  "id": "comtr4g",
+                  "name": "对象摘要",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D4E4E4"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "comtr4b",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr4c",
+                          "content": "北陵渡口伏击",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "comtr4d",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#D6EFF0",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#0A6C6F"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "comtr4e",
+                              "content": "事件",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#0A4E51"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "comtr4f",
+                      "content": "轨道已排布",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#65787B"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comtr4r",
+                  "name": "基础字段",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D4E4E4"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "comtr4h",
+                      "content": "基础字段",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#65787B"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr4i",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr4j",
+                          "content": "开始时刻",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr4k",
+                          "content": "第 12 日 / 戌时",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr4l",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr4m",
+                          "content": "作用轨道",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr4n",
+                          "content": "主时间、地点、观察",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr4o",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "comtr4p",
+                          "content": "观察切片",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#65787B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr4q",
+                          "content": "柳云澜 / 沈照雪",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#162628"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comtr52",
+                  "name": "引用与跳转",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D4E4E4"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "comtr4s",
+                      "content": "引用与跳转",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#65787B"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr4t",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "comtr4u",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#0A6C6F"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr4v",
+                          "content": "前置事件：密令下发",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#162628",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr4w",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "comtr4x",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#0A6C6F"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr4y",
+                          "content": "后续事件：地脉异动",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#162628",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comtr4z",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D4E4E4"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "comtr50",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#0A6C6F"
+                        },
+                        {
+                          "type": "text",
+                          "id": "comtr51",
+                          "content": "章节输出：T-12-A",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#162628",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comtr55",
+                  "name": "视图提示",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D4E4E4"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "comtr53",
+                      "content": "轨道页强调多时间线、多空间线和观察切片的并行排布。",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#162628",
+                      "width": "fill_container",
+                      "textGrowth": "fixed-width"
+                    },
+                    {
+                      "type": "text",
+                      "id": "comtr54",
+                      "content": "当前套系：总控指挥型",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#65787B"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
