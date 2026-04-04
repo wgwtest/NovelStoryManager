@@ -1,0 +1,2178 @@
+{
+  "version": "2.10",
+  "children": [
+    {
+      "type": "frame",
+      "id": "staov0",
+      "x": 80,
+      "y": 80,
+      "name": "总工作台总览",
+      "width": 1600,
+      "height": 1000,
+      "clip": true,
+      "cornerRadius": 24,
+      "fill": "#F4F8F6",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "staov1",
+          "name": "顶部栏",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#D7E3DC"
+          },
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "padding": [
+            18,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "staov2",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "staov3",
+                  "content": "知识编辑器",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700",
+                  "fill": "#1C2E25"
+                },
+                {
+                  "type": "text",
+                  "id": "staov4",
+                  "content": "项目 / 青云劫火录 · 场景调度型 · 总工作台总览",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "fill": "#6B7C72"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "staov5",
+              "layout": "horizontal",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "staov6",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#F1F7F3",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "staov7",
+                      "content": "导入",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#6B7C72"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "staov8",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#F1F7F3",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "staov9",
+                      "content": "导出",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#6B7C72"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "staova",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#DDEFE6",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#2E7D5B"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "staovb",
+                      "content": "已保存",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#235F46"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "staovc",
+          "name": "主体区",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "#F9FCFA",
+          "layout": "horizontal",
+          "children": [
+            {
+              "type": "frame",
+              "id": "staovd",
+              "name": "对象库列",
+              "width": 290,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": {
+                  "right": 1
+                },
+                "fill": "#D7E3DC"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                16,
+                16
+              ],
+              "clip": true,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "staove",
+                  "content": "对象库",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "fill": "#1C2E25"
+                },
+                {
+                  "type": "frame",
+                  "id": "staovi",
+                  "name": "搜索区",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "staovf",
+                      "content": "搜索对象、规格化键、标签",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#6B7C72"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staovg",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 14,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staovh",
+                          "content": "输入对象名或关系键",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "staov1b",
+                  "name": "分类区",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "staovj",
+                      "content": "分类",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#6B7C72"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staovk",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#DDEFE6",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2E7D5B"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staovl",
+                          "content": "人物",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#235F46"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staovm",
+                          "content": "24",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#235F46"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staovn",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staovo",
+                          "content": "势力",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staovp",
+                          "content": "11",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staovq",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staovr",
+                          "content": "地点",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staovs",
+                          "content": "18",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staovt",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staovu",
+                          "content": "物品",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staovv",
+                          "content": "13",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staovw",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staovx",
+                          "content": "境界体系",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staovy",
+                          "content": "7",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staovz",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov10",
+                          "content": "事件",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov11",
+                          "content": "26",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov12",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov13",
+                          "content": "关系",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov14",
+                          "content": "31",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov15",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov16",
+                          "content": "线索",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov17",
+                          "content": "14",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov18",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov19",
+                          "content": "剧情弧",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov1a",
+                          "content": "9",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "staov1k",
+                  "name": "动作区",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "staov1c",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov1d",
+                          "content": "已建模对象",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov1e",
+                          "content": "153",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov1f",
+                      "layout": "horizontal",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "staov1g",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#DDEFE6",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#2E7D5B"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "staov1h",
+                              "content": "新建对象",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#235F46"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "staov1i",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#F1F7F3",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D7E3DC"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "staov1j",
+                              "content": "批量导入",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#6B7C72"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "staov21",
+                  "name": "对象列表",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "staov1l",
+                      "content": "列表",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#6B7C72"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov1m",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2E7D5B"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov1n",
+                          "content": "柳云澜",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov1o",
+                          "content": "人物 / 主视角",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov1p",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov1q",
+                          "content": "赤霄盟",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov1r",
+                          "content": "势力 / 对立阵营",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov1s",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov1t",
+                          "content": "北陵渡口伏击",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov1u",
+                          "content": "事件 / 主冲突",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov1v",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov1w",
+                          "content": "劫火印",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov1x",
+                          "content": "物品 / 核心线索",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov1y",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov1z",
+                          "content": "劫火入世",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov20",
+                          "content": "剧情弧 / 主弧",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "staov22",
+              "name": "主视图区",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#F9FCFA",
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                18,
+                18
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "staov23",
+                  "name": "标签栏",
+                  "layout": "horizontal",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "staov24",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#DDEFE6",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2E7D5B"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov25",
+                          "content": "知识库",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#235F46"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov26",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov27",
+                          "content": "关系图",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov28",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov29",
+                          "content": "轨道",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#6B7C72"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "staov2j",
+                  "name": "视图导语",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "staov2a",
+                      "content": "场景调度型 · 总工作台总览",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "700",
+                      "fill": "#1C2E25"
+                    },
+                    {
+                      "type": "text",
+                      "id": "staov2b",
+                      "content": "把空间线和场景切换当作调度问题处理，强调地点层、舞台图和空间跳切。总工作台先回答“当前世界模型覆盖到哪里”。",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500",
+                      "fill": "#6B7C72",
+                      "width": "fill_container",
+                      "textGrowth": "fixed-width"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov2c",
+                      "layout": "horizontal",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "staov2d",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#DDEFE6",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#2E7D5B"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "staov2e",
+                              "content": "空间调度",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#235F46"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "staov2f",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#F1F7F3",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D7E3DC"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "staov2g",
+                              "content": "地点层",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#6B7C72"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "staov2h",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#F1F7F3",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D7E3DC"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "staov2i",
+                              "content": "场景切换",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#6B7C72"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "staov2k",
+                  "layout": "horizontal",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "staov2o",
+                      "name": "场景舞台图卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov2l",
+                          "content": "场景舞台图",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov2m",
+                          "content": "04",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov2n",
+                          "content": "当前项目的高频主舞台被抽成空间层。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov2s",
+                      "name": "地点调度层卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov2p",
+                          "content": "地点调度层",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov2q",
+                          "content": "05",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov2r",
+                          "content": "每层都可以承载并行事件和观察切片。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov2w",
+                      "name": "空间跳切卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov2t",
+                          "content": "空间跳切",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov2u",
+                          "content": "06",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov2v",
+                          "content": "不同地点之间的跳切需要可解释。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "staov3p",
+                  "name": "场景舞台图",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "staov2x",
+                      "content": "场景舞台图",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "700",
+                      "fill": "#1C2E25"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov38",
+                      "name": "空间切换条",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "width": "fill_container",
+                      "fill": "#F9FCFA",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov2y",
+                          "content": "空间切换条",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "staov2z",
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "staov30",
+                              "layout": "horizontal",
+                              "width": "fit_content",
+                              "height": "fit_content",
+                              "padding": [
+                                7,
+                                12
+                              ],
+                              "cornerRadius": 999,
+                              "fill": "#F1F7F3",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#D7E3DC"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "staov31",
+                                  "content": "青崖城",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700",
+                                  "fill": "#6B7C72"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "staov32",
+                              "layout": "horizontal",
+                              "width": "fit_content",
+                              "height": "fit_content",
+                              "padding": [
+                                7,
+                                12
+                              ],
+                              "cornerRadius": 999,
+                              "fill": "#DDEFE6",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#2E7D5B"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "staov33",
+                                  "content": "北陵渡口",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700",
+                                  "fill": "#235F46"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "staov34",
+                              "layout": "horizontal",
+                              "width": "fit_content",
+                              "height": "fit_content",
+                              "padding": [
+                                7,
+                                12
+                              ],
+                              "cornerRadius": 999,
+                              "fill": "#F1F7F3",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#D7E3DC"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "staov35",
+                                  "content": "赤霄暗线",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700",
+                                  "fill": "#6B7C72"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "staov36",
+                              "layout": "horizontal",
+                              "width": "fit_content",
+                              "height": "fit_content",
+                              "padding": [
+                                7,
+                                12
+                              ],
+                              "cornerRadius": 999,
+                              "fill": "#F1F7F3",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#D7E3DC"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "staov37",
+                                  "content": "荒山古道",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700",
+                                  "fill": "#6B7C72"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov39",
+                      "width": "fill_container",
+                      "height": 430,
+                      "layout": "none",
+                      "fill": "#F9FCFA",
+                      "cornerRadius": 18,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "clip": true,
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "id": "staov3a",
+                          "x": 36,
+                          "y": 46,
+                          "width": 260,
+                          "height": 120,
+                          "fill": "#E0F2FE",
+                          "cornerRadius": 18,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#8CD0F6"
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "staov3b",
+                          "x": 352,
+                          "y": 62,
+                          "width": 290,
+                          "height": 140,
+                          "fill": "#E8F8D2",
+                          "cornerRadius": 18,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#AEDC66"
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "staov3c",
+                          "x": 686,
+                          "y": 40,
+                          "width": 236,
+                          "height": 110,
+                          "fill": "#FDE2E2",
+                          "cornerRadius": 18,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#F2A5A5"
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "staov3d",
+                          "x": 192,
+                          "y": 248,
+                          "width": 340,
+                          "height": 132,
+                          "fill": "#F5E8FF",
+                          "cornerRadius": 18,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D1A9FF"
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "staov3e",
+                          "x": 574,
+                          "y": 252,
+                          "width": 254,
+                          "height": 124,
+                          "fill": "#FFF2D8",
+                          "cornerRadius": 18,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#F2C97D"
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "staov3f",
+                          "x": 284,
+                          "y": 146,
+                          "width": 120,
+                          "height": 4,
+                          "fill": "#2E7D5B",
+                          "cornerRadius": 999
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "staov3g",
+                          "x": 528,
+                          "y": 184,
+                          "width": 160,
+                          "height": 4,
+                          "fill": "#2E7D5B",
+                          "cornerRadius": 999,
+                          "rotation": 20
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "staov3h",
+                          "x": 460,
+                          "y": 316,
+                          "width": 120,
+                          "height": 4,
+                          "fill": "#2E7D5B",
+                          "cornerRadius": 999,
+                          "rotation": -20
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov3i",
+                          "content": "地点调度层",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#235F46",
+                          "x": 58,
+                          "y": 56
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov3j",
+                          "content": "青崖城",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25",
+                          "x": 60,
+                          "y": 86
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov3k",
+                          "content": "北陵渡口",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25",
+                          "x": 372,
+                          "y": 96
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov3l",
+                          "content": "赤霄暗线",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25",
+                          "x": 706,
+                          "y": 70
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov3m",
+                          "content": "观察切换层",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#235F46",
+                          "x": 214,
+                          "y": 258
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov3n",
+                          "content": "柳云澜 / 沈照雪双视角交叠",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25",
+                          "x": 214,
+                          "y": 290
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov3o",
+                          "content": "荒山古道撤离线",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25",
+                          "x": 594,
+                          "y": 286
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "staov3q",
+              "name": "检查器列",
+              "width": 332,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": {
+                  "left": 1
+                },
+                "fill": "#D7E3DC"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                16,
+                16
+              ],
+              "clip": true,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "staov3r",
+                  "content": "检查器",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "fill": "#1C2E25"
+                },
+                {
+                  "type": "frame",
+                  "id": "staov3x",
+                  "name": "对象摘要",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "staov3s",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov3t",
+                          "content": "柳云澜",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "staov3u",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#DDEFE6",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#2E7D5B"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "staov3v",
+                              "content": "人物",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#235F46"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "staov3w",
+                      "content": "已建模",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#6B7C72"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "staov48",
+                  "name": "基础字段",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "staov3y",
+                      "content": "基础字段",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#6B7C72"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov3z",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov40",
+                          "content": "身份",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov41",
+                          "content": "散修 / 主视角",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov42",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov43",
+                          "content": "当前境界",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov44",
+                          "content": "化炁中段",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov45",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "staov46",
+                          "content": "首次出现",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#6B7C72"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov47",
+                          "content": "第一卷 第一章",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#1C2E25"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "staov4j",
+                  "name": "引用与跳转",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "staov49",
+                      "content": "引用与跳转",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#6B7C72"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov4a",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "staov4b",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#2E7D5B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov4c",
+                          "content": "关联事件：北陵渡口伏击、青崖城夜审",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#1C2E25",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov4d",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "staov4e",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#2E7D5B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov4f",
+                          "content": "关联剧情弧：劫火入世",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#1C2E25",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "staov4g",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F1F7F3",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D7E3DC"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "staov4h",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#2E7D5B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "staov4i",
+                          "content": "引用切片：S-12、S-14",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#1C2E25",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "staov4m",
+                  "name": "视图提示",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7E3DC"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "staov4k",
+                      "content": "总工作台先回答“当前世界模型覆盖到哪里”。",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#1C2E25",
+                      "width": "fill_container",
+                      "textGrowth": "fixed-width"
+                    },
+                    {
+                      "type": "text",
+                      "id": "staov4l",
+                      "content": "当前套系：场景调度型",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#6B7C72"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

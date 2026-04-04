@@ -1074,7 +1074,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dostr4s",
+                  "id": "dostr2j",
                   "name": "视图导语",
                   "layout": "vertical",
                   "gap": 10,
@@ -1095,7 +1095,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "dostr4j",
+                      "id": "dostr2a",
                       "content": "卷宗案台型 · 轨道页",
                       "fontFamily": "Inter",
                       "fontSize": 20,
@@ -1104,7 +1104,7 @@
                     },
                     {
                       "type": "text",
-                      "id": "dostr4k",
+                      "id": "dostr2b",
                       "content": "把对象建模当作卷宗整理工作，主工作区强调记录索引、字段矩阵和详情抽屉。轨道页强调多时间线、多空间线和观察切片的并行排布。",
                       "fontFamily": "Inter",
                       "fontSize": 13,
@@ -1115,14 +1115,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dostr4l",
+                      "id": "dostr2c",
                       "layout": "horizontal",
                       "gap": 8,
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "frame",
-                          "id": "dostr4m",
+                          "id": "dostr2d",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1139,7 +1139,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr4n",
+                              "id": "dostr2e",
                               "content": "卷宗视角",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1150,7 +1150,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr4o",
+                          "id": "dostr2f",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1167,7 +1167,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr4p",
+                              "id": "dostr2g",
                               "content": "字段审校",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1178,7 +1178,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr4q",
+                          "id": "dostr2h",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1195,7 +1195,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr4r",
+                              "id": "dostr2i",
                               "content": "引用追踪",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1210,14 +1210,14 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dostr4t",
+                  "id": "dostr2k",
                   "layout": "horizontal",
                   "width": "fill_container",
                   "gap": 14,
                   "children": [
                     {
                       "type": "frame",
-                      "id": "dostr4x",
+                      "id": "dostr2o",
                       "name": "已建卷宗卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1238,7 +1238,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dostr4u",
+                          "id": "dostr2l",
                           "content": "已建卷宗",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1247,7 +1247,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dostr4v",
+                          "id": "dostr2m",
                           "content": "153",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1256,7 +1256,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dostr4w",
+                          "id": "dostr2n",
                           "content": "对象库不是写作页，而是项目对象卷宗库。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1269,7 +1269,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dostr51",
+                      "id": "dostr2s",
                       "name": "待补字段卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1290,7 +1290,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dostr4y",
+                          "id": "dostr2p",
                           "content": "待补字段",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1299,7 +1299,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dostr4z",
+                          "id": "dostr2q",
                           "content": "12",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1308,7 +1308,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dostr50",
+                          "id": "dostr2r",
                           "content": "字段矩阵直接暴露缺项，便于人工补建模。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1321,7 +1321,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dostr55",
+                      "id": "dostr2w",
                       "name": "待补引用卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1342,7 +1342,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dostr52",
+                          "id": "dostr2t",
                           "content": "待补引用",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1351,7 +1351,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dostr53",
+                          "id": "dostr2u",
                           "content": "08",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1360,7 +1360,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dostr54",
+                          "id": "dostr2v",
                           "content": "关系和切片都回指卷宗记录。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1375,18 +1375,18 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dostr2a",
+                  "id": "dostr2x",
                   "layout": "horizontal",
                   "width": "fill_container",
                   "gap": 14,
                   "children": [
                     {
                       "type": "frame",
-                      "id": "dostr2r",
+                      "id": "dostr3e",
                       "name": "卷宗目录",
                       "layout": "vertical",
                       "gap": 8,
-                      "width": 260,
+                      "width": 250,
                       "fill": "#FFFFFF",
                       "cornerRadius": 18,
                       "padding": [
@@ -1403,7 +1403,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dostr2b",
+                          "id": "dostr2y",
                           "content": "卷宗目录",
                           "fontFamily": "Inter",
                           "fontSize": 15,
@@ -1412,7 +1412,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr2c",
+                          "id": "dostr2z",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1429,7 +1429,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr2d",
+                              "id": "dostr30",
                               "content": "北陵渡口伏击",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1438,7 +1438,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dostr2e",
+                              "id": "dostr31",
                               "content": "事件 / 第 12 日",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1449,7 +1449,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr2f",
+                          "id": "dostr32",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1466,7 +1466,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr2g",
+                              "id": "dostr33",
                               "content": "地脉异动",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1475,7 +1475,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dostr2h",
+                              "id": "dostr34",
                               "content": "事件 / 第 13 日",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1486,7 +1486,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr2i",
+                          "id": "dostr35",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1503,7 +1503,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr2j",
+                              "id": "dostr36",
                               "content": "柳云澜观察切片",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1512,7 +1512,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dostr2k",
+                              "id": "dostr37",
                               "content": "观察 / 主视角",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1523,7 +1523,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr2l",
+                          "id": "dostr38",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1540,7 +1540,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr2m",
+                              "id": "dostr39",
                               "content": "沈照雪观察切片",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1549,7 +1549,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dostr2n",
+                              "id": "dostr3a",
                               "content": "观察 / 侧视角",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1560,7 +1560,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr2o",
+                          "id": "dostr3b",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1577,7 +1577,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr2p",
+                              "id": "dostr3c",
                               "content": "劫火印现身",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1586,7 +1586,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dostr2q",
+                              "id": "dostr3d",
                               "content": "事件 / 第 14 日",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1599,14 +1599,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dostr2s",
+                      "id": "dostr3f",
                       "layout": "vertical",
                       "width": "fill_container",
                       "gap": 14,
                       "children": [
                         {
                           "type": "frame",
-                          "id": "dostr3v",
+                          "id": "dostr4i",
                           "name": "字段矩阵",
                           "layout": "vertical",
                           "gap": 12,
@@ -1627,7 +1627,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr2t",
+                              "id": "dostr3g",
                               "content": "字段矩阵",
                               "fontFamily": "Inter",
                               "fontSize": 15,
@@ -1636,14 +1636,14 @@
                             },
                             {
                               "type": "frame",
-                              "id": "dostr2u",
+                              "id": "dostr3h",
                               "layout": "vertical",
                               "gap": 8,
                               "width": "fill_container",
                               "children": [
                                 {
                                   "type": "frame",
-                                  "id": "dostr2v",
+                                  "id": "dostr3i",
                                   "layout": "horizontal",
                                   "width": "fill_container",
                                   "padding": [
@@ -1655,13 +1655,13 @@
                                   "children": [
                                     {
                                       "type": "frame",
-                                      "id": "dostr2w",
+                                      "id": "dostr3j",
                                       "layout": "horizontal",
                                       "width": 180,
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dostr2x",
+                                          "id": "dostr3k",
                                           "content": "事件",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1672,13 +1672,13 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dostr2y",
+                                      "id": "dostr3l",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dostr2z",
+                                          "id": "dostr3m",
                                           "content": "所在轨",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1689,242 +1689,18 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dostr30",
+                                      "id": "dostr3n",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dostr31",
+                                          "id": "dostr3o",
                                           "content": "时间",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
                                           "fontWeight": "700",
                                           "fill": "#66758A"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dostr32",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dostr33",
-                                          "content": "输出切片",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#66758A"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "dostr34",
-                                  "layout": "horizontal",
-                                  "width": "fill_container",
-                                  "padding": [
-                                    8,
-                                    10
-                                  ],
-                                  "cornerRadius": 12,
-                                  "fill": "#FFFFFF",
-                                  "stroke": {
-                                    "thickness": 1,
-                                    "fill": "#D6DEE8"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "frame",
-                                      "id": "dostr35",
-                                      "layout": "horizontal",
-                                      "width": 180,
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dostr36",
-                                          "content": "北陵渡口伏击",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dostr37",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dostr38",
-                                          "content": "主时间轨",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dostr39",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dostr3a",
-                                          "content": "第 12 日",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dostr3b",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dostr3c",
-                                          "content": "T-12-A",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "dostr3d",
-                                  "layout": "horizontal",
-                                  "width": "fill_container",
-                                  "padding": [
-                                    8,
-                                    10
-                                  ],
-                                  "cornerRadius": 12,
-                                  "fill": "#FFFFFF",
-                                  "stroke": {
-                                    "thickness": 1,
-                                    "fill": "#D6DEE8"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "frame",
-                                      "id": "dostr3e",
-                                      "layout": "horizontal",
-                                      "width": 180,
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dostr3f",
-                                          "content": "地脉异动",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dostr3g",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dostr3h",
-                                          "content": "支线轨",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dostr3i",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dostr3j",
-                                          "content": "第 13 日",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dostr3k",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dostr3l",
-                                          "content": "T-13-B",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "dostr3m",
-                                  "layout": "horizontal",
-                                  "width": "fill_container",
-                                  "padding": [
-                                    8,
-                                    10
-                                  ],
-                                  "cornerRadius": 12,
-                                  "fill": "#FFFFFF",
-                                  "stroke": {
-                                    "thickness": 1,
-                                    "fill": "#D6DEE8"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "frame",
-                                      "id": "dostr3n",
-                                      "layout": "horizontal",
-                                      "width": 180,
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dostr3o",
-                                          "content": "劫火印现身",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#17212B"
                                         }
                                       ]
                                     },
@@ -1937,6 +1713,230 @@
                                         {
                                           "type": "text",
                                           "id": "dostr3q",
+                                          "content": "输出切片",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#66758A"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dostr3r",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dostr3s",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dostr3t",
+                                          "content": "北陵渡口伏击",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dostr3u",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dostr3v",
+                                          "content": "主时间轨",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dostr3w",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dostr3x",
+                                          "content": "第 12 日",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dostr3y",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dostr3z",
+                                          "content": "T-12-A",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dostr40",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dostr41",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dostr42",
+                                          "content": "地脉异动",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dostr43",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dostr44",
+                                          "content": "支线轨",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dostr45",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dostr46",
+                                          "content": "第 13 日",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dostr47",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dostr48",
+                                          "content": "T-13-B",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dostr49",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dostr4a",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dostr4b",
+                                          "content": "劫火印现身",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dostr4c",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dostr4d",
                                           "content": "线索轨",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1947,13 +1947,13 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dostr3r",
+                                      "id": "dostr4e",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dostr3s",
+                                          "id": "dostr4f",
                                           "content": "第 14 日",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1964,13 +1964,13 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dostr3t",
+                                      "id": "dostr4g",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dostr3u",
+                                          "id": "dostr4h",
                                           "content": "T-14-C",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1987,10 +1987,10 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr46",
-                          "name": "卷宗时间索引",
+                          "id": "dostr4m",
+                          "name": "卷宗审校进度卡片",
                           "layout": "vertical",
-                          "gap": 12,
+                          "gap": 8,
                           "width": "fill_container",
                           "fill": "#FFFFFF",
                           "cornerRadius": 18,
@@ -2008,96 +2008,32 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr3w",
-                              "content": "按卷宗追踪每个对象穿过哪些轨道。",
+                              "id": "dostr4j",
+                              "content": "卷宗审校进度",
                               "fontFamily": "Inter",
                               "fontSize": 12,
                               "fontWeight": "500",
                               "fill": "#66758A"
                             },
                             {
-                              "type": "frame",
-                              "id": "dostr3x",
-                              "layout": "horizontal",
-                              "width": "fill_container",
-                              "justifyContent": "space_between",
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "id": "dostr3y",
-                                  "content": "柳云澜",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 12,
-                                  "fontWeight": "500",
-                                  "fill": "#66758A"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "dostr3z",
-                                  "content": "主时间轨 / 观察轨 / 地点轨",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 12,
-                                  "fontWeight": "700",
-                                  "fill": "#17212B"
-                                }
-                              ]
+                              "type": "text",
+                              "id": "dostr4k",
+                              "content": "76%",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "700",
+                              "fill": "#17212B"
                             },
                             {
-                              "type": "frame",
-                              "id": "dostr40",
-                              "layout": "horizontal",
+                              "type": "text",
+                              "id": "dostr4l",
+                              "content": "卷宗工作流会优先暴露缺字段和缺引用对象。",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#66758A",
                               "width": "fill_container",
-                              "justifyContent": "space_between",
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "id": "dostr41",
-                                  "content": "劫火印",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 12,
-                                  "fontWeight": "500",
-                                  "fill": "#66758A"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "dostr42",
-                                  "content": "线索轨 / 冲突轨",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 12,
-                                  "fontWeight": "700",
-                                  "fill": "#17212B"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "frame",
-                              "id": "dostr43",
-                              "layout": "horizontal",
-                              "width": "fill_container",
-                              "justifyContent": "space_between",
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "id": "dostr44",
-                                  "content": "赤霄盟",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 12,
-                                  "fontWeight": "500",
-                                  "fill": "#66758A"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "dostr45",
-                                  "content": "势力轨 / 冲突轨",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 12,
-                                  "fontWeight": "700",
-                                  "fill": "#17212B"
-                                }
-                              ]
+                              "textGrowth": "fixed-width"
                             }
                           ]
                         }
@@ -2105,7 +2041,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dostr4i",
+                      "id": "dostr4y",
                       "name": "记录详情抽屉",
                       "layout": "vertical",
                       "gap": 12,
@@ -2126,7 +2062,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dostr47",
+                          "id": "dostr4n",
                           "content": "记录详情抽屉",
                           "fontFamily": "Inter",
                           "fontSize": 15,
@@ -2135,7 +2071,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr48",
+                          "id": "dostr4o",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2143,7 +2079,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr49",
+                              "id": "dostr4p",
                               "content": "开始时刻",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2152,7 +2088,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dostr4a",
+                              "id": "dostr4q",
                               "content": "第 12 日 / 戌时",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2163,7 +2099,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr4b",
+                          "id": "dostr4r",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2171,7 +2107,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr4c",
+                              "id": "dostr4s",
                               "content": "作用轨道",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2180,7 +2116,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dostr4d",
+                              "id": "dostr4t",
                               "content": "主时间、地点、观察",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2191,7 +2127,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr4e",
+                          "id": "dostr4u",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2199,7 +2135,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr4f",
+                              "id": "dostr4v",
                               "content": "观察切片",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2208,7 +2144,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dostr4g",
+                              "id": "dostr4w",
                               "content": "柳云澜 / 沈照雪",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2219,8 +2155,8 @@
                         },
                         {
                           "type": "text",
-                          "id": "dostr4h",
-                          "content": "当前抽屉与右侧检查器不同：抽屉承载当前记录主内容，检查器承载跨视图辅助信息。",
+                          "id": "dostr4x",
+                          "content": "抽屉承载当前记录主内容；右侧检查器只承载跨视图辅助信息。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
                           "fontWeight": "500",
@@ -2236,7 +2172,7 @@
             },
             {
               "type": "frame",
-              "id": "dostr56",
+              "id": "dostr4z",
               "name": "检查器列",
               "width": 336,
               "height": "fill_container",
@@ -2257,7 +2193,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "dostr57",
+                  "id": "dostr50",
                   "content": "检查器",
                   "fontFamily": "Inter",
                   "fontSize": 16,
@@ -2266,7 +2202,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dostr5d",
+                  "id": "dostr56",
                   "name": "对象摘要",
                   "layout": "vertical",
                   "gap": 12,
@@ -2287,7 +2223,7 @@
                   "children": [
                     {
                       "type": "frame",
-                      "id": "dostr58",
+                      "id": "dostr51",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "justifyContent": "space_between",
@@ -2295,7 +2231,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dostr59",
+                          "id": "dostr52",
                           "content": "北陵渡口伏击",
                           "fontFamily": "Inter",
                           "fontSize": 18,
@@ -2304,7 +2240,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dostr5a",
+                          "id": "dostr53",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -2321,7 +2257,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dostr5b",
+                              "id": "dostr54",
                               "content": "事件",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2334,7 +2270,7 @@
                     },
                     {
                       "type": "text",
-                      "id": "dostr5c",
+                      "id": "dostr55",
                       "content": "轨道已排布",
                       "fontFamily": "Inter",
                       "fontSize": 12,
@@ -2345,7 +2281,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dostr5o",
+                  "id": "dostr5h",
                   "name": "基础字段",
                   "layout": "vertical",
                   "gap": 12,
@@ -2366,7 +2302,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "dostr5e",
+                      "id": "dostr57",
                       "content": "基础字段",
                       "fontFamily": "Inter",
                       "fontSize": 12,
@@ -2375,7 +2311,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dostr5f",
+                      "id": "dostr58",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "justifyContent": "space_between",
@@ -2383,7 +2319,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dostr5g",
+                          "id": "dostr59",
                           "content": "开始时刻",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2392,7 +2328,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dostr5h",
+                          "id": "dostr5a",
                           "content": "第 12 日 / 戌时",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2403,7 +2339,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dostr5i",
+                      "id": "dostr5b",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "justifyContent": "space_between",
@@ -2411,7 +2347,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dostr5j",
+                          "id": "dostr5c",
                           "content": "作用轨道",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2420,7 +2356,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dostr5k",
+                          "id": "dostr5d",
                           "content": "主时间、地点、观察",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2431,7 +2367,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dostr5l",
+                      "id": "dostr5e",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "justifyContent": "space_between",
@@ -2439,7 +2375,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dostr5m",
+                          "id": "dostr5f",
                           "content": "观察切片",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2448,7 +2384,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dostr5n",
+                          "id": "dostr5g",
                           "content": "柳云澜 / 沈照雪",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2461,7 +2397,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dostr5z",
+                  "id": "dostr5s",
                   "name": "引用与跳转",
                   "layout": "vertical",
                   "gap": 8,
@@ -2482,7 +2418,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "dostr5p",
+                      "id": "dostr5i",
                       "content": "引用与跳转",
                       "fontFamily": "Inter",
                       "fontSize": 12,
@@ -2491,7 +2427,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dostr5q",
+                      "id": "dostr5j",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "gap": 8,
@@ -2509,14 +2445,14 @@
                       "children": [
                         {
                           "type": "ellipse",
-                          "id": "dostr5r",
+                          "id": "dostr5k",
                           "width": 10,
                           "height": 10,
                           "fill": "#2457C5"
                         },
                         {
                           "type": "text",
-                          "id": "dostr5s",
+                          "id": "dostr5l",
                           "content": "前置事件：密令下发",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2529,7 +2465,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dostr5t",
+                      "id": "dostr5m",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "gap": 8,
@@ -2547,14 +2483,14 @@
                       "children": [
                         {
                           "type": "ellipse",
-                          "id": "dostr5u",
+                          "id": "dostr5n",
                           "width": 10,
                           "height": 10,
                           "fill": "#2457C5"
                         },
                         {
                           "type": "text",
-                          "id": "dostr5v",
+                          "id": "dostr5o",
                           "content": "后续事件：地脉异动",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2567,7 +2503,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dostr5w",
+                      "id": "dostr5p",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "gap": 8,
@@ -2585,14 +2521,14 @@
                       "children": [
                         {
                           "type": "ellipse",
-                          "id": "dostr5x",
+                          "id": "dostr5q",
                           "width": 10,
                           "height": 10,
                           "fill": "#2457C5"
                         },
                         {
                           "type": "text",
-                          "id": "dostr5y",
+                          "id": "dostr5r",
                           "content": "章节输出：T-12-A",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2607,7 +2543,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dostr62",
+                  "id": "dostr5v",
                   "name": "视图提示",
                   "layout": "vertical",
                   "gap": 12,
@@ -2628,7 +2564,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "dostr60",
+                      "id": "dostr5t",
                       "content": "轨道页强调多时间线、多空间线和观察切片的并行排布。",
                       "fontFamily": "Inter",
                       "fontSize": 12,
@@ -2639,7 +2575,7 @@
                     },
                     {
                       "type": "text",
-                      "id": "dostr61",
+                      "id": "dostr5u",
                       "content": "当前套系：卷宗案台型",
                       "fontFamily": "Inter",
                       "fontSize": 12,

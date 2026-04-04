@@ -1074,7 +1074,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dosov4l",
+                  "id": "dosov2j",
                   "name": "视图导语",
                   "layout": "vertical",
                   "gap": 10,
@@ -1095,7 +1095,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "dosov4c",
+                      "id": "dosov2a",
                       "content": "卷宗案台型 · 总工作台总览",
                       "fontFamily": "Inter",
                       "fontSize": 20,
@@ -1104,7 +1104,7 @@
                     },
                     {
                       "type": "text",
-                      "id": "dosov4d",
+                      "id": "dosov2b",
                       "content": "把对象建模当作卷宗整理工作，主工作区强调记录索引、字段矩阵和详情抽屉。总工作台先回答“当前世界模型覆盖到哪里”。",
                       "fontFamily": "Inter",
                       "fontSize": 13,
@@ -1115,14 +1115,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dosov4e",
+                      "id": "dosov2c",
                       "layout": "horizontal",
                       "gap": 8,
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "frame",
-                          "id": "dosov4f",
+                          "id": "dosov2d",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1139,7 +1139,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov4g",
+                              "id": "dosov2e",
                               "content": "卷宗视角",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1150,7 +1150,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosov4h",
+                          "id": "dosov2f",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1167,7 +1167,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov4i",
+                              "id": "dosov2g",
                               "content": "字段审校",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1178,7 +1178,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosov4j",
+                          "id": "dosov2h",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1195,7 +1195,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov4k",
+                              "id": "dosov2i",
                               "content": "引用追踪",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1210,14 +1210,14 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dosov4m",
+                  "id": "dosov2k",
                   "layout": "horizontal",
                   "width": "fill_container",
                   "gap": 14,
                   "children": [
                     {
                       "type": "frame",
-                      "id": "dosov4q",
+                      "id": "dosov2o",
                       "name": "已建卷宗卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1238,7 +1238,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dosov4n",
+                          "id": "dosov2l",
                           "content": "已建卷宗",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1247,7 +1247,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosov4o",
+                          "id": "dosov2m",
                           "content": "153",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1256,7 +1256,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosov4p",
+                          "id": "dosov2n",
                           "content": "对象库不是写作页，而是项目对象卷宗库。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1269,7 +1269,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dosov4u",
+                      "id": "dosov2s",
                       "name": "待补字段卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1290,7 +1290,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dosov4r",
+                          "id": "dosov2p",
                           "content": "待补字段",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1299,7 +1299,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosov4s",
+                          "id": "dosov2q",
                           "content": "12",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1308,7 +1308,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosov4t",
+                          "id": "dosov2r",
                           "content": "字段矩阵直接暴露缺项，便于人工补建模。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1321,7 +1321,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dosov4y",
+                      "id": "dosov2w",
                       "name": "待补引用卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1342,7 +1342,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dosov4v",
+                          "id": "dosov2t",
                           "content": "待补引用",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1351,7 +1351,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosov4w",
+                          "id": "dosov2u",
                           "content": "08",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1360,7 +1360,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosov4x",
+                          "id": "dosov2v",
                           "content": "关系和切片都回指卷宗记录。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1375,18 +1375,18 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dosov2a",
+                  "id": "dosov2x",
                   "layout": "horizontal",
                   "width": "fill_container",
                   "gap": 14,
                   "children": [
                     {
                       "type": "frame",
-                      "id": "dosov2r",
+                      "id": "dosov3e",
                       "name": "卷宗目录",
                       "layout": "vertical",
                       "gap": 8,
-                      "width": 260,
+                      "width": 250,
                       "fill": "#FFFFFF",
                       "cornerRadius": 18,
                       "padding": [
@@ -1403,7 +1403,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dosov2b",
+                          "id": "dosov2y",
                           "content": "卷宗目录",
                           "fontFamily": "Inter",
                           "fontSize": 15,
@@ -1412,7 +1412,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosov2c",
+                          "id": "dosov2z",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1429,7 +1429,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov2d",
+                              "id": "dosov30",
                               "content": "柳云澜",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1438,7 +1438,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosov2e",
+                              "id": "dosov31",
                               "content": "人物 / 主视角",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1449,7 +1449,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosov2f",
+                          "id": "dosov32",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1466,7 +1466,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov2g",
+                              "id": "dosov33",
                               "content": "赤霄盟",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1475,7 +1475,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosov2h",
+                              "id": "dosov34",
                               "content": "势力 / 对立阵营",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1486,7 +1486,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosov2i",
+                          "id": "dosov35",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1503,7 +1503,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov2j",
+                              "id": "dosov36",
                               "content": "北陵渡口伏击",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1512,7 +1512,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosov2k",
+                              "id": "dosov37",
                               "content": "事件 / 主冲突",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1523,7 +1523,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosov2l",
+                          "id": "dosov38",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1540,7 +1540,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov2m",
+                              "id": "dosov39",
                               "content": "劫火印",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1549,7 +1549,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosov2n",
+                              "id": "dosov3a",
                               "content": "物品 / 核心线索",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1560,7 +1560,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosov2o",
+                          "id": "dosov3b",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1577,7 +1577,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov2p",
+                              "id": "dosov3c",
                               "content": "劫火入世",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1586,7 +1586,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosov2q",
+                              "id": "dosov3d",
                               "content": "剧情弧 / 主弧",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1599,14 +1599,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dosov2s",
+                      "id": "dosov3f",
                       "layout": "vertical",
                       "width": "fill_container",
                       "gap": 14,
                       "children": [
                         {
                           "type": "frame",
-                          "id": "dosov3v",
+                          "id": "dosov4i",
                           "name": "字段矩阵",
                           "layout": "vertical",
                           "gap": 12,
@@ -1627,7 +1627,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov2t",
+                              "id": "dosov3g",
                               "content": "字段矩阵",
                               "fontFamily": "Inter",
                               "fontSize": 15,
@@ -1636,14 +1636,14 @@
                             },
                             {
                               "type": "frame",
-                              "id": "dosov2u",
+                              "id": "dosov3h",
                               "layout": "vertical",
                               "gap": 8,
                               "width": "fill_container",
                               "children": [
                                 {
                                   "type": "frame",
-                                  "id": "dosov2v",
+                                  "id": "dosov3i",
                                   "layout": "horizontal",
                                   "width": "fill_container",
                                   "padding": [
@@ -1655,13 +1655,13 @@
                                   "children": [
                                     {
                                       "type": "frame",
-                                      "id": "dosov2w",
+                                      "id": "dosov3j",
                                       "layout": "horizontal",
                                       "width": 180,
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dosov2x",
+                                          "id": "dosov3k",
                                           "content": "对象",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1672,13 +1672,13 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dosov2y",
+                                      "id": "dosov3l",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dosov2z",
+                                          "id": "dosov3m",
                                           "content": "建模状态",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1689,242 +1689,18 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dosov30",
+                                      "id": "dosov3n",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dosov31",
+                                          "id": "dosov3o",
                                           "content": "引用切片",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
                                           "fontWeight": "700",
                                           "fill": "#66758A"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosov32",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosov33",
-                                          "content": "最近改动",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#66758A"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "dosov34",
-                                  "layout": "horizontal",
-                                  "width": "fill_container",
-                                  "padding": [
-                                    8,
-                                    10
-                                  ],
-                                  "cornerRadius": 12,
-                                  "fill": "#FFFFFF",
-                                  "stroke": {
-                                    "thickness": 1,
-                                    "fill": "#D6DEE8"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "frame",
-                                      "id": "dosov35",
-                                      "layout": "horizontal",
-                                      "width": 180,
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosov36",
-                                          "content": "柳云澜",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosov37",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosov38",
-                                          "content": "已完成",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosov39",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosov3a",
-                                          "content": "S-12 / S-14",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosov3b",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosov3c",
-                                          "content": "刚刚",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "dosov3d",
-                                  "layout": "horizontal",
-                                  "width": "fill_container",
-                                  "padding": [
-                                    8,
-                                    10
-                                  ],
-                                  "cornerRadius": 12,
-                                  "fill": "#FFFFFF",
-                                  "stroke": {
-                                    "thickness": 1,
-                                    "fill": "#D6DEE8"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "frame",
-                                      "id": "dosov3e",
-                                      "layout": "horizontal",
-                                      "width": 180,
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosov3f",
-                                          "content": "赤霄盟",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosov3g",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosov3h",
-                                          "content": "待补关系",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosov3i",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosov3j",
-                                          "content": "S-09",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosov3k",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosov3l",
-                                          "content": "8 分钟前",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "dosov3m",
-                                  "layout": "horizontal",
-                                  "width": "fill_container",
-                                  "padding": [
-                                    8,
-                                    10
-                                  ],
-                                  "cornerRadius": 12,
-                                  "fill": "#FFFFFF",
-                                  "stroke": {
-                                    "thickness": 1,
-                                    "fill": "#D6DEE8"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "frame",
-                                      "id": "dosov3n",
-                                      "layout": "horizontal",
-                                      "width": 180,
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosov3o",
-                                          "content": "劫火印",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#17212B"
                                         }
                                       ]
                                     },
@@ -1937,6 +1713,230 @@
                                         {
                                           "type": "text",
                                           "id": "dosov3q",
+                                          "content": "最近改动",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#66758A"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dosov3r",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3s",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3t",
+                                          "content": "柳云澜",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3u",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3v",
+                                          "content": "已完成",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3w",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3x",
+                                          "content": "S-12 / S-14",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov3y",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov3z",
+                                          "content": "刚刚",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dosov40",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov41",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov42",
+                                          "content": "赤霄盟",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov43",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov44",
+                                          "content": "待补关系",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov45",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov46",
+                                          "content": "S-09",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov47",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov48",
+                                          "content": "8 分钟前",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dosov49",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov4a",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov4b",
+                                          "content": "劫火印",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosov4c",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosov4d",
                                           "content": "待补来源",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1947,13 +1947,13 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dosov3r",
+                                      "id": "dosov4e",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dosov3s",
+                                          "id": "dosov4f",
                                           "content": "S-12 / S-16",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1964,13 +1964,13 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dosov3t",
+                                      "id": "dosov4g",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dosov3u",
+                                          "id": "dosov4h",
                                           "content": "12 分钟前",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1987,7 +1987,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosov3z",
+                          "id": "dosov4m",
                           "name": "卷宗审校进度卡片",
                           "layout": "vertical",
                           "gap": 8,
@@ -2008,7 +2008,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov3w",
+                              "id": "dosov4j",
                               "content": "卷宗审校进度",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2017,7 +2017,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosov3x",
+                              "id": "dosov4k",
                               "content": "76%",
                               "fontFamily": "Inter",
                               "fontSize": 28,
@@ -2026,7 +2026,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosov3y",
+                              "id": "dosov4l",
                               "content": "卷宗工作流会优先暴露缺字段和缺引用对象。",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2041,7 +2041,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dosov4b",
+                      "id": "dosov4y",
                       "name": "记录详情抽屉",
                       "layout": "vertical",
                       "gap": 12,
@@ -2062,7 +2062,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dosov40",
+                          "id": "dosov4n",
                           "content": "记录详情抽屉",
                           "fontFamily": "Inter",
                           "fontSize": 15,
@@ -2071,7 +2071,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosov41",
+                          "id": "dosov4o",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2079,7 +2079,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov42",
+                              "id": "dosov4p",
                               "content": "身份",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2088,7 +2088,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosov43",
+                              "id": "dosov4q",
                               "content": "散修 / 主视角",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2099,7 +2099,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosov44",
+                          "id": "dosov4r",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2107,7 +2107,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov45",
+                              "id": "dosov4s",
                               "content": "当前境界",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2116,7 +2116,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosov46",
+                              "id": "dosov4t",
                               "content": "化炁中段",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2127,7 +2127,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosov47",
+                          "id": "dosov4u",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2135,7 +2135,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosov48",
+                              "id": "dosov4v",
                               "content": "首次出现",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2144,7 +2144,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosov49",
+                              "id": "dosov4w",
                               "content": "第一卷 第一章",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2155,8 +2155,8 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosov4a",
-                          "content": "当前抽屉与右侧检查器不同：抽屉承载当前记录主内容，检查器承载跨视图辅助信息。",
+                          "id": "dosov4x",
+                          "content": "抽屉承载当前记录主内容；右侧检查器只承载跨视图辅助信息。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
                           "fontWeight": "500",

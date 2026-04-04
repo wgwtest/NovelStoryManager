@@ -1,0 +1,3241 @@
+{
+  "version": "2.10",
+  "children": [
+    {
+      "type": "frame",
+      "id": "matgr0",
+      "x": 80,
+      "y": 80,
+      "name": "关系图页",
+      "width": 1600,
+      "height": 1000,
+      "clip": true,
+      "cornerRadius": 24,
+      "fill": "#F7F4FB",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "matgr1",
+          "name": "顶部栏",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#E1D6EE"
+          },
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "padding": [
+            18,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "matgr2",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "matgr3",
+                  "content": "知识编辑器",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700",
+                  "fill": "#2C1E38"
+                },
+                {
+                  "type": "text",
+                  "id": "matgr4",
+                  "content": "项目 / 青云劫火录 · 剧情弧矩阵型 · 关系图页",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "fill": "#7A6887"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "matgr5",
+              "layout": "horizontal",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "matgr6",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#F5F0FA",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E1D6EE"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "matgr7",
+                      "content": "导入",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#7A6887"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "matgr8",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#F5F0FA",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E1D6EE"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "matgr9",
+                      "content": "导出",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#7A6887"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "matgra",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#E9DDF5",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#7D4D9E"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "matgrb",
+                      "content": "已保存",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#5D3979"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "matgrc",
+          "name": "主体区",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "#FBF8FE",
+          "layout": "horizontal",
+          "children": [
+            {
+              "type": "frame",
+              "id": "matgrd",
+              "name": "对象库列",
+              "width": 290,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": {
+                  "right": 1
+                },
+                "fill": "#E1D6EE"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                16,
+                16
+              ],
+              "clip": true,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "matgre",
+                  "content": "对象库",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "fill": "#2C1E38"
+                },
+                {
+                  "type": "frame",
+                  "id": "matgri",
+                  "name": "搜索区",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E1D6EE"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "matgrf",
+                      "content": "搜索对象、规格化键、标签",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#7A6887"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgrg",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 14,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgrh",
+                          "content": "输入对象名或关系键",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "matgr1b",
+                  "name": "分类区",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E1D6EE"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "matgrj",
+                      "content": "分类",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#7A6887"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgrk",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#E9DDF5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#7D4D9E"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgrl",
+                          "content": "人物",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#5D3979"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgrm",
+                          "content": "24",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#5D3979"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgrn",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgro",
+                          "content": "势力",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgrp",
+                          "content": "11",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgrq",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgrr",
+                          "content": "地点",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgrs",
+                          "content": "18",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgrt",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgru",
+                          "content": "物品",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgrv",
+                          "content": "13",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgrw",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgrx",
+                          "content": "境界体系",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgry",
+                          "content": "7",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgrz",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr10",
+                          "content": "事件",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr11",
+                          "content": "26",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr12",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr13",
+                          "content": "关系",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr14",
+                          "content": "31",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr15",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr16",
+                          "content": "线索",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr17",
+                          "content": "14",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr18",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr19",
+                          "content": "剧情弧",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr1a",
+                          "content": "9",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "matgr1k",
+                  "name": "动作区",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E1D6EE"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "matgr1c",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr1d",
+                          "content": "已建模对象",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr1e",
+                          "content": "153",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr1f",
+                      "layout": "horizontal",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "matgr1g",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#E9DDF5",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#7D4D9E"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "matgr1h",
+                              "content": "新建对象",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#5D3979"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "matgr1i",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#F5F0FA",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#E1D6EE"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "matgr1j",
+                              "content": "批量导入",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#7A6887"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "matgr21",
+                  "name": "对象列表",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E1D6EE"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "matgr1l",
+                      "content": "列表",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#7A6887"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr1m",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#7D4D9E"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr1n",
+                          "content": "柳云澜",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr1o",
+                          "content": "人物 / 关系中心",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr1p",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr1q",
+                          "content": "赤霄盟",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr1r",
+                          "content": "势力 / 被追查",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr1s",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr1t",
+                          "content": "北陵渡口伏击",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr1u",
+                          "content": "事件 / 触发节点",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr1v",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr1w",
+                          "content": "劫火印",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr1x",
+                          "content": "线索 / 流向不明",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr1y",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr1z",
+                          "content": "天衡司密令",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr20",
+                          "content": "线索 / 官方牵引",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "matgr22",
+              "name": "主视图区",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#FBF8FE",
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                18,
+                18
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "matgr23",
+                  "name": "标签栏",
+                  "layout": "horizontal",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "matgr24",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr25",
+                          "content": "知识库",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr26",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#E9DDF5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#7D4D9E"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr27",
+                          "content": "关系图",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#5D3979"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr28",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr29",
+                          "content": "轨道",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#7A6887"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "matgr4w",
+                  "name": "视图导语",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E1D6EE"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "matgr4n",
+                      "content": "剧情弧矩阵型 · 关系图页",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "700",
+                      "fill": "#2C1E38"
+                    },
+                    {
+                      "type": "text",
+                      "id": "matgr4o",
+                      "content": "把人物、事件、线索和剧情弧投到同一矩阵里，强调交叉覆盖与空白区域。关系图页强调对象、事件与线索的依赖流向和因果链。",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500",
+                      "fill": "#7A6887",
+                      "width": "fill_container",
+                      "textGrowth": "fixed-width"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr4p",
+                      "layout": "horizontal",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "matgr4q",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#E9DDF5",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#7D4D9E"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "matgr4r",
+                              "content": "矩阵分析",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#5D3979"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "matgr4s",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#F5F0FA",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#E1D6EE"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "matgr4t",
+                              "content": "弧线覆盖",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#7A6887"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "matgr4u",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#F5F0FA",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#E1D6EE"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "matgr4v",
+                              "content": "空白暴露",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#7A6887"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "matgr4x",
+                  "layout": "horizontal",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "matgr51",
+                      "name": "剧情弧矩阵卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr4y",
+                          "content": "剧情弧矩阵",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr4z",
+                          "content": "04",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr50",
+                          "content": "核心剧情弧和角色群被压到一个观察平面里。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#7A6887",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr55",
+                      "name": "角色交叉轴卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr52",
+                          "content": "角色交叉轴",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr53",
+                          "content": "08",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr54",
+                          "content": "交叉轴负责暴露角色与剧情弧的联动密度。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#7A6887",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr59",
+                      "name": "空白格卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr56",
+                          "content": "空白格",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr57",
+                          "content": "06",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr58",
+                          "content": "空白格提示仍未被模型覆盖的关系或切片。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#7A6887",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "matgr5a",
+                  "layout": "horizontal",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "matgr5c",
+                      "name": "剧情弧矩阵",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr5b",
+                          "content": "剧情弧矩阵",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "matgr2a",
+                          "layout": "vertical",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "matgr2b",
+                              "layout": "horizontal",
+                              "width": "fill_container",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "matgr2c",
+                                  "width": 150,
+                                  "height": 36
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr2d",
+                                  "width": "fill_container",
+                                  "height": 36,
+                                  "layout": "horizontal",
+                                  "alignItems": "center",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2e",
+                                      "content": "主冲突",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#2C1E38"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr2f",
+                                  "width": "fill_container",
+                                  "height": 36,
+                                  "layout": "horizontal",
+                                  "alignItems": "center",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2g",
+                                      "content": "师承线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#2C1E38"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr2h",
+                                  "width": "fill_container",
+                                  "height": 36,
+                                  "layout": "horizontal",
+                                  "alignItems": "center",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2i",
+                                      "content": "势力线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#2C1E38"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr2j",
+                                  "width": "fill_container",
+                                  "height": 36,
+                                  "layout": "horizontal",
+                                  "alignItems": "center",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2k",
+                                      "content": "线索线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#2C1E38"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr2l",
+                                  "width": "fill_container",
+                                  "height": 36,
+                                  "layout": "horizontal",
+                                  "alignItems": "center",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2m",
+                                      "content": "后续支线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#2C1E38"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "matgr2n",
+                              "layout": "horizontal",
+                              "width": "fill_container",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "matgr2o",
+                                  "width": 150,
+                                  "height": 70,
+                                  "layout": "horizontal",
+                                  "alignItems": "center",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2p",
+                                      "content": "主弧",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#2C1E38"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr2q",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#7D4D9E"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2r",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#5D3979"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2s",
+                                      "content": "主弧 × 主冲突",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr2t",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2u",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2v",
+                                      "content": "主弧 × 师承线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr2w",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2x",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr2y",
+                                      "content": "主弧 × 势力线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr2z",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#7D4D9E"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr30",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#5D3979"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr31",
+                                      "content": "主弧 × 线索线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr32",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr33",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr34",
+                                      "content": "主弧 × 后续支线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "matgr35",
+                              "layout": "horizontal",
+                              "width": "fill_container",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "matgr36",
+                                  "width": 150,
+                                  "height": 70,
+                                  "layout": "horizontal",
+                                  "alignItems": "center",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr37",
+                                      "content": "支弧 A",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#2C1E38"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr38",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr39",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3a",
+                                      "content": "支弧 A × 主冲突",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr3b",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3c",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3d",
+                                      "content": "支弧 A × 师承线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr3e",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#7D4D9E"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3f",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#5D3979"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3g",
+                                      "content": "支弧 A × 势力线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr3h",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3i",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3j",
+                                      "content": "支弧 A × 线索线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr3k",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3l",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3m",
+                                      "content": "支弧 A × 后续支线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "matgr3n",
+                              "layout": "horizontal",
+                              "width": "fill_container",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "matgr3o",
+                                  "width": 150,
+                                  "height": 70,
+                                  "layout": "horizontal",
+                                  "alignItems": "center",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3p",
+                                      "content": "支弧 B",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#2C1E38"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr3q",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3r",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3s",
+                                      "content": "支弧 B × 主冲突",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr3t",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#7D4D9E"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3u",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#5D3979"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3v",
+                                      "content": "支弧 B × 师承线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr3w",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3x",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr3y",
+                                      "content": "支弧 B × 势力线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr3z",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr40",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr41",
+                                      "content": "支弧 B × 线索线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr42",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#7D4D9E"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr43",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#5D3979"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr44",
+                                      "content": "支弧 B × 后续支线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "matgr45",
+                              "layout": "horizontal",
+                              "width": "fill_container",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "matgr46",
+                                  "width": 150,
+                                  "height": 70,
+                                  "layout": "horizontal",
+                                  "alignItems": "center",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr47",
+                                      "content": "伏笔弧",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700",
+                                      "fill": "#2C1E38"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr48",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#7D4D9E"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr49",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#5D3979"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr4a",
+                                      "content": "伏笔弧 × 主冲突",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr4b",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr4c",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr4d",
+                                      "content": "伏笔弧 × 师承线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr4e",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr4f",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr4g",
+                                      "content": "伏笔弧 × 势力线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr4h",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#7D4D9E"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr4i",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#5D3979"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr4j",
+                                      "content": "伏笔弧 × 线索线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "matgr4k",
+                                  "width": "fill_container",
+                                  "height": 70,
+                                  "layout": "vertical",
+                                  "gap": 6,
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#F5F0FA",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#E1D6EE"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "matgr4l",
+                                      "content": "事件覆盖格",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "fill": "#7A6887"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "matgr4m",
+                                      "content": "伏笔弧 × 后续支线",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "500",
+                                      "fill": "#2C1E38",
+                                      "width": "fill_container",
+                                      "textGrowth": "fixed-width"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr5d",
+                      "layout": "vertical",
+                      "width": 320,
+                      "gap": 14,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "matgr5r",
+                          "name": "角色交叉轴",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 18,
+                          "padding": [
+                            16,
+                            16,
+                            16,
+                            16
+                          ],
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#E1D6EE"
+                          },
+                          "clip": false,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "matgr5e",
+                              "content": "角色交叉轴",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "700",
+                              "fill": "#2C1E38"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "matgr5f",
+                              "layout": "vertical",
+                              "width": "fill_container",
+                              "gap": 4,
+                              "padding": [
+                                10,
+                                12
+                              ],
+                              "cornerRadius": 12,
+                              "fill": "#F5F0FA",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#7D4D9E"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "matgr5g",
+                                  "content": "柳云澜",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "700",
+                                  "fill": "#2C1E38"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "matgr5h",
+                                  "content": "可投影到剧情弧矩阵",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "fill": "#7A6887"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "matgr5i",
+                              "layout": "vertical",
+                              "width": "fill_container",
+                              "gap": 4,
+                              "padding": [
+                                10,
+                                12
+                              ],
+                              "cornerRadius": 12,
+                              "fill": "#FFFFFF",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#E1D6EE"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "matgr5j",
+                                  "content": "沈照雪",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "700",
+                                  "fill": "#2C1E38"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "matgr5k",
+                                  "content": "可投影到剧情弧矩阵",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "fill": "#7A6887"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "matgr5l",
+                              "layout": "vertical",
+                              "width": "fill_container",
+                              "gap": 4,
+                              "padding": [
+                                10,
+                                12
+                              ],
+                              "cornerRadius": 12,
+                              "fill": "#FFFFFF",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#E1D6EE"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "matgr5m",
+                                  "content": "赤霄盟",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "700",
+                                  "fill": "#2C1E38"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "matgr5n",
+                                  "content": "可投影到剧情弧矩阵",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "fill": "#7A6887"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "matgr5o",
+                              "layout": "vertical",
+                              "width": "fill_container",
+                              "gap": 4,
+                              "padding": [
+                                10,
+                                12
+                              ],
+                              "cornerRadius": 12,
+                              "fill": "#FFFFFF",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#E1D6EE"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "matgr5p",
+                                  "content": "天衡司",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "700",
+                                  "fill": "#2C1E38"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "matgr5q",
+                                  "content": "可投影到剧情弧矩阵",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "fill": "#7A6887"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "matgr63",
+                          "name": "事件覆盖格",
+                          "layout": "vertical",
+                          "gap": 12,
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 18,
+                          "padding": [
+                            16,
+                            16,
+                            16,
+                            16
+                          ],
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#E1D6EE"
+                          },
+                          "clip": false,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "matgr5s",
+                              "content": "事件覆盖格",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "700",
+                              "fill": "#2C1E38"
+                            },
+                            {
+                              "type": "text",
+                              "id": "matgr5t",
+                              "content": "本格用于解释矩阵中为何存在空白、为何存在高密度交叉。",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#7A6887",
+                              "width": "fill_container",
+                              "textGrowth": "fixed-width"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "matgr5u",
+                              "layout": "horizontal",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "matgr5v",
+                                  "content": "北陵渡口伏击",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "500",
+                                  "fill": "#7A6887"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "matgr5w",
+                                  "content": "命中主弧与冲突列",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700",
+                                  "fill": "#2C1E38"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "matgr5x",
+                              "layout": "horizontal",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "matgr5y",
+                                  "content": "劫火印现身",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "500",
+                                  "fill": "#7A6887"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "matgr5z",
+                                  "content": "命中线索列与观察列",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700",
+                                  "fill": "#2C1E38"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "matgr60",
+                              "layout": "horizontal",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "matgr61",
+                                  "content": "地脉异动",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "500",
+                                  "fill": "#7A6887"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "matgr62",
+                                  "content": "命中后续支线列",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700",
+                                  "fill": "#2C1E38"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "matgr64",
+              "name": "检查器列",
+              "width": 334,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": {
+                  "left": 1
+                },
+                "fill": "#E1D6EE"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                16,
+                16
+              ],
+              "clip": true,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "matgr65",
+                  "content": "检查器",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "fill": "#2C1E38"
+                },
+                {
+                  "type": "frame",
+                  "id": "matgr6b",
+                  "name": "对象摘要",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E1D6EE"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "matgr66",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr67",
+                          "content": "柳云澜 -> 赤霄盟",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "matgr68",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#E9DDF5",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#7D4D9E"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "matgr69",
+                              "content": "关系",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#5D3979"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "matgr6a",
+                      "content": "图谱已连线",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#7A6887"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "matgr6m",
+                  "name": "基础字段",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E1D6EE"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "matgr6c",
+                      "content": "基础字段",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#7A6887"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr6d",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr6e",
+                          "content": "关系类型",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr6f",
+                          "content": "追查 / 对立",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr6g",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr6h",
+                          "content": "触发事件",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr6i",
+                          "content": "北陵渡口伏击",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr6j",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "matgr6k",
+                          "content": "权重",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#7A6887"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr6l",
+                          "content": "0.82",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#2C1E38"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "matgr6x",
+                  "name": "引用与跳转",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E1D6EE"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "matgr6n",
+                      "content": "引用与跳转",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#7A6887"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr6o",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "matgr6p",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#7D4D9E"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr6q",
+                          "content": "上游：天衡司密令",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#2C1E38",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr6r",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "matgr6s",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#7D4D9E"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr6t",
+                          "content": "下游：青崖城夜审",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#2C1E38",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "matgr6u",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#F5F0FA",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E1D6EE"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "matgr6v",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#7D4D9E"
+                        },
+                        {
+                          "type": "text",
+                          "id": "matgr6w",
+                          "content": "并行边：柳云澜 -> 劫火印",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#2C1E38",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "matgr70",
+                  "name": "视图提示",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E1D6EE"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "matgr6y",
+                      "content": "关系图页强调对象、事件与线索的依赖流向和因果链。",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#2C1E38",
+                      "width": "fill_container",
+                      "textGrowth": "fixed-width"
+                    },
+                    {
+                      "type": "text",
+                      "id": "matgr6z",
+                      "content": "当前套系：剧情弧矩阵型",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#7A6887"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

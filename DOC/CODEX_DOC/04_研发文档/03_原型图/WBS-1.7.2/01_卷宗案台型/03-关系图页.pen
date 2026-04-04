@@ -1074,7 +1074,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dosgr4l",
+                  "id": "dosgr2j",
                   "name": "视图导语",
                   "layout": "vertical",
                   "gap": 10,
@@ -1095,7 +1095,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "dosgr4c",
+                      "id": "dosgr2a",
                       "content": "卷宗案台型 · 关系图页",
                       "fontFamily": "Inter",
                       "fontSize": 20,
@@ -1104,7 +1104,7 @@
                     },
                     {
                       "type": "text",
-                      "id": "dosgr4d",
+                      "id": "dosgr2b",
                       "content": "把对象建模当作卷宗整理工作，主工作区强调记录索引、字段矩阵和详情抽屉。关系图页强调对象、事件与线索的依赖流向和因果链。",
                       "fontFamily": "Inter",
                       "fontSize": 13,
@@ -1115,14 +1115,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dosgr4e",
+                      "id": "dosgr2c",
                       "layout": "horizontal",
                       "gap": 8,
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "frame",
-                          "id": "dosgr4f",
+                          "id": "dosgr2d",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1139,7 +1139,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr4g",
+                              "id": "dosgr2e",
                               "content": "卷宗视角",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1150,7 +1150,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosgr4h",
+                          "id": "dosgr2f",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1167,7 +1167,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr4i",
+                              "id": "dosgr2g",
                               "content": "字段审校",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1178,7 +1178,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosgr4j",
+                          "id": "dosgr2h",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1195,7 +1195,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr4k",
+                              "id": "dosgr2i",
                               "content": "引用追踪",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1210,14 +1210,14 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dosgr4m",
+                  "id": "dosgr2k",
                   "layout": "horizontal",
                   "width": "fill_container",
                   "gap": 14,
                   "children": [
                     {
                       "type": "frame",
-                      "id": "dosgr4q",
+                      "id": "dosgr2o",
                       "name": "已建卷宗卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1238,7 +1238,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dosgr4n",
+                          "id": "dosgr2l",
                           "content": "已建卷宗",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1247,7 +1247,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosgr4o",
+                          "id": "dosgr2m",
                           "content": "153",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1256,7 +1256,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosgr4p",
+                          "id": "dosgr2n",
                           "content": "对象库不是写作页，而是项目对象卷宗库。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1269,7 +1269,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dosgr4u",
+                      "id": "dosgr2s",
                       "name": "待补字段卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1290,7 +1290,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dosgr4r",
+                          "id": "dosgr2p",
                           "content": "待补字段",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1299,7 +1299,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosgr4s",
+                          "id": "dosgr2q",
                           "content": "12",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1308,7 +1308,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosgr4t",
+                          "id": "dosgr2r",
                           "content": "字段矩阵直接暴露缺项，便于人工补建模。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1321,7 +1321,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dosgr4y",
+                      "id": "dosgr2w",
                       "name": "待补引用卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1342,7 +1342,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dosgr4v",
+                          "id": "dosgr2t",
                           "content": "待补引用",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1351,7 +1351,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosgr4w",
+                          "id": "dosgr2u",
                           "content": "17",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1360,7 +1360,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosgr4x",
+                          "id": "dosgr2v",
                           "content": "关系和切片都回指卷宗记录。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1375,18 +1375,18 @@
                 },
                 {
                   "type": "frame",
-                  "id": "dosgr2a",
+                  "id": "dosgr2x",
                   "layout": "horizontal",
                   "width": "fill_container",
                   "gap": 14,
                   "children": [
                     {
                       "type": "frame",
-                      "id": "dosgr2r",
+                      "id": "dosgr3e",
                       "name": "卷宗目录",
                       "layout": "vertical",
                       "gap": 8,
-                      "width": 260,
+                      "width": 250,
                       "fill": "#FFFFFF",
                       "cornerRadius": 18,
                       "padding": [
@@ -1403,7 +1403,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dosgr2b",
+                          "id": "dosgr2y",
                           "content": "卷宗目录",
                           "fontFamily": "Inter",
                           "fontSize": 15,
@@ -1412,7 +1412,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosgr2c",
+                          "id": "dosgr2z",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1429,7 +1429,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr2d",
+                              "id": "dosgr30",
                               "content": "柳云澜",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1438,7 +1438,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosgr2e",
+                              "id": "dosgr31",
                               "content": "人物 / 关系中心",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1449,7 +1449,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosgr2f",
+                          "id": "dosgr32",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1466,7 +1466,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr2g",
+                              "id": "dosgr33",
                               "content": "赤霄盟",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1475,7 +1475,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosgr2h",
+                              "id": "dosgr34",
                               "content": "势力 / 被追查",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1486,7 +1486,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosgr2i",
+                          "id": "dosgr35",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1503,7 +1503,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr2j",
+                              "id": "dosgr36",
                               "content": "北陵渡口伏击",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1512,7 +1512,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosgr2k",
+                              "id": "dosgr37",
                               "content": "事件 / 触发节点",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1523,7 +1523,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosgr2l",
+                          "id": "dosgr38",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1540,7 +1540,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr2m",
+                              "id": "dosgr39",
                               "content": "劫火印",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1549,7 +1549,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosgr2n",
+                              "id": "dosgr3a",
                               "content": "线索 / 流向不明",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1560,7 +1560,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosgr2o",
+                          "id": "dosgr3b",
                           "layout": "vertical",
                           "width": "fill_container",
                           "gap": 4,
@@ -1577,7 +1577,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr2p",
+                              "id": "dosgr3c",
                               "content": "天衡司密令",
                               "fontFamily": "Inter",
                               "fontSize": 13,
@@ -1586,7 +1586,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosgr2q",
+                              "id": "dosgr3d",
                               "content": "线索 / 官方牵引",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1599,14 +1599,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dosgr2s",
+                      "id": "dosgr3f",
                       "layout": "vertical",
                       "width": "fill_container",
                       "gap": 14,
                       "children": [
                         {
                           "type": "frame",
-                          "id": "dosgr3v",
+                          "id": "dosgr4i",
                           "name": "字段矩阵",
                           "layout": "vertical",
                           "gap": 12,
@@ -1627,7 +1627,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr2t",
+                              "id": "dosgr3g",
                               "content": "字段矩阵",
                               "fontFamily": "Inter",
                               "fontSize": 15,
@@ -1636,14 +1636,14 @@
                             },
                             {
                               "type": "frame",
-                              "id": "dosgr2u",
+                              "id": "dosgr3h",
                               "layout": "vertical",
                               "gap": 8,
                               "width": "fill_container",
                               "children": [
                                 {
                                   "type": "frame",
-                                  "id": "dosgr2v",
+                                  "id": "dosgr3i",
                                   "layout": "horizontal",
                                   "width": "fill_container",
                                   "padding": [
@@ -1655,13 +1655,13 @@
                                   "children": [
                                     {
                                       "type": "frame",
-                                      "id": "dosgr2w",
+                                      "id": "dosgr3j",
                                       "layout": "horizontal",
                                       "width": 180,
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dosgr2x",
+                                          "id": "dosgr3k",
                                           "content": "关系",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1672,13 +1672,13 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dosgr2y",
+                                      "id": "dosgr3l",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dosgr2z",
+                                          "id": "dosgr3m",
                                           "content": "起点",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1689,242 +1689,18 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dosgr30",
+                                      "id": "dosgr3n",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dosgr31",
+                                          "id": "dosgr3o",
                                           "content": "终点",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
                                           "fontWeight": "700",
                                           "fill": "#66758A"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosgr32",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosgr33",
-                                          "content": "影响",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#66758A"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "dosgr34",
-                                  "layout": "horizontal",
-                                  "width": "fill_container",
-                                  "padding": [
-                                    8,
-                                    10
-                                  ],
-                                  "cornerRadius": 12,
-                                  "fill": "#FFFFFF",
-                                  "stroke": {
-                                    "thickness": 1,
-                                    "fill": "#D6DEE8"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "frame",
-                                      "id": "dosgr35",
-                                      "layout": "horizontal",
-                                      "width": 180,
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosgr36",
-                                          "content": "追查",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosgr37",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosgr38",
-                                          "content": "赤霄盟",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosgr39",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosgr3a",
-                                          "content": "柳云澜",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosgr3b",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosgr3c",
-                                          "content": "主冲突",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "dosgr3d",
-                                  "layout": "horizontal",
-                                  "width": "fill_container",
-                                  "padding": [
-                                    8,
-                                    10
-                                  ],
-                                  "cornerRadius": 12,
-                                  "fill": "#FFFFFF",
-                                  "stroke": {
-                                    "thickness": 1,
-                                    "fill": "#D6DEE8"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "frame",
-                                      "id": "dosgr3e",
-                                      "layout": "horizontal",
-                                      "width": 180,
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosgr3f",
-                                          "content": "师承",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosgr3g",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosgr3h",
-                                          "content": "无名旧卷",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosgr3i",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosgr3j",
-                                          "content": "柳云澜",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "frame",
-                                      "id": "dosgr3k",
-                                      "layout": "horizontal",
-                                      "width": "fill_container",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosgr3l",
-                                          "content": "背景",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "500",
-                                          "fill": "#17212B"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "dosgr3m",
-                                  "layout": "horizontal",
-                                  "width": "fill_container",
-                                  "padding": [
-                                    8,
-                                    10
-                                  ],
-                                  "cornerRadius": 12,
-                                  "fill": "#FFFFFF",
-                                  "stroke": {
-                                    "thickness": 1,
-                                    "fill": "#D6DEE8"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "frame",
-                                      "id": "dosgr3n",
-                                      "layout": "horizontal",
-                                      "width": 180,
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "id": "dosgr3o",
-                                          "content": "争夺",
-                                          "fontFamily": "Inter",
-                                          "fontSize": 12,
-                                          "fontWeight": "700",
-                                          "fill": "#17212B"
                                         }
                                       ]
                                     },
@@ -1937,6 +1713,230 @@
                                         {
                                           "type": "text",
                                           "id": "dosgr3q",
+                                          "content": "影响",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#66758A"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dosgr3r",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dosgr3s",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosgr3t",
+                                          "content": "追查",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosgr3u",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosgr3v",
+                                          "content": "赤霄盟",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosgr3w",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosgr3x",
+                                          "content": "柳云澜",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosgr3y",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosgr3z",
+                                          "content": "主冲突",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dosgr40",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dosgr41",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosgr42",
+                                          "content": "师承",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosgr43",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosgr44",
+                                          "content": "无名旧卷",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosgr45",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosgr46",
+                                          "content": "柳云澜",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosgr47",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosgr48",
+                                          "content": "背景",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "500",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "dosgr49",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "padding": [
+                                    8,
+                                    10
+                                  ],
+                                  "cornerRadius": 12,
+                                  "fill": "#FFFFFF",
+                                  "stroke": {
+                                    "thickness": 1,
+                                    "fill": "#D6DEE8"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "dosgr4a",
+                                      "layout": "horizontal",
+                                      "width": 180,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosgr4b",
+                                          "content": "争夺",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "700",
+                                          "fill": "#17212B"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dosgr4c",
+                                      "layout": "horizontal",
+                                      "width": "fill_container",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dosgr4d",
                                           "content": "天衡司",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1947,13 +1947,13 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dosgr3r",
+                                      "id": "dosgr4e",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dosgr3s",
+                                          "id": "dosgr4f",
                                           "content": "劫火印",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1964,13 +1964,13 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "dosgr3t",
+                                      "id": "dosgr4g",
                                       "layout": "horizontal",
                                       "width": "fill_container",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "dosgr3u",
+                                          "id": "dosgr4h",
                                           "content": "高",
                                           "fontFamily": "Inter",
                                           "fontSize": 12,
@@ -1987,7 +1987,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosgr3z",
+                          "id": "dosgr4m",
                           "name": "卷宗审校进度卡片",
                           "layout": "vertical",
                           "gap": 8,
@@ -2008,7 +2008,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr3w",
+                              "id": "dosgr4j",
                               "content": "卷宗审校进度",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2017,7 +2017,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosgr3x",
+                              "id": "dosgr4k",
                               "content": "76%",
                               "fontFamily": "Inter",
                               "fontSize": 28,
@@ -2026,7 +2026,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosgr3y",
+                              "id": "dosgr4l",
                               "content": "卷宗工作流会优先暴露缺字段和缺引用对象。",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2041,7 +2041,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "dosgr4b",
+                      "id": "dosgr4y",
                       "name": "记录详情抽屉",
                       "layout": "vertical",
                       "gap": 12,
@@ -2062,7 +2062,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "dosgr40",
+                          "id": "dosgr4n",
                           "content": "记录详情抽屉",
                           "fontFamily": "Inter",
                           "fontSize": 15,
@@ -2071,7 +2071,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosgr41",
+                          "id": "dosgr4o",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2079,7 +2079,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr42",
+                              "id": "dosgr4p",
                               "content": "关系类型",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2088,7 +2088,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosgr43",
+                              "id": "dosgr4q",
                               "content": "追查 / 对立",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2099,7 +2099,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosgr44",
+                          "id": "dosgr4r",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2107,7 +2107,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr45",
+                              "id": "dosgr4s",
                               "content": "触发事件",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2116,7 +2116,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosgr46",
+                              "id": "dosgr4t",
                               "content": "北陵渡口伏击",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2127,7 +2127,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "dosgr47",
+                          "id": "dosgr4u",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2135,7 +2135,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "dosgr48",
+                              "id": "dosgr4v",
                               "content": "权重",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2144,7 +2144,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "dosgr49",
+                              "id": "dosgr4w",
                               "content": "0.82",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2155,8 +2155,8 @@
                         },
                         {
                           "type": "text",
-                          "id": "dosgr4a",
-                          "content": "当前抽屉与右侧检查器不同：抽屉承载当前记录主内容，检查器承载跨视图辅助信息。",
+                          "id": "dosgr4x",
+                          "content": "抽屉承载当前记录主内容；右侧检查器只承载跨视图辅助信息。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
                           "fontWeight": "500",

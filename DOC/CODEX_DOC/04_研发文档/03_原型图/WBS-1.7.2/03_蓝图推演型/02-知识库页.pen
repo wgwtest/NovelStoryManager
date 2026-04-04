@@ -1074,7 +1074,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "blukn4d",
+                  "id": "blukn2j",
                   "name": "视图导语",
                   "layout": "vertical",
                   "gap": 10,
@@ -1095,7 +1095,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "blukn44",
+                      "id": "blukn2a",
                       "content": "蓝图推演型 · 知识库页",
                       "fontFamily": "Inter",
                       "fontSize": 20,
@@ -1104,7 +1104,7 @@
                     },
                     {
                       "type": "text",
-                      "id": "blukn45",
+                      "id": "blukn2b",
                       "content": "把对象与关系当作可推演的图结构，中区主角是蓝图总线与节点依赖。知识库页只负责结构化真值和规格化字段，不承接正文写作。",
                       "fontFamily": "Inter",
                       "fontSize": 13,
@@ -1115,14 +1115,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "blukn46",
+                      "id": "blukn2c",
                       "layout": "horizontal",
                       "gap": 8,
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "frame",
-                          "id": "blukn47",
+                          "id": "blukn2d",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1139,7 +1139,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "blukn48",
+                              "id": "blukn2e",
                               "content": "蓝图总线",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1150,7 +1150,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "blukn49",
+                          "id": "blukn2f",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1167,7 +1167,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "blukn4a",
+                              "id": "blukn2g",
                               "content": "端口吸附",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1178,7 +1178,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "blukn4b",
+                          "id": "blukn2h",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -1195,7 +1195,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "blukn4c",
+                              "id": "blukn2i",
                               "content": "依赖推演",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -1210,14 +1210,14 @@
                 },
                 {
                   "type": "frame",
-                  "id": "blukn4e",
+                  "id": "blukn2k",
                   "layout": "horizontal",
                   "width": "fill_container",
                   "gap": 14,
                   "children": [
                     {
                       "type": "frame",
-                      "id": "blukn4i",
+                      "id": "blukn2o",
                       "name": "主节点卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1238,7 +1238,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "blukn4f",
+                          "id": "blukn2l",
                           "content": "主节点",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1247,7 +1247,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "blukn4g",
+                          "id": "blukn2m",
                           "content": "17",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1256,7 +1256,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "blukn4h",
+                          "id": "blukn2n",
                           "content": "主要节点必须有稳定输入和输出含义。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1269,7 +1269,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "blukn4m",
+                      "id": "blukn2s",
                       "name": "待补边卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1290,7 +1290,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "blukn4j",
+                          "id": "blukn2p",
                           "content": "待补边",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1299,7 +1299,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "blukn4k",
+                          "id": "blukn2q",
                           "content": "09",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1308,7 +1308,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "blukn4l",
+                          "id": "blukn2r",
                           "content": "没有方向和端口语义的边不允许直接入图。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1321,7 +1321,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "blukn4q",
+                      "id": "blukn2w",
                       "name": "图到轨投影卡片",
                       "layout": "vertical",
                       "gap": 8,
@@ -1342,7 +1342,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "blukn4n",
+                          "id": "blukn2t",
                           "content": "图到轨投影",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1351,7 +1351,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "blukn4o",
+                          "id": "blukn2u",
                           "content": "07",
                           "fontFamily": "Inter",
                           "fontSize": 28,
@@ -1360,7 +1360,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "blukn4p",
+                          "id": "blukn2v",
                           "content": "关系推演最终要落回轨道或切片。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -1375,14 +1375,14 @@
                 },
                 {
                   "type": "frame",
-                  "id": "blukn4r",
+                  "id": "blukn2x",
                   "layout": "horizontal",
                   "width": "fill_container",
                   "gap": 14,
                   "children": [
                     {
                       "type": "frame",
-                      "id": "blukn3o",
+                      "id": "blukn4o",
                       "name": "蓝图总线",
                       "layout": "vertical",
                       "gap": 14,
@@ -1403,7 +1403,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "blukn2a",
+                          "id": "blukn2y",
                           "content": "蓝图总线",
                           "fontFamily": "Inter",
                           "fontSize": 16,
@@ -1412,7 +1412,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "blukn2b",
+                          "id": "blukn2z",
                           "width": "fill_container",
                           "height": 560,
                           "layout": "none",
@@ -1426,49 +1426,59 @@
                           "children": [
                             {
                               "type": "rectangle",
-                              "id": "blukn2c",
-                              "x": 222,
-                              "y": 118,
-                              "width": 178,
+                              "id": "blukn30",
+                              "x": 190,
+                              "y": 126,
+                              "width": 188,
                               "height": 4,
                               "fill": "#0E6BA8",
                               "cornerRadius": 999
                             },
                             {
                               "type": "rectangle",
-                              "id": "blukn2d",
-                              "x": 397,
-                              "y": 121,
+                              "id": "blukn31",
+                              "x": 376,
+                              "y": 130,
                               "width": 4,
-                              "height": 114,
+                              "height": 118,
                               "fill": "#0E6BA8",
                               "cornerRadius": 999
                             },
                             {
                               "type": "rectangle",
-                              "id": "blukn2e",
-                              "x": 401,
-                              "y": 232,
-                              "width": 210,
+                              "id": "blukn32",
+                              "x": 380,
+                              "y": 245,
+                              "width": 214,
                               "height": 4,
                               "fill": "#0E6BA8",
                               "cornerRadius": 999
                             },
                             {
                               "type": "rectangle",
-                              "id": "blukn2f",
-                              "x": 608,
-                              "y": 236,
+                              "id": "blukn33",
+                              "x": 590,
+                              "y": 248,
                               "width": 4,
-                              "height": 120,
+                              "height": 125,
+                              "fill": "#0E6BA8",
+                              "cornerRadius": 999
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "blukn34",
+                              "x": 594,
+                              "y": 372,
+                              "width": 198,
+                              "height": 4,
                               "fill": "#0E6BA8",
                               "cornerRadius": 999
                             },
                             {
                               "type": "frame",
-                              "id": "blukn2g",
-                              "x": 44,
-                              "y": 74,
+                              "id": "blukn35",
+                              "x": 42,
+                              "y": 84,
                               "width": 190,
                               "height": "fit_content",
                               "layout": "vertical",
@@ -1496,7 +1506,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "id": "blukn2h",
+                                  "id": "blukn36",
                                   "content": "推演节点",
                                   "fontFamily": "Inter",
                                   "fontSize": 11,
@@ -1505,7 +1515,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "id": "blukn2i",
+                                  "id": "blukn37",
                                   "content": "人物规格",
                                   "fontFamily": "Inter",
                                   "fontSize": 14,
@@ -1514,8 +1524,8 @@
                                 },
                                 {
                                   "type": "text",
-                                  "id": "blukn2j",
-                                  "content": "主视角或主规格输入。",
+                                  "id": "blukn38",
+                                  "content": "上游输入或主规格入口。",
                                   "fontFamily": "Inter",
                                   "fontSize": 12,
                                   "fontWeight": "500",
@@ -1525,7 +1535,7 @@
                                 },
                                 {
                                   "type": "frame",
-                                  "id": "blukn2k",
+                                  "id": "blukn39",
                                   "layout": "horizontal",
                                   "width": "fill_container",
                                   "justifyContent": "space_between",
@@ -1533,21 +1543,21 @@
                                   "children": [
                                     {
                                       "type": "frame",
-                                      "id": "blukn2l",
+                                      "id": "blukn3a",
                                       "layout": "horizontal",
                                       "gap": 8,
                                       "alignItems": "center",
                                       "children": [
                                         {
                                           "type": "ellipse",
-                                          "id": "blukn2m",
+                                          "id": "blukn3b",
                                           "width": 10,
                                           "height": 10,
                                           "fill": "#0E6BA8"
                                         },
                                         {
                                           "type": "text",
-                                          "id": "blukn2n",
+                                          "id": "blukn3c",
                                           "content": "输入",
                                           "fontFamily": "Inter",
                                           "fontSize": 11,
@@ -1558,14 +1568,14 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "blukn2o",
+                                      "id": "blukn3d",
                                       "layout": "horizontal",
                                       "gap": 8,
                                       "alignItems": "center",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "blukn2p",
+                                          "id": "blukn3e",
                                           "content": "输出",
                                           "fontFamily": "Inter",
                                           "fontSize": 11,
@@ -1574,7 +1584,7 @@
                                         },
                                         {
                                           "type": "ellipse",
-                                          "id": "blukn2q",
+                                          "id": "blukn3f",
                                           "width": 10,
                                           "height": 10,
                                           "fill": "#0E6BA8"
@@ -1587,10 +1597,10 @@
                             },
                             {
                               "type": "frame",
-                              "id": "blukn2r",
-                              "x": 400,
-                              "y": 74,
-                              "width": 206,
+                              "id": "blukn3g",
+                              "x": 382,
+                              "y": 84,
+                              "width": 212,
                               "height": "fit_content",
                               "layout": "vertical",
                               "gap": 8,
@@ -1617,7 +1627,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "id": "blukn2s",
+                                  "id": "blukn3h",
                                   "content": "推演节点",
                                   "fontFamily": "Inter",
                                   "fontSize": 11,
@@ -1626,7 +1636,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "id": "blukn2t",
+                                  "id": "blukn3i",
                                   "content": "线索规格",
                                   "fontFamily": "Inter",
                                   "fontSize": 14,
@@ -1635,8 +1645,8 @@
                                 },
                                 {
                                   "type": "text",
-                                  "id": "blukn2u",
-                                  "content": "中继推演或当前主冲突。",
+                                  "id": "blukn3j",
+                                  "content": "当前主冲突或规则节点。",
                                   "fontFamily": "Inter",
                                   "fontSize": 12,
                                   "fontWeight": "500",
@@ -1646,7 +1656,7 @@
                                 },
                                 {
                                   "type": "frame",
-                                  "id": "blukn2v",
+                                  "id": "blukn3k",
                                   "layout": "horizontal",
                                   "width": "fill_container",
                                   "justifyContent": "space_between",
@@ -1654,21 +1664,21 @@
                                   "children": [
                                     {
                                       "type": "frame",
-                                      "id": "blukn2w",
+                                      "id": "blukn3l",
                                       "layout": "horizontal",
                                       "gap": 8,
                                       "alignItems": "center",
                                       "children": [
                                         {
                                           "type": "ellipse",
-                                          "id": "blukn2x",
+                                          "id": "blukn3m",
                                           "width": 10,
                                           "height": 10,
                                           "fill": "#0E6BA8"
                                         },
                                         {
                                           "type": "text",
-                                          "id": "blukn2y",
+                                          "id": "blukn3n",
                                           "content": "输入",
                                           "fontFamily": "Inter",
                                           "fontSize": 11,
@@ -1679,14 +1689,14 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "blukn2z",
+                                      "id": "blukn3o",
                                       "layout": "horizontal",
                                       "gap": 8,
                                       "alignItems": "center",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "blukn30",
+                                          "id": "blukn3p",
                                           "content": "输出",
                                           "fontFamily": "Inter",
                                           "fontSize": 11,
@@ -1695,7 +1705,7 @@
                                         },
                                         {
                                           "type": "ellipse",
-                                          "id": "blukn31",
+                                          "id": "blukn3q",
                                           "width": 10,
                                           "height": 10,
                                           "fill": "#0E6BA8"
@@ -1708,9 +1718,9 @@
                             },
                             {
                               "type": "frame",
-                              "id": "blukn32",
-                              "x": 640,
-                              "y": 194,
+                              "id": "blukn3r",
+                              "x": 620,
+                              "y": 206,
                               "width": 190,
                               "height": "fit_content",
                               "layout": "vertical",
@@ -1738,7 +1748,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "id": "blukn33",
+                                  "id": "blukn3s",
                                   "content": "推演节点",
                                   "fontFamily": "Inter",
                                   "fontSize": 11,
@@ -1747,7 +1757,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "id": "blukn34",
+                                  "id": "blukn3t",
                                   "content": "事件规格",
                                   "fontFamily": "Inter",
                                   "fontSize": 14,
@@ -1756,8 +1766,8 @@
                                 },
                                 {
                                   "type": "text",
-                                  "id": "blukn35",
-                                  "content": "向下游派生影响。",
+                                  "id": "blukn3u",
+                                  "content": "中继状态或关键线索。",
                                   "fontFamily": "Inter",
                                   "fontSize": 12,
                                   "fontWeight": "500",
@@ -1767,7 +1777,7 @@
                                 },
                                 {
                                   "type": "frame",
-                                  "id": "blukn36",
+                                  "id": "blukn3v",
                                   "layout": "horizontal",
                                   "width": "fill_container",
                                   "justifyContent": "space_between",
@@ -1775,21 +1785,21 @@
                                   "children": [
                                     {
                                       "type": "frame",
-                                      "id": "blukn37",
+                                      "id": "blukn3w",
                                       "layout": "horizontal",
                                       "gap": 8,
                                       "alignItems": "center",
                                       "children": [
                                         {
                                           "type": "ellipse",
-                                          "id": "blukn38",
+                                          "id": "blukn3x",
                                           "width": 10,
                                           "height": 10,
                                           "fill": "#0E6BA8"
                                         },
                                         {
                                           "type": "text",
-                                          "id": "blukn39",
+                                          "id": "blukn3y",
                                           "content": "输入",
                                           "fontFamily": "Inter",
                                           "fontSize": 11,
@@ -1800,14 +1810,14 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "blukn3a",
+                                      "id": "blukn3z",
                                       "layout": "horizontal",
                                       "gap": 8,
                                       "alignItems": "center",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "blukn3b",
+                                          "id": "blukn40",
                                           "content": "输出",
                                           "fontFamily": "Inter",
                                           "fontSize": 11,
@@ -1816,7 +1826,7 @@
                                         },
                                         {
                                           "type": "ellipse",
-                                          "id": "blukn3c",
+                                          "id": "blukn41",
                                           "width": 10,
                                           "height": 10,
                                           "fill": "#0E6BA8"
@@ -1829,10 +1839,10 @@
                             },
                             {
                               "type": "frame",
-                              "id": "blukn3d",
-                              "x": 884,
-                              "y": 314,
-                              "width": 204,
+                              "id": "blukn42",
+                              "x": 846,
+                              "y": 330,
+                              "width": 194,
                               "height": "fit_content",
                               "layout": "vertical",
                               "gap": 8,
@@ -1859,7 +1869,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "id": "blukn3e",
+                                  "id": "blukn43",
                                   "content": "推演节点",
                                   "fontFamily": "Inter",
                                   "fontSize": 11,
@@ -1868,7 +1878,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "id": "blukn3f",
+                                  "id": "blukn44",
                                   "content": "势力规格",
                                   "fontFamily": "Inter",
                                   "fontSize": 14,
@@ -1877,8 +1887,8 @@
                                 },
                                 {
                                   "type": "text",
-                                  "id": "blukn3g",
-                                  "content": "承接并行或后续传播。",
+                                  "id": "blukn45",
+                                  "content": "下游势力或后续事件。",
                                   "fontFamily": "Inter",
                                   "fontSize": 12,
                                   "fontWeight": "500",
@@ -1888,7 +1898,7 @@
                                 },
                                 {
                                   "type": "frame",
-                                  "id": "blukn3h",
+                                  "id": "blukn46",
                                   "layout": "horizontal",
                                   "width": "fill_container",
                                   "justifyContent": "space_between",
@@ -1896,21 +1906,21 @@
                                   "children": [
                                     {
                                       "type": "frame",
-                                      "id": "blukn3i",
+                                      "id": "blukn47",
                                       "layout": "horizontal",
                                       "gap": 8,
                                       "alignItems": "center",
                                       "children": [
                                         {
                                           "type": "ellipse",
-                                          "id": "blukn3j",
+                                          "id": "blukn48",
                                           "width": 10,
                                           "height": 10,
                                           "fill": "#0E6BA8"
                                         },
                                         {
                                           "type": "text",
-                                          "id": "blukn3k",
+                                          "id": "blukn49",
                                           "content": "输入",
                                           "fontFamily": "Inter",
                                           "fontSize": 11,
@@ -1921,14 +1931,14 @@
                                     },
                                     {
                                       "type": "frame",
-                                      "id": "blukn3l",
+                                      "id": "blukn4a",
                                       "layout": "horizontal",
                                       "gap": 8,
                                       "alignItems": "center",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "id": "blukn3m",
+                                          "id": "blukn4b",
                                           "content": "输出",
                                           "fontFamily": "Inter",
                                           "fontSize": 11,
@@ -1937,7 +1947,128 @@
                                         },
                                         {
                                           "type": "ellipse",
-                                          "id": "blukn3n",
+                                          "id": "blukn4c",
+                                          "width": 10,
+                                          "height": 10,
+                                          "fill": "#0E6BA8"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "blukn4d",
+                              "x": 1018,
+                              "y": 114,
+                              "width": 184,
+                              "height": "fit_content",
+                              "layout": "vertical",
+                              "gap": 8,
+                              "padding": [
+                                12,
+                                12
+                              ],
+                              "cornerRadius": 16,
+                              "fill": "#FFFFFF",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#0E6BA8"
+                              },
+                              "effect": {
+                                "type": "shadow",
+                                "shadowType": "outer",
+                                "offset": {
+                                  "x": 0,
+                                  "y": 10
+                                },
+                                "blur": 20,
+                                "color": "#0F172A14"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "blukn4e",
+                                  "content": "推演节点",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "700",
+                                  "fill": "#0C4D78"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "blukn4f",
+                                  "content": "轨道规格",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 14,
+                                  "fontWeight": "700",
+                                  "fill": "#132432"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "blukn4g",
+                                  "content": "权重校正或轨道投影。",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "500",
+                                  "fill": "#617485",
+                                  "width": "fill_container",
+                                  "textGrowth": "fixed-width"
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "blukn4h",
+                                  "layout": "horizontal",
+                                  "width": "fill_container",
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "blukn4i",
+                                      "layout": "horizontal",
+                                      "gap": 8,
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "ellipse",
+                                          "id": "blukn4j",
+                                          "width": 10,
+                                          "height": 10,
+                                          "fill": "#0E6BA8"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "blukn4k",
+                                          "content": "输入",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 11,
+                                          "fontWeight": "500",
+                                          "fill": "#617485"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "blukn4l",
+                                      "layout": "horizontal",
+                                      "gap": 8,
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "blukn4m",
+                                          "content": "输出",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 11,
+                                          "fontWeight": "500",
+                                          "fill": "#617485"
+                                        },
+                                        {
+                                          "type": "ellipse",
+                                          "id": "blukn4n",
                                           "width": 10,
                                           "height": 10,
                                           "fill": "#0E6BA8"
@@ -1954,7 +2085,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "blukn43",
+                      "id": "blukn56",
                       "name": "端口规则板",
                       "layout": "vertical",
                       "gap": 12,
@@ -1975,7 +2106,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "blukn3p",
+                          "id": "blukn4p",
                           "content": "端口规则板",
                           "fontFamily": "Inter",
                           "fontSize": 15,
@@ -1984,7 +2115,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "blukn3q",
+                          "id": "blukn4q",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -1992,7 +2123,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "blukn3r",
+                              "id": "blukn4r",
                               "content": "蓝端口",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2001,7 +2132,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "blukn3s",
+                              "id": "blukn4s",
                               "content": "对象输入 / 事件前置",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2012,7 +2143,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "blukn3t",
+                          "id": "blukn4t",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2020,7 +2151,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "blukn3u",
+                              "id": "blukn4u",
                               "content": "青端口",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2029,7 +2160,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "blukn3v",
+                              "id": "blukn4v",
                               "content": "关系中继 / 状态变化",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2040,7 +2171,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "blukn3w",
+                          "id": "blukn4w",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2048,7 +2179,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "blukn3x",
+                              "id": "blukn4x",
                               "content": "灰端口",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2057,7 +2188,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "blukn3y",
+                              "id": "blukn4y",
                               "content": "观察说明 / 非阻塞信息",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2068,7 +2199,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "blukn3z",
+                          "id": "blukn4z",
                           "layout": "horizontal",
                           "width": "fill_container",
                           "justifyContent": "space_between",
@@ -2076,7 +2207,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "blukn40",
+                              "id": "blukn50",
                               "content": "橙端口",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2085,7 +2216,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "blukn41",
+                              "id": "blukn51",
                               "content": "输出到轨道或切片",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2095,9 +2226,37 @@
                           ]
                         },
                         {
+                          "type": "frame",
+                          "id": "blukn52",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "blukn53",
+                              "content": "高亮",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#617485"
+                            },
+                            {
+                              "type": "text",
+                              "id": "blukn54",
+                              "content": "鼠标聚焦时显示可连接提示",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#132432"
+                            }
+                          ]
+                        },
+                        {
                           "type": "text",
-                          "id": "blukn42",
-                          "content": "这块板只解释图规则，不承担对象详情；对象详情仍交给右侧检查器。",
+                          "id": "blukn55",
+                          "content": "这块板只解释图规则，不承接对象详情；对象详情仍交给右侧检查器。",
                           "fontFamily": "Inter",
                           "fontSize": 12,
                           "fontWeight": "500",
@@ -2113,7 +2272,7 @@
             },
             {
               "type": "frame",
-              "id": "blukn4s",
+              "id": "blukn57",
               "name": "检查器列",
               "width": 334,
               "height": "fill_container",
@@ -2134,7 +2293,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "blukn4t",
+                  "id": "blukn58",
                   "content": "检查器",
                   "fontFamily": "Inter",
                   "fontSize": 16,
@@ -2143,7 +2302,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "blukn4z",
+                  "id": "blukn5e",
                   "name": "对象摘要",
                   "layout": "vertical",
                   "gap": 12,
@@ -2164,7 +2323,7 @@
                   "children": [
                     {
                       "type": "frame",
-                      "id": "blukn4u",
+                      "id": "blukn59",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "justifyContent": "space_between",
@@ -2172,7 +2331,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "blukn4v",
+                          "id": "blukn5a",
                           "content": "劫火印",
                           "fontFamily": "Inter",
                           "fontSize": 18,
@@ -2181,7 +2340,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "blukn4w",
+                          "id": "blukn5b",
                           "layout": "horizontal",
                           "width": "fit_content",
                           "height": "fit_content",
@@ -2198,7 +2357,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "blukn4x",
+                              "id": "blukn5c",
                               "content": "线索",
                               "fontFamily": "Inter",
                               "fontSize": 12,
@@ -2211,7 +2370,7 @@
                     },
                     {
                       "type": "text",
-                      "id": "blukn4y",
+                      "id": "blukn5d",
                       "content": "字段审校中",
                       "fontFamily": "Inter",
                       "fontSize": 12,
@@ -2222,7 +2381,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "blukn5a",
+                  "id": "blukn5p",
                   "name": "基础字段",
                   "layout": "vertical",
                   "gap": 12,
@@ -2243,7 +2402,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "blukn50",
+                      "id": "blukn5f",
                       "content": "基础字段",
                       "fontFamily": "Inter",
                       "fontSize": 12,
@@ -2252,7 +2411,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "blukn51",
+                      "id": "blukn5g",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "justifyContent": "space_between",
@@ -2260,7 +2419,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "blukn52",
+                          "id": "blukn5h",
                           "content": "线索级别",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2269,7 +2428,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "blukn53",
+                          "id": "blukn5i",
                           "content": "主线核心",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2280,7 +2439,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "blukn54",
+                      "id": "blukn5j",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "justifyContent": "space_between",
@@ -2288,7 +2447,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "blukn55",
+                          "id": "blukn5k",
                           "content": "载体",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2297,7 +2456,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "blukn56",
+                          "id": "blukn5l",
                           "content": "器物",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2308,7 +2467,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "blukn57",
+                      "id": "blukn5m",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "justifyContent": "space_between",
@@ -2316,7 +2475,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "blukn58",
+                          "id": "blukn5n",
                           "content": "当前状态",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2325,7 +2484,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "blukn59",
+                          "id": "blukn5o",
                           "content": "去向未知",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2338,7 +2497,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "blukn5l",
+                  "id": "blukn60",
                   "name": "引用与跳转",
                   "layout": "vertical",
                   "gap": 8,
@@ -2359,7 +2518,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "blukn5b",
+                      "id": "blukn5q",
                       "content": "引用与跳转",
                       "fontFamily": "Inter",
                       "fontSize": 12,
@@ -2368,7 +2527,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "blukn5c",
+                      "id": "blukn5r",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "gap": 8,
@@ -2386,14 +2545,14 @@
                       "children": [
                         {
                           "type": "ellipse",
-                          "id": "blukn5d",
+                          "id": "blukn5s",
                           "width": 10,
                           "height": 10,
                           "fill": "#0E6BA8"
                         },
                         {
                           "type": "text",
-                          "id": "blukn5e",
+                          "id": "blukn5t",
                           "content": "绑定人物：柳云澜",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2406,7 +2565,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "blukn5f",
+                      "id": "blukn5u",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "gap": 8,
@@ -2424,14 +2583,14 @@
                       "children": [
                         {
                           "type": "ellipse",
-                          "id": "blukn5g",
+                          "id": "blukn5v",
                           "width": 10,
                           "height": 10,
                           "fill": "#0E6BA8"
                         },
                         {
                           "type": "text",
-                          "id": "blukn5h",
+                          "id": "blukn5w",
                           "content": "绑定势力：赤霄盟、天衡司",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2444,7 +2603,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "blukn5i",
+                      "id": "blukn5x",
                       "layout": "horizontal",
                       "width": "fill_container",
                       "gap": 8,
@@ -2462,14 +2621,14 @@
                       "children": [
                         {
                           "type": "ellipse",
-                          "id": "blukn5j",
+                          "id": "blukn5y",
                           "width": 10,
                           "height": 10,
                           "fill": "#0E6BA8"
                         },
                         {
                           "type": "text",
-                          "id": "blukn5k",
+                          "id": "blukn5z",
                           "content": "绑定轨道：第 12 日 / 第 14 日",
                           "fontFamily": "Inter",
                           "fontSize": 12,
@@ -2484,7 +2643,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "blukn5o",
+                  "id": "blukn63",
                   "name": "视图提示",
                   "layout": "vertical",
                   "gap": 12,
@@ -2505,7 +2664,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "blukn5m",
+                      "id": "blukn61",
                       "content": "知识库页只负责结构化真值和规格化字段，不承接正文写作。",
                       "fontFamily": "Inter",
                       "fontSize": 12,
@@ -2516,7 +2675,7 @@
                     },
                     {
                       "type": "text",
-                      "id": "blukn5n",
+                      "id": "blukn62",
                       "content": "当前套系：蓝图推演型",
                       "fontFamily": "Inter",
                       "fontSize": 12,

@@ -70,32 +70,32 @@ export const SUITE_DEFINITIONS = [
     markers: ["卷宗目录", "字段矩阵", "记录详情抽屉"],
     summary: "把对象建模当作卷宗整理工作，主工作区强调记录索引、字段矩阵和详情抽屉。",
     references: [
-      { label: "Airtable Interface / Record Detail", url: "https://support.airtable.com/docs/es/airtable-interface-layout-record-detail" },
+      { label: "Airtable Record Detail", url: "https://support.airtable.com/docs/es/airtable-interface-layout-record-detail" },
       { label: "Scrivener Corkboard", url: "https://www.literatureandlatte.com/learn-and-support/video-tutorials/organising-5-get-to-know-the-corkboard" }
     ]
   },
   {
-    directory: "02_筹划墙型",
-    name: "筹划墙型",
-    mode: "wall",
-    accent: "#A0492E",
-    accentSoft: "#F7E0D6",
-    accentStrong: "#7A3320",
-    canvas: "#F7F4F1",
-    workspace: "#FBF8F5",
-    panel: "#FFFDFB",
-    panelAlt: "#F8F1EC",
-    border: "#E5D8CC",
-    subtle: "#F1E6DE",
-    text: "#2A1E18",
-    muted: "#7A6A62",
+    directory: "02_档案阅览型",
+    name: "档案阅览型",
+    mode: "archive",
+    accent: "#355C7D",
+    accentSoft: "#DDE8F3",
+    accentStrong: "#25405B",
+    canvas: "#F4F7FA",
+    workspace: "#F8FBFD",
+    panel: "#FFFFFF",
+    panelAlt: "#F1F6FA",
+    border: "#D7E0E8",
+    subtle: "#E7EEF4",
+    text: "#1A2731",
+    muted: "#6C7B86",
     leftWidth: 292,
-    rightWidth: 320,
-    topBarHeight: 82,
-    markers: ["筹划墙画布", "灵感便签", "素材归堆区"],
-    summary: "把剧情组织还原成拖拽筹划墙，中区是大画布，左侧对象库更像素材仓。",
+    rightWidth: 334,
+    topBarHeight: 80,
+    markers: ["档案索引架", "引文页框", "参考脚注列"],
+    summary: "把世界模型当作可检索资料来查阅和校读，强调索引、正文页框和脚注引用。",
     references: [
-      { label: "Milanote Visual Boards", url: "https://milanote.com/templates/product-management/kanban-board" },
+      { label: "Airtable Interface Designer", url: "https://support.airtable.com/v1/docs/getting-started-with-airtable-interface-designer" },
       { label: "Obsidian Canvas", url: "https://obsidian.md/canvas" }
     ]
   },
@@ -125,7 +125,32 @@ export const SUITE_DEFINITIONS = [
     ]
   },
   {
-    directory: "04_剪辑编排型",
+    directory: "04_剧情弧矩阵型",
+    name: "剧情弧矩阵型",
+    mode: "matrix",
+    accent: "#7D4D9E",
+    accentSoft: "#E9DDF5",
+    accentStrong: "#5D3979",
+    canvas: "#F7F4FB",
+    workspace: "#FBF8FE",
+    panel: "#FFFFFF",
+    panelAlt: "#F5F0FA",
+    border: "#E1D6EE",
+    subtle: "#EEE6F6",
+    text: "#2C1E38",
+    muted: "#7A6887",
+    leftWidth: 290,
+    rightWidth: 334,
+    topBarHeight: 80,
+    markers: ["剧情弧矩阵", "角色交叉轴", "事件覆盖格"],
+    summary: "把人物、事件、线索和剧情弧投到同一矩阵里，强调交叉覆盖与空白区域。",
+    references: [
+      { label: "Miro Matrix / Mapping", url: "https://help.miro.com/hc/en-us/articles/20185235301650-Timeline" },
+      { label: "Notion Databases", url: "https://www.notion.com/help/timelines" }
+    ]
+  },
+  {
+    directory: "05_剪辑编排型",
     name: "剪辑编排型",
     mode: "timeline",
     accent: "#D06A1A",
@@ -151,28 +176,78 @@ export const SUITE_DEFINITIONS = [
     ]
   },
   {
-    directory: "05_总控指挥型",
-    name: "总控指挥型",
-    mode: "command",
-    accent: "#0A6C6F",
-    accentSoft: "#D6EFF0",
-    accentStrong: "#0A4E51",
-    canvas: "#F2F7F7",
-    workspace: "#F7FBFB",
+    directory: "06_场景调度型",
+    name: "场景调度型",
+    mode: "stage",
+    accent: "#2E7D5B",
+    accentSoft: "#DDEFE6",
+    accentStrong: "#235F46",
+    canvas: "#F4F8F6",
+    workspace: "#F9FCFA",
+    panel: "#FFFFFF",
+    panelAlt: "#F1F7F3",
+    border: "#D7E3DC",
+    subtle: "#E7EFEA",
+    text: "#1C2E25",
+    muted: "#6B7C72",
+    leftWidth: 290,
+    rightWidth: 332,
+    topBarHeight: 80,
+    markers: ["场景舞台图", "地点调度层", "空间切换条"],
+    summary: "把空间线和场景切换当作调度问题处理，强调地点层、舞台图和空间跳切。",
+    references: [
+      { label: "Miro Space Planning", url: "https://help.miro.com/hc/en-us/articles/20185235301650-Timeline" },
+      { label: "Obsidian Canvas", url: "https://obsidian.md/canvas" }
+    ]
+  },
+  {
+    directory: "07_双镜对读型",
+    name: "双镜对读型",
+    mode: "compare",
+    accent: "#9A4C4C",
+    accentSoft: "#F3DEDE",
+    accentStrong: "#7B3B3B",
+    canvas: "#F9F5F5",
+    workspace: "#FCFAFA",
+    panel: "#FFFFFF",
+    panelAlt: "#F7F0F0",
+    border: "#E5D8D8",
+    subtle: "#EFE6E6",
+    text: "#2B1E1E",
+    muted: "#7B6868",
+    leftWidth: 292,
+    rightWidth: 334,
+    topBarHeight: 80,
+    markers: ["双镜对读台", "左右对照窗", "差异摘要带"],
+    summary: "把两条对象链、两个视角切片或两组关系图放到同一台面上对照阅读。",
+    references: [
+      { label: "Airtable Detail Comparison", url: "https://support.airtable.com/docs/es/airtable-interface-layout-record-detail" },
+      { label: "Notion Comparison Layouts", url: "https://www.notion.com/help/timelines" }
+    ]
+  },
+  {
+    directory: "08_切片汇编型",
+    name: "切片汇编型",
+    mode: "assembly",
+    accent: "#006B6B",
+    accentSoft: "#D7EEEE",
+    accentStrong: "#004F4F",
+    canvas: "#F2F8F8",
+    workspace: "#F8FBFB",
     panel: "#FFFFFF",
     panelAlt: "#EDF5F5",
-    border: "#D4E4E4",
-    subtle: "#E4F0F0",
-    text: "#162628",
-    muted: "#65787B",
-    leftWidth: 290,
-    rightWidth: 338,
+    border: "#D6E3E3",
+    subtle: "#E6EFEF",
+    text: "#172828",
+    muted: "#677878",
+    leftWidth: 292,
+    rightWidth: 336,
     topBarHeight: 80,
-    markers: ["全局覆盖总览", "联动监视窗", "输出切片指挥板"],
-    summary: "把三主视图统一收拢到一个总控工作面，重点检查覆盖、联动和输出切片。",
+    markers: ["切片汇编台", "片段编排列", "输出装配栏"],
+    summary: "把观察切片、事件片段和引用对象装配成可交付的输出包，但仍不把章节当作建模前提。",
     references: [
-      { label: "Notion Timelines", url: "https://www.notion.com/help/timelines" },
-      { label: "Airtable Interface Designer", url: "https://support.airtable.com/v1/docs/getting-started-with-airtable-interface-designer" }
+      { label: "Aeon Timeline Story Arcs", url: "https://www.aeontimeline.com/" },
+      { label: "Notion Timelines", url: "https://www.notion.com/help/timelines" }
     ]
   }
 ];
@@ -318,7 +393,7 @@ function idFactory(prefix) {
   return () => `${prefix}${(counter++).toString(36)}`;
 }
 
-function stroke(fill, side) {
+function makeStroke(fill, side) {
   if (!side) {
     return {
       thickness: 1,
@@ -389,7 +464,7 @@ function card(idGen, suite, name, children, options = {}) {
       fill: options.fill ?? suite.panel,
       cornerRadius: options.cornerRadius ?? 18,
       padding: options.padding ?? [16, 16, 16, 16],
-      stroke: options.stroke ?? stroke(suite.border),
+      stroke: options.stroke ?? makeStroke(suite.border),
       clip: options.clip ?? false
     },
     children
@@ -406,7 +481,7 @@ function pill(idGen, suite, label, active = false) {
       padding: [7, 12],
       cornerRadius: 999,
       fill: active ? suite.accentSoft : suite.panelAlt,
-      stroke: stroke(active ? suite.accent : suite.border)
+      stroke: makeStroke(active ? suite.accent : suite.border)
     },
     [
       text(idGen(), label, {
@@ -423,28 +498,6 @@ function dot(idGen, fill) {
     width: 10,
     height: 10,
     fill
-  });
-}
-
-function statCard(idGen, suite, title, value, note) {
-  return card(idGen, suite, `${title}卡片`, [
-    text(idGen(), title, {
-      fontSize: 12,
-      fill: suite.muted
-    }),
-    text(idGen(), value, {
-      fontSize: 28,
-      fontWeight: "700",
-      fill: suite.text
-    }),
-    text(idGen(), note, {
-      fontSize: 12,
-      fill: suite.muted,
-      width: "fill_container",
-      textGrowth: "fixed-width"
-    })
-  ], {
-    gap: 8
   });
 }
 
@@ -481,7 +534,7 @@ function listRow(idGen, suite, title, meta, active = false) {
       padding: [10, 12],
       cornerRadius: 12,
       fill: active ? suite.panelAlt : suite.panel,
-      stroke: stroke(active ? suite.accent : suite.border)
+      stroke: makeStroke(active ? suite.accent : suite.border)
     },
     [
       text(idGen(), title, {
@@ -497,6 +550,28 @@ function listRow(idGen, suite, title, meta, active = false) {
   );
 }
 
+function statCard(idGen, suite, title, value, note) {
+  return card(idGen, suite, `${title}卡片`, [
+    text(idGen(), title, {
+      fontSize: 12,
+      fill: suite.muted
+    }),
+    text(idGen(), value, {
+      fontSize: 28,
+      fontWeight: "700",
+      fill: suite.text
+    }),
+    text(idGen(), note, {
+      fontSize: 12,
+      fill: suite.muted,
+      width: "fill_container",
+      textGrowth: "fixed-width"
+    })
+  ], {
+    gap: 8
+  });
+}
+
 function buildTopBar(idGen, suite, page) {
   return frame(
     idGen(),
@@ -505,7 +580,7 @@ function buildTopBar(idGen, suite, page) {
       width: "fill_container",
       height: suite.topBarHeight,
       fill: suite.panel,
-      stroke: stroke(suite.border, "bottom"),
+      stroke: makeStroke(suite.border, "bottom"),
       layout: "horizontal",
       justifyContent: "space_between",
       alignItems: "center",
@@ -555,7 +630,7 @@ function buildSidebar(idGen, suite, page) {
       width: suite.leftWidth,
       height: "fill_container",
       fill: suite.panel,
-      stroke: stroke(suite.border, "right"),
+      stroke: makeStroke(suite.border, "right"),
       layout: "vertical",
       gap: 14,
       padding: [16, 16],
@@ -580,7 +655,7 @@ function buildSidebar(idGen, suite, page) {
             padding: [10, 12],
             cornerRadius: 14,
             fill: suite.panelAlt,
-            stroke: stroke(suite.border)
+            stroke: makeStroke(suite.border)
           },
           [
             text(idGen(), "输入对象名或关系键", {
@@ -609,7 +684,7 @@ function buildSidebar(idGen, suite, page) {
               padding: [8, 10],
               cornerRadius: 12,
               fill: index === 0 ? suite.accentSoft : suite.panelAlt,
-              stroke: stroke(index === 0 ? suite.accent : suite.border)
+              stroke: makeStroke(index === 0 ? suite.accent : suite.border)
             },
             [
               text(idGen(), label, {
@@ -682,7 +757,7 @@ function buildInspector(idGen, suite, page) {
       width: suite.rightWidth,
       height: "fill_container",
       fill: suite.panel,
-      stroke: stroke(suite.border, "left"),
+      stroke: makeStroke(suite.border, "left"),
       layout: "vertical",
       gap: 14,
       padding: [16, 16],
@@ -742,7 +817,7 @@ function buildInspector(idGen, suite, page) {
               padding: [8, 10],
               cornerRadius: 12,
               fill: suite.panelAlt,
-              stroke: stroke(suite.border)
+              stroke: makeStroke(suite.border)
             },
             [
               dot(idGen, suite.accent),
@@ -787,15 +862,17 @@ function buildSuiteIntro(idGen, suite, page, extraPills = []) {
       width: "fill_container",
       textGrowth: "fixed-width"
     }),
-    frame(
-      idGen(),
-      {
-        layout: "horizontal",
-        gap: 8,
-        alignItems: "center"
-      },
-      extraPills.map((label, index) => pill(idGen, suite, label, index === 0))
-    )
+    extraPills.length === 0
+      ? text(idGen(), " ", { fontSize: 1, opacity: 0 })
+      : frame(
+          idGen(),
+          {
+            layout: "horizontal",
+            gap: 8,
+            alignItems: "center"
+          },
+          extraPills.map((label, index) => pill(idGen, suite, label, index === 0))
+        )
   ], {
     gap: 10
   });
@@ -851,7 +928,7 @@ function buildTableCard(idGen, suite, title, headers, rows) {
               padding: [8, 10],
               cornerRadius: 12,
               fill: suite.panel,
-              stroke: stroke(suite.border)
+              stroke: makeStroke(suite.border)
             },
             row.map((cell, index) =>
               frame(
@@ -879,15 +956,14 @@ function buildTableCard(idGen, suite, title, headers, rows) {
 }
 
 function buildDossierLayout(idGen, suite, page) {
-  const drawerTitle = page.key === "focus" ? "记录详情抽屉 · 深度展开" : "记录详情抽屉";
-  const headersByPage = {
+  const headers = {
     overview: ["对象", "建模状态", "引用切片", "最近改动"],
     knowledge: ["字段", "值", "来源", "审校"],
     graph: ["关系", "起点", "终点", "影响"],
     tracks: ["事件", "所在轨", "时间", "输出切片"],
     focus: ["视角", "覆盖事件", "覆盖关系", "覆盖轨道"]
   };
-  const rowsByPage = {
+  const rows = {
     overview: [
       ["柳云澜", "已完成", "S-12 / S-14", "刚刚"],
       ["赤霄盟", "待补关系", "S-09", "8 分钟前"],
@@ -915,70 +991,6 @@ function buildDossierLayout(idGen, suite, page) {
     ]
   };
 
-  const mainStack = frame(
-    idGen(),
-    {
-      layout: "horizontal",
-      width: "fill_container",
-      gap: 14
-    },
-    [
-      card(idGen, suite, "卷宗目录", [
-        text(idGen(), "卷宗目录", {
-          fontSize: 15,
-          fontWeight: "700",
-          fill: suite.text
-        }),
-        ...OBJECT_LISTS[page.key].map(([title, meta], index) =>
-          listRow(idGen, suite, title, meta, index === 0)
-        )
-      ], {
-        width: 260,
-        gap: 8
-      }),
-      frame(
-        idGen(),
-        {
-          layout: "vertical",
-          width: "fill_container",
-          gap: 14
-        },
-        [
-          buildTableCard(idGen, suite, "字段矩阵", headersByPage[page.key], rowsByPage[page.key]),
-          page.key === "tracks"
-            ? card(idGen, suite, "卷宗时间索引", [
-                text(idGen(), "按卷宗追踪每个对象穿过哪些轨道。", {
-                  fontSize: 12,
-                  fill: suite.muted
-                }),
-                ...[
-                  ["柳云澜", "主时间轨 / 观察轨 / 地点轨"],
-                  ["劫火印", "线索轨 / 冲突轨"],
-                  ["赤霄盟", "势力轨 / 冲突轨"]
-                ].map(([left, right]) => infoRow(idGen, suite, left, right))
-              ])
-            : statCard(idGen, suite, "卷宗审校进度", page.key === "focus" ? "89%" : "76%", "卷宗工作流会优先暴露缺字段和缺引用对象。")
-        ]
-      ),
-      card(idGen, suite, drawerTitle, [
-        text(idGen(), drawerTitle, {
-          fontSize: 15,
-          fontWeight: "700",
-          fill: suite.text
-        }),
-        ...INSPECTOR_DATA[page.key].basics.map(([left, right]) => infoRow(idGen, suite, left, right)),
-        text(idGen(), "当前抽屉与右侧检查器不同：抽屉承载当前记录主内容，检查器承载跨视图辅助信息。", {
-          fontSize: 12,
-          fill: suite.muted,
-          width: "fill_container",
-          textGrowth: "fixed-width"
-        })
-      ], {
-        width: page.key === "focus" ? 360 : 320
-      })
-    ]
-  );
-
   return [
     buildSuiteIntro(idGen, suite, page, ["卷宗视角", "字段审校", "引用追踪"]),
     frame(
@@ -994,180 +1006,174 @@ function buildDossierLayout(idGen, suite, page) {
         statCard(idGen, suite, "待补引用", page.key === "graph" ? "17" : "08", "关系和切片都回指卷宗记录。")
       ]
     ),
-    mainStack
+    frame(
+      idGen(),
+      {
+        layout: "horizontal",
+        width: "fill_container",
+        gap: 14
+      },
+      [
+        card(idGen, suite, "卷宗目录", [
+          text(idGen(), "卷宗目录", {
+            fontSize: 15,
+            fontWeight: "700",
+            fill: suite.text
+          }),
+          ...OBJECT_LISTS[page.key].map(([title, meta], index) =>
+            listRow(idGen, suite, title, meta, index === 0)
+          )
+        ], {
+          width: 250,
+          gap: 8
+        }),
+        frame(
+          idGen(),
+          {
+            layout: "vertical",
+            width: "fill_container",
+            gap: 14
+          },
+          [
+            buildTableCard(idGen, suite, "字段矩阵", headers[page.key], rows[page.key]),
+            statCard(idGen, suite, "卷宗审校进度", page.key === "focus" ? "89%" : "76%", "卷宗工作流会优先暴露缺字段和缺引用对象。")
+          ]
+        ),
+        card(idGen, suite, "记录详情抽屉", [
+          text(idGen(), "记录详情抽屉", {
+            fontSize: 15,
+            fontWeight: "700",
+            fill: suite.text
+          }),
+          ...INSPECTOR_DATA[page.key].basics.map(([left, right]) => infoRow(idGen, suite, left, right)),
+          text(idGen(), "抽屉承载当前记录主内容；右侧检查器只承载跨视图辅助信息。", {
+            fontSize: 12,
+            fill: suite.muted,
+            width: "fill_container",
+            textGrowth: "fixed-width"
+          })
+        ], {
+          width: 320
+        })
+      ]
+    )
   ];
 }
 
-function wallNote(idGen, suite, x, y, title, body, fill, rotation = 0) {
-  return frame(
-    idGen(),
-    {
-      x,
-      y,
-      width: 180,
-      height: "fit_content",
-      layout: "vertical",
-      gap: 8,
-      padding: [12, 12],
-      cornerRadius: 16,
-      fill,
-      rotation,
-      effect: {
-        type: "shadow",
-        shadowType: "outer",
-        offset: { x: 0, y: 10 },
-        blur: 18,
-        color: "#00000014"
-      }
-    },
-    [
-      text(idGen(), "灵感便签", {
-        fontSize: 11,
-        fontWeight: "700",
-        fill: suite.accentStrong
-      }),
-      text(idGen(), title, {
-        fontSize: 14,
-        fontWeight: "700",
-        fill: suite.text
-      }),
-      text(idGen(), body, {
-        fontSize: 12,
-        fill: suite.text,
-        width: "fill_container",
-        textGrowth: "fixed-width"
-      })
-    ]
-  );
-}
-
-function buildWallLayout(idGen, suite, page) {
-  const canvasLabels = {
-    overview: ["开局火种", "追查压力", "飞升代价"],
-    knowledge: ["人物群", "物品群", "线索群"],
-    graph: ["因果团簇", "追查团簇", "伏笔团簇"],
-    tracks: ["第 12 日", "第 13 日", "第 14 日"],
-    focus: ["当前对象", "关联资源", "待补抽象"]
+function buildArchiveLayout(idGen, suite, page) {
+  const quoteByPage = {
+    overview: "当前世界模型已可被卷宗化查阅，但还缺少若干脚注回指。",
+    knowledge: "本页以资料页框展示对象正文、标签、出处与脚注，而不是表格后台。",
+    graph: "关系图页在这一套中被降为附录型资料页，重点是图谱说明和引用脚注。",
+    tracks: "轨道页在这一套中更像时间附录，用注释化材料解释切片顺序。",
+    focus: "对象库与检查器页在这一套中重点体现“索引 -> 阅览 -> 脚注”三步流程。"
   };
 
-  const board = card(idGen, suite, "筹划墙画布", [
-    text(idGen(), "筹划墙画布", {
-      fontSize: 16,
-      fontWeight: "700",
-      fill: suite.text
-    }),
+  return [
+    buildSuiteIntro(idGen, suite, page, ["资料阅览", "索引检索", "脚注引用"]),
     frame(
       idGen(),
       {
+        layout: "horizontal",
         width: "fill_container",
-        height: 560,
-        layout: "none",
-        fill: suite.workspace,
-        cornerRadius: 18,
-        stroke: stroke(suite.border),
-        clip: true
+        gap: 14
       },
       [
-        ...canvasLabels[page.key].map((label, index) =>
+        statCard(idGen, suite, "已建档案页", "86", "每个对象都可以被投成可检索档案页。"),
+        statCard(idGen, suite, "脚注回指", page.key === "graph" ? "19" : "14", "脚注用于解释对象、关系和切片的出处。"),
+        statCard(idGen, suite, "待归档资料", page.key === "tracks" ? "07" : "05", "尚未进入索引架的对象需要先完成规格化。")
+      ]
+    ),
+    frame(
+      idGen(),
+      {
+        layout: "horizontal",
+        width: "fill_container",
+        gap: 14
+      },
+      [
+        card(idGen, suite, "档案索引架", [
+          text(idGen(), "档案索引架", {
+            fontSize: 15,
+            fontWeight: "700",
+            fill: suite.text
+          }),
+          ...[
+            "主角人物索引",
+            "核心势力索引",
+            "关键事件索引",
+            "线索与物品索引",
+            "剧情弧附录索引"
+          ].map((title, index) => listRow(idGen, suite, title, "可跳入阅览页框", index === 0))
+        ], {
+          width: 248,
+          gap: 8
+        }),
+        card(idGen, suite, "引文页框", [
+          text(idGen(), "引文页框", {
+            fontSize: 15,
+            fontWeight: "700",
+            fill: suite.text
+          }),
           frame(
             idGen(),
             {
-              x: 30 + index * 250,
-              y: 20,
-              width: 220,
-              height: 34,
-              layout: "horizontal",
-              alignItems: "center",
-              padding: [8, 12],
-              cornerRadius: 999,
-              fill: suite.panelAlt,
-              stroke: stroke(suite.border)
+              width: "fill_container",
+              height: 340,
+              layout: "vertical",
+              gap: 14,
+              padding: [18, 18],
+              cornerRadius: 16,
+              fill: suite.workspace,
+              stroke: makeStroke(suite.border)
             },
             [
-              text(idGen(), label, {
-                fontSize: 12,
+              text(idGen(), "柳云澜", {
+                fontSize: 22,
                 fontWeight: "700",
                 fill: suite.text
-              })
+              }),
+              text(idGen(), quoteByPage[page.key], {
+                fontSize: 13,
+                fill: suite.text,
+                width: "fill_container",
+                textGrowth: "fixed-width"
+              }),
+              ...[
+                "【资料摘录】当前对象已与劫火印、北陵渡口伏击和青崖城夜审建立回指。",
+                "【规格化键】character.liuyunlan",
+                "【引用范围】知识库 / 关系图 / 轨道 / 切片输出"
+              ].map((line) =>
+                text(idGen(), line, {
+                  fontSize: 12,
+                  fill: suite.muted,
+                  width: "fill_container",
+                  textGrowth: "fixed-width"
+                })
+              )
             ]
           )
-        ),
-        rectangle(idGen(), {
-          x: 220,
-          y: 164,
-          width: 152,
-          height: 4,
-          fill: suite.accent,
-          rotation: -8,
-          cornerRadius: 999
+        ], {
+          width: "fill_container",
+          gap: 12
         }),
-        rectangle(idGen(), {
-          x: 489,
-          y: 266,
-          width: 138,
-          height: 4,
-          fill: suite.accent,
-          rotation: 6,
-          cornerRadius: 999
-        }),
-        wallNote(idGen, suite, 48, 84, "柳云澜追查链", "主角必须同时承受天衡司与赤霄盟双向压力。", "#FFF4B8", -3),
-        wallNote(idGen, suite, 290, 134, page.key === "graph" ? "因果改写点" : "北陵渡口伏击", page.key === "tracks" ? "放入第 12 日主冲突轨。" : "这是当前所有冲突串联的第一爆点。", "#D8F6FF", 2),
-        wallNote(idGen, suite, 542, 244, page.key === "focus" ? "当前对象补抽象" : "劫火印流向", "谁拿到它，谁就重写后续所有关系。", "#FDE2F1", -2),
-        wallNote(idGen, suite, 210, 332, "观察切片", "沈照雪视角必须看到不同于柳云澜的证据。", "#E1F7D6", 4),
-        wallNote(idGen, suite, 630, 82, "境界体系冲突", "每次境界跃迁都要拉动势力压力。", "#E8E2FF", -1)
+        card(idGen, suite, "参考脚注列", [
+          text(idGen(), "参考脚注列", {
+            fontSize: 15,
+            fontWeight: "700",
+            fill: suite.text
+          }),
+          ...[
+            "脚注 01：首次出现于第一卷第一章。",
+            "脚注 02：与赤霄盟追查链直接相连。",
+            "脚注 03：第 12 日切片中承担关键观察位。",
+            "脚注 04：在关系图中连接劫火印和天衡司密令。"
+          ].map((line, index) => listRow(idGen, suite, `脚注 ${index + 1}`, line, index === 0))
+        ], {
+          width: 320,
+          gap: 8
+        })
       ]
-    )
-  ], {
-    gap: 14
-  });
-
-  const tray = card(idGen, suite, "素材归堆区", [
-    text(idGen(), "素材归堆区", {
-      fontSize: 15,
-      fontWeight: "700",
-      fill: suite.text
-    }),
-    frame(
-      idGen(),
-      {
-        layout: "horizontal",
-        gap: 8
-      },
-      [pill(idGen, suite, "人物卡", true), pill(idGen, suite, "事件卡"), pill(idGen, suite, "关系卡")]
-    ),
-    ...[
-      ["赤霄盟", "势力素材 / 可拖入画布"],
-      ["天衡司密令", "线索素材 / 可形成因果卡"],
-      ["地脉异动", "事件素材 / 可拖入时间群组"]
-    ].map(([title, meta], index) => listRow(idGen, suite, title, meta, index === 0))
-  ], {
-    width: 350,
-    gap: 8
-  });
-
-  return [
-    buildSuiteIntro(idGen, suite, page, ["筹划墙", "自由拖拽", "卡片归堆"]),
-    frame(
-      idGen(),
-      {
-        layout: "horizontal",
-        width: "fill_container",
-        gap: 14
-      },
-      [
-        statCard(idGen, suite, "当前墙面群组", page.key === "overview" ? "03" : "05", "每个群组代表一段剧情组织假设。"),
-        statCard(idGen, suite, "可拖素材", "42", "对象库持续作为素材源头，不由墙面反向持有数据。"),
-        statCard(idGen, suite, "待归堆便签", page.key === "focus" ? "07" : "11", "灵感便签只表达组织，不替代真实对象数据。")
-      ]
-    ),
-    frame(
-      idGen(),
-      {
-        layout: "horizontal",
-        width: "fill_container",
-        gap: 14
-      },
-      [board, tray]
     )
   ];
 }
@@ -1185,7 +1191,7 @@ function blueprintNode(idGen, suite, x, y, title, meta, width = 190) {
       padding: [12, 12],
       cornerRadius: 16,
       fill: suite.panel,
-      stroke: stroke(suite.accent),
+      stroke: makeStroke(suite.accent),
       effect: {
         type: "shadow",
         shadowType: "outer",
@@ -1245,95 +1251,13 @@ function blueprintNode(idGen, suite, x, y, title, meta, width = 190) {
 }
 
 function buildBlueprintLayout(idGen, suite, page) {
-  const nodeTitles = {
-    overview: ["柳云澜", "北陵渡口伏击", "劫火印", "赤霄盟"],
-    knowledge: ["人物规格", "线索规格", "事件规格", "势力规格"],
-    graph: ["上游因果", "主冲突节点", "并行边", "后续事件"],
-    tracks: ["事件切片", "观察切片", "轨道映射", "输出投影"],
-    focus: ["当前对象", "关联关系", "绑定切片", "后续风险"]
-  };
-
-  const bus = card(idGen, suite, "蓝图总线", [
-    text(idGen(), "蓝图总线", {
-      fontSize: 16,
-      fontWeight: "700",
-      fill: suite.text
-    }),
-    frame(
-      idGen(),
-      {
-        width: "fill_container",
-        height: 560,
-        layout: "none",
-        fill: suite.workspace,
-        cornerRadius: 18,
-        stroke: stroke(suite.border),
-        clip: true
-      },
-      [
-        rectangle(idGen(), {
-          x: 222,
-          y: 118,
-          width: 178,
-          height: 4,
-          fill: suite.accent,
-          cornerRadius: 999
-        }),
-        rectangle(idGen(), {
-          x: 397,
-          y: 121,
-          width: 4,
-          height: 114,
-          fill: suite.accent,
-          cornerRadius: 999
-        }),
-        rectangle(idGen(), {
-          x: 401,
-          y: 232,
-          width: 210,
-          height: 4,
-          fill: suite.accent,
-          cornerRadius: 999
-        }),
-        rectangle(idGen(), {
-          x: 608,
-          y: 236,
-          width: 4,
-          height: 120,
-          fill: suite.accent,
-          cornerRadius: 999
-        }),
-        blueprintNode(idGen, suite, 44, 74, nodeTitles[page.key][0], "主视角或主规格输入。"),
-        blueprintNode(idGen, suite, 400, 74, nodeTitles[page.key][1], "中继推演或当前主冲突。", 206),
-        blueprintNode(idGen, suite, 640, 194, nodeTitles[page.key][2], "向下游派生影响。"),
-        blueprintNode(idGen, suite, 884, 314, nodeTitles[page.key][3], "承接并行或后续传播。", 204)
-      ]
-    )
-  ], {
-    gap: 14
-  });
-
-  const rules = card(idGen, suite, "端口规则板", [
-    text(idGen(), "端口规则板", {
-      fontSize: 15,
-      fontWeight: "700",
-      fill: suite.text
-    }),
-    ...[
-      ["蓝端口", "对象输入 / 事件前置"],
-      ["青端口", "关系中继 / 状态变化"],
-      ["灰端口", "观察说明 / 非阻塞信息"],
-      ["橙端口", "输出到轨道或切片"]
-    ].map(([left, right]) => infoRow(idGen, suite, left, right)),
-    text(idGen(), "这块板只解释图规则，不承担对象详情；对象详情仍交给右侧检查器。", {
-      fontSize: 12,
-      fill: suite.muted,
-      width: "fill_container",
-      textGrowth: "fixed-width"
-    })
-  ], {
-    width: 320
-  });
+  const titles = {
+    overview: ["柳云澜", "北陵渡口伏击", "劫火印", "赤霄盟", "地脉异动"],
+    knowledge: ["人物规格", "线索规格", "事件规格", "势力规格", "轨道规格"],
+    graph: ["上游因果", "主冲突节点", "并行边", "后续事件", "权重校正"],
+    tracks: ["事件切片", "观察切片", "轨道映射", "输出投影", "时间锚点"],
+    focus: ["当前对象", "关联关系", "绑定切片", "后续风险", "回指来源"]
+  }[page.key];
 
   return [
     buildSuiteIntro(idGen, suite, page, ["蓝图总线", "端口吸附", "依赖推演"]),
@@ -1357,7 +1281,256 @@ function buildBlueprintLayout(idGen, suite, page) {
         width: "fill_container",
         gap: 14
       },
-      [bus, rules]
+      [
+        card(idGen, suite, "蓝图总线", [
+          text(idGen(), "蓝图总线", {
+            fontSize: 16,
+            fontWeight: "700",
+            fill: suite.text
+          }),
+          frame(
+            idGen(),
+            {
+              width: "fill_container",
+              height: 560,
+              layout: "none",
+              fill: suite.workspace,
+              cornerRadius: 18,
+              stroke: makeStroke(suite.border),
+              clip: true
+            },
+            [
+              rectangle(idGen(), { x: 190, y: 126, width: 188, height: 4, fill: suite.accent, cornerRadius: 999 }),
+              rectangle(idGen(), { x: 376, y: 130, width: 4, height: 118, fill: suite.accent, cornerRadius: 999 }),
+              rectangle(idGen(), { x: 380, y: 245, width: 214, height: 4, fill: suite.accent, cornerRadius: 999 }),
+              rectangle(idGen(), { x: 590, y: 248, width: 4, height: 125, fill: suite.accent, cornerRadius: 999 }),
+              rectangle(idGen(), { x: 594, y: 372, width: 198, height: 4, fill: suite.accent, cornerRadius: 999 }),
+              blueprintNode(idGen, suite, 42, 84, titles[0], "上游输入或主规格入口。"),
+              blueprintNode(idGen, suite, 382, 84, titles[1], "当前主冲突或规则节点。", 212),
+              blueprintNode(idGen, suite, 620, 206, titles[2], "中继状态或关键线索。"),
+              blueprintNode(idGen, suite, 846, 330, titles[3], "下游势力或后续事件。", 194),
+              blueprintNode(idGen, suite, 1018, 114, titles[4], "权重校正或轨道投影。", 184)
+            ]
+          )
+        ], {
+          gap: 14
+        }),
+        card(idGen, suite, "端口规则板", [
+          text(idGen(), "端口规则板", {
+            fontSize: 15,
+            fontWeight: "700",
+            fill: suite.text
+          }),
+          ...[
+            ["蓝端口", "对象输入 / 事件前置"],
+            ["青端口", "关系中继 / 状态变化"],
+            ["灰端口", "观察说明 / 非阻塞信息"],
+            ["橙端口", "输出到轨道或切片"],
+            ["高亮", "鼠标聚焦时显示可连接提示"]
+          ].map(([left, right]) => infoRow(idGen, suite, left, right)),
+          text(idGen(), "这块板只解释图规则，不承接对象详情；对象详情仍交给右侧检查器。", {
+            fontSize: 12,
+            fill: suite.muted,
+            width: "fill_container",
+            textGrowth: "fixed-width"
+          })
+        ], {
+          width: 320
+        })
+      ]
+    )
+  ];
+}
+
+function buildMatrixLayout(idGen, suite, page) {
+  const columns = page.key === "knowledge"
+    ? ["人物", "势力", "地点", "物品", "事件"]
+    : page.key === "graph"
+      ? ["主冲突", "师承线", "势力线", "线索线", "后续支线"]
+      : page.key === "tracks"
+        ? ["第 10 日", "第 11 日", "第 12 日", "第 13 日", "第 14 日"]
+        : ["柳云澜", "沈照雪", "赤霄盟", "劫火印", "天衡司"];
+  const rows = page.key === "focus"
+    ? ["劫火入世", "地脉异动", "天衡司追捕", "赤霄伏线"]
+    : ["主弧", "支弧 A", "支弧 B", "伏笔弧"];
+
+  const grid = frame(
+    idGen(),
+    {
+      layout: "vertical",
+      width: "fill_container",
+      gap: 8
+    },
+    [
+      frame(
+        idGen(),
+        {
+          layout: "horizontal",
+          width: "fill_container",
+          gap: 8
+        },
+        [
+          frame(idGen(), { width: 150, height: 36 }),
+          ...columns.map((col) =>
+            frame(
+              idGen(),
+              {
+                width: "fill_container",
+                height: 36,
+                layout: "horizontal",
+                alignItems: "center",
+                padding: [8, 10],
+                cornerRadius: 12,
+                fill: suite.panelAlt
+              },
+              [
+                text(idGen(), col, {
+                  fontSize: 12,
+                  fontWeight: "700",
+                  fill: suite.text
+                })
+              ]
+            )
+          )
+        ]
+      ),
+      ...rows.map((row, rowIndex) =>
+        frame(
+          idGen(),
+          {
+            layout: "horizontal",
+            width: "fill_container",
+            gap: 8
+          },
+          [
+            frame(
+              idGen(),
+              {
+                width: 150,
+                height: 70,
+                layout: "horizontal",
+                alignItems: "center",
+                padding: [8, 10],
+                cornerRadius: 12,
+                fill: suite.panelAlt
+              },
+              [
+                text(idGen(), row, {
+                  fontSize: 12,
+                  fontWeight: "700",
+                  fill: suite.text
+                })
+              ]
+            ),
+            ...columns.map((col, colIndex) =>
+              frame(
+                idGen(),
+                {
+                  width: "fill_container",
+                  height: 70,
+                  layout: "vertical",
+                  gap: 6,
+                  padding: [8, 10],
+                  cornerRadius: 12,
+                  fill: (rowIndex + colIndex) % 2 === 0 ? suite.panel : suite.panelAlt,
+                  stroke: makeStroke((rowIndex + colIndex) % 3 === 0 ? suite.accent : suite.border)
+                },
+                [
+                  text(idGen(), "事件覆盖格", {
+                    fontSize: 11,
+                    fontWeight: "700",
+                    fill: (rowIndex + colIndex) % 3 === 0 ? suite.accentStrong : suite.muted
+                  }),
+                  text(idGen(), `${row} × ${col}`, {
+                    fontSize: 12,
+                    fill: suite.text,
+                    width: "fill_container",
+                    textGrowth: "fixed-width"
+                  })
+                ]
+              )
+            )
+          ]
+        )
+      )
+    ]
+  );
+
+  return [
+    buildSuiteIntro(idGen, suite, page, ["矩阵分析", "弧线覆盖", "空白暴露"]),
+    frame(
+      idGen(),
+      {
+        layout: "horizontal",
+        width: "fill_container",
+        gap: 14
+      },
+      [
+        statCard(idGen, suite, "剧情弧矩阵", "04", "核心剧情弧和角色群被压到一个观察平面里。"),
+        statCard(idGen, suite, "角色交叉轴", page.key === "knowledge" ? "05" : "08", "交叉轴负责暴露角色与剧情弧的联动密度。"),
+        statCard(idGen, suite, "空白格", page.key === "graph" ? "06" : "09", "空白格提示仍未被模型覆盖的关系或切片。")
+      ]
+    ),
+    frame(
+      idGen(),
+      {
+        layout: "horizontal",
+        width: "fill_container",
+        gap: 14
+      },
+      [
+        card(idGen, suite, "剧情弧矩阵", [
+          text(idGen(), "剧情弧矩阵", {
+            fontSize: 15,
+            fontWeight: "700",
+            fill: suite.text
+          }),
+          grid
+        ], {
+          width: "fill_container",
+          gap: 12
+        }),
+        frame(
+          idGen(),
+          {
+            layout: "vertical",
+            width: 320,
+            gap: 14
+          },
+          [
+            card(idGen, suite, "角色交叉轴", [
+              text(idGen(), "角色交叉轴", {
+                fontSize: 15,
+                fontWeight: "700",
+                fill: suite.text
+              }),
+              ...["柳云澜", "沈照雪", "赤霄盟", "天衡司"].map((item, index) =>
+                listRow(idGen, suite, item, "可投影到剧情弧矩阵", index === 0)
+              )
+            ], {
+              gap: 8
+            }),
+            card(idGen, suite, "事件覆盖格", [
+              text(idGen(), "事件覆盖格", {
+                fontSize: 15,
+                fontWeight: "700",
+                fill: suite.text
+              }),
+              text(idGen(), "本格用于解释矩阵中为何存在空白、为何存在高密度交叉。", {
+                fontSize: 12,
+                fill: suite.muted,
+                width: "fill_container",
+                textGrowth: "fixed-width"
+              }),
+              ...[
+                ["北陵渡口伏击", "命中主弧与冲突列"],
+                ["劫火印现身", "命中线索列与观察列"],
+                ["地脉异动", "命中后续支线列"]
+              ].map(([left, right]) => infoRow(idGen, suite, left, right))
+            ])
+          ]
+        )
+      ]
     )
   ];
 }
@@ -1427,7 +1600,7 @@ function buildTrackRow(idGen, suite, title, blocks) {
           layout: "none",
           fill: suite.workspace,
           cornerRadius: 14,
-          stroke: stroke(suite.border),
+          stroke: makeStroke(suite.border),
           clip: true
         },
         [
@@ -1448,78 +1621,6 @@ function buildTrackRow(idGen, suite, title, blocks) {
 }
 
 function buildTimelineLayout(idGen, suite, page) {
-  const timeScale = card(idGen, suite, "编排时间尺", [
-    text(idGen(), "编排时间尺", {
-      fontSize: 15,
-      fontWeight: "700",
-      fill: suite.text
-    }),
-    frame(
-      idGen(),
-      {
-        layout: "horizontal",
-        width: "fill_container",
-        justifyContent: "space_between"
-      },
-      ["第 10 日", "第 11 日", "第 12 日", "第 13 日", "第 14 日", "第 15 日", "第 16 日"].map((label) =>
-        text(idGen(), label, {
-          fontSize: 12,
-          fontWeight: "700",
-          fill: suite.muted
-        })
-      )
-    )
-  ]);
-
-  const matrix = card(idGen, suite, "轨道头矩阵", [
-    text(idGen(), "轨道头矩阵", {
-      fontSize: 15,
-      fontWeight: "700",
-      fill: suite.text
-    }),
-    buildTrackRow(idGen, suite, "主时间轨", [
-      trackBlock(idGen, suite.accentSoft, 208, "密令下发", "前置事件", 130, suite.accentStrong),
-      trackBlock(idGen, "#FFE2D8", 410, "北陵渡口伏击", "主冲突", 184)
-    ]),
-    buildTrackRow(idGen, suite, "地点轨", [
-      trackBlock(idGen, "#DFF2FF", 420, "北陵渡口", "场景活跃", 150),
-      trackBlock(idGen, "#E8F8D2", 610, "青崖城", "后续追查", 160)
-    ]),
-    buildTrackRow(idGen, suite, "观察轨", [
-      trackBlock(idGen, suite.panelAlt, 394, "柳云澜", "主视角", 126),
-      trackBlock(idGen, "#F3E8FF", 530, "沈照雪", "侧视角", 136)
-    ]),
-    buildTrackRow(idGen, suite, page.key === "tracks" ? "切片输出轨" : "伏笔轨", [
-      trackBlock(idGen, "#FFF1B8", 252, "劫火印现身", "线索锚点", 154),
-      trackBlock(idGen, suite.accentSoft, 640, page.key === "focus" ? "对象切片" : "地脉异动", page.key === "focus" ? "输出观察" : "后续引爆", 150, suite.accentStrong)
-    ])
-  ], {
-    gap: 12
-  });
-
-  const basket = card(idGen, suite, "待排事件篮", [
-    text(idGen(), "待排事件篮", {
-      fontSize: 15,
-      fontWeight: "700",
-      fill: suite.text
-    }),
-    frame(
-      idGen(),
-      {
-        layout: "horizontal",
-        gap: 8,
-        width: "fill_container"
-      },
-      [
-        listRow(idGen, suite, "天衡司追捕令", "待放入主时间轨", true),
-        listRow(idGen, suite, "赤霄盟暗桩暴露", "待放入势力轨"),
-        listRow(idGen, suite, page.key === "focus" ? "柳云澜独白切片" : "青崖城搜捕", page.key === "focus" ? "待放入观察轨" : "待放入地点轨")
-      ]
-    )
-  ], {
-    gap: 12
-  });
-
   return [
     buildSuiteIntro(idGen, suite, page, ["多轨编排", "观察切片", "时间尺"]),
     frame(
@@ -1531,89 +1632,88 @@ function buildTimelineLayout(idGen, suite, page) {
       },
       [
         statCard(idGen, suite, "主轨事件", page.key === "tracks" ? "18" : "14", "主冲突必须在时间尺上连续可追踪。"),
-        statCard(idGen, suite, "观察切片", "11", "章节或切片只是一种观察输出，不是世界模型本体。"),
+        statCard(idGen, suite, "观察切片", "11", "章节或切片只是观察结果，不是世界模型本体。"),
         statCard(idGen, suite, "待排事件", page.key === "focus" ? "04" : "07", "待排事件篮吸纳还没落轨的对象变化。")
       ]
     ),
-    timeScale,
-    matrix,
-    basket
+    card(idGen, suite, "编排时间尺", [
+      text(idGen(), "编排时间尺", {
+        fontSize: 15,
+        fontWeight: "700",
+        fill: suite.text
+      }),
+      frame(
+        idGen(),
+        {
+          layout: "horizontal",
+          width: "fill_container",
+          justifyContent: "space_between"
+        },
+        ["第 10 日", "第 11 日", "第 12 日", "第 13 日", "第 14 日", "第 15 日", "第 16 日"].map((label) =>
+          text(idGen(), label, {
+            fontSize: 12,
+            fontWeight: "700",
+            fill: suite.muted
+          })
+        )
+      )
+    ]),
+    card(idGen, suite, "轨道头矩阵", [
+      text(idGen(), "轨道头矩阵", {
+        fontSize: 15,
+        fontWeight: "700",
+        fill: suite.text
+      }),
+      buildTrackRow(idGen, suite, "主时间轨", [
+        trackBlock(idGen, suite.accentSoft, 208, "密令下发", "前置事件", 130, suite.accentStrong),
+        trackBlock(idGen, "#FFE2D8", 410, "北陵渡口伏击", "主冲突", 184)
+      ]),
+      buildTrackRow(idGen, suite, "地点轨", [
+        trackBlock(idGen, "#DFF2FF", 420, "北陵渡口", "场景活跃", 150),
+        trackBlock(idGen, "#E8F8D2", 610, "青崖城", "后续追查", 160)
+      ]),
+      buildTrackRow(idGen, suite, "观察轨", [
+        trackBlock(idGen, suite.panelAlt, 394, "柳云澜", "主视角", 126),
+        trackBlock(idGen, "#F3E8FF", 530, "沈照雪", "侧视角", 136)
+      ]),
+      buildTrackRow(idGen, suite, page.key === "tracks" ? "切片输出轨" : "伏笔轨", [
+        trackBlock(idGen, "#FFF1B8", 252, "劫火印现身", "线索锚点", 154),
+        trackBlock(idGen, suite.accentSoft, 640, page.key === "focus" ? "对象切片" : "地脉异动", page.key === "focus" ? "输出观察" : "后续引爆", 150, suite.accentStrong)
+      ])
+    ], {
+      gap: 12
+    }),
+    card(idGen, suite, "待排事件篮", [
+      text(idGen(), "待排事件篮", {
+        fontSize: 15,
+        fontWeight: "700",
+        fill: suite.text
+      }),
+      frame(
+        idGen(),
+        {
+          layout: "horizontal",
+          gap: 8,
+          width: "fill_container"
+        },
+        [
+          listRow(idGen, suite, "天衡司追捕令", "待放入主时间轨", true),
+          listRow(idGen, suite, "赤霄盟暗桩暴露", "待放入势力轨"),
+          listRow(idGen, suite, page.key === "focus" ? "柳云澜独白切片" : "青崖城搜捕", page.key === "focus" ? "待放入观察轨" : "待放入地点轨")
+        ]
+      )
+    ], {
+      gap: 12
+    })
   ];
 }
 
-function miniWindow(idGen, suite, title, lines, accentLabel) {
-  return card(idGen, suite, "联动监视窗", [
-    frame(
-      idGen(),
-      {
-        layout: "horizontal",
-        width: "fill_container",
-        justifyContent: "space_between",
-        alignItems: "center"
-      },
-      [
-        text(idGen(), "联动监视窗", {
-          fontSize: 12,
-          fontWeight: "700",
-          fill: suite.accentStrong
-        }),
-        pill(idGen, suite, accentLabel, true)
-      ]
-    ),
-    text(idGen(), title, {
-      fontSize: 15,
-      fontWeight: "700",
-      fill: suite.text
-    }),
-    ...lines.map((line) =>
-      text(idGen(), line, {
-        fontSize: 12,
-        fill: suite.muted,
-        width: "fill_container",
-        textGrowth: "fixed-width"
-      })
-    )
-  ], {
-    gap: 8
-  });
-}
-
-function buildCommandLayout(idGen, suite, page) {
-  const windowsByPage = {
-    overview: [
-      ["知识库覆盖", ["人物 24 / 势力 11 / 事件 26", "字段缺失主要集中在线索与剧情弧。"]],
-      ["关系图监视", ["主冲突链已形成 23 条关键边。", "还有 9 条边没有稳定方向。"]],
-      ["轨道覆盖", ["第 12 日到第 16 日覆盖最密集。", "仍有 7 个事件待排轨。"]],
-      ["章节切片输出", ["观察切片已覆盖 17 段。", "主时间线仍有 2 处断层。"]]
-    ],
-    knowledge: [
-      ["字段审校", ["当前对象字段矩阵中 9 项待补。"]],
-      ["规格化检查", ["规格化键没有冲突。"]],
-      ["引用一致性", ["2 条物品引用需要复核。"]],
-      ["输出落点", ["字段变更会影响 4 处切片。"]]
-    ],
-    graph: [
-      ["主冲突推演", ["图谱显示追查链压力正在上升。"]],
-      ["边权漂移", ["3 条边权低于阈值。"]],
-      ["支线分叉", ["地脉异动可能形成新分支。"]],
-      ["输出风险", ["第 14 日切片可能失衡。"]]
-    ],
-    tracks: [
-      ["主时间带", ["第 12 日到第 14 日拥挤，需要拆轨。"]],
-      ["观察切片", ["沈照雪视角仍偏弱。"]],
-      ["地点并行", ["青崖城与北陵渡口存在交叠。"]],
-      ["输出排序", ["切片 T-14-C 与 T-14-D 顺序待定。"]]
-    ],
-    focus: [
-      ["当前对象联动", ["劫火入世已覆盖事件 6 个。"]],
-      ["关系热度", ["核心冲突边权 0.82。"]],
-      ["轨道投影", ["主时间轨与观察轨存在双落点。"]],
-      ["输出策略", ["适合拆成双视角切片输出。"]]
-    ]
-  };
+function buildStageLayout(idGen, suite, page) {
+  const stageTitle = page.key === "tracks" ? "场景舞台图 · 空间线排布" : "场景舞台图";
+  const zoneLabels = ["青崖城", "北陵渡口", "赤霄暗线", "荒山古道"];
 
   return [
-    buildSuiteIntro(idGen, suite, page, ["全局总控", "联动监视", "切片输出"]),
+    buildSuiteIntro(idGen, suite, page, ["空间调度", "地点层", "场景切换"]),
     frame(
       idGen(),
       {
@@ -1622,76 +1722,243 @@ function buildCommandLayout(idGen, suite, page) {
         gap: 14
       },
       [
-        statCard(idGen, suite, "全局覆盖总览", page.key === "overview" ? "81%" : "76%", "覆盖率不是写作进度，而是世界模型可观测程度。"),
-        statCard(idGen, suite, "跨视图联动", "3 / 3", "知识库、关系图、轨道需要能互相追跳。"),
-        statCard(idGen, suite, "待补输出", page.key === "focus" ? "03" : "06", "输出切片只是一层观察结果。")
+        statCard(idGen, suite, "场景舞台图", "04", "当前项目的高频主舞台被抽成空间层。"),
+        statCard(idGen, suite, "地点调度层", page.key === "tracks" ? "07" : "05", "每层都可以承载并行事件和观察切片。"),
+        statCard(idGen, suite, "空间跳切", "06", "不同地点之间的跳切需要可解释。")
       ]
     ),
-    frame(
-      idGen(),
-      {
-        layout: "horizontal",
-        width: "fill_container",
-        gap: 14
-      },
-      [
+    card(idGen, suite, stageTitle, [
+      text(idGen(), stageTitle, {
+        fontSize: 15,
+        fontWeight: "700",
+        fill: suite.text
+      }),
+      card(idGen, suite, "空间切换条", [
+        text(idGen(), "空间切换条", {
+          fontSize: 12,
+          fontWeight: "700",
+          fill: suite.text
+        }),
         frame(
           idGen(),
           {
-            layout: "vertical",
-            width: "fill_container",
-            gap: 14
+            layout: "horizontal",
+            gap: 8
           },
-          [
-            text(idGen(), "全局覆盖总览", {
-              fontSize: 16,
+          zoneLabels.map((label, index) => pill(idGen, suite, label, index === 1))
+        )
+      ], {
+        fill: suite.workspace
+      }),
+      frame(
+        idGen(),
+        {
+          width: "fill_container",
+          height: 430,
+          layout: "none",
+          fill: suite.workspace,
+          cornerRadius: 18,
+          stroke: makeStroke(suite.border),
+          clip: true
+        },
+        [
+          rectangle(idGen(), { x: 36, y: 46, width: 260, height: 120, fill: "#E0F2FE", cornerRadius: 18, stroke: makeStroke("#8CD0F6") }),
+          rectangle(idGen(), { x: 352, y: 62, width: 290, height: 140, fill: "#E8F8D2", cornerRadius: 18, stroke: makeStroke("#AEDC66") }),
+          rectangle(idGen(), { x: 686, y: 40, width: 236, height: 110, fill: "#FDE2E2", cornerRadius: 18, stroke: makeStroke("#F2A5A5") }),
+          rectangle(idGen(), { x: 192, y: 248, width: 340, height: 132, fill: "#F5E8FF", cornerRadius: 18, stroke: makeStroke("#D1A9FF") }),
+          rectangle(idGen(), { x: 574, y: 252, width: 254, height: 124, fill: "#FFF2D8", cornerRadius: 18, stroke: makeStroke("#F2C97D") }),
+          rectangle(idGen(), { x: 284, y: 146, width: 120, height: 4, fill: suite.accent, cornerRadius: 999 }),
+          rectangle(idGen(), { x: 528, y: 184, width: 160, height: 4, fill: suite.accent, cornerRadius: 999, rotation: 20 }),
+          rectangle(idGen(), { x: 460, y: 316, width: 120, height: 4, fill: suite.accent, cornerRadius: 999, rotation: -20 }),
+          text(idGen(), "地点调度层", { x: 58, y: 56, fontSize: 13, fontWeight: "700", fill: suite.accentStrong }),
+          text(idGen(), "青崖城", { x: 60, y: 86, fontSize: 16, fontWeight: "700", fill: suite.text }),
+          text(idGen(), "北陵渡口", { x: 372, y: 96, fontSize: 16, fontWeight: "700", fill: suite.text }),
+          text(idGen(), "赤霄暗线", { x: 706, y: 70, fontSize: 16, fontWeight: "700", fill: suite.text }),
+          text(idGen(), "观察切换层", { x: 214, y: 258, fontSize: 13, fontWeight: "700", fill: suite.accentStrong }),
+          text(idGen(), "柳云澜 / 沈照雪双视角交叠", { x: 214, y: 290, fontSize: 14, fontWeight: "700", fill: suite.text }),
+          text(idGen(), "荒山古道撤离线", { x: 594, y: 286, fontSize: 16, fontWeight: "700", fill: suite.text })
+        ]
+      )
+    ], {
+      gap: 12
+    })
+  ];
+}
+
+function buildCompareLayout(idGen, suite, page) {
+  const titles = {
+    overview: ["柳云澜链路", "沈照雪链路"],
+    knowledge: ["对象真值", "切片输出"],
+    graph: ["主关系图", "支关系图"],
+    tracks: ["主时间轨", "观察轨"],
+    focus: ["当前对象", "关联对象"]
+  }[page.key];
+
+  return [
+    buildSuiteIntro(idGen, suite, page, ["双镜对读", "左右对照", "差异提炼"]),
+    frame(
+      idGen(),
+      {
+        layout: "horizontal",
+        width: "fill_container",
+        gap: 14
+      },
+      [
+        statCard(idGen, suite, "双镜对读台", "02", "任何一次比较都必须明确左右两侧对象。"),
+        statCard(idGen, suite, "差异点", page.key === "graph" ? "11" : "07", "差异点用于解释为何需要两镜并看。"),
+        statCard(idGen, suite, "共识点", "05", "共识点决定哪些信息可以沉到检查器。")
+      ]
+    ),
+    card(idGen, suite, "双镜对读台", [
+      text(idGen(), "双镜对读台", {
+        fontSize: 15,
+        fontWeight: "700",
+        fill: suite.text
+      }),
+      card(idGen, suite, "差异摘要带", [
+        text(idGen(), "差异摘要带", {
+          fontSize: 12,
+          fontWeight: "700",
+          fill: suite.text
+        }),
+        text(idGen(), "左侧更偏对象真值，右侧更偏观察结果；本带只总结差异，不重复正文。", {
+          fontSize: 12,
+          fill: suite.muted,
+          width: "fill_container",
+          textGrowth: "fixed-width"
+        })
+      ], {
+        fill: suite.workspace
+      }),
+      frame(
+        idGen(),
+        {
+          layout: "horizontal",
+          width: "fill_container",
+          gap: 14
+        },
+        [0, 1].map((index) =>
+          card(idGen, suite, "左右对照窗", [
+            text(idGen(), "左右对照窗", {
+              fontSize: 12,
+              fontWeight: "700",
+              fill: suite.accentStrong
+            }),
+            text(idGen(), titles[index], {
+              fontSize: 17,
               fontWeight: "700",
               fill: suite.text
             }),
-            frame(
-              idGen(),
-              {
-                layout: "horizontal",
+            ...[
+              "对象入口：柳云澜 / 沈照雪",
+              page.key === "graph" ? "关系密度：主线 / 支线" : "引用切片：S-12 / S-14",
+              page.key === "tracks" ? "轨道密度：重 / 轻" : "当前观察：主 / 侧"
+            ].map((line) =>
+              text(idGen(), line, {
+                fontSize: 12,
+                fill: suite.muted,
                 width: "fill_container",
-                gap: 14
-              },
-              windowsByPage[page.key].slice(0, 2).map(([title, lines]) =>
-                miniWindow(idGen, suite, title, lines, page.selectedTab)
-              )
-            ),
-            frame(
-              idGen(),
-              {
-                layout: "horizontal",
-                width: "fill_container",
-                gap: 14
-              },
-              windowsByPage[page.key].slice(2).map(([title, lines]) =>
-                miniWindow(idGen, suite, title, lines, "联动")
-              )
+                textGrowth: "fixed-width"
+              })
             )
-          ]
-        ),
-        card(idGen, suite, "输出切片指挥板", [
-          text(idGen(), "输出切片指挥板", {
+          ], {
+            width: "fill_container",
+            height: 360
+          })
+        )
+      )
+    ], {
+      gap: 12
+    })
+  ];
+}
+
+function buildAssemblyLayout(idGen, suite, page) {
+  return [
+    buildSuiteIntro(idGen, suite, page, ["切片装配", "输出汇编", "片段回指"]),
+    frame(
+      idGen(),
+      {
+        layout: "horizontal",
+        width: "fill_container",
+        gap: 14
+      },
+      [
+        statCard(idGen, suite, "切片汇编台", "12", "切片并不是世界模型本体，而是观察层的可消费片段。"),
+        statCard(idGen, suite, "待装配片段", page.key === "focus" ? "04" : "09", "每个片段都应保留回指对象。"),
+        statCard(idGen, suite, "输出装配栏", "03", "用于组织一批可投向章节或观察层的结果。")
+      ]
+    ),
+    frame(
+      idGen(),
+      {
+        layout: "horizontal",
+        width: "fill_container",
+        gap: 14
+      },
+      [
+        card(idGen, suite, "切片汇编台", [
+          text(idGen(), "切片汇编台", {
+            fontSize: 15,
+            fontWeight: "700",
+            fill: suite.text
+          }),
+          frame(
+            idGen(),
+            {
+              layout: "vertical",
+              width: "fill_container",
+              gap: 10
+            },
+            [
+              ...[
+                ["片段 A", "柳云澜视角进入北陵渡口", true],
+                ["片段 B", "劫火印现身引爆冲突", false],
+                ["片段 C", "沈照雪获得异质线索", false],
+                ["片段 D", page.key === "tracks" ? "插入第 14 日观察切片" : "插入后续观察输出", false]
+              ].map(([title, meta, active]) => listRow(idGen, suite, title, meta, active))
+            ]
+          )
+        ], {
+          width: 360,
+          gap: 10
+        }),
+        card(idGen, suite, "片段编排列", [
+          text(idGen(), "片段编排列", {
             fontSize: 15,
             fontWeight: "700",
             fill: suite.text
           }),
           ...[
-            ["主输出", "T-12-A / 北陵渡口伏击"],
-            ["并行输出", "T-14-C / 劫火印现身"],
-            ["观察输出", "S-14 / 沈照雪视角"],
-            ["风险提示", "主时间轨仍有 2 处空洞"]
-          ].map(([left, right]) => infoRow(idGen, suite, left, right)),
-          text(idGen(), "这块板的职责不是写章节，而是统筹哪些切片已经可以被观察层消费。", {
-            fontSize: 12,
-            fill: suite.muted,
-            width: "fill_container",
-            textGrowth: "fixed-width"
-          })
+            ["1", "片段 A -> 主视角开场"],
+            ["2", "片段 B -> 主冲突抬升"],
+            ["3", "片段 C -> 侧视角回补"],
+            ["4", "片段 D -> 输出转场"]
+          ].map(([left, right]) => infoRow(idGen, suite, left, right))
         ], {
-          width: 340
+          width: "fill_container"
+        }),
+        card(idGen, suite, "输出装配栏", [
+          text(idGen(), "输出装配栏", {
+            fontSize: 15,
+            fontWeight: "700",
+            fill: suite.text
+          }),
+          ...[
+            "目标输出：T-12-A / 北陵渡口伏击",
+            "并行输出：S-14 / 沈照雪观察",
+            "回指对象：柳云澜、劫火印、赤霄盟",
+            "回指轨道：主时间轨 / 观察轨"
+          ].map((line) =>
+            text(idGen(), line, {
+              fontSize: 12,
+              fill: suite.muted,
+              width: "fill_container",
+              textGrowth: "fixed-width"
+            })
+          )
+        ], {
+          width: 320
         })
       ]
     )
@@ -1701,10 +1968,13 @@ function buildCommandLayout(idGen, suite, page) {
 function buildCenter(idGen, suite, page) {
   const builders = {
     dossier: buildDossierLayout,
-    wall: buildWallLayout,
+    archive: buildArchiveLayout,
     blueprint: buildBlueprintLayout,
+    matrix: buildMatrixLayout,
     timeline: buildTimelineLayout,
-    command: buildCommandLayout
+    stage: buildStageLayout,
+    compare: buildCompareLayout,
+    assembly: buildAssemblyLayout
   };
 
   return frame(
@@ -1772,9 +2042,7 @@ function buildSuiteNote(suite) {
     (page) => `- \`${page.fileName}\` / \`${page.pngName}\`：${page.title}`
   ).join("\n");
   const markerLines = suite.markers.map((marker) => `- \`${marker}\``).join("\n");
-  const referenceLines = suite.references
-    .map((item) => `- [${item.label}](${item.url})`)
-    .join("\n");
+  const referenceLines = suite.references.map((item) => `- [${item.label}](${item.url})`).join("\n");
 
   return `# ${suite.name} 方案说明
 
@@ -1795,7 +2063,7 @@ ${referenceLines}
 1. 产品标题统一使用 \`知识编辑器\`，项目 \`青云劫火录\` 只做上下文。
 2. 左侧对象库保持长期驻留，但中区主工作面的隐喻完全围绕 \`${suite.name}\` 重构。
 3. 右侧检查器只承载当前对象的辅助详情，不替代中区主工作流。
-4. \`${suite.name}\` 的目标不是换色，而是改变用户处理对象、关系、轨道与输出切片的方式。
+4. \`${suite.name}\` 的目标不是换色，而是改变用户处理对象、关系、轨道与切片的方式。
 
 ## 页面清单
 
@@ -1828,14 +2096,12 @@ export async function generatePrototypeAssets(options = {}) {
 
   for (const suite of SUITE_DEFINITIONS) {
     const suiteDir = path.join(outputRoot, suite.directory);
-
     await mkdir(suiteDir, {
       recursive: true
     });
 
     for (const page of PAGE_DEFINITIONS) {
       const doc = buildScreenDocument(suite, page);
-
       await writeFile(
         path.join(suiteDir, page.fileName),
         `${JSON.stringify(doc, null, 2)}\n`,

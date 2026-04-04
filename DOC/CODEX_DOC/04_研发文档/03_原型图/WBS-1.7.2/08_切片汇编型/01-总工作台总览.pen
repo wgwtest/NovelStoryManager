@@ -1,0 +1,2217 @@
+{
+  "version": "2.10",
+  "children": [
+    {
+      "type": "frame",
+      "id": "assov0",
+      "x": 80,
+      "y": 80,
+      "name": "总工作台总览",
+      "width": 1600,
+      "height": 1000,
+      "clip": true,
+      "cornerRadius": 24,
+      "fill": "#F2F8F8",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "assov1",
+          "name": "顶部栏",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#D6E3E3"
+          },
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "padding": [
+            18,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "assov2",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "assov3",
+                  "content": "知识编辑器",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700",
+                  "fill": "#172828"
+                },
+                {
+                  "type": "text",
+                  "id": "assov4",
+                  "content": "项目 / 青云劫火录 · 切片汇编型 · 总工作台总览",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "fill": "#677878"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "assov5",
+              "layout": "horizontal",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "assov6",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#EDF5F5",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6E3E3"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "assov7",
+                      "content": "导入",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#677878"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "assov8",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#EDF5F5",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6E3E3"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "assov9",
+                      "content": "导出",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#677878"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "assova",
+                  "layout": "horizontal",
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "cornerRadius": 999,
+                  "fill": "#D7EEEE",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#006B6B"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "assovb",
+                      "content": "已保存",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#004F4F"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "assovc",
+          "name": "主体区",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "#F8FBFB",
+          "layout": "horizontal",
+          "children": [
+            {
+              "type": "frame",
+              "id": "assovd",
+              "name": "对象库列",
+              "width": 292,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": {
+                  "right": 1
+                },
+                "fill": "#D6E3E3"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                16,
+                16
+              ],
+              "clip": true,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "assove",
+                  "content": "对象库",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "fill": "#172828"
+                },
+                {
+                  "type": "frame",
+                  "id": "assovi",
+                  "name": "搜索区",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6E3E3"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "assovf",
+                      "content": "搜索对象、规格化键、标签",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#677878"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assovg",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 14,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assovh",
+                          "content": "输入对象名或关系键",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "assov1b",
+                  "name": "分类区",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6E3E3"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "assovj",
+                      "content": "分类",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#677878"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assovk",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#D7EEEE",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#006B6B"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assovl",
+                          "content": "人物",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#004F4F"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assovm",
+                          "content": "24",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#004F4F"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assovn",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assovo",
+                          "content": "势力",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assovp",
+                          "content": "11",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assovq",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assovr",
+                          "content": "地点",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assovs",
+                          "content": "18",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assovt",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assovu",
+                          "content": "物品",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assovv",
+                          "content": "13",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assovw",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assovx",
+                          "content": "境界体系",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assovy",
+                          "content": "7",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assovz",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov10",
+                          "content": "事件",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov11",
+                          "content": "26",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov12",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov13",
+                          "content": "关系",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov14",
+                          "content": "31",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov15",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov16",
+                          "content": "线索",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov17",
+                          "content": "14",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov18",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov19",
+                          "content": "剧情弧",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov1a",
+                          "content": "9",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#677878"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "assov1k",
+                  "name": "动作区",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6E3E3"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "assov1c",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov1d",
+                          "content": "已建模对象",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov1e",
+                          "content": "153",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov1f",
+                      "layout": "horizontal",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "assov1g",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#D7EEEE",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#006B6B"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "assov1h",
+                              "content": "新建对象",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#004F4F"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "assov1i",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#EDF5F5",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6E3E3"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "assov1j",
+                              "content": "批量导入",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#677878"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "assov21",
+                  "name": "对象列表",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6E3E3"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "assov1l",
+                      "content": "列表",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#677878"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov1m",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#006B6B"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov1n",
+                          "content": "柳云澜",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov1o",
+                          "content": "人物 / 主视角",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov1p",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov1q",
+                          "content": "赤霄盟",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov1r",
+                          "content": "势力 / 对立阵营",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov1s",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov1t",
+                          "content": "北陵渡口伏击",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov1u",
+                          "content": "事件 / 主冲突",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov1v",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov1w",
+                          "content": "劫火印",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov1x",
+                          "content": "物品 / 核心线索",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov1y",
+                      "layout": "vertical",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#FFFFFF",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov1z",
+                          "content": "劫火入世",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov20",
+                          "content": "剧情弧 / 主弧",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "assov22",
+              "name": "主视图区",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#F8FBFB",
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                18,
+                18
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "assov23",
+                  "name": "标签栏",
+                  "layout": "horizontal",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "assov24",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#D7EEEE",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#006B6B"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov25",
+                          "content": "知识库",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#004F4F"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov26",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov27",
+                          "content": "关系图",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#677878"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov28",
+                      "layout": "horizontal",
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "padding": [
+                        7,
+                        12
+                      ],
+                      "cornerRadius": 999,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov29",
+                          "content": "轨道",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#677878"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "assov2j",
+                  "name": "视图导语",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6E3E3"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "assov2a",
+                      "content": "切片汇编型 · 总工作台总览",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "700",
+                      "fill": "#172828"
+                    },
+                    {
+                      "type": "text",
+                      "id": "assov2b",
+                      "content": "把观察切片、事件片段和引用对象装配成可交付的输出包，但仍不把章节当作建模前提。总工作台先回答“当前世界模型覆盖到哪里”。",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500",
+                      "fill": "#677878",
+                      "width": "fill_container",
+                      "textGrowth": "fixed-width"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov2c",
+                      "layout": "horizontal",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "assov2d",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#D7EEEE",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#006B6B"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "assov2e",
+                              "content": "切片装配",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#004F4F"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "assov2f",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#EDF5F5",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6E3E3"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "assov2g",
+                              "content": "输出汇编",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#677878"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "assov2h",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#EDF5F5",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#D6E3E3"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "assov2i",
+                              "content": "片段回指",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#677878"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "assov2k",
+                  "layout": "horizontal",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "assov2o",
+                      "name": "切片汇编台卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov2l",
+                          "content": "切片汇编台",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov2m",
+                          "content": "12",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov2n",
+                          "content": "切片并不是世界模型本体，而是观察层的可消费片段。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov2s",
+                      "name": "待装配片段卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov2p",
+                          "content": "待装配片段",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov2q",
+                          "content": "09",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov2r",
+                          "content": "每个片段都应保留回指对象。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov2w",
+                      "name": "输出装配栏卡片",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov2t",
+                          "content": "输出装配栏",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov2u",
+                          "content": "03",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov2v",
+                          "content": "用于组织一批可投向章节或观察层的结果。",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "assov2x",
+                  "layout": "horizontal",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "assov3c",
+                      "name": "切片汇编台",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "width": 360,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov2y",
+                          "content": "切片汇编台",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "assov2z",
+                          "layout": "vertical",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "assov30",
+                              "layout": "vertical",
+                              "width": "fill_container",
+                              "gap": 4,
+                              "padding": [
+                                10,
+                                12
+                              ],
+                              "cornerRadius": 12,
+                              "fill": "#EDF5F5",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#006B6B"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "assov31",
+                                  "content": "片段 A",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "700",
+                                  "fill": "#172828"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "assov32",
+                                  "content": "柳云澜视角进入北陵渡口",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "fill": "#677878"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "assov33",
+                              "layout": "vertical",
+                              "width": "fill_container",
+                              "gap": 4,
+                              "padding": [
+                                10,
+                                12
+                              ],
+                              "cornerRadius": 12,
+                              "fill": "#FFFFFF",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#D6E3E3"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "assov34",
+                                  "content": "片段 B",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "700",
+                                  "fill": "#172828"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "assov35",
+                                  "content": "劫火印现身引爆冲突",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "fill": "#677878"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "assov36",
+                              "layout": "vertical",
+                              "width": "fill_container",
+                              "gap": 4,
+                              "padding": [
+                                10,
+                                12
+                              ],
+                              "cornerRadius": 12,
+                              "fill": "#FFFFFF",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#D6E3E3"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "assov37",
+                                  "content": "片段 C",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "700",
+                                  "fill": "#172828"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "assov38",
+                                  "content": "沈照雪获得异质线索",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "fill": "#677878"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "assov39",
+                              "layout": "vertical",
+                              "width": "fill_container",
+                              "gap": 4,
+                              "padding": [
+                                10,
+                                12
+                              ],
+                              "cornerRadius": 12,
+                              "fill": "#FFFFFF",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#D6E3E3"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "assov3a",
+                                  "content": "片段 D",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "700",
+                                  "fill": "#172828"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "assov3b",
+                                  "content": "插入后续观察输出",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "fill": "#677878"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov3q",
+                      "name": "片段编排列",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov3d",
+                          "content": "片段编排列",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "assov3e",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "assov3f",
+                              "content": "1",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#677878"
+                            },
+                            {
+                              "type": "text",
+                              "id": "assov3g",
+                              "content": "片段 A -> 主视角开场",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#172828"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "assov3h",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "assov3i",
+                              "content": "2",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#677878"
+                            },
+                            {
+                              "type": "text",
+                              "id": "assov3j",
+                              "content": "片段 B -> 主冲突抬升",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#172828"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "assov3k",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "assov3l",
+                              "content": "3",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#677878"
+                            },
+                            {
+                              "type": "text",
+                              "id": "assov3m",
+                              "content": "片段 C -> 侧视角回补",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#172828"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "assov3n",
+                          "layout": "horizontal",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "assov3o",
+                              "content": "4",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500",
+                              "fill": "#677878"
+                            },
+                            {
+                              "type": "text",
+                              "id": "assov3p",
+                              "content": "片段 D -> 输出转场",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#172828"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov3w",
+                      "name": "输出装配栏",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "width": 320,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 18,
+                      "padding": [
+                        16,
+                        16,
+                        16,
+                        16
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "clip": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov3r",
+                          "content": "输出装配栏",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov3s",
+                          "content": "目标输出：T-12-A / 北陵渡口伏击",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov3t",
+                          "content": "并行输出：S-14 / 沈照雪观察",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov3u",
+                          "content": "回指对象：柳云澜、劫火印、赤霄盟",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov3v",
+                          "content": "回指轨道：主时间轨 / 观察轨",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "assov3x",
+              "name": "检查器列",
+              "width": 336,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": {
+                  "left": 1
+                },
+                "fill": "#D6E3E3"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                16,
+                16
+              ],
+              "clip": true,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "assov3y",
+                  "content": "检查器",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "fill": "#172828"
+                },
+                {
+                  "type": "frame",
+                  "id": "assov44",
+                  "name": "对象摘要",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6E3E3"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "assov3z",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov40",
+                          "content": "柳云澜",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "assov41",
+                          "layout": "horizontal",
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "cornerRadius": 999,
+                          "fill": "#D7EEEE",
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#006B6B"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "assov42",
+                              "content": "人物",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700",
+                              "fill": "#004F4F"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "assov43",
+                      "content": "已建模",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#677878"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "assov4f",
+                  "name": "基础字段",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6E3E3"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "assov45",
+                      "content": "基础字段",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#677878"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov46",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov47",
+                          "content": "身份",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov48",
+                          "content": "散修 / 主视角",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov49",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov4a",
+                          "content": "当前境界",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov4b",
+                          "content": "化炁中段",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov4c",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "assov4d",
+                          "content": "首次出现",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#677878"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov4e",
+                          "content": "第一卷 第一章",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700",
+                          "fill": "#172828"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "assov4q",
+                  "name": "引用与跳转",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6E3E3"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "assov4g",
+                      "content": "引用与跳转",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "fill": "#677878"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov4h",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "assov4i",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#006B6B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov4j",
+                          "content": "关联事件：北陵渡口伏击、青崖城夜审",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#172828",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov4k",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "assov4l",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#006B6B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov4m",
+                          "content": "关联剧情弧：劫火入世",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#172828",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "assov4n",
+                      "layout": "horizontal",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "padding": [
+                        8,
+                        10
+                      ],
+                      "cornerRadius": 12,
+                      "fill": "#EDF5F5",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D6E3E3"
+                      },
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "assov4o",
+                          "width": 10,
+                          "height": 10,
+                          "fill": "#006B6B"
+                        },
+                        {
+                          "type": "text",
+                          "id": "assov4p",
+                          "content": "引用切片：S-12、S-14",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "fill": "#172828",
+                          "width": "fill_container",
+                          "textGrowth": "fixed-width"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "assov4t",
+                  "name": "视图提示",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "padding": [
+                    16,
+                    16,
+                    16,
+                    16
+                  ],
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D6E3E3"
+                  },
+                  "clip": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "assov4r",
+                      "content": "总工作台先回答“当前世界模型覆盖到哪里”。",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#172828",
+                      "width": "fill_container",
+                      "textGrowth": "fixed-width"
+                    },
+                    {
+                      "type": "text",
+                      "id": "assov4s",
+                      "content": "当前套系：切片汇编型",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "fill": "#677878"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
