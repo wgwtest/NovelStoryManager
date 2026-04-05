@@ -3,9 +3,9 @@
 ## 当前状态
 
 1. 当前活动文档根：`DOC/CODEX_DOC/`
-2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.7 -> WBS 1.7.2`
-3. 当前阶段状态：`WBS 1.7 已按最新评论切换为 Pencil + Codex 直接协同设计路线，开发中；WBS 1.7.1 已完成人工验收；WBS 1.7.2 已根据最新评论继续修正导出链路与四工作面表达；WBS 4 正在从旧三视图树重排为四工作面树；WBS 1.8 方案待人工验收；WBS 1.8.1 已自测通过待人工验收；WBS 1.8.2 已完成拖拽稳定性、动态连线与端口高亮提示自测，待人工验收；WBS 3.1 仍待人工验收`
-4. 当前主线目标：完成 `WBS 1.7.2` 四张核心工作面原型修复，并将 `WBS 4` 任务树统一改成 `卷宗 / 蓝图推演 / 剪辑编排 / 场景调度`
+2. 当前活动链路：`WBS 0 -> WBS 4 -> WBS 4.1 -> WBS 4.1.2/4.1.3/4.1.4 -> WBS 4.1.5`
+3. 当前阶段状态：`WBS 1.7.1 已完成人工验收；WBS 1.7.2 已收口为四张核心工作面原型；WBS 1.8 / 1.8.1 / 1.8.2 已建立 BaseLab 工具链；WBS 3.1 已验收并冻结为 DOM + SVG 基线；WBS 4 已收口为多视图设计；WBS 4.1 卷宗已被确定为当前优先分支，4.1.2/4.1.3/4.1.4 先走 BaseLab 独立验证，4.1.5 承接主工作台融合`
+4. 当前主线目标：完成 `WBS 4.1` 卷宗工作面的独立验证路线重排，并将 `WBS 4` 固化为“多视图设计，当前首批四个工作面”的稳定口径
 5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## 文档组织原则
@@ -22,7 +22,7 @@
 
 1. 根节点使用 `WBS 0` 总纲 issue 承载整体研发路线
 2. 一级模块使用 `WBS 1` 到 `WBS 7` 父 issue 承载并列能力分块
-3. `WBS 3` 固定用于多视图共性机制，`WBS 4` 固定用于视图设计，再下挂 `卷宗 / 蓝图推演 / 剪辑编排 / 场景调度` 四个执行分支
+3. `WBS 3` 固定用于多视图共性机制，`WBS 4` 固定用于多视图设计，再下挂 `卷宗 / 蓝图推演 / 剪辑编排 / 场景调度` 四个当前首批执行分支
 4. 可直接执行的实现任务使用叶子 issue，挂在对应父节点下
 5. 只有不存在稳定父子关系的任务，才允许在同层并列
 6. 父节点与叶子节点名称都应概括、易懂，避免使用信息量不足的抽象词
@@ -74,7 +74,7 @@
 5. `06_过程文档/02_历史计划/` 用于归档旧版详细实施计划或拆分前文档，不再占用当前计划主目录
 6. `06_过程文档/03_验收意见处理/` 用于存放验收意见归类、原因判断和计划重排分析
 7. 对强交互工作台，技术方案选型必须以后续原型目标和交互验证为输入，不允许绕过原型直接冻结交互栈
-8. 多视图分支必须先经过 `WBS 3` 共性层，再进入 `WBS 4` 视图设计下各自的“要素设计 / 能力验证 / 功能验证 / 样式验证”
+8. 多视图分支必须先经过 `WBS 3` 共性层，再进入 `WBS 4` 多视图设计下各自的分支验证链路；默认仍按“要素设计 / 能力验证 / 功能验证 / 样式验证”拆分，当前 `卷宗` 分支额外补入“主工作台融合”
 9. 当某个 `WBS` 节点的主要价值是“规范本身”时，应优先把 `研发文档/` 下的规范正文作为主要成果物，而不是只保留抽象 issue 标题
 
 ## 阅读顺序
@@ -111,19 +111,21 @@
 30. [13-WBS-3.1-交互画布与渲染基座选型-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/13-WBS-3.1-交互画布与渲染基座选型-研制计划.md)
 31. [17-WBS-4-视图设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/17-WBS-4-视图设计-研制计划.md)
 32. [17A-WBS-4.1-卷宗工作面设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/17A-WBS-4.1-卷宗工作面设计-研制计划.md)
-33. [22-WBS-4.2-蓝图推演工作面设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/22-WBS-4.2-蓝图推演工作面设计-研制计划.md)
-34. [27-WBS-4.3-剪辑编排工作面设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/27-WBS-4.3-剪辑编排工作面设计-研制计划.md)
-35. [31A-WBS-4.4-场景调度工作面设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/31A-WBS-4.4-场景调度工作面设计-研制计划.md)
-36. [32-WBS-7-观察输出层-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/32-WBS-7-观察输出层-研制计划.md)
-36. [2026-04-03-010206-验收意见与计划重排分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-010206-验收意见与计划重排分析.md)
-37. [2026-04-03-094110-GitHub评论优化分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-094110-GitHub评论优化分析.md)
-38. [2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md)
-39. [2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md)
-40. [2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md)
-41. [2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/01_会话交接/2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md)
-42. [2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md)
-43. [2026-04-04-003541-WBS-1.7-口述评论转写与Pencil直设路线分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-04-003541-WBS-1.7-口述评论转写与Pencil直设路线分析.md)
-44. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
+33. [21A-WBS-4.1.5-卷宗主工作台融合-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/21A-WBS-4.1.5-卷宗主工作台融合-研制计划.md)
+34. [22-WBS-4.2-蓝图推演工作面设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/22-WBS-4.2-蓝图推演工作面设计-研制计划.md)
+35. [27-WBS-4.3-剪辑编排工作面设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/27-WBS-4.3-剪辑编排工作面设计-研制计划.md)
+36. [31A-WBS-4.4-场景调度工作面设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/31A-WBS-4.4-场景调度工作面设计-研制计划.md)
+37. [32-WBS-7-观察输出层-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/32-WBS-7-观察输出层-研制计划.md)
+38. [2026-04-03-010206-验收意见与计划重排分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-010206-验收意见与计划重排分析.md)
+39. [2026-04-03-094110-GitHub评论优化分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-094110-GitHub评论优化分析.md)
+40. [2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md)
+41. [2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md)
+42. [2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md)
+43. [2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/01_会话交接/2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md)
+44. [2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md)
+45. [2026-04-04-003541-WBS-1.7-口述评论转写与Pencil直设路线分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-04-003541-WBS-1.7-口述评论转写与Pencil直设路线分析.md)
+46. [2026-04-06-005608-WBS-4-卷宗优先与多视图增量建模意见分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-06-005608-WBS-4-卷宗优先与多视图增量建模意见分析.md)
+47. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
 
 ## 协作规则
 
