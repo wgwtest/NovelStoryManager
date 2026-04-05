@@ -4,8 +4,8 @@
 
 1. 当前活动文档根：`DOC/CODEX_DOC/`
 2. 当前活动链路：`WBS 0 -> WBS 1 -> WBS 1.7 -> WBS 1.7.2`
-3. 当前阶段状态：`WBS 1.7 已按最新评论切换为 Pencil + Codex 直接协同设计路线，开发中；WBS 1.7.1 已完成人工验收；WBS 1.7.2 已根据 issue #43 最新评阅从五套路线扩编为八套路线，并重新导出 40 张图，自测通过，待人工验收；WBS 1.8 方案待人工验收；WBS 1.8.1 已自测通过待人工验收；WBS 1.8.2 已完成拖拽稳定性、动态连线与端口高亮提示自测，待人工验收；WBS 3.1 仍待人工验收`
-4. 当前主线目标：组织 `WBS 1.7.2` 八套路线原型稿的人工评阅，并据此冻结后续界面实现优先级
+3. 当前阶段状态：`WBS 1.7 已按最新评论切换为 Pencil + Codex 直接协同设计路线，开发中；WBS 1.7.1 已完成人工验收；WBS 1.7.2 已根据 issue #43 最新评阅收束为四张核心工作面，并完成原稿、导出图、GitHub issue 和任务树同步，待人工验收；WBS 1.8 方案待人工验收；WBS 1.8.1 已自测通过待人工验收；WBS 1.8.2 已完成拖拽稳定性、动态连线与端口高亮提示自测，待人工验收；WBS 3.1 仍待人工验收`
+4. 当前主线目标：维持 `WBS 1.7.2` 四张核心工作面与 `WBS 4` 视图树同步结果，等待人工验收
 5. GitHub Project：<https://github.com/users/wgwtest/projects/3>
 
 ## 文档组织原则
@@ -22,7 +22,7 @@
 
 1. 根节点使用 `WBS 0` 总纲 issue 承载整体研发路线
 2. 一级模块使用 `WBS 1` 到 `WBS 7` 父 issue 承载并列能力分块
-3. `WBS 3` 固定用于三视图共性机制，`WBS 4-6` 分别承载知识库、关系图、多轨视图
+3. `WBS 3` 固定用于多视图共性机制，`WBS 4` 固定用于视图设计，再下挂知识库、关系图、多轨三个执行分支
 4. 可直接执行的实现任务使用叶子 issue，挂在对应父节点下
 5. 只有不存在稳定父子关系的任务，才允许在同层并列
 6. 父节点与叶子节点名称都应概括、易懂，避免使用信息量不足的抽象词
@@ -74,7 +74,7 @@
 5. `06_过程文档/02_历史计划/` 用于归档旧版详细实施计划或拆分前文档，不再占用当前计划主目录
 6. `06_过程文档/03_验收意见处理/` 用于存放验收意见归类、原因判断和计划重排分析
 7. 对强交互工作台，技术方案选型必须以后续原型目标和交互验证为输入，不允许绕过原型直接冻结交互栈
-8. 三主视图必须先经过 `WBS 3` 共性层，再进入各自的“要素设计 / 能力验证 / 功能验证 / 样式验证”
+8. 多视图分支必须先经过 `WBS 3` 共性层，再进入 `WBS 4` 视图设计下各自的“要素设计 / 能力验证 / 功能验证 / 样式验证”
 9. 当某个 `WBS` 节点的主要价值是“规范本身”时，应优先把 `研发文档/` 下的规范正文作为主要成果物，而不是只保留抽象 issue 标题
 
 ## 阅读顺序
@@ -107,21 +107,22 @@
 26. [10-WBS-2.1-项目底座实施-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/10-WBS-2.1-项目底座实施-研制计划.md)
 27. [2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/04_研发文档/01_数据规范/2026-04-02-WBS-2.2-项目数据规范与导入导出规范.md)
 28. [11-WBS-2.2-数据规范与导入导出规范-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/11-WBS-2.2-数据规范与导入导出规范-研制计划.md)
-29. [12-WBS-3-三视图共性机制-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/12-WBS-3-三视图共性机制-研制计划.md)
+29. [12-WBS-3-多视图共性机制-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/12-WBS-3-多视图共性机制-研制计划.md)
 30. [13-WBS-3.1-交互画布与渲染基座选型-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/13-WBS-3.1-交互画布与渲染基座选型-研制计划.md)
-31. [17-WBS-4-知识库工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/17-WBS-4-知识库工作台-研制计划.md)
-32. [22-WBS-5-关系图工作台-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/22-WBS-5-关系图工作台-研制计划.md)
-33. [27-WBS-6-多轨编排视图-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/27-WBS-6-多轨编排视图-研制计划.md)
-34. [32-WBS-7-观察输出层-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/32-WBS-7-观察输出层-研制计划.md)
-35. [2026-04-03-010206-验收意见与计划重排分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-010206-验收意见与计划重排分析.md)
-36. [2026-04-03-094110-GitHub评论优化分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-094110-GitHub评论优化分析.md)
-37. [2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md)
-38. [2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md)
-39. [2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md)
-40. [2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/01_会话交接/2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md)
-41. [2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md)
-42. [2026-04-04-003541-WBS-1.7-口述评论转写与Pencil直设路线分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-04-003541-WBS-1.7-口述评论转写与Pencil直设路线分析.md)
-43. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
+31. [17-WBS-4-视图设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/17-WBS-4-视图设计-研制计划.md)
+32. [17A-WBS-4.1-知识库视图设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/17A-WBS-4.1-知识库视图设计-研制计划.md)
+33. [22-WBS-4.2-关系图视图设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/22-WBS-4.2-关系图视图设计-研制计划.md)
+34. [27-WBS-4.3-多轨编排视图设计-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/27-WBS-4.3-多轨编排视图设计-研制计划.md)
+35. [32-WBS-7-观察输出层-研制计划.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/03_研制计划/32-WBS-7-观察输出层-研制计划.md)
+36. [2026-04-03-010206-验收意见与计划重排分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-010206-验收意见与计划重排分析.md)
+37. [2026-04-03-094110-GitHub评论优化分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-094110-GitHub评论优化分析.md)
+38. [2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-142806-WBS-3.1-BaseLab工具化评论处理.md)
+39. [2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-153822-WBS-1.8-子节点拆分与实施启动分析.md)
+40. [2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-171351-WBS-1.8.2-拖拽与动态连线验收意见处理.md)
+41. [2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/01_会话交接/2026-04-03-172623-WBS-1.8.2-拖拽与动态连线修正交接.md)
+42. [2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-03-223557-WBS-1.7-Pencil设计稿建议分析.md)
+43. [2026-04-04-003541-WBS-1.7-口述评论转写与Pencil直设路线分析.md](/home/wgw/CodexProject/NovelStoryManager/DOC/CODEX_DOC/06_过程文档/03_验收意见处理/2026-04-04-003541-WBS-1.7-口述评论转写与Pencil直设路线分析.md)
+44. GitHub Project Roadmap: <https://github.com/users/wgwtest/projects/3>
 
 ## 协作规则
 
@@ -143,6 +144,6 @@
 2. `01_需求分析/`：需求边界、总体分析、需求收敛文档
 3. `02_设计说明/`：直接存放总体设计、信息架构、原型设计、交互验证、技术方案等设计正文
 4. `03_研制计划/`：平铺的 `WBS` 节点文档，一节点一文件，文件名统一以 `-研制计划.md` 结尾
-5. `04_研发文档/`：当前下设 `01_数据规范/`，后续可扩展 `02_视图共性/`
+5. `04_研发文档/`：当前下设 `01_数据规范/`、`03_原型图/`，后续可按稳定主题继续扩展
 6. `05_测试文档/`：下设 `01_自测报告/`、`02_验收清单/`、`03_验收记录/`、`04_验收结论/`
 7. `06_过程文档/`：当前下设 `01_会话交接/`、`02_历史计划/`、`03_验收意见处理/`

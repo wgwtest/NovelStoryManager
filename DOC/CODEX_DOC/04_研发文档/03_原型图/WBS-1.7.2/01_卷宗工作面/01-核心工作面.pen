@@ -1,0 +1,1386 @@
+{
+  "version": "2.10",
+  "children": [
+    {
+      "type": "frame",
+      "id": "01_0",
+      "x": 40,
+      "y": 40,
+      "name": "卷宗工作面",
+      "width": 1760,
+      "height": 1080,
+      "clip": true,
+      "cornerRadius": 28,
+      "fill": "#F4F7FB",
+      "children": [
+        {
+          "type": "frame",
+          "id": "01_9",
+          "x": 0,
+          "y": 0,
+          "width": 1760,
+          "height": 84,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#D7E0EC"
+          },
+          "children": [
+            {
+              "type": "text",
+              "id": "01_a",
+              "content": "知识编辑器",
+              "fontFamily": "Inter",
+              "fill": "#15202B",
+              "fontSize": 24,
+              "x": 24,
+              "y": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "01_b",
+              "content": "当前项目 · 青云劫火录",
+              "fontFamily": "Inter",
+              "fill": "#66758A",
+              "fontSize": 13,
+              "x": 24,
+              "y": 50,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "01_1",
+              "x": 500,
+              "y": 26,
+              "width": 118,
+              "height": 34,
+              "cornerRadius": 18,
+              "fill": "#2358C9",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#2358C9"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_2",
+                  "content": "卷宗",
+                  "fontFamily": "Inter",
+                  "fill": "#FFFFFF",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 9,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_3",
+              "x": 626,
+              "y": 26,
+              "width": 110,
+              "height": 34,
+              "cornerRadius": 18,
+              "fill": "#F2F4F7",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_4",
+                  "content": "蓝图推演",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 9,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_5",
+              "x": 752,
+              "y": 26,
+              "width": 110,
+              "height": 34,
+              "cornerRadius": 18,
+              "fill": "#F2F4F7",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_6",
+                  "content": "剪辑编排",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 9,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_7",
+              "x": 878,
+              "y": 26,
+              "width": 110,
+              "height": 34,
+              "cornerRadius": 18,
+              "fill": "#F2F4F7",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_8",
+                  "content": "场景调度",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 9,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "01_c",
+              "content": "本轮只保留 4 个核心工作面",
+              "fontFamily": "Inter",
+              "fill": "#66758A",
+              "fontSize": 13,
+              "x": 1370,
+              "y": 30,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "01_1f",
+          "x": 20,
+          "y": 104,
+          "width": 300,
+          "height": 956,
+          "cornerRadius": 22,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "thickness": 1,
+            "fill": "#D7E0EC"
+          },
+          "children": [
+            {
+              "type": "text",
+              "id": "01_1g",
+              "content": "对象库",
+              "fontFamily": "Inter",
+              "fill": "#15202B",
+              "fontSize": 18,
+              "x": 18,
+              "y": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "rectangle",
+              "id": "01_1h",
+              "x": 18,
+              "y": 54,
+              "width": 264,
+              "height": 42,
+              "cornerRadius": 14,
+              "fill": "#F7F9FC",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              }
+            },
+            {
+              "type": "text",
+              "id": "01_1i",
+              "content": "搜索对象、卷宗、地点、事件",
+              "fontFamily": "Inter",
+              "fill": "#66758A",
+              "fontSize": 13,
+              "x": 18,
+              "y": 67,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "01_d",
+              "x": 18,
+              "y": 120,
+              "width": 78,
+              "height": 30,
+              "cornerRadius": 15,
+              "fill": "#DDE7FF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#2358C9"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_e",
+                  "content": "人物",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 8,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_f",
+              "x": 106,
+              "y": 120,
+              "width": 78,
+              "height": 30,
+              "cornerRadius": 15,
+              "fill": "#F5F7FA",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_g",
+                  "content": "势力",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 8,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_h",
+              "x": 194,
+              "y": 120,
+              "width": 78,
+              "height": 30,
+              "cornerRadius": 15,
+              "fill": "#F5F7FA",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_i",
+                  "content": "地点",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 8,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_j",
+              "x": 18,
+              "y": 162,
+              "width": 78,
+              "height": 30,
+              "cornerRadius": 15,
+              "fill": "#F5F7FA",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_k",
+                  "content": "物品",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 8,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_l",
+              "x": 106,
+              "y": 162,
+              "width": 78,
+              "height": 30,
+              "cornerRadius": 15,
+              "fill": "#F5F7FA",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_m",
+                  "content": "境界体系",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 8,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_n",
+              "x": 194,
+              "y": 162,
+              "width": 78,
+              "height": 30,
+              "cornerRadius": 15,
+              "fill": "#F5F7FA",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_o",
+                  "content": "事件",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 8,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_p",
+              "x": 18,
+              "y": 204,
+              "width": 78,
+              "height": 30,
+              "cornerRadius": 15,
+              "fill": "#F5F7FA",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_q",
+                  "content": "关系",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 8,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_r",
+              "x": 106,
+              "y": 204,
+              "width": 78,
+              "height": 30,
+              "cornerRadius": 15,
+              "fill": "#F5F7FA",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_s",
+                  "content": "线索",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 8,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_t",
+              "x": 194,
+              "y": 204,
+              "width": 78,
+              "height": 30,
+              "cornerRadius": 15,
+              "fill": "#F5F7FA",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_u",
+                  "content": "剧情弧",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 8,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "01_1j",
+              "content": "当前对象",
+              "fontFamily": "Inter",
+              "fill": "#66758A",
+              "fontSize": 13,
+              "x": 18,
+              "y": 252,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "01_v",
+              "x": 18,
+              "y": 280,
+              "width": 264,
+              "height": 80,
+              "cornerRadius": 16,
+              "fill": "#DDE7FF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#2358C9"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_w",
+                  "content": "柳云澜",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 15,
+                  "x": 16,
+                  "y": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_x",
+                  "content": "人物",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 16,
+                  "y": 40,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_y",
+                  "content": "卷宗已对齐",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 16,
+                  "y": 58,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_z",
+              "x": 18,
+              "y": 374,
+              "width": 264,
+              "height": 80,
+              "cornerRadius": 16,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_10",
+                  "content": "焚天盟",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 15,
+                  "x": 16,
+                  "y": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_11",
+                  "content": "势力",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 16,
+                  "y": 40,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_12",
+                  "content": "交叉引用 6 处",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 16,
+                  "y": 58,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_13",
+              "x": 18,
+              "y": 468,
+              "width": 264,
+              "height": 80,
+              "cornerRadius": 16,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_14",
+                  "content": "赤霄古城",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 15,
+                  "x": 16,
+                  "y": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_15",
+                  "content": "地点",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 16,
+                  "y": 40,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_16",
+                  "content": "空间跳转高频",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 16,
+                  "y": 58,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_17",
+              "x": 18,
+              "y": 562,
+              "width": 264,
+              "height": 80,
+              "cornerRadius": 16,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_18",
+                  "content": "劫火印",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 15,
+                  "x": 16,
+                  "y": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_19",
+                  "content": "物品",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 16,
+                  "y": 40,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_1a",
+                  "content": "绑定主角事件",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 16,
+                  "y": 58,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_1b",
+              "x": 18,
+              "y": 656,
+              "width": 264,
+              "height": 80,
+              "cornerRadius": 16,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_1c",
+                  "content": "劫火入世",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 15,
+                  "x": 16,
+                  "y": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_1d",
+                  "content": "剧情弧",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 16,
+                  "y": 40,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_1e",
+                  "content": "观察中",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 16,
+                  "y": 58,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "01_1k",
+          "x": 340,
+          "y": 104,
+          "width": 1040,
+          "height": 956,
+          "cornerRadius": 22,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "thickness": 1,
+            "fill": "#D7E0EC"
+          },
+          "children": [
+            {
+              "type": "text",
+              "id": "01_1l",
+              "content": "卷宗工作面",
+              "fontFamily": "Inter",
+              "fill": "#15202B",
+              "fontSize": 24,
+              "x": 24,
+              "y": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "01_1m",
+              "content": "把对象建模收束为卷宗整理、摘要收口和审校确认三步。",
+              "fontFamily": "Inter",
+              "fill": "#66758A",
+              "fontSize": 14,
+              "x": 24,
+              "y": 54,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "01_1n",
+              "x": 24,
+              "y": 96,
+              "width": 212,
+              "height": 92,
+              "cornerRadius": 18,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_1o",
+                  "content": "已开卷宗",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 13,
+                  "x": 16,
+                  "y": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_1p",
+                  "content": "24",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 26,
+                  "x": 16,
+                  "y": 42,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_1q",
+              "x": 248,
+              "y": 96,
+              "width": 212,
+              "height": 92,
+              "cornerRadius": 18,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_1r",
+                  "content": "待审字段",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 13,
+                  "x": 16,
+                  "y": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_1s",
+                  "content": "18",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 26,
+                  "x": 16,
+                  "y": 42,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_1t",
+              "x": 472,
+              "y": 96,
+              "width": 212,
+              "height": 92,
+              "cornerRadius": 18,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_1u",
+                  "content": "待确认引用",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 13,
+                  "x": 16,
+                  "y": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_1v",
+                  "content": "09",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 26,
+                  "x": 16,
+                  "y": 42,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_21",
+              "x": 24,
+              "y": 214,
+              "width": 272,
+              "height": 682,
+              "cornerRadius": 18,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_22",
+                  "content": "卷宗目录",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 16,
+                  "x": 18,
+                  "y": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_1w",
+                  "content": "01  柳云澜人物卷",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 14,
+                  "x": 18,
+                  "y": 52,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_1x",
+                  "content": "02  焚天盟势力卷",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 14,
+                  "x": 18,
+                  "y": 88,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_1y",
+                  "content": "03  赤霄古城地点卷",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 14,
+                  "x": 18,
+                  "y": 124,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_1z",
+                  "content": "04  劫火印物品卷",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 14,
+                  "x": 18,
+                  "y": 160,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_20",
+                  "content": "卷宗列表只保留结构入口，不再铺 5 张不同页面。",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 218,
+                  "width": 236,
+                  "lineHeight": 18,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_2a",
+              "x": 318,
+              "y": 214,
+              "width": 378,
+              "height": 682,
+              "cornerRadius": 18,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_2b",
+                  "content": "卷宗摘要",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 16,
+                  "x": 18,
+                  "y": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_23",
+                  "content": "对象名称：柳云澜",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 18,
+                  "x": 18,
+                  "y": 52,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_24",
+                  "content": "角色定位：火脉异变的主承载体",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 86,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "01_25",
+                  "content": "当前摘要只保留你需要一眼读懂的字段，不再堆“字段矩阵”整页。",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 124,
+                  "width": 342,
+                  "lineHeight": 19,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "01_26",
+                  "content": "关键绑定",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 198,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_27",
+                  "content": "· 劫火印",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 226,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "01_28",
+                  "content": "· 赤霄古城",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 250,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "01_29",
+                  "content": "· 劫火入世剧情弧",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 274,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_2i",
+              "x": 718,
+              "y": 214,
+              "width": 298,
+              "height": 682,
+              "cornerRadius": 18,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_2j",
+                  "content": "对象审校",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 16,
+                  "x": 18,
+                  "y": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2c",
+                  "content": "审校清单",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 14,
+                  "x": 18,
+                  "y": 52,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2d",
+                  "content": "1. 名称与别称一致",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 86,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2e",
+                  "content": "2. 绑定事件已建立",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 112,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2f",
+                  "content": "3. 关联地点已标注",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 138,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2g",
+                  "content": "4. 输出切片引用可追踪",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 164,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2h",
+                  "content": "当前工作面不是再展开成“摘要页 / 审校页 / 详情页”三张图，而是合并到一张主图内讲清。",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 228,
+                  "width": 262,
+                  "lineHeight": 18,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "01_2n",
+          "x": 1400,
+          "y": 104,
+          "width": 340,
+          "height": 956,
+          "cornerRadius": 22,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "thickness": 1,
+            "fill": "#D7E0EC"
+          },
+          "children": [
+            {
+              "type": "text",
+              "id": "01_2o",
+              "content": "检查器",
+              "fontFamily": "Inter",
+              "fill": "#15202B",
+              "fontSize": 18,
+              "x": 18,
+              "y": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "01_2p",
+              "content": "当前核心图说明",
+              "fontFamily": "Inter",
+              "fill": "#66758A",
+              "fontSize": 13,
+              "x": 18,
+              "y": 58,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "01_2q",
+              "content": "当前只保留 1 张核心图，用来把这一类工作面的主结构讲清楚。",
+              "fontFamily": "Inter",
+              "fill": "#15202B",
+              "fontSize": 13,
+              "x": 18,
+              "y": 82,
+              "width": 292,
+              "lineHeight": 19,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "01_2r",
+              "content": "本图重点",
+              "fontFamily": "Inter",
+              "fill": "#66758A",
+              "fontSize": 13,
+              "x": 18,
+              "y": 160,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "01_2k",
+              "content": "01  卷宗目录",
+              "fontFamily": "Inter",
+              "fill": "#15202B",
+              "fontSize": 13,
+              "x": 18,
+              "y": 188,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "01_2l",
+              "content": "02  卷宗摘要",
+              "fontFamily": "Inter",
+              "fill": "#15202B",
+              "fontSize": 13,
+              "x": 18,
+              "y": 214,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "01_2m",
+              "content": "03  对象审校",
+              "fontFamily": "Inter",
+              "fill": "#15202B",
+              "fontSize": 13,
+              "x": 18,
+              "y": 240,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "01_2u",
+              "x": 18,
+              "y": 286,
+              "width": 304,
+              "height": 146,
+              "cornerRadius": 18,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_2v",
+                  "content": "本轮判断",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 16,
+                  "x": 18,
+                  "y": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2s",
+                  "content": "把对象建模收束为卷宗整理问题，强调目录、摘要页和审校动作。",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 44,
+                  "width": 264,
+                  "lineHeight": 19,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2t",
+                  "content": "页面主结构已从旧的三页切换为四个工作面。",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 106,
+                  "width": 264,
+                  "lineHeight": 18,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "01_30",
+              "x": 18,
+              "y": 452,
+              "width": 304,
+              "height": 184,
+              "cornerRadius": 18,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7E0EC"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "01_31",
+                  "content": "当前选中对象",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 16,
+                  "x": 18,
+                  "y": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2w",
+                  "content": "柳云澜",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 17,
+                  "x": 18,
+                  "y": 44,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2x",
+                  "content": "人物 · 核心观察对象",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 70,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2y",
+                  "content": "关联卷宗：3 份",
+                  "fontFamily": "Inter",
+                  "fill": "#15202B",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 108,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "01_2z",
+                  "content": "关联场景：赤霄古城 / 焚火殿 / 地脉裂隙",
+                  "fontFamily": "Inter",
+                  "fill": "#66758A",
+                  "fontSize": 12,
+                  "x": 18,
+                  "y": 132,
+                  "width": 264,
+                  "lineHeight": 17,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
