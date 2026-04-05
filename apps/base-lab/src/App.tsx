@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 
 import BaseSelectionLab from "./components/BaseSelectionLab.js";
+import DossierAbilityLab from "./components/DossierAbilityLab.js";
 
 type LabStatus = "planned" | "ready";
 
@@ -14,6 +15,14 @@ type LabEntry = {
 };
 
 const labEntries: LabEntry[] = [
+  {
+    id: "wbs-4.1-dossier-ability",
+    purpose: "使用样例项目与模拟视图状态验证卷宗目录、正文、引用回查、审校队列和检查器联动。",
+    status: "ready",
+    summary: "卷宗能力/功能/样式联合验证",
+    targetWbs: "WBS 4.1",
+    title: "WBS 4.1 卷宗独立验证"
+  },
   {
     id: "wbs-3.1-base-selection",
     purpose: "对比 DOM + CSS、DOM + SVG、Canvas 三类基座表现，作为首个迁移实验。",
@@ -53,6 +62,10 @@ export default function App() {
 
   if (activeLab?.id === "wbs-3.1-base-selection") {
     return <BaseSelectionLab onBack={() => setActiveLabId(null)} />;
+  }
+
+  if (activeLab?.id === "wbs-4.1-dossier-ability") {
+    return <DossierAbilityLab onBack={() => setActiveLabId(null)} />;
   }
 
   const readyCount = labEntries.filter((entry) => entry.status === "ready").length;
