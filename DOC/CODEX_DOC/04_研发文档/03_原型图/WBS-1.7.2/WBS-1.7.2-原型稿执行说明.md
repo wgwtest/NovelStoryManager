@@ -47,7 +47,10 @@
    - `node scripts/generate-wbs-1.7.2-prototypes.mjs`
 2. 导出命令：
    - `node scripts/export-wbs-1.7.2-prototypes.mjs`
-3. 测试命令：
+3. 导出链路说明：
+   - `.pen` 原稿继续由 `Pencil` 维护
+   - `.png` 评审图改由浏览器渲染导出，避免 `Pencil CLI` 在复杂嵌套布局下出现接近空白的截图
+4. 测试命令：
    - `node --test scripts/generate-wbs-1.7.2-prototypes.test.mjs scripts/export-wbs-1.7.2-prototypes.test.mjs`
 
 ## 当前执行结果
