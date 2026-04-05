@@ -3,7 +3,7 @@
   "children": [
     {
       "type": "frame",
-      "id": "02_0",
+      "id": "02-0",
       "x": 40,
       "y": 40,
       "name": "蓝图推演工作面",
@@ -15,7 +15,7 @@
       "children": [
         {
           "type": "frame",
-          "id": "02_9",
+          "id": "02-9",
           "x": 0,
           "y": 0,
           "width": 1760,
@@ -30,7 +30,7 @@
           "children": [
             {
               "type": "text",
-              "id": "02_a",
+              "id": "02-a",
               "content": "知识编辑器",
               "fontFamily": "Inter",
               "fill": "#172430",
@@ -41,7 +41,7 @@
             },
             {
               "type": "text",
-              "id": "02_b",
+              "id": "02-b",
               "content": "当前项目 · 青云劫火录",
               "fontFamily": "Inter",
               "fill": "#657786",
@@ -52,7 +52,7 @@
             },
             {
               "type": "frame",
-              "id": "02_1",
+              "id": "02-1",
               "x": 500,
               "y": 26,
               "width": 110,
@@ -66,7 +66,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_2",
+                  "id": "02-2",
                   "content": "卷宗",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -79,7 +79,7 @@
             },
             {
               "type": "frame",
-              "id": "02_3",
+              "id": "02-3",
               "x": 626,
               "y": 26,
               "width": 118,
@@ -93,7 +93,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_4",
+                  "id": "02-4",
                   "content": "蓝图推演",
                   "fontFamily": "Inter",
                   "fill": "#FFFFFF",
@@ -106,7 +106,7 @@
             },
             {
               "type": "frame",
-              "id": "02_5",
+              "id": "02-5",
               "x": 752,
               "y": 26,
               "width": 110,
@@ -120,7 +120,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_6",
+                  "id": "02-6",
                   "content": "剪辑编排",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -133,7 +133,7 @@
             },
             {
               "type": "frame",
-              "id": "02_7",
+              "id": "02-7",
               "x": 878,
               "y": 26,
               "width": 110,
@@ -147,7 +147,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_8",
+                  "id": "02-8",
                   "content": "场景调度",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -160,7 +160,7 @@
             },
             {
               "type": "text",
-              "id": "02_c",
+              "id": "02-c",
               "content": "本轮只保留 4 个核心工作面",
               "fontFamily": "Inter",
               "fill": "#657786",
@@ -173,7 +173,7 @@
         },
         {
           "type": "frame",
-          "id": "02_1f",
+          "id": "02-1f",
           "x": 20,
           "y": 104,
           "width": 300,
@@ -187,7 +187,7 @@
           "children": [
             {
               "type": "text",
-              "id": "02_1g",
+              "id": "02-1g",
               "content": "对象库",
               "fontFamily": "Inter",
               "fill": "#172430",
@@ -198,7 +198,7 @@
             },
             {
               "type": "rectangle",
-              "id": "02_1h",
+              "id": "02-1h",
               "x": 18,
               "y": 54,
               "width": 264,
@@ -212,7 +212,7 @@
             },
             {
               "type": "text",
-              "id": "02_1i",
+              "id": "02-1i",
               "content": "搜索对象、卷宗、地点、事件",
               "fontFamily": "Inter",
               "fill": "#657786",
@@ -223,7 +223,7 @@
             },
             {
               "type": "frame",
-              "id": "02_d",
+              "id": "02-d",
               "x": 18,
               "y": 120,
               "width": 78,
@@ -237,7 +237,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_e",
+                  "id": "02-e",
                   "content": "人物",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -250,7 +250,7 @@
             },
             {
               "type": "frame",
-              "id": "02_f",
+              "id": "02-f",
               "x": 106,
               "y": 120,
               "width": 78,
@@ -264,7 +264,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_g",
+                  "id": "02-g",
                   "content": "势力",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -277,7 +277,7 @@
             },
             {
               "type": "frame",
-              "id": "02_h",
+              "id": "02-h",
               "x": 194,
               "y": 120,
               "width": 78,
@@ -291,7 +291,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_i",
+                  "id": "02-i",
                   "content": "地点",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -304,7 +304,7 @@
             },
             {
               "type": "frame",
-              "id": "02_j",
+              "id": "02-j",
               "x": 18,
               "y": 162,
               "width": 78,
@@ -318,7 +318,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_k",
+                  "id": "02-k",
                   "content": "物品",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -331,7 +331,7 @@
             },
             {
               "type": "frame",
-              "id": "02_l",
+              "id": "02-l",
               "x": 106,
               "y": 162,
               "width": 78,
@@ -345,7 +345,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_m",
+                  "id": "02-m",
                   "content": "境界体系",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -358,7 +358,7 @@
             },
             {
               "type": "frame",
-              "id": "02_n",
+              "id": "02-n",
               "x": 194,
               "y": 162,
               "width": 78,
@@ -372,7 +372,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_o",
+                  "id": "02-o",
                   "content": "事件",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -385,7 +385,7 @@
             },
             {
               "type": "frame",
-              "id": "02_p",
+              "id": "02-p",
               "x": 18,
               "y": 204,
               "width": 78,
@@ -399,7 +399,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_q",
+                  "id": "02-q",
                   "content": "关系",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -412,7 +412,7 @@
             },
             {
               "type": "frame",
-              "id": "02_r",
+              "id": "02-r",
               "x": 106,
               "y": 204,
               "width": 78,
@@ -426,7 +426,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_s",
+                  "id": "02-s",
                   "content": "线索",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -439,7 +439,7 @@
             },
             {
               "type": "frame",
-              "id": "02_t",
+              "id": "02-t",
               "x": 194,
               "y": 204,
               "width": 78,
@@ -453,7 +453,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_u",
+                  "id": "02-u",
                   "content": "剧情弧",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -466,7 +466,7 @@
             },
             {
               "type": "text",
-              "id": "02_1j",
+              "id": "02-1j",
               "content": "当前对象",
               "fontFamily": "Inter",
               "fill": "#657786",
@@ -477,7 +477,7 @@
             },
             {
               "type": "frame",
-              "id": "02_v",
+              "id": "02-v",
               "x": 18,
               "y": 280,
               "width": 264,
@@ -491,7 +491,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_w",
+                  "id": "02-w",
                   "content": "柳云澜",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -502,7 +502,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_x",
+                  "id": "02-x",
                   "content": "人物",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -513,7 +513,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_y",
+                  "id": "02-y",
                   "content": "卷宗已对齐",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -526,7 +526,7 @@
             },
             {
               "type": "frame",
-              "id": "02_z",
+              "id": "02-z",
               "x": 18,
               "y": 374,
               "width": 264,
@@ -540,7 +540,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_10",
+                  "id": "02-10",
                   "content": "焚天盟",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -551,7 +551,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_11",
+                  "id": "02-11",
                   "content": "势力",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -562,7 +562,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_12",
+                  "id": "02-12",
                   "content": "交叉引用 6 处",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -575,7 +575,7 @@
             },
             {
               "type": "frame",
-              "id": "02_13",
+              "id": "02-13",
               "x": 18,
               "y": 468,
               "width": 264,
@@ -589,7 +589,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_14",
+                  "id": "02-14",
                   "content": "赤霄古城",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -600,7 +600,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_15",
+                  "id": "02-15",
                   "content": "地点",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -611,7 +611,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_16",
+                  "id": "02-16",
                   "content": "空间跳转高频",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -624,7 +624,7 @@
             },
             {
               "type": "frame",
-              "id": "02_17",
+              "id": "02-17",
               "x": 18,
               "y": 562,
               "width": 264,
@@ -638,7 +638,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_18",
+                  "id": "02-18",
                   "content": "劫火印",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -649,7 +649,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_19",
+                  "id": "02-19",
                   "content": "物品",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -660,7 +660,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_1a",
+                  "id": "02-1a",
                   "content": "绑定主角事件",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -673,7 +673,7 @@
             },
             {
               "type": "frame",
-              "id": "02_1b",
+              "id": "02-1b",
               "x": 18,
               "y": 656,
               "width": 264,
@@ -687,7 +687,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_1c",
+                  "id": "02-1c",
                   "content": "劫火入世",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -698,7 +698,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_1d",
+                  "id": "02-1d",
                   "content": "剧情弧",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -709,7 +709,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_1e",
+                  "id": "02-1e",
                   "content": "观察中",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -724,7 +724,7 @@
         },
         {
           "type": "frame",
-          "id": "02_1k",
+          "id": "02-1k",
           "x": 340,
           "y": 104,
           "width": 1040,
@@ -738,7 +738,7 @@
           "children": [
             {
               "type": "text",
-              "id": "02_1l",
+              "id": "02-1l",
               "content": "蓝图推演工作面",
               "fontFamily": "Inter",
               "fill": "#172430",
@@ -749,7 +749,7 @@
             },
             {
               "type": "text",
-              "id": "02_1m",
+              "id": "02-1m",
               "content": "这张图只保留推演主总线，不再拆成多页去解释同一套节点语言。",
               "fontFamily": "Inter",
               "fill": "#657786",
@@ -760,7 +760,7 @@
             },
             {
               "type": "frame",
-              "id": "02_1z",
+              "id": "02-1z",
               "x": 24,
               "y": 98,
               "width": 708,
@@ -774,7 +774,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_20",
+                  "id": "02-20",
                   "content": "蓝图总线",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -785,7 +785,7 @@
                 },
                 {
                   "type": "rectangle",
-                  "id": "02_1n",
+                  "id": "02-1n",
                   "x": 18,
                   "y": 52,
                   "width": 672,
@@ -799,7 +799,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "02_1o",
+                  "id": "02-1o",
                   "x": 58,
                   "y": 120,
                   "width": 170,
@@ -813,7 +813,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "02_1p",
+                      "id": "02-1p",
                       "content": "推演节点 · 柳云澜",
                       "fontFamily": "Inter",
                       "fill": "#172430",
@@ -824,7 +824,7 @@
                     },
                     {
                       "type": "text",
-                      "id": "02_1q",
+                      "id": "02-1q",
                       "content": "对象起点",
                       "fontFamily": "Inter",
                       "fill": "#657786",
@@ -837,7 +837,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "02_1r",
+                  "id": "02-1r",
                   "x": 292,
                   "y": 266,
                   "width": 188,
@@ -851,7 +851,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "02_1s",
+                      "id": "02-1s",
                       "content": "推演节点 · 劫火印",
                       "fontFamily": "Inter",
                       "fill": "#172430",
@@ -862,7 +862,7 @@
                     },
                     {
                       "type": "text",
-                      "id": "02_1t",
+                      "id": "02-1t",
                       "content": "关键绑定物",
                       "fontFamily": "Inter",
                       "fill": "#657786",
@@ -875,7 +875,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "02_1u",
+                  "id": "02-1u",
                   "x": 508,
                   "y": 474,
                   "width": 150,
@@ -889,7 +889,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "02_1v",
+                      "id": "02-1v",
                       "content": "依赖回路",
                       "fontFamily": "Inter",
                       "fill": "#172430",
@@ -900,7 +900,7 @@
                     },
                     {
                       "type": "text",
-                      "id": "02_1w",
+                      "id": "02-1w",
                       "content": "触发事件链",
                       "fontFamily": "Inter",
                       "fill": "#657786",
@@ -913,7 +913,7 @@
                 },
                 {
                   "type": "line",
-                  "id": "02_1x",
+                  "id": "02-1x",
                   "x": 228,
                   "y": 168,
                   "width": 80,
@@ -925,7 +925,7 @@
                 },
                 {
                   "type": "line",
-                  "id": "02_1y",
+                  "id": "02-1y",
                   "x": 478,
                   "y": 360,
                   "width": 54,
@@ -939,7 +939,7 @@
             },
             {
               "type": "frame",
-              "id": "02_26",
+              "id": "02-26",
               "x": 754,
               "y": 98,
               "width": 262,
@@ -953,7 +953,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_27",
+                  "id": "02-27",
                   "content": "规则注板",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -964,7 +964,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_21",
+                  "id": "02-21",
                   "content": "推演顺序",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -975,7 +975,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_22",
+                  "id": "02-22",
                   "content": "1. 先定对象起点",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -986,7 +986,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_23",
+                  "id": "02-23",
                   "content": "2. 再接关键绑定物",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -997,7 +997,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_24",
+                  "id": "02-24",
                   "content": "3. 最后找依赖回路",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -1008,7 +1008,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_25",
+                  "id": "02-25",
                   "content": "本轮不再把节点语言拆散到另一张页面里解释。",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -1025,7 +1025,7 @@
         },
         {
           "type": "frame",
-          "id": "02_2b",
+          "id": "02-2b",
           "x": 1400,
           "y": 104,
           "width": 340,
@@ -1039,7 +1039,7 @@
           "children": [
             {
               "type": "text",
-              "id": "02_2c",
+              "id": "02-2c",
               "content": "检查器",
               "fontFamily": "Inter",
               "fill": "#172430",
@@ -1050,7 +1050,7 @@
             },
             {
               "type": "text",
-              "id": "02_2d",
+              "id": "02-2d",
               "content": "当前核心图说明",
               "fontFamily": "Inter",
               "fill": "#657786",
@@ -1061,7 +1061,7 @@
             },
             {
               "type": "text",
-              "id": "02_2e",
+              "id": "02-2e",
               "content": "当前只保留 1 张核心图，用来把这一类工作面的主结构讲清楚。",
               "fontFamily": "Inter",
               "fill": "#172430",
@@ -1074,7 +1074,7 @@
             },
             {
               "type": "text",
-              "id": "02_2f",
+              "id": "02-2f",
               "content": "本图重点",
               "fontFamily": "Inter",
               "fill": "#657786",
@@ -1085,7 +1085,7 @@
             },
             {
               "type": "text",
-              "id": "02_28",
+              "id": "02-28",
               "content": "01  蓝图总线",
               "fontFamily": "Inter",
               "fill": "#172430",
@@ -1096,7 +1096,7 @@
             },
             {
               "type": "text",
-              "id": "02_29",
+              "id": "02-29",
               "content": "02  推演节点",
               "fontFamily": "Inter",
               "fill": "#172430",
@@ -1107,7 +1107,7 @@
             },
             {
               "type": "text",
-              "id": "02_2a",
+              "id": "02-2a",
               "content": "03  依赖回路",
               "fontFamily": "Inter",
               "fill": "#172430",
@@ -1118,7 +1118,7 @@
             },
             {
               "type": "frame",
-              "id": "02_2i",
+              "id": "02-2i",
               "x": 18,
               "y": 286,
               "width": 304,
@@ -1132,7 +1132,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_2j",
+                  "id": "02-2j",
                   "content": "本轮判断",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -1143,7 +1143,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_2g",
+                  "id": "02-2g",
                   "content": "把世界模型收束为依赖推演问题，强调主总线、关键节点和回路判断。",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -1156,7 +1156,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_2h",
+                  "id": "02-2h",
                   "content": "页面主结构已从旧的三页切换为四个工作面。",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -1171,7 +1171,7 @@
             },
             {
               "type": "frame",
-              "id": "02_2o",
+              "id": "02-2o",
               "x": 18,
               "y": 452,
               "width": 304,
@@ -1185,7 +1185,7 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "02_2p",
+                  "id": "02-2p",
                   "content": "当前选中对象",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -1196,7 +1196,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_2k",
+                  "id": "02-2k",
                   "content": "柳云澜",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -1207,7 +1207,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_2l",
+                  "id": "02-2l",
                   "content": "人物 · 核心观察对象",
                   "fontFamily": "Inter",
                   "fill": "#657786",
@@ -1218,7 +1218,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_2m",
+                  "id": "02-2m",
                   "content": "关联卷宗：3 份",
                   "fontFamily": "Inter",
                   "fill": "#172430",
@@ -1229,7 +1229,7 @@
                 },
                 {
                   "type": "text",
-                  "id": "02_2n",
+                  "id": "02-2n",
                   "content": "关联场景：赤霄古城 / 焚火殿 / 地脉裂隙",
                   "fontFamily": "Inter",
                   "fill": "#657786",

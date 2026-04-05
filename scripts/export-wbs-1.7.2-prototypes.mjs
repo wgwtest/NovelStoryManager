@@ -1117,8 +1117,8 @@ export function buildPrototypeHtml(suite) {
 }
 
 function resolveSuiteByPath(penPath) {
-  const suiteDirectory = path.basename(path.dirname(penPath));
-  const suite = SUITE_DEFINITIONS.find((item) => item.directory === suiteDirectory);
+  const suiteStem = path.basename(penPath, ".pen");
+  const suite = SUITE_DEFINITIONS.find((item) => item.fileStem === suiteStem);
 
   if (!suite) {
     throw new Error(`No suite definition found for ${penPath}`);

@@ -4,32 +4,30 @@ import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 
-const EXPECTED_FILES = ["01-核心工作面.pen", "方案说明.md"];
-
 const EXPECTED_WORKSPACES = [
   {
-    directory: "01_卷宗工作面",
+    fileStem: "01-卷宗工作面",
     name: "卷宗工作面",
     markers: ["卷宗目录", "卷宗摘要", "对象审校"]
   },
   {
-    directory: "02_蓝图推演工作面",
+    fileStem: "02-蓝图推演工作面",
     name: "蓝图推演工作面",
     markers: ["蓝图总线", "推演节点", "依赖回路"]
   },
   {
-    directory: "03_剪辑编排工作面",
+    fileStem: "03-剪辑编排工作面",
     name: "剪辑编排工作面",
     markers: ["编排时间尺", "片段篮", "编排层"]
   },
   {
-    directory: "04_场景调度工作面",
+    fileStem: "04-场景调度工作面",
     name: "场景调度工作面",
     markers: ["场景舞台图", "地点调度", "空间切换"]
   }
 ];
 
-test("generatePrototypeAssets creates four WBS 1.7.2 workspace folders with one deep-dive Pencil source each", async () => {
+test("generatePrototypeAssets creates four flat WBS 1.7.2 source bundles at the root", async () => {
   const tempDir = await mkdtemp(path.join(os.tmpdir(), "novelstory-wbs-1.7.2-"));
   const { SUITE_DEFINITIONS, generatePrototypeAssets } = await import(
     new URL("./generate-wbs-1.7.2-prototypes.mjs", import.meta.url)
@@ -38,11 +36,11 @@ test("generatePrototypeAssets creates four WBS 1.7.2 workspace folders with one 
   assert.equal(SUITE_DEFINITIONS.length, 4);
   assert.deepEqual(
     SUITE_DEFINITIONS.map((suite) => ({
-      directory: suite.directory,
+      fileStem: suite.fileStem,
       name: suite.name
     })),
     EXPECTED_WORKSPACES.map((suite) => ({
-      directory: suite.directory,
+      fileStem: suite.fileStem,
       name: suite.name
     }))
   );
@@ -51,13 +49,17 @@ test("generatePrototypeAssets creates four WBS 1.7.2 workspace folders with one 
     outputRoot: tempDir
   });
 
+  const rootEntries = await readdir(tempDir);
+  assert.deepEqual(
+    rootEntries.sort(),
+    EXPECTED_WORKSPACES.flatMap((suite) => [
+      `${suite.fileStem}.pen`,
+      `${suite.fileStem}-方案说明.md`
+    ]).sort()
+  );
+
   for (const suite of EXPECTED_WORKSPACES) {
-    const suiteDir = path.join(tempDir, suite.directory);
-    const files = await readdir(suiteDir);
-
-    assert.deepEqual(files.sort(), EXPECTED_FILES);
-
-    const workspaceRaw = await readFile(path.join(suiteDir, "01-核心工作面.pen"), "utf8");
+    const workspaceRaw = await readFile(path.join(tempDir, `${suite.fileStem}.pen`), "utf8");
     const workspaceDoc = JSON.parse(workspaceRaw);
     const topFrame = workspaceDoc.children[0];
     const serialized = JSON.stringify(topFrame);
@@ -81,7 +83,7 @@ test("generatePrototypeAssets creates four WBS 1.7.2 workspace folders with one 
       assert.match(serialized, new RegExp(marker));
     }
 
-    const noteRaw = await readFile(path.join(suiteDir, "方案说明.md"), "utf8");
+    const noteRaw = await readFile(path.join(tempDir, `${suite.fileStem}-方案说明.md`), "utf8");
     assert.match(noteRaw, new RegExp(suite.name));
     assert.match(noteRaw, /当前只保留 1 张核心图/);
     assert.match(noteRaw, /知识编辑器/);
@@ -91,19 +93,23 @@ test("generatePrototypeAssets creates four WBS 1.7.2 workspace folders with one 
   }
 });
 
-test("generatePrototypeAssets preserves root-level companion docs while replacing generated workspace directories", async () => {
+test("generatePrototypeAssets preserves root-level companion docs while replacing generated prototype assets", async () => {
   const tempDir = await mkdtemp(path.join(os.tmpdir(), "novelstory-wbs-1.7.2-preserve-"));
   const { generatePrototypeAssets } = await import(
     new URL("./generate-wbs-1.7.2-prototypes.mjs", import.meta.url)
   );
   const guidePath = path.join(tempDir, "WBS-1.7.2-原型稿执行说明.md");
   const legacyDir = path.join(tempDir, "99_遗留方案");
+  const stalePen = path.join(tempDir, "01-卷宗工作面.pen");
+  const stalePng = path.join(tempDir, "01-卷宗工作面.png");
 
   await writeFile(guidePath, "# keep\n", "utf8");
   await mkdir(legacyDir, {
     recursive: true
   });
   await writeFile(path.join(legacyDir, "stale.pen"), "{}", "utf8");
+  await writeFile(stalePen, "{}\n", "utf8");
+  await writeFile(stalePng, "old-png\n", "utf8");
 
   await generatePrototypeAssets({
     outputRoot: tempDir
@@ -114,6 +120,8 @@ test("generatePrototypeAssets preserves root-level companion docs while replacin
   const rootEntries = await readdir(tempDir);
   assert(rootEntries.includes("WBS-1.7.2-原型稿执行说明.md"));
   assert(!rootEntries.includes("99_遗留方案"));
+  assert(rootEntries.includes("01-卷宗工作面.pen"));
+  assert(!rootEntries.includes("01-卷宗工作面.png"));
 });
 
 test("default output root resolves to the readable WBS 1.7.2 prototype directory", async () => {

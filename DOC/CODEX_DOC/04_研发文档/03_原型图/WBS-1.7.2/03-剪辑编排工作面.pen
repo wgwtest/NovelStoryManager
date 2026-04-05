@@ -3,19 +3,19 @@
   "children": [
     {
       "type": "frame",
-      "id": "04_0",
+      "id": "03-0",
       "x": 40,
       "y": 40,
-      "name": "场景调度工作面",
+      "name": "剪辑编排工作面",
       "width": 1760,
       "height": 1080,
       "clip": true,
       "cornerRadius": 28,
-      "fill": "#F4F8F5",
+      "fill": "#F8F5F1",
       "children": [
         {
           "type": "frame",
-          "id": "04_9",
+          "id": "03-9",
           "x": 0,
           "y": 0,
           "width": 1760,
@@ -25,15 +25,15 @@
             "thickness": {
               "bottom": 1
             },
-            "fill": "#D8E3DC"
+            "fill": "#E4D8CD"
           },
           "children": [
             {
               "type": "text",
-              "id": "04_a",
+              "id": "03-a",
               "content": "知识编辑器",
               "fontFamily": "Inter",
-              "fill": "#1E2C24",
+              "fill": "#2B2117",
               "fontSize": 24,
               "x": 24,
               "y": 18,
@@ -41,10 +41,10 @@
             },
             {
               "type": "text",
-              "id": "04_b",
+              "id": "03-b",
               "content": "当前项目 · 青云劫火录",
               "fontFamily": "Inter",
-              "fill": "#6D7C73",
+              "fill": "#7C6B59",
               "fontSize": 13,
               "x": 24,
               "y": 50,
@@ -52,7 +52,7 @@
             },
             {
               "type": "frame",
-              "id": "04_1",
+              "id": "03-1",
               "x": 500,
               "y": 26,
               "width": 110,
@@ -61,15 +61,15 @@
               "fill": "#F2F4F7",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_2",
+                  "id": "03-2",
                   "content": "卷宗",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 13,
                   "x": 18,
                   "y": 9,
@@ -79,7 +79,7 @@
             },
             {
               "type": "frame",
-              "id": "04_3",
+              "id": "03-3",
               "x": 626,
               "y": 26,
               "width": 110,
@@ -88,15 +88,15 @@
               "fill": "#F2F4F7",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_4",
+                  "id": "03-4",
                   "content": "蓝图推演",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 13,
                   "x": 18,
                   "y": 9,
@@ -106,49 +106,22 @@
             },
             {
               "type": "frame",
-              "id": "04_5",
+              "id": "03-5",
               "x": 752,
-              "y": 26,
-              "width": 110,
-              "height": 34,
-              "cornerRadius": 18,
-              "fill": "#F2F4F7",
-              "stroke": {
-                "thickness": 1,
-                "fill": "#D8E3DC"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "id": "04_6",
-                  "content": "剪辑编排",
-                  "fontFamily": "Inter",
-                  "fill": "#1E2C24",
-                  "fontSize": 13,
-                  "x": 18,
-                  "y": 9,
-                  "fontWeight": "700"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "04_7",
-              "x": 878,
               "y": 26,
               "width": 118,
               "height": 34,
               "cornerRadius": 18,
-              "fill": "#2C7A57",
+              "fill": "#C96A1B",
               "stroke": {
                 "thickness": 1,
-                "fill": "#2C7A57"
+                "fill": "#C96A1B"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_8",
-                  "content": "场景调度",
+                  "id": "03-6",
+                  "content": "剪辑编排",
                   "fontFamily": "Inter",
                   "fill": "#FFFFFF",
                   "fontSize": 13,
@@ -159,11 +132,38 @@
               ]
             },
             {
+              "type": "frame",
+              "id": "03-7",
+              "x": 878,
+              "y": 26,
+              "width": 110,
+              "height": 34,
+              "cornerRadius": 18,
+              "fill": "#F2F4F7",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E4D8CD"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "03-8",
+                  "content": "场景调度",
+                  "fontFamily": "Inter",
+                  "fill": "#2B2117",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 9,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
               "type": "text",
-              "id": "04_c",
+              "id": "03-c",
               "content": "本轮只保留 4 个核心工作面",
               "fontFamily": "Inter",
-              "fill": "#6D7C73",
+              "fill": "#7C6B59",
               "fontSize": 13,
               "x": 1370,
               "y": 30,
@@ -173,7 +173,7 @@
         },
         {
           "type": "frame",
-          "id": "04_1f",
+          "id": "03-1f",
           "x": 20,
           "y": 104,
           "width": 300,
@@ -182,15 +182,15 @@
           "fill": "#FFFFFF",
           "stroke": {
             "thickness": 1,
-            "fill": "#D8E3DC"
+            "fill": "#E4D8CD"
           },
           "children": [
             {
               "type": "text",
-              "id": "04_1g",
+              "id": "03-1g",
               "content": "对象库",
               "fontFamily": "Inter",
-              "fill": "#1E2C24",
+              "fill": "#2B2117",
               "fontSize": 18,
               "x": 18,
               "y": 18,
@@ -198,7 +198,7 @@
             },
             {
               "type": "rectangle",
-              "id": "04_1h",
+              "id": "03-1h",
               "x": 18,
               "y": 54,
               "width": 264,
@@ -207,15 +207,15 @@
               "fill": "#F7F9FC",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               }
             },
             {
               "type": "text",
-              "id": "04_1i",
+              "id": "03-1i",
               "content": "搜索对象、卷宗、地点、事件",
               "fontFamily": "Inter",
-              "fill": "#6D7C73",
+              "fill": "#7C6B59",
               "fontSize": 13,
               "x": 18,
               "y": 67,
@@ -223,24 +223,24 @@
             },
             {
               "type": "frame",
-              "id": "04_d",
+              "id": "03-d",
               "x": 18,
               "y": 120,
               "width": 78,
               "height": 30,
               "cornerRadius": 15,
-              "fill": "#DDEEE5",
+              "fill": "#F7E5D8",
               "stroke": {
                 "thickness": 1,
-                "fill": "#2C7A57"
+                "fill": "#C96A1B"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_e",
+                  "id": "03-e",
                   "content": "人物",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 12,
                   "x": 18,
                   "y": 8,
@@ -250,7 +250,7 @@
             },
             {
               "type": "frame",
-              "id": "04_f",
+              "id": "03-f",
               "x": 106,
               "y": 120,
               "width": 78,
@@ -259,15 +259,15 @@
               "fill": "#F5F7FA",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_g",
+                  "id": "03-g",
                   "content": "势力",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 12,
                   "x": 18,
                   "y": 8,
@@ -277,7 +277,7 @@
             },
             {
               "type": "frame",
-              "id": "04_h",
+              "id": "03-h",
               "x": 194,
               "y": 120,
               "width": 78,
@@ -286,15 +286,15 @@
               "fill": "#F5F7FA",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_i",
+                  "id": "03-i",
                   "content": "地点",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 12,
                   "x": 18,
                   "y": 8,
@@ -304,7 +304,7 @@
             },
             {
               "type": "frame",
-              "id": "04_j",
+              "id": "03-j",
               "x": 18,
               "y": 162,
               "width": 78,
@@ -313,15 +313,15 @@
               "fill": "#F5F7FA",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_k",
+                  "id": "03-k",
                   "content": "物品",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 12,
                   "x": 18,
                   "y": 8,
@@ -331,7 +331,7 @@
             },
             {
               "type": "frame",
-              "id": "04_l",
+              "id": "03-l",
               "x": 106,
               "y": 162,
               "width": 78,
@@ -340,15 +340,15 @@
               "fill": "#F5F7FA",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_m",
+                  "id": "03-m",
                   "content": "境界体系",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 12,
                   "x": 18,
                   "y": 8,
@@ -358,7 +358,7 @@
             },
             {
               "type": "frame",
-              "id": "04_n",
+              "id": "03-n",
               "x": 194,
               "y": 162,
               "width": 78,
@@ -367,15 +367,15 @@
               "fill": "#F5F7FA",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_o",
+                  "id": "03-o",
                   "content": "事件",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 12,
                   "x": 18,
                   "y": 8,
@@ -385,7 +385,7 @@
             },
             {
               "type": "frame",
-              "id": "04_p",
+              "id": "03-p",
               "x": 18,
               "y": 204,
               "width": 78,
@@ -394,15 +394,15 @@
               "fill": "#F5F7FA",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_q",
+                  "id": "03-q",
                   "content": "关系",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 12,
                   "x": 18,
                   "y": 8,
@@ -412,7 +412,7 @@
             },
             {
               "type": "frame",
-              "id": "04_r",
+              "id": "03-r",
               "x": 106,
               "y": 204,
               "width": 78,
@@ -421,15 +421,15 @@
               "fill": "#F5F7FA",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_s",
+                  "id": "03-s",
                   "content": "线索",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 12,
                   "x": 18,
                   "y": 8,
@@ -439,7 +439,7 @@
             },
             {
               "type": "frame",
-              "id": "04_t",
+              "id": "03-t",
               "x": 194,
               "y": 204,
               "width": 78,
@@ -448,15 +448,15 @@
               "fill": "#F5F7FA",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_u",
+                  "id": "03-u",
                   "content": "剧情弧",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 12,
                   "x": 18,
                   "y": 8,
@@ -466,10 +466,10 @@
             },
             {
               "type": "text",
-              "id": "04_1j",
+              "id": "03-1j",
               "content": "当前对象",
               "fontFamily": "Inter",
-              "fill": "#6D7C73",
+              "fill": "#7C6B59",
               "fontSize": 13,
               "x": 18,
               "y": 252,
@@ -477,24 +477,24 @@
             },
             {
               "type": "frame",
-              "id": "04_v",
+              "id": "03-v",
               "x": 18,
               "y": 280,
               "width": 264,
               "height": 80,
               "cornerRadius": 16,
-              "fill": "#DDEEE5",
+              "fill": "#F7E5D8",
               "stroke": {
                 "thickness": 1,
-                "fill": "#2C7A57"
+                "fill": "#C96A1B"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_w",
+                  "id": "03-w",
                   "content": "柳云澜",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 15,
                   "x": 16,
                   "y": 14,
@@ -502,10 +502,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_x",
+                  "id": "03-x",
                   "content": "人物",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 16,
                   "y": 40,
@@ -513,10 +513,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_y",
+                  "id": "03-y",
                   "content": "卷宗已对齐",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 16,
                   "y": 58,
@@ -526,7 +526,7 @@
             },
             {
               "type": "frame",
-              "id": "04_z",
+              "id": "03-z",
               "x": 18,
               "y": 374,
               "width": 264,
@@ -535,15 +535,15 @@
               "fill": "#FFFFFF",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_10",
+                  "id": "03-10",
                   "content": "焚天盟",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 15,
                   "x": 16,
                   "y": 14,
@@ -551,10 +551,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_11",
+                  "id": "03-11",
                   "content": "势力",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 16,
                   "y": 40,
@@ -562,10 +562,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_12",
+                  "id": "03-12",
                   "content": "交叉引用 6 处",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 16,
                   "y": 58,
@@ -575,7 +575,7 @@
             },
             {
               "type": "frame",
-              "id": "04_13",
+              "id": "03-13",
               "x": 18,
               "y": 468,
               "width": 264,
@@ -584,15 +584,15 @@
               "fill": "#FFFFFF",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_14",
+                  "id": "03-14",
                   "content": "赤霄古城",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 15,
                   "x": 16,
                   "y": 14,
@@ -600,10 +600,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_15",
+                  "id": "03-15",
                   "content": "地点",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 16,
                   "y": 40,
@@ -611,10 +611,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_16",
+                  "id": "03-16",
                   "content": "空间跳转高频",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 16,
                   "y": 58,
@@ -624,7 +624,7 @@
             },
             {
               "type": "frame",
-              "id": "04_17",
+              "id": "03-17",
               "x": 18,
               "y": 562,
               "width": 264,
@@ -633,15 +633,15 @@
               "fill": "#FFFFFF",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_18",
+                  "id": "03-18",
                   "content": "劫火印",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 15,
                   "x": 16,
                   "y": 14,
@@ -649,10 +649,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_19",
+                  "id": "03-19",
                   "content": "物品",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 16,
                   "y": 40,
@@ -660,10 +660,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_1a",
+                  "id": "03-1a",
                   "content": "绑定主角事件",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 16,
                   "y": 58,
@@ -673,7 +673,7 @@
             },
             {
               "type": "frame",
-              "id": "04_1b",
+              "id": "03-1b",
               "x": 18,
               "y": 656,
               "width": 264,
@@ -682,15 +682,15 @@
               "fill": "#FFFFFF",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_1c",
+                  "id": "03-1c",
                   "content": "劫火入世",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 15,
                   "x": 16,
                   "y": 14,
@@ -698,10 +698,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_1d",
+                  "id": "03-1d",
                   "content": "剧情弧",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 16,
                   "y": 40,
@@ -709,10 +709,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_1e",
+                  "id": "03-1e",
                   "content": "观察中",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 16,
                   "y": 58,
@@ -724,7 +724,7 @@
         },
         {
           "type": "frame",
-          "id": "04_1k",
+          "id": "03-1w",
           "x": 340,
           "y": 104,
           "width": 1040,
@@ -733,15 +733,15 @@
           "fill": "#FFFFFF",
           "stroke": {
             "thickness": 1,
-            "fill": "#D8E3DC"
+            "fill": "#E4D8CD"
           },
           "children": [
             {
               "type": "text",
-              "id": "04_1l",
-              "content": "场景调度工作面",
+              "id": "03-1x",
+              "content": "剪辑编排工作面",
               "fontFamily": "Inter",
-              "fill": "#1E2C24",
+              "fill": "#2B2117",
               "fontSize": 24,
               "x": 24,
               "y": 20,
@@ -749,10 +749,10 @@
             },
             {
               "type": "text",
-              "id": "04_1m",
-              "content": "把空间线和场景切换收束成一张主图，重点回答“谁在什么地方切到哪里”。",
+              "id": "03-1y",
+              "content": "把时间、片段和并行排布都压到同一张主图里讲清，不再回到旧的页级拆分。",
               "fontFamily": "Inter",
-              "fill": "#6D7C73",
+              "fill": "#7C6B59",
               "fontSize": 14,
               "x": 24,
               "y": 54,
@@ -760,24 +760,117 @@
             },
             {
               "type": "frame",
-              "id": "04_1z",
+              "id": "03-25",
               "x": 24,
               "y": 98,
-              "width": 630,
-              "height": 812,
+              "width": 992,
+              "height": 120,
               "cornerRadius": 18,
               "fill": "#FFFFFF",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_20",
-                  "content": "场景舞台图",
+                  "id": "03-26",
+                  "content": "编排时间尺",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
+                  "fontSize": 16,
+                  "x": 18,
+                  "y": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "03-1z",
+                  "content": "T-12",
+                  "fontFamily": "Inter",
+                  "fill": "#2B2117",
+                  "fontSize": 13,
+                  "x": 20,
+                  "y": 58,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "03-20",
+                  "content": "T-08",
+                  "fontFamily": "Inter",
+                  "fill": "#2B2117",
+                  "fontSize": 13,
+                  "x": 188,
+                  "y": 58,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "03-21",
+                  "content": "T-04",
+                  "fontFamily": "Inter",
+                  "fill": "#2B2117",
+                  "fontSize": 13,
+                  "x": 356,
+                  "y": 58,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "03-22",
+                  "content": "T+00",
+                  "fontFamily": "Inter",
+                  "fill": "#2B2117",
+                  "fontSize": 13,
+                  "x": 524,
+                  "y": 58,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "03-23",
+                  "content": "T+04",
+                  "fontFamily": "Inter",
+                  "fill": "#2B2117",
+                  "fontSize": 13,
+                  "x": 692,
+                  "y": 58,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "03-24",
+                  "content": "T+08",
+                  "fontFamily": "Inter",
+                  "fill": "#2B2117",
+                  "fontSize": 13,
+                  "x": 860,
+                  "y": 58,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "03-2b",
+              "x": 24,
+              "y": 238,
+              "width": 720,
+              "height": 658,
+              "cornerRadius": 18,
+              "fill": "#FFFFFF",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E4D8CD"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "03-2c",
+                  "content": "编排层",
+                  "fontFamily": "Inter",
+                  "fill": "#2B2117",
                   "fontSize": 16,
                   "x": 18,
                   "y": 16,
@@ -785,178 +878,235 @@
                 },
                 {
                   "type": "rectangle",
-                  "id": "04_1n",
+                  "id": "03-27",
                   "x": 18,
-                  "y": 52,
-                  "width": 594,
-                  "height": 724,
-                  "cornerRadius": 18,
-                  "fill": "#F8FBF9",
+                  "y": 60,
+                  "width": 684,
+                  "height": 570,
+                  "cornerRadius": 16,
+                  "fill": "#FCFAF7",
                   "stroke": {
                     "thickness": 1,
-                    "fill": "#D8E3DC"
+                    "fill": "#E4D8CD"
                   }
                 },
                 {
+                  "type": "text",
+                  "id": "03-28",
+                  "content": "主线层",
+                  "fontFamily": "Inter",
+                  "fill": "#7C6B59",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 92,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "03-29",
+                  "content": "观察层",
+                  "fontFamily": "Inter",
+                  "fill": "#7C6B59",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 172,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "03-2a",
+                  "content": "回闪层",
+                  "fontFamily": "Inter",
+                  "fill": "#7C6B59",
+                  "fontSize": 13,
+                  "x": 18,
+                  "y": 252,
+                  "fontWeight": "700"
+                },
+                {
                   "type": "frame",
-                  "id": "04_1o",
-                  "x": 60,
-                  "y": 108,
-                  "width": 164,
-                  "height": 104,
-                  "cornerRadius": 18,
-                  "fill": "#DDEEE5",
+                  "id": "03-1k",
+                  "x": 132,
+                  "y": 96,
+                  "width": 198,
+                  "height": 54,
+                  "cornerRadius": 14,
+                  "fill": "#F7E5D8",
                   "stroke": {
                     "thickness": 1,
-                    "fill": "#2C7A57"
+                    "fill": "#C96A1B"
                   },
                   "children": [
                     {
                       "type": "text",
-                      "id": "04_1p",
-                      "content": "赤霄古城",
+                      "id": "03-1l",
+                      "content": "主线铺垫",
                       "fontFamily": "Inter",
-                      "fill": "#1E2C24",
-                      "fontSize": 16,
-                      "x": 18,
+                      "fill": "#2B2117",
+                      "fontSize": 13,
+                      "x": 14,
                       "y": 18,
                       "fontWeight": "700"
-                    },
-                    {
-                      "type": "text",
-                      "id": "04_1q",
-                      "content": "主舞台",
-                      "fontFamily": "Inter",
-                      "fill": "#6D7C73",
-                      "fontSize": 12,
-                      "x": 18,
-                      "y": 54,
-                      "fontWeight": "500"
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "04_1r",
-                  "x": 324,
-                  "y": 246,
+                  "id": "03-1m",
+                  "x": 360,
+                  "y": 96,
                   "width": 156,
-                  "height": 104,
-                  "cornerRadius": 18,
-                  "fill": "#FFFFFF",
+                  "height": 54,
+                  "cornerRadius": 14,
+                  "fill": "#F7E5D8",
                   "stroke": {
                     "thickness": 1,
-                    "fill": "#2C7A57"
+                    "fill": "#C96A1B"
                   },
                   "children": [
                     {
                       "type": "text",
-                      "id": "04_1s",
-                      "content": "焚火殿",
+                      "id": "03-1n",
+                      "content": "火印失控",
                       "fontFamily": "Inter",
-                      "fill": "#1E2C24",
-                      "fontSize": 16,
-                      "x": 18,
+                      "fill": "#2B2117",
+                      "fontSize": 13,
+                      "x": 14,
                       "y": 18,
                       "fontWeight": "700"
-                    },
-                    {
-                      "type": "text",
-                      "id": "04_1t",
-                      "content": "次级场",
-                      "fontFamily": "Inter",
-                      "fill": "#6D7C73",
-                      "fontSize": 12,
-                      "x": 18,
-                      "y": 54,
-                      "fontWeight": "500"
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "04_1u",
-                  "x": 182,
-                  "y": 470,
-                  "width": 186,
-                  "height": 104,
-                  "cornerRadius": 18,
-                  "fill": "#FFFFFF",
+                  "id": "03-1o",
+                  "x": 184,
+                  "y": 176,
+                  "width": 220,
+                  "height": 54,
+                  "cornerRadius": 14,
+                  "fill": "#F7E5D8",
                   "stroke": {
                     "thickness": 1,
-                    "fill": "#2C7A57"
+                    "fill": "#C96A1B"
                   },
                   "children": [
                     {
                       "type": "text",
-                      "id": "04_1v",
-                      "content": "地脉裂隙",
+                      "id": "03-1p",
+                      "content": "古城回闪",
                       "fontFamily": "Inter",
-                      "fill": "#1E2C24",
-                      "fontSize": 16,
-                      "x": 18,
+                      "fill": "#2B2117",
+                      "fontSize": 13,
+                      "x": 14,
                       "y": 18,
                       "fontWeight": "700"
-                    },
-                    {
-                      "type": "text",
-                      "id": "04_1w",
-                      "content": "切换终点",
-                      "fontFamily": "Inter",
-                      "fill": "#6D7C73",
-                      "fontSize": 12,
-                      "x": 18,
-                      "y": 54,
-                      "fontWeight": "500"
                     }
                   ]
                 },
                 {
-                  "type": "line",
-                  "id": "04_1x",
-                  "x": 224,
-                  "y": 160,
-                  "width": 118,
-                  "height": 90,
+                  "type": "frame",
+                  "id": "03-1q",
+                  "x": 446,
+                  "y": 176,
+                  "width": 162,
+                  "height": 54,
+                  "cornerRadius": 14,
+                  "fill": "#F7E5D8",
                   "stroke": {
-                    "thickness": 3,
-                    "fill": "#2C7A57"
-                  }
+                    "thickness": 1,
+                    "fill": "#C96A1B"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "03-1r",
+                      "content": "地脉异动",
+                      "fontFamily": "Inter",
+                      "fill": "#2B2117",
+                      "fontSize": 13,
+                      "x": 14,
+                      "y": 18,
+                      "fontWeight": "700"
+                    }
+                  ]
                 },
                 {
-                  "type": "line",
-                  "id": "04_1y",
-                  "x": 334,
-                  "y": 350,
-                  "width": -78,
-                  "height": 126,
+                  "type": "frame",
+                  "id": "03-1s",
+                  "x": 96,
+                  "y": 256,
+                  "width": 174,
+                  "height": 54,
+                  "cornerRadius": 14,
+                  "fill": "#F7E5D8",
                   "stroke": {
-                    "thickness": 3,
-                    "fill": "#2C7A57"
-                  }
+                    "thickness": 1,
+                    "fill": "#C96A1B"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "03-1t",
+                      "content": "观测切片 A",
+                      "fontFamily": "Inter",
+                      "fill": "#2B2117",
+                      "fontSize": 13,
+                      "x": 14,
+                      "y": 18,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "03-1u",
+                  "x": 320,
+                  "y": 256,
+                  "width": 248,
+                  "height": 54,
+                  "cornerRadius": 14,
+                  "fill": "#F7E5D8",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#C96A1B"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "03-1v",
+                      "content": "观测切片 B",
+                      "fontFamily": "Inter",
+                      "fill": "#2B2117",
+                      "fontSize": 13,
+                      "x": 14,
+                      "y": 18,
+                      "fontWeight": "700"
+                    }
+                  ]
                 }
               ]
             },
             {
               "type": "frame",
-              "id": "04_25",
-              "x": 676,
-              "y": 98,
-              "width": 340,
-              "height": 386,
+              "id": "03-2i",
+              "x": 766,
+              "y": 238,
+              "width": 250,
+              "height": 658,
               "cornerRadius": 18,
               "fill": "#FFFFFF",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_26",
-                  "content": "地点调度",
+                  "id": "03-2j",
+                  "content": "片段篮",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 16,
                   "x": 18,
                   "y": 16,
@@ -964,10 +1114,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_21",
-                  "content": "当前驻留",
+                  "id": "03-2d",
+                  "content": "待排片段",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 14,
                   "x": 18,
                   "y": 52,
@@ -975,118 +1125,47 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_22",
-                  "content": "· 柳云澜 -> 赤霄古城",
+                  "id": "03-2e",
+                  "content": "· 劫火印第一次异动",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 13,
                   "x": 18,
-                  "y": 86,
+                  "y": 88,
                   "fontWeight": "500"
                 },
                 {
                   "type": "text",
-                  "id": "04_23",
-                  "content": "· 焚天盟 -> 焚火殿",
+                  "id": "03-2f",
+                  "content": "· 赤霄古城夜巡",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 13,
                   "x": 18,
-                  "y": 112,
+                  "y": 114,
                   "fontWeight": "500"
                 },
                 {
                   "type": "text",
-                  "id": "04_24",
-                  "content": "· 劫火印 -> 地脉裂隙",
+                  "id": "03-2g",
+                  "content": "· 焚天盟议事",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 13,
                   "x": 18,
-                  "y": 138,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "04_2c",
-              "x": 676,
-              "y": 504,
-              "width": 340,
-              "height": 406,
-              "cornerRadius": 18,
-              "fill": "#FFFFFF",
-              "stroke": {
-                "thickness": 1,
-                "fill": "#D8E3DC"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "id": "04_2d",
-                  "content": "空间切换",
-                  "fontFamily": "Inter",
-                  "fill": "#1E2C24",
-                  "fontSize": 16,
-                  "x": 18,
-                  "y": 16,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "04_27",
-                  "content": "切换顺序",
-                  "fontFamily": "Inter",
-                  "fill": "#1E2C24",
-                  "fontSize": 14,
-                  "x": 18,
-                  "y": 52,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "04_28",
-                  "content": "1. 古城夜巡",
-                  "fontFamily": "Inter",
-                  "fill": "#1E2C24",
-                  "fontSize": 13,
-                  "x": 18,
-                  "y": 86,
+                  "y": 140,
                   "fontWeight": "500"
                 },
                 {
                   "type": "text",
-                  "id": "04_29",
-                  "content": "2. 焚火殿议事",
+                  "id": "03-2h",
+                  "content": "这一张图只讲清“怎么编排”，不再额外拆出旧的多页结构。",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
-                  "fontSize": 13,
-                  "x": 18,
-                  "y": 112,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "04_2a",
-                  "content": "3. 地脉裂隙爆发",
-                  "fontFamily": "Inter",
-                  "fill": "#1E2C24",
-                  "fontSize": 13,
-                  "x": 18,
-                  "y": 138,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "04_2b",
-                  "content": "这一张图只解释空间调度主结构，不再分裂成旧的页级表达。",
-                  "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 18,
-                  "y": 202,
-                  "width": 304,
+                  "y": 204,
+                  "width": 214,
                   "lineHeight": 18,
                   "fontWeight": "500"
                 }
@@ -1096,7 +1175,7 @@
         },
         {
           "type": "frame",
-          "id": "04_2h",
+          "id": "03-2n",
           "x": 1400,
           "y": 104,
           "width": 340,
@@ -1105,15 +1184,15 @@
           "fill": "#FFFFFF",
           "stroke": {
             "thickness": 1,
-            "fill": "#D8E3DC"
+            "fill": "#E4D8CD"
           },
           "children": [
             {
               "type": "text",
-              "id": "04_2i",
+              "id": "03-2o",
               "content": "检查器",
               "fontFamily": "Inter",
-              "fill": "#1E2C24",
+              "fill": "#2B2117",
               "fontSize": 18,
               "x": 18,
               "y": 18,
@@ -1121,10 +1200,10 @@
             },
             {
               "type": "text",
-              "id": "04_2j",
+              "id": "03-2p",
               "content": "当前核心图说明",
               "fontFamily": "Inter",
-              "fill": "#6D7C73",
+              "fill": "#7C6B59",
               "fontSize": 13,
               "x": 18,
               "y": 58,
@@ -1132,10 +1211,10 @@
             },
             {
               "type": "text",
-              "id": "04_2k",
+              "id": "03-2q",
               "content": "当前只保留 1 张核心图，用来把这一类工作面的主结构讲清楚。",
               "fontFamily": "Inter",
-              "fill": "#1E2C24",
+              "fill": "#2B2117",
               "fontSize": 13,
               "x": 18,
               "y": 82,
@@ -1145,10 +1224,10 @@
             },
             {
               "type": "text",
-              "id": "04_2l",
+              "id": "03-2r",
               "content": "本图重点",
               "fontFamily": "Inter",
-              "fill": "#6D7C73",
+              "fill": "#7C6B59",
               "fontSize": 13,
               "x": 18,
               "y": 160,
@@ -1156,10 +1235,10 @@
             },
             {
               "type": "text",
-              "id": "04_2e",
-              "content": "01  场景舞台图",
+              "id": "03-2k",
+              "content": "01  编排时间尺",
               "fontFamily": "Inter",
-              "fill": "#1E2C24",
+              "fill": "#2B2117",
               "fontSize": 13,
               "x": 18,
               "y": 188,
@@ -1167,10 +1246,10 @@
             },
             {
               "type": "text",
-              "id": "04_2f",
-              "content": "02  地点调度",
+              "id": "03-2l",
+              "content": "02  片段篮",
               "fontFamily": "Inter",
-              "fill": "#1E2C24",
+              "fill": "#2B2117",
               "fontSize": 13,
               "x": 18,
               "y": 214,
@@ -1178,10 +1257,10 @@
             },
             {
               "type": "text",
-              "id": "04_2g",
-              "content": "03  空间切换",
+              "id": "03-2m",
+              "content": "03  编排层",
               "fontFamily": "Inter",
-              "fill": "#1E2C24",
+              "fill": "#2B2117",
               "fontSize": 13,
               "x": 18,
               "y": 240,
@@ -1189,7 +1268,7 @@
             },
             {
               "type": "frame",
-              "id": "04_2o",
+              "id": "03-2u",
               "x": 18,
               "y": 286,
               "width": 304,
@@ -1198,15 +1277,15 @@
               "fill": "#FFFFFF",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_2p",
+                  "id": "03-2v",
                   "content": "本轮判断",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 16,
                   "x": 18,
                   "y": 16,
@@ -1214,10 +1293,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_2m",
-                  "content": "把世界观察收束为空间调度问题，强调主舞台、地点切换和场景流转。",
+                  "id": "03-2s",
+                  "content": "把时间和观察组织收束为剪辑编排问题，强调时间尺、片段篮和并行编排层。",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 13,
                   "x": 18,
                   "y": 44,
@@ -1227,10 +1306,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_2n",
+                  "id": "03-2t",
                   "content": "页面主结构已从旧的三页切换为四个工作面。",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 18,
                   "y": 106,
@@ -1242,7 +1321,7 @@
             },
             {
               "type": "frame",
-              "id": "04_2u",
+              "id": "03-30",
               "x": 18,
               "y": 452,
               "width": 304,
@@ -1251,15 +1330,15 @@
               "fill": "#FFFFFF",
               "stroke": {
                 "thickness": 1,
-                "fill": "#D8E3DC"
+                "fill": "#E4D8CD"
               },
               "children": [
                 {
                   "type": "text",
-                  "id": "04_2v",
+                  "id": "03-31",
                   "content": "当前选中对象",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 16,
                   "x": 18,
                   "y": 16,
@@ -1267,10 +1346,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_2q",
+                  "id": "03-2w",
                   "content": "柳云澜",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 17,
                   "x": 18,
                   "y": 44,
@@ -1278,10 +1357,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_2r",
+                  "id": "03-2x",
                   "content": "人物 · 核心观察对象",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 18,
                   "y": 70,
@@ -1289,10 +1368,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_2s",
+                  "id": "03-2y",
                   "content": "关联卷宗：3 份",
                   "fontFamily": "Inter",
-                  "fill": "#1E2C24",
+                  "fill": "#2B2117",
                   "fontSize": 13,
                   "x": 18,
                   "y": 108,
@@ -1300,10 +1379,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "04_2t",
+                  "id": "03-2z",
                   "content": "关联场景：赤霄古城 / 焚火殿 / 地脉裂隙",
                   "fontFamily": "Inter",
-                  "fill": "#6D7C73",
+                  "fill": "#7C6B59",
                   "fontSize": 12,
                   "x": 18,
                   "y": 132,

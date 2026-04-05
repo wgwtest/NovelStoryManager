@@ -15,7 +15,7 @@ const TAB_LABELS = ["卷宗", "蓝图推演", "剪辑编排", "场景调度"];
 
 export const SUITE_DEFINITIONS = [
   {
-    directory: "01_卷宗工作面",
+    fileStem: "01-卷宗工作面",
     name: "卷宗工作面",
     tabLabel: "卷宗",
     accent: "#2358C9",
@@ -30,7 +30,7 @@ export const SUITE_DEFINITIONS = [
     mode: "dossier"
   },
   {
-    directory: "02_蓝图推演工作面",
+    fileStem: "02-蓝图推演工作面",
     name: "蓝图推演工作面",
     tabLabel: "蓝图推演",
     accent: "#0E6BA8",
@@ -45,7 +45,7 @@ export const SUITE_DEFINITIONS = [
     mode: "blueprint"
   },
   {
-    directory: "03_剪辑编排工作面",
+    fileStem: "03-剪辑编排工作面",
     name: "剪辑编排工作面",
     tabLabel: "剪辑编排",
     accent: "#C96A1B",
@@ -60,7 +60,7 @@ export const SUITE_DEFINITIONS = [
     mode: "editing"
   },
   {
-    directory: "04_场景调度工作面",
+    fileStem: "04-场景调度工作面",
     name: "场景调度工作面",
     tabLabel: "场景调度",
     accent: "#2C7A57",
@@ -1015,7 +1015,7 @@ function buildStagePanel(idGen, suite) {
 }
 
 function buildWorkspaceFrame(suite) {
-  const idGen = idFactory(suite.directory.slice(0, 3).toLowerCase());
+  const idGen = idFactory(suite.fileStem.slice(0, 3).toLowerCase());
   const mainPanelBuilders = {
     dossier: buildDossierPanel,
     blueprint: buildBlueprintPanel,
@@ -1077,8 +1077,17 @@ ${suite.summary}
 `;
 }
 
+function getGeneratedFileNames() {
+  return SUITE_DEFINITIONS.flatMap((suite) => [
+    `${suite.fileStem}.pen`,
+    `${suite.fileStem}.png`,
+    `${suite.fileStem}-方案说明.md`
+  ]);
+}
+
 export async function generatePrototypeAssets(options = {}) {
   const outputRoot = path.resolve(options.outputRoot ?? DEFAULT_OUTPUT_ROOT);
+  const generatedFileNames = new Set(getGeneratedFileNames());
 
   await mkdir(outputRoot, {
     recursive: true
@@ -1088,29 +1097,36 @@ export async function generatePrototypeAssets(options = {}) {
   });
 
   for (const entry of rootEntries) {
-    if (!entry.isDirectory()) {
+    const entryPath = path.join(outputRoot, entry.name);
+
+    if (entry.isDirectory()) {
+      await rm(entryPath, {
+        force: true,
+        recursive: true
+      });
       continue;
     }
 
-    await rm(path.join(outputRoot, entry.name), {
-      force: true,
-      recursive: true
-    });
+    if (generatedFileNames.has(entry.name)) {
+      await rm(entryPath, {
+        force: true
+      });
+    }
   }
 
   for (const suite of SUITE_DEFINITIONS) {
-    const suiteDir = path.join(outputRoot, suite.directory);
     const doc = buildPrototypeDoc(suite);
 
-    await mkdir(suiteDir, {
-      recursive: true
-    });
     await writeFile(
-      path.join(suiteDir, "01-核心工作面.pen"),
+      path.join(outputRoot, `${suite.fileStem}.pen`),
       `${JSON.stringify(doc, null, 2)}\n`,
       "utf8"
     );
-    await writeFile(path.join(suiteDir, "方案说明.md"), buildNote(suite), "utf8");
+    await writeFile(
+      path.join(outputRoot, `${suite.fileStem}-方案说明.md`),
+      buildNote(suite),
+      "utf8"
+    );
   }
 
   return outputRoot;

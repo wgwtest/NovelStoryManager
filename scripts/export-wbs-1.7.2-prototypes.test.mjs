@@ -36,14 +36,12 @@ print(json.dumps({
 
 test("collectExportJobs finds .pen files and maps them to same-directory png targets", async () => {
   const tempDir = await mkdtemp(path.join(os.tmpdir(), "novelstory-wbs-1.7.2-export-"));
-  const suiteDir = path.join(tempDir, "01_编目工作台型");
-
-  await mkdir(suiteDir, {
+  await mkdir(tempDir, {
     recursive: true
   });
-  await writeFile(path.join(suiteDir, "01-总工作台总览.pen"), "{\n  \"version\": \"2.10\",\n  \"children\": []\n}\n", "utf8");
-  await writeFile(path.join(suiteDir, "02-知识库页.pen"), "{\n  \"version\": \"2.10\",\n  \"children\": []\n}\n", "utf8");
-  await writeFile(path.join(suiteDir, "方案说明.md"), "# note\n", "utf8");
+  await writeFile(path.join(tempDir, "01-总工作台总览.pen"), "{\n  \"version\": \"2.10\",\n  \"children\": []\n}\n", "utf8");
+  await writeFile(path.join(tempDir, "02-知识库页.pen"), "{\n  \"version\": \"2.10\",\n  \"children\": []\n}\n", "utf8");
+  await writeFile(path.join(tempDir, "02-知识库页-方案说明.md"), "# note\n", "utf8");
 
   const { collectExportJobs } = await import(
     new URL("./export-wbs-1.7.2-prototypes.mjs", import.meta.url)
@@ -96,7 +94,7 @@ test("exportPrototypePngs outputs visually populated core workface screenshots",
   });
   await exportPrototypePngs(tempDir);
 
-  const pngPath = path.join(tempDir, "01_卷宗工作面", "01-核心工作面.png");
+  const pngPath = path.join(tempDir, "01-卷宗工作面.png");
   const stats = await inspectPngWithPython(pngPath);
 
   assert.equal(stats.width > 1000, true);
