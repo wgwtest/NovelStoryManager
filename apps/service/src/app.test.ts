@@ -254,7 +254,7 @@ describe("buildApp", () => {
     expect(response.json().bundle.scope.objectTypes).toEqual([
       "characters"
     ]);
-    expect(response.json().bundle.objects.characters).toHaveLength(2);
+    expect(response.json().bundle.objects.characters).toHaveLength(4);
     expect("factions" in response.json().bundle.objects).toBe(false);
 
     await app.close();
