@@ -55,9 +55,71 @@ export type InspectorField = {
 export type InspectorSections = {
   additionalFields: InspectorField[];
   coreFields: InspectorField[];
+  referenceFields: InspectorField[];
 };
 
 export type SavedFilter = ProjectData["views"]["saved-filters"][number];
+
+export type DossierAppearanceEntry = {
+  eventId: string;
+  eventName: string;
+  eventSummary: string;
+  roleLabels: string[];
+  sliceTitles: string[];
+  timeAnchor: string;
+};
+
+export type DossierSharedAppearance = {
+  eventId: string;
+  eventName: string;
+  leftRoleLabels: string[];
+  rightRoleLabels: string[];
+  sliceTitles: string[];
+  timeAnchor: string;
+};
+
+export type DossierRelationEntry = {
+  counterpartyId: string;
+  counterpartyName: string;
+  counterpartyType: ObjectTypeName;
+  direction: "bidirectional" | "forward";
+  relationId: string;
+  relationSummary: string;
+  relationTags: string[];
+  relationType: string;
+  sharedAppearances: DossierSharedAppearance[];
+  startAnchor: string;
+  strength: number;
+};
+
+export type DossierRelationContext = {
+  relationId: string;
+  sourceId: string;
+  sourceName: string;
+  sourceType: ObjectTypeName;
+  targetId: string;
+  targetName: string;
+  targetType: ObjectTypeName;
+  sharedAppearances: DossierSharedAppearance[];
+};
+
+export type RelationTargetOption = {
+  label: string;
+  objectId: string;
+  objectType: ObjectTypeName;
+};
+
+export type CreateRelationInput = {
+  direction: "bidirectional" | "forward";
+  endAnchor: string;
+  sourceRef: string;
+  startAnchor: string;
+  strength: number;
+  summary: string;
+  tags: string[];
+  targetRef: string;
+  type: string;
+};
 
 const sampleProjectTemplate = projectDataSchema.parse({
   manifest,
@@ -204,6 +266,10 @@ function getInputKind(field: string, value: unknown): InspectorField["inputKind"
     return "readonly";
   }
 
+  if (Array.isArray(value)) {
+    return "textarea";
+  }
+
   if (typeof value === "number") {
     return "number";
   }
@@ -216,11 +282,21 @@ function getInputKind(field: string, value: unknown): InspectorField["inputKind"
 }
 
 export function getObjectDisplayName(item: StoryObject): string {
+  if ("sourceRef" in item && "targetRef" in item) {
+    const relationRecord = item as unknown as {
+      sourceRef: string;
+      targetRef: string;
+      type: string;
+    };
+
+    return `${relationRecord.type} · ${relationRecord.sourceRef} -> ${relationRecord.targetRef}`;
+  }
+
   if ("name" in item) {
     return item.name;
   }
 
-  return item.type;
+  return "";
 }
 
 export function getObjectTypeLabel(objectType: ObjectTypeName): string {
@@ -439,18 +515,20 @@ export function buildAuditQueue(project: ProjectData): DossierAuditItem[] {
 export function buildInspectorFields(draftObject: EditableObject): InspectorSections {
   const coreFields: InspectorField[] = [];
   const additionalFields: InspectorField[] = [];
+  const referenceFields: InspectorField[] = [];
 
   for (const [field, value] of Object.entries(draftObject)) {
-    if (isReferenceField(field)) {
-      continue;
-    }
-
     const nextField: InspectorField = {
       inputKind: getInputKind(field, value),
       key: field,
       label: formatFieldLabel(field),
       value
     };
+
+    if (isReferenceField(field)) {
+      referenceFields.push(nextField);
+      continue;
+    }
 
     if (coreFieldOrder.includes(field as (typeof coreFieldOrder)[number])) {
       coreFields.push(nextField);
@@ -469,10 +547,234 @@ export function buildInspectorFields(draftObject: EditableObject): InspectorSect
   additionalFields.sort((left, right) =>
     left.label.localeCompare(right.label, "en")
   );
+  referenceFields.sort((left, right) =>
+    left.label.localeCompare(right.label, "en")
+  );
 
   return {
     additionalFields,
-    coreFields
+    coreFields,
+    referenceFields
+  };
+}
+
+function collectEventRoleLabels(event: ProjectData["objects"]["events"][number], objectId: string) {
+  return Object.entries(event)
+    .filter(([field, value]) => isReferenceField(field) && toReferenceIds(value).includes(objectId))
+    .map(([field]) => formatFieldLabel(field));
+}
+
+function collectSliceTitlesForEvent(
+  project: ProjectData,
+  eventId: string,
+  relatedObjectIds: string[]
+): string[] {
+  return project.views["chapter-slices"]
+    .filter((slice) => {
+      if (slice.eventRefs.includes(eventId)) {
+        return true;
+      }
+
+      return relatedObjectIds.every((objectId) => slice.focusObjectRefs.includes(objectId));
+    })
+    .map((slice) => slice.title);
+}
+
+export function collectObjectAppearances(
+  project: ProjectData,
+  objectId: string
+): DossierAppearanceEntry[] {
+  return project.objects.events
+    .flatMap((event) => {
+      const roleLabels = collectEventRoleLabels(event, objectId);
+
+      if (roleLabels.length === 0) {
+        return [];
+      }
+
+      return [
+        {
+          eventId: event.id,
+          eventName: event.name,
+          eventSummary: event.summary,
+          roleLabels,
+          sliceTitles: collectSliceTitlesForEvent(project, event.id, [objectId]),
+          timeAnchor: event.timeAnchor
+        }
+      ];
+    })
+    .sort((left, right) => left.eventName.localeCompare(right.eventName, "zh-Hans-CN"));
+}
+
+function collectSharedAppearances(
+  project: ProjectData,
+  leftObjectId: string,
+  rightObjectId: string
+): DossierSharedAppearance[] {
+  return project.objects.events
+    .flatMap((event) => {
+      const leftRoleLabels = collectEventRoleLabels(event, leftObjectId);
+      const rightRoleLabels = collectEventRoleLabels(event, rightObjectId);
+
+      if (leftRoleLabels.length === 0 || rightRoleLabels.length === 0) {
+        return [];
+      }
+
+      return [
+        {
+          eventId: event.id,
+          eventName: event.name,
+          leftRoleLabels,
+          rightRoleLabels,
+          sliceTitles: collectSliceTitlesForEvent(project, event.id, [
+            leftObjectId,
+            rightObjectId
+          ]),
+          timeAnchor: event.timeAnchor
+        }
+      ];
+    })
+    .sort((left, right) => left.eventName.localeCompare(right.eventName, "zh-Hans-CN"));
+}
+
+export function collectObjectRelationEntries(
+  project: ProjectData,
+  objectId: string
+): DossierRelationEntry[] {
+  return project.objects.relations
+    .flatMap((relation) => {
+      if (relation.sourceRef !== objectId && relation.targetRef !== objectId) {
+        return [];
+      }
+
+      const counterpartyId =
+        relation.sourceRef === objectId ? relation.targetRef : relation.sourceRef;
+      const resolvedCounterparty = resolveObjectReference(project, counterpartyId);
+
+      if (!resolvedCounterparty) {
+        return [];
+      }
+
+      return [
+        {
+          counterpartyId,
+          counterpartyName: getObjectDisplayName(resolvedCounterparty.object),
+          counterpartyType: resolvedCounterparty.objectType,
+          direction: relation.direction,
+          relationId: relation.id,
+          relationSummary: relation.summary,
+          relationTags: relation.tags,
+          relationType: relation.type,
+          sharedAppearances: collectSharedAppearances(project, objectId, counterpartyId),
+          startAnchor: relation.startAnchor,
+          strength: relation.strength
+        }
+      ];
+    })
+    .sort((left, right) => left.counterpartyName.localeCompare(right.counterpartyName, "zh-Hans-CN"));
+}
+
+export function collectRelationContext(
+  project: ProjectData,
+  relationId: string
+): DossierRelationContext | null {
+  const relation = project.objects.relations.find((item) => item.id === relationId);
+
+  if (!relation) {
+    return null;
+  }
+
+  const source = resolveObjectReference(project, relation.sourceRef);
+  const target = resolveObjectReference(project, relation.targetRef);
+
+  if (!source || !target) {
+    return null;
+  }
+
+  return {
+    relationId,
+    sourceId: relation.sourceRef,
+    sourceName: getObjectDisplayName(source.object),
+    sourceType: source.objectType,
+    targetId: relation.targetRef,
+    targetName: getObjectDisplayName(target.object),
+    targetType: target.objectType,
+    sharedAppearances: collectSharedAppearances(project, relation.sourceRef, relation.targetRef)
+  };
+}
+
+export function getRelationTargetOptions(
+  project: ProjectData,
+  sourceObjectId: string
+): RelationTargetOption[] {
+  const options: RelationTargetOption[] = [];
+
+  for (const objectType of objectTypeNames) {
+    if (objectType === "relations") {
+      continue;
+    }
+
+    for (const item of project.objects[objectType] as StoryObject[]) {
+      if (item.id === sourceObjectId) {
+        continue;
+      }
+
+      options.push({
+        label: `[${getObjectTypeLabel(objectType)}] ${getObjectDisplayName(item)}`,
+        objectId: item.id,
+        objectType
+      });
+    }
+  }
+
+  return options.sort((left, right) => left.label.localeCompare(right.label, "zh-Hans-CN"));
+}
+
+function sanitizeIdSegment(value: string) {
+  return value
+    .trim()
+    .toLocaleLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 24);
+}
+
+export function createRelationInProject(
+  project: ProjectData,
+  input: CreateRelationInput
+): {
+  project: ProjectData;
+  relationId: string;
+} {
+  const typeSegment = sanitizeIdSegment(input.type) || "relation";
+  const sourceSegment = sanitizeIdSegment(input.sourceRef) || "source";
+  const targetSegment = sanitizeIdSegment(input.targetRef) || "target";
+  const baseId = `rel_${typeSegment}-${sourceSegment}-${targetSegment}`;
+  const occupiedIds = new Set(project.objects.relations.map((item) => item.id));
+  let relationId = baseId;
+  let suffix = 2;
+
+  while (occupiedIds.has(relationId)) {
+    relationId = `${baseId}-${suffix}`;
+    suffix += 1;
+  }
+
+  const nextProject = mergeObjectIntoProject(project, "relations", {
+    direction: input.direction,
+    endAnchor: input.endAnchor.trim(),
+    id: relationId,
+    sourceRef: input.sourceRef,
+    startAnchor: input.startAnchor.trim(),
+    strength: Math.max(0, Math.min(1, input.strength)),
+    summary: input.summary.trim(),
+    tags: input.tags.filter(Boolean),
+    targetRef: input.targetRef,
+    type: input.type.trim() || "relation"
+  });
+
+  return {
+    project: nextProject,
+    relationId
   };
 }
 

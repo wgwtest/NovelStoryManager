@@ -7,10 +7,15 @@ import {
   buildAuditQueue,
   buildDraftObject,
   buildInspectorFields,
+  collectObjectAppearances,
+  collectObjectRelationEntries,
   collectBacklinks,
+  collectRelationContext,
   collectReferenceLinks,
+  createRelationInProject,
   createSampleProjectData,
   formatFieldValue,
+  getRelationTargetOptions,
   getDossierObjectTypeOptions,
   getFilteredObjects,
   getObjectDisplayName,
@@ -18,6 +23,7 @@ import {
   getSavedFilters,
   mergeObjectIntoProject,
   parseDraftFieldValue,
+  resolveObjectReference,
   type EditableObject
 } from "../lib/dossier-ability-lab.js";
 
@@ -32,12 +38,48 @@ type DossierSelection = {
 
 type DossierLabMode = "review" | "spec" | "workbench";
 
+type RelationComposerState = {
+  direction: "bidirectional" | "forward";
+  endAnchor: string;
+  startAnchor: string;
+  strength: string;
+  summary: string;
+  tags: string;
+  targetRef: string;
+  type: string;
+};
+
 function getInitialProject(): ProjectData {
   return createSampleProjectData();
 }
 
 function getFirstObjectId(project: ProjectData, objectType: ObjectTypeName): string {
   return (project.objects[objectType] as StoryObject[])[0]?.id ?? "";
+}
+
+function createRelationComposerState(targetRef = ""): RelationComposerState {
+  return {
+    direction: "forward",
+    endAnchor: "",
+    startAnchor: "",
+    strength: "0.5",
+    summary: "",
+    tags: "",
+    targetRef,
+    type: "关系"
+  };
+}
+
+function toReferenceIds(value: unknown): string[] {
+  if (Array.isArray(value)) {
+    return value.filter((item): item is string => typeof item === "string" && item.length > 0);
+  }
+
+  if (typeof value === "string" && value.length > 0) {
+    return [value];
+  }
+
+  return [];
 }
 
 export default function DossierAbilityLab(props: DossierAbilityLabProps) {
@@ -80,6 +122,21 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
     () => (activeObject ? collectReferenceLinks(project, activeObject) : []),
     [project, activeObject]
   );
+  const relationEntries = useMemo(
+    () => (activeObject ? collectObjectRelationEntries(project, activeObject.id) : []),
+    [project, activeObject]
+  );
+  const appearanceEntries = useMemo(
+    () => (activeObject ? collectObjectAppearances(project, activeObject.id) : []),
+    [project, activeObject]
+  );
+  const relationContext = useMemo(
+    () =>
+      activeObjectType === "relations" && activeObject
+        ? collectRelationContext(project, activeObject.id)
+        : null,
+    [project, activeObject, activeObjectType]
+  );
   const backlinks = useMemo(
     () => (activeObject ? collectBacklinks(project, activeObject.id) : []),
     [project, activeObject]
@@ -99,6 +156,15 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
     () => (draftObject ? buildInspectorFields(draftObject) : null),
     [draftObject]
   );
+  const relationTargetOptions = useMemo(
+    () => (activeObject ? getRelationTargetOptions(project, activeObject.id) : []),
+    [project, activeObject]
+  );
+  const [relationComposer, setRelationComposer] = useState<RelationComposerState>(() =>
+    createRelationComposerState(
+      getRelationTargetOptions(getInitialProject(), "char_suxuan")[0]?.objectId ?? ""
+    )
+  );
 
   useEffect(() => {
     if (activeObject && activeObject.id !== selectedObjectId) {
@@ -114,6 +180,25 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
 
     setDraftObject(buildDraftObject(project, activeObjectType, activeObject.id));
   }, [project, activeObjectType, activeObject]);
+
+  useEffect(() => {
+    if (!activeObject || activeObjectType === "relations") {
+      setRelationComposer(createRelationComposerState(""));
+      return;
+    }
+
+    setRelationComposer((current) => {
+      const nextTarget =
+        relationTargetOptions.find((option) => option.objectId === current.targetRef)?.objectId ??
+        relationTargetOptions[0]?.objectId ??
+        "";
+
+      return {
+        ...current,
+        targetRef: nextTarget
+      };
+    });
+  }, [activeObject, activeObjectType, relationTargetOptions]);
 
   function handleObjectTypeChange(nextType: ObjectTypeName) {
     setActiveObjectType(nextType);
@@ -198,6 +283,65 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
     setProject(nextProject);
     setApplyState("已应用到本页样例");
   }
+
+  function handleRelationComposerChange(
+    field: keyof RelationComposerState,
+    value: string
+  ) {
+    setRelationComposer((current) => ({
+      ...current,
+      [field]: value
+    }));
+    setApplyState("未保存样例改写");
+  }
+
+  function handleCreateRelation() {
+    if (!activeObject || activeObjectType === "relations" || !relationComposer.targetRef) {
+      return;
+    }
+
+    const strength = Number(relationComposer.strength);
+    const {
+      project: nextProject,
+      relationId
+    } = createRelationInProject(project, {
+      direction: relationComposer.direction,
+      endAnchor: relationComposer.endAnchor,
+      sourceRef: activeObject.id,
+      startAnchor: relationComposer.startAnchor,
+      strength: Number.isFinite(strength) ? strength : 0.5,
+      summary: relationComposer.summary,
+      tags: relationComposer.tags
+        .split(/[\n,]/)
+        .map((item) => item.trim())
+        .filter(Boolean),
+      targetRef: relationComposer.targetRef,
+      type: relationComposer.type
+    });
+
+    setProject(nextProject);
+    setRelationComposer(
+      createRelationComposerState(
+        relationTargetOptions.find((item) => item.objectId !== relationComposer.targetRef)?.objectId ??
+          relationTargetOptions[0]?.objectId ??
+          ""
+      )
+    );
+    handleOpenDossier(
+      {
+        objectId: relationId,
+        objectType: "relations"
+      },
+      true
+    );
+    setApplyState("已新建关系草案");
+  }
+
+  const activeObjectRecord = activeObject as (Record<string, unknown> & StoryObject) | null;
+  const activeTagCount = Array.isArray(activeObjectRecord?.tags)
+    ? activeObjectRecord.tags.length
+    : 0;
+  const activeFactionCount = toReferenceIds(activeObjectRecord?.factionRefs).length;
 
   const modeStatus =
     activeMode === "workbench"
@@ -386,11 +530,23 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
                       </div>
                       <div>
                         <dt>Status</dt>
-                        <dd>{formatFieldValue((activeObject as Record<string, unknown>).status)}</dd>
+                        <dd>{formatFieldValue(activeObjectRecord?.status)}</dd>
+                      </div>
+                      <div>
+                        <dt>Identity</dt>
+                        <dd>{formatFieldValue(activeObjectRecord?.identity) || "待补录身份"}</dd>
                       </div>
                       <div>
                         <dt>Tags</dt>
-                        <dd>{formatFieldValue((activeObject as Record<string, unknown>).tags)}</dd>
+                        <dd>{formatFieldValue(activeObjectRecord?.tags) || "暂无标签"}</dd>
+                      </div>
+                      <div>
+                        <dt>Tag Count</dt>
+                        <dd>{activeTagCount}</dd>
+                      </div>
+                      <div>
+                        <dt>Faction Count</dt>
+                        <dd>{activeFactionCount}</dd>
                       </div>
                     </dl>
                   </article>
@@ -405,7 +561,186 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
                         ? `待补录字段：${activeAuditItem.missingFields.join(" / ")}`
                         : "当前对象缺失字段已补齐，可继续核对引用链。"}
                     </p>
+                    <p className="dossier-inline-note">
+                      卷宗在这里既承担事实查询，也承担字段、引用与关系的直接编辑；但轨道、场景编排仍留给其他视图处理。
+                    </p>
                   </article>
+                </section>
+
+                {activeObjectType !== "relations" ? (
+                  <section className="dossier-reference-section">
+                    <div className="dossier-section-header">
+                      <h3>关系档案</h3>
+                      <span>{relationEntries.length} 项</span>
+                    </div>
+
+                    {relationEntries.length > 0 ? (
+                      <div className="dossier-record-list">
+                        {relationEntries.map((entry) => (
+                          <article className="dossier-record-card" key={entry.relationId}>
+                            <div className="dossier-record-headline">
+                              <strong>{entry.relationType}</strong>
+                              <span>
+                                {entry.counterpartyName} · 强度 {entry.strength.toFixed(2)}
+                              </span>
+                            </div>
+                            <p>{entry.relationSummary || "待补录关系摘要"}</p>
+                            <p className="dossier-inline-note">
+                              方向：{entry.direction} · 起点：{entry.startAnchor || "未标注"} ·
+                              标签：{entry.relationTags.join(" / ") || "暂无标签"}
+                            </p>
+                            <p className="dossier-inline-note">
+                              共同出场：
+                              {entry.sharedAppearances.length > 0
+                                ? entry.sharedAppearances
+                                    .map((item) => item.eventName)
+                                    .join(" / ")
+                                : " 暂无共同事件"}
+                            </p>
+                            <div className="dossier-record-actions">
+                              <button
+                                className="toolbar-button"
+                                onClick={() =>
+                                  handleOpenDossier(
+                                    {
+                                      objectId: entry.relationId,
+                                      objectType: "relations"
+                                    },
+                                    true
+                                  )
+                                }
+                                type="button"
+                              >
+                                打开关系卷宗
+                              </button>
+                              <button
+                                className="toolbar-button"
+                                onClick={() =>
+                                  handleOpenDossier(
+                                    {
+                                      objectId: entry.counterpartyId,
+                                      objectType: entry.counterpartyType
+                                    },
+                                    true
+                                  )
+                                }
+                                type="button"
+                              >
+                                打开 {entry.counterpartyName} 卷宗
+                              </button>
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="dossier-empty">当前对象还没有独立关系对象，可在右侧创建新的关系草案。</p>
+                    )}
+                  </section>
+                ) : null}
+
+                {activeObjectType === "relations" && relationContext ? (
+                  <section className="dossier-reference-section">
+                    <div className="dossier-section-header">
+                      <h3>关系语境</h3>
+                      <span>{relationContext.sharedAppearances.length} 项共同出场</span>
+                    </div>
+
+                    <div className="dossier-record-list">
+                      <article className="dossier-record-card">
+                        <div className="dossier-record-headline">
+                          <strong>
+                            {relationContext.sourceName} ↔ {relationContext.targetName}
+                          </strong>
+                          <span>关系对象 {relationContext.relationId}</span>
+                        </div>
+                        <p className="dossier-inline-note">
+                          这条关系不是只读说明，它本身就是独立对象，可以编辑 source / target /
+                          summary / strength / 标签。
+                        </p>
+                        <div className="dossier-record-actions">
+                          <button
+                            className="toolbar-button"
+                            onClick={() =>
+                              handleOpenDossier(
+                                {
+                                  objectId: relationContext.sourceId,
+                                  objectType: relationContext.sourceType
+                                },
+                                true
+                              )
+                            }
+                            type="button"
+                          >
+                            打开 {relationContext.sourceName} 卷宗
+                          </button>
+                          <button
+                            className="toolbar-button"
+                            onClick={() =>
+                              handleOpenDossier(
+                                {
+                                  objectId: relationContext.targetId,
+                                  objectType: relationContext.targetType
+                                },
+                                true
+                              )
+                            }
+                            type="button"
+                          >
+                            打开 {relationContext.targetName} 卷宗
+                          </button>
+                        </div>
+                      </article>
+                    </div>
+                  </section>
+                ) : null}
+
+                <section className="dossier-reference-section">
+                  <div className="dossier-section-header">
+                    <h3>出场记录</h3>
+                    <span>{appearanceEntries.length} 项</span>
+                  </div>
+
+                  {appearanceEntries.length > 0 ? (
+                    <div className="dossier-record-list">
+                      {appearanceEntries.map((entry) => (
+                        <article className="dossier-record-card" key={entry.eventId}>
+                          <div className="dossier-record-headline">
+                            <strong>{entry.eventName}</strong>
+                            <span>{entry.timeAnchor || "未标注时间锚点"}</span>
+                          </div>
+                          <p>{entry.eventSummary || "待补录事件摘要"}</p>
+                          <p className="dossier-inline-note">
+                            出场角色：{entry.roleLabels.join(" / ")}
+                          </p>
+                          <p className="dossier-inline-note">
+                            章节切片：
+                            {entry.sliceTitles.length > 0
+                              ? entry.sliceTitles.join(" / ")
+                              : " 当前未投影到章节切片"}
+                          </p>
+                          <div className="dossier-record-actions">
+                            <button
+                              className="toolbar-button"
+                              onClick={() =>
+                                handleOpenDossier(
+                                  {
+                                    objectId: entry.eventId,
+                                    objectType: "events"
+                                  },
+                                  true
+                                )
+                              }
+                              type="button"
+                            >
+                              打开 {entry.eventName} 卷宗
+                            </button>
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="dossier-empty">当前对象还没有事件出场记录，后续可继续补录事件与章节切片。</p>
+                  )}
                 </section>
 
                 <section className="dossier-reference-section">
@@ -587,6 +922,218 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
                         </label>
                       )
                     )}
+                  </div>
+                </section>
+              ) : null}
+
+              {inspectorSections.referenceFields.length > 0 ? (
+                <section className="dossier-inspector-section">
+                  <h3>Reference Fields</h3>
+                  <div className="dossier-field-list">
+                    {inspectorSections.referenceFields.map((field) => {
+                      const resolvedTargets = toReferenceIds(field.value).flatMap((objectId) => {
+                        const resolved = resolveObjectReference(project, objectId);
+
+                        if (!resolved) {
+                          return [];
+                        }
+
+                        return [
+                          {
+                            objectId,
+                            objectType: resolved.objectType,
+                            label: `${getObjectTypeLabel(resolved.objectType)} · ${getObjectDisplayName(
+                              resolved.object
+                            )}`
+                          }
+                        ];
+                      });
+
+                      return field.inputKind === "textarea" ? (
+                        <div className="dossier-reference-editor" key={field.key}>
+                          <label>
+                            <span>{field.label}</span>
+                            <textarea
+                              name={field.key}
+                              onChange={(event) => handleDraftChange(field.key, event.target.value)}
+                              value={formatFieldValue(field.value)}
+                            />
+                          </label>
+                          {resolvedTargets.length > 0 ? (
+                            <div className="reference-chip-list">
+                              {resolvedTargets.map((target) => (
+                                <button
+                                  className="reference-chip"
+                                  key={`${field.key}-${target.objectId}`}
+                                  onClick={() =>
+                                    handleOpenDossier(
+                                      {
+                                        objectId: target.objectId,
+                                        objectType: target.objectType
+                                      },
+                                      true
+                                    )
+                                  }
+                                  type="button"
+                                >
+                                  {target.label}
+                                </button>
+                              ))}
+                            </div>
+                          ) : (
+                            <p className="dossier-empty">当前字段暂无已解析引用。</p>
+                          )}
+                        </div>
+                      ) : (
+                        <div className="dossier-reference-editor" key={field.key}>
+                          <label>
+                            <span>{field.label}</span>
+                            <input
+                              name={field.key}
+                              onChange={(event) => handleDraftChange(field.key, event.target.value)}
+                              type="text"
+                              value={formatFieldValue(field.value)}
+                            />
+                          </label>
+                          {resolvedTargets.length > 0 ? (
+                            <div className="reference-chip-list">
+                              {resolvedTargets.map((target) => (
+                                <button
+                                  className="reference-chip"
+                                  key={`${field.key}-${target.objectId}`}
+                                  onClick={() =>
+                                    handleOpenDossier(
+                                      {
+                                        objectId: target.objectId,
+                                        objectType: target.objectType
+                                      },
+                                      true
+                                    )
+                                  }
+                                  type="button"
+                                >
+                                  {target.label}
+                                </button>
+                              ))}
+                            </div>
+                          ) : (
+                            <p className="dossier-empty">当前字段暂无已解析引用。</p>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
+              ) : null}
+
+              {activeObject && activeObjectType !== "relations" ? (
+                <section className="dossier-inspector-section">
+                  <h3>关系草拟</h3>
+                  <div className="dossier-field-list">
+                    <label>
+                      <span>Target Object</span>
+                      <select
+                        name="relation-target"
+                        onChange={(event) =>
+                          handleRelationComposerChange("targetRef", event.target.value)
+                        }
+                        value={relationComposer.targetRef}
+                      >
+                        {relationTargetOptions.map((option) => (
+                          <option key={option.objectId} value={option.objectId}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                    <label>
+                      <span>Relation Type</span>
+                      <input
+                        name="relation-type"
+                        onChange={(event) => handleRelationComposerChange("type", event.target.value)}
+                        type="text"
+                        value={relationComposer.type}
+                      />
+                    </label>
+                    <label>
+                      <span>Direction</span>
+                      <select
+                        name="relation-direction"
+                        onChange={(event) =>
+                          handleRelationComposerChange(
+                            "direction",
+                            event.target.value as RelationComposerState["direction"]
+                          )
+                        }
+                        value={relationComposer.direction}
+                      >
+                        <option value="forward">forward</option>
+                        <option value="bidirectional">bidirectional</option>
+                      </select>
+                    </label>
+                    <label>
+                      <span>Strength</span>
+                      <input
+                        max="1"
+                        min="0"
+                        name="relation-strength"
+                        onChange={(event) =>
+                          handleRelationComposerChange("strength", event.target.value)
+                        }
+                        step="0.05"
+                        type="number"
+                        value={relationComposer.strength}
+                      />
+                    </label>
+                    <label>
+                      <span>Start Anchor</span>
+                      <input
+                        name="relation-start-anchor"
+                        onChange={(event) =>
+                          handleRelationComposerChange("startAnchor", event.target.value)
+                        }
+                        type="text"
+                        value={relationComposer.startAnchor}
+                      />
+                    </label>
+                    <label>
+                      <span>End Anchor</span>
+                      <input
+                        name="relation-end-anchor"
+                        onChange={(event) =>
+                          handleRelationComposerChange("endAnchor", event.target.value)
+                        }
+                        type="text"
+                        value={relationComposer.endAnchor}
+                      />
+                    </label>
+                    <label>
+                      <span>Relation Tags</span>
+                      <input
+                        name="relation-tags"
+                        onChange={(event) => handleRelationComposerChange("tags", event.target.value)}
+                        placeholder="人物关系,宗门往来"
+                        type="text"
+                        value={relationComposer.tags}
+                      />
+                    </label>
+                    <label>
+                      <span>Relation Summary</span>
+                      <textarea
+                        name="relation-summary"
+                        onChange={(event) =>
+                          handleRelationComposerChange("summary", event.target.value)
+                        }
+                        value={relationComposer.summary}
+                      />
+                    </label>
+                    <button
+                      className="toolbar-button"
+                      onClick={handleCreateRelation}
+                      type="button"
+                    >
+                      新建关系草案并打开卷宗
+                    </button>
                   </div>
                 </section>
               ) : null}

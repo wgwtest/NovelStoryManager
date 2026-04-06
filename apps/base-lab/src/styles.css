@@ -21,6 +21,7 @@ body {
 
 button,
 input,
+select,
 textarea {
   font: inherit;
 }
@@ -1301,6 +1302,7 @@ textarea {
 
 .dossier-filter-input input,
 .dossier-inspector-form input,
+.dossier-inspector-form select,
 .dossier-inspector-form textarea {
   width: 100%;
   border: 1px solid rgba(34, 31, 29, 0.12);
@@ -1572,6 +1574,47 @@ textarea {
   gap: 10px;
 }
 
+.dossier-record-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dossier-record-card,
+.dossier-reference-editor {
+  border: 1px solid rgba(34, 31, 29, 0.08);
+  border-radius: 16px;
+  background: #fffdf9;
+  padding: 14px;
+}
+
+.dossier-record-headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.dossier-record-headline strong {
+  color: #2b251f;
+}
+
+.dossier-record-headline span {
+  color: #6d6155;
+  font-size: 13px;
+}
+
+.dossier-record-card p {
+  margin: 8px 0 0;
+}
+
+.dossier-record-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
 .dossier-section-header {
   display: flex;
   justify-content: space-between;
@@ -1584,6 +1627,12 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.dossier-reference-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .dossier-readonly-field code {

@@ -48,6 +48,11 @@ export const dossierDesignGoals: DossierDesignCard[] = [
     title: "卷宗和其他视图怎么分工",
     summary:
       "卷宗负责事实和档案，蓝图负责关系推演，剪辑负责多轨编排，场景负责空间调度。它们共享模型，不共享视图实现。"
+  },
+  {
+    title: "卷宗是不是可编辑",
+    summary:
+      "卷宗不是只读资料页。它是事实层的读写混合工作面，可以直接编辑字段、引用和关系，但不负责轨道编排或场景摆位。"
   }
 ];
 
@@ -62,11 +67,15 @@ export const dossierPanelChecklist: DossierDesignCard[] = [
   },
   {
     title: "右侧检查器",
-    summary: "提供高频字段编辑，不替代中央卷宗的阅读与核对职责。"
+    summary: "提供高频字段与引用字段编辑，不替代中央卷宗的阅读与核对职责。"
   },
   {
     title: "底部审校队列",
     summary: "明确告诉用户缺什么字段，而不是只给出一个抽象异常状态。"
+  },
+  {
+    title: "关系档案与出场记录",
+    summary: "补足对象之间的独立关系对象、共同事件和章节切片投影，让卷宗既能查档，也能改档。"
   }
 ];
 

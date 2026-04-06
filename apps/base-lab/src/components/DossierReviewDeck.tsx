@@ -24,7 +24,7 @@ export function DossierReviewDeck(props: DossierReviewDeckProps) {
               <h2>卷宗设计思路</h2>
               <p className="dossier-review-intro">
                 当前页先回答卷宗为什么存在、覆盖哪些对象、靠什么数据驱动，再进入交互验证。
-                这样审阅时不会只看到一个能操作的页面，却不知道它为什么这样设计。
+                卷宗在这里被定义为“事实层读写混合工作面”，这样审阅时不会只看到一个能操作的页面，却不知道它为什么这样设计。
               </p>
 
               <div className="dossier-review-action-row">

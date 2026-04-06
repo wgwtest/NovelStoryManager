@@ -134,9 +134,55 @@ describe("DossierAbilityLab", () => {
 
     expect(screen.getByRole("heading", { name: "Core Fields" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Additional Fields" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Reference Fields" })).toBeInTheDocument();
     expect(screen.getByText("Id")).toBeInTheDocument();
     expect(screen.getByLabelText("Summary")).toBeInTheDocument();
     expect(screen.getByText("char_suxuan", { selector: "code" })).toBeInTheDocument();
+  });
+
+  it("shows relation archive and appearance records for the active dossier", async () => {
+    const user = userEvent.setup();
+
+    render(<DossierAbilityLab onBack={() => {}} />);
+    await user.click(screen.getByRole("tab", { name: "工作面验证" }));
+
+    expect(screen.getByRole("heading", { name: "关系档案" })).toBeInTheDocument();
+    expect(screen.getByText("mentor")).toBeInTheDocument();
+    expect(screen.getByText(/共同出场：试炼谷夺令/)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "出场记录" })).toBeInTheDocument();
+    expect(screen.getByText(/章节切片：第一章 残火令现/)).toBeInTheDocument();
+  });
+
+  it("creates a relation draft from the current dossier and opens the new relation dossier", async () => {
+    const user = userEvent.setup();
+
+    render(<DossierAbilityLab onBack={() => {}} />);
+    await user.click(screen.getByRole("tab", { name: "工作面验证" }));
+
+    await user.selectOptions(screen.getByLabelText("Target Object"), "char_new_003");
+    await user.clear(screen.getByLabelText("Relation Type"));
+    await user.type(screen.getByLabelText("Relation Type"), "ally");
+    await user.type(screen.getByLabelText("Relation Summary"), "苏玄与新角色3建立临时同盟。");
+    await user.click(screen.getByRole("button", { name: "新建关系草案并打开卷宗" }));
+
+    expect(await screen.findByRole("heading", { name: "关系语境" })).toBeInTheDocument();
+    expect(screen.getByText("苏玄 ↔ 新角色3")).toBeInTheDocument();
+    expect(screen.getByText("已新建关系草案")).toBeInTheDocument();
+  });
+
+  it("edits reference fields through the inspector and removes resolved links", async () => {
+    const user = userEvent.setup();
+
+    render(<DossierAbilityLab onBack={() => {}} />);
+    await user.click(screen.getByRole("tab", { name: "工作面验证" }));
+
+    const factionInput = screen.getByLabelText("Faction");
+
+    await user.clear(factionInput);
+    await user.click(screen.getByRole("button", { name: "应用到本页样例" }));
+
+    expect(screen.queryByRole("button", { name: "打开 青云宗 卷宗" })).not.toBeInTheDocument();
+    expect(screen.getByText("已应用到本页样例")).toBeInTheDocument();
   });
 
   it("applies inspector edits to the local sample model", async () => {
