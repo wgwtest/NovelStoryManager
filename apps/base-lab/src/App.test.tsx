@@ -82,7 +82,11 @@ describe("BaseLab app", () => {
     expect(
       await screen.findByRole("heading", { name: "WBS 4.1 卷宗独立验证" })
     ).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "卷宗目录" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "卷宗设计思路" })).toBeInTheDocument();
+
+    await user.click(screen.getByRole("tab", { name: "工作面验证" }));
+
+    expect(await screen.findByRole("heading", { name: "卷宗目录" })).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Back to BaseLab" }));
 

@@ -17,9 +17,10 @@ type LabEntry = {
 const labEntries: LabEntry[] = [
   {
     id: "wbs-4.1-dossier-ability",
-    purpose: "使用样例项目与模拟视图状态验证卷宗目录、正文、引用回查、审校队列和检查器联动。",
+    purpose:
+      "先审阅卷宗设计思路与样例数据规范，再用样例项目和模拟视图状态验证目录、正文、引用回查、审校队列和检查器联动。",
     status: "ready",
-    summary: "卷宗能力/功能/样式联合验证",
+    summary: "卷宗审阅说明 + 能力/功能/样式联合验证",
     targetWbs: "WBS 4.1",
     title: "WBS 4.1 卷宗独立验证"
   },

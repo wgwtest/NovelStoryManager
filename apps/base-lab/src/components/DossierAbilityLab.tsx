@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import type { ObjectTypeName, ProjectData, StoryObject } from "@novelstory/schema";
 
+import { DossierReviewDeck, DossierSpecDeck } from "./DossierReviewDeck.js";
 import {
   buildAuditQueue,
   buildDraftObject,
@@ -29,6 +30,8 @@ type DossierSelection = {
   objectType: ObjectTypeName;
 };
 
+type DossierLabMode = "review" | "spec" | "workbench";
+
 function getInitialProject(): ProjectData {
   return createSampleProjectData();
 }
@@ -39,6 +42,7 @@ function getFirstObjectId(project: ProjectData, objectType: ObjectTypeName): str
 
 export default function DossierAbilityLab(props: DossierAbilityLabProps) {
   const [project, setProject] = useState<ProjectData>(() => getInitialProject());
+  const [activeMode, setActiveMode] = useState<DossierLabMode>("review");
   const [activeObjectType, setActiveObjectType] = useState<ObjectTypeName>("characters");
   const [selectedObjectId, setSelectedObjectId] = useState("char_suxuan");
   const [activeFilterId, setActiveFilterId] = useState("filter-main-cast");
@@ -57,10 +61,16 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
   );
   const activeObject = useMemo(() => {
     const currentCollection = project.objects[activeObjectType] as StoryObject[];
+    const selectedObject =
+      currentCollection.find((item) => item.id === selectedObjectId) ?? null;
+    const isSelectedObjectVisible = selectedObject
+      ? filteredObjects.some((item) => item.id === selectedObject.id)
+      : false;
 
     return (
-      currentCollection.find((item) => item.id === selectedObjectId) ??
+      (isSelectedObjectVisible ? selectedObject : null) ??
       filteredObjects[0] ??
+      selectedObject ??
       currentCollection[0] ??
       null
     );
@@ -75,6 +85,16 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
     [project, activeObject]
   );
   const auditQueue = useMemo(() => buildAuditQueue(project), [project]);
+  const activeAuditItem = useMemo(
+    () =>
+      activeObject
+        ? auditQueue.find(
+            (item) =>
+              item.objectId === activeObject.id && item.objectType === activeObjectType
+          ) ?? null
+        : null,
+    [auditQueue, activeObject, activeObjectType]
+  );
   const inspectorSections = useMemo(
     () => (draftObject ? buildInspectorFields(draftObject) : null),
     [draftObject]
@@ -179,17 +199,24 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
     setApplyState("已应用到本页样例");
   }
 
+  const modeStatus =
+    activeMode === "workbench"
+      ? applyState
+      : activeMode === "review"
+        ? "Design Review"
+        : "Schema Review";
+
   return (
     <div className="app-shell dossier-lab-shell">
       <header className="topbar dossier-lab-header">
         <div>
           <h1>WBS 4.1 卷宗独立验证</h1>
-          <p>BaseLab 卷宗页使用 sample-novel 样例工程验证目录、正文、回查与检查器联动。</p>
+          <p>先审阅卷宗设计与样例规范，再进入 BaseLab 工作面验证，避免只看到操作结果却看不到设计前提。</p>
         </div>
 
         <div className="topbar-actions">
           <div className="status-pill" aria-live="polite">
-            {applyState}
+            {modeStatus}
           </div>
           <button className="toolbar-button" onClick={props.onBack} type="button">
             Back to BaseLab
@@ -197,7 +224,52 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
         </div>
       </header>
 
-      <main className="dossier-lab-layout">
+      <div className="tab-strip dossier-mode-strip" role="tablist" aria-label="卷宗独立验证层级">
+        <button
+          aria-selected={activeMode === "review"}
+          className={activeMode === "review" ? "tab-button tab-button-active" : "tab-button"}
+          onClick={() => setActiveMode("review")}
+          role="tab"
+          type="button"
+        >
+          设计说明
+        </button>
+        <button
+          aria-selected={activeMode === "spec"}
+          className={activeMode === "spec" ? "tab-button tab-button-active" : "tab-button"}
+          onClick={() => setActiveMode("spec")}
+          role="tab"
+          type="button"
+        >
+          样例规范
+        </button>
+        <button
+          aria-selected={activeMode === "workbench"}
+          className={activeMode === "workbench" ? "tab-button tab-button-active" : "tab-button"}
+          onClick={() => setActiveMode("workbench")}
+          role="tab"
+          type="button"
+        >
+          工作面验证
+        </button>
+      </div>
+
+      {activeMode === "review" ? (
+        <DossierReviewDeck
+          onOpenSpec={() => setActiveMode("spec")}
+          onOpenWorkbench={() => setActiveMode("workbench")}
+        />
+      ) : null}
+
+      {activeMode === "spec" ? (
+        <DossierSpecDeck
+          onOpenSpec={() => setActiveMode("spec")}
+          onOpenWorkbench={() => setActiveMode("workbench")}
+        />
+      ) : null}
+
+      {activeMode === "workbench" ? (
+        <main className="dossier-lab-layout">
         <section className="panel dossier-directory-panel">
           <div className="panel-header">
             <h2>卷宗目录</h2>
@@ -328,6 +400,11 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
                     <p className="dossier-inline-note">
                       当前页聚焦事实核对、引用跳转与字段补录，不承担主工作台壳层联动。
                     </p>
+                    <p className="dossier-inline-note">
+                      {activeAuditItem
+                        ? `待补录字段：${activeAuditItem.missingFields.join(" / ")}`
+                        : "当前对象缺失字段已补齐，可继续核对引用链。"}
+                    </p>
                   </article>
                 </section>
 
@@ -375,7 +452,7 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
                     <div className="dossier-reference-list">
                       {backlinks.map((link) => (
                         <button
-                          aria-label={link.sourceName}
+                          aria-label={`回查 ${link.sourceName} 卷宗`}
                           className="dossier-reference-button dossier-reference-button-secondary"
                           key={`${link.objectId}-${link.field}`}
                           onClick={() =>
@@ -389,7 +466,7 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
                           }
                           type="button"
                         >
-                          <strong>{link.sourceName}</strong>
+                          <strong>回查 {link.sourceName} 卷宗</strong>
                           <span>{link.field}</span>
                         </button>
                       ))}
@@ -522,7 +599,8 @@ export default function DossierAbilityLab(props: DossierAbilityLabProps) {
             </form>
           ) : null}
         </aside>
-      </main>
+        </main>
+      ) : null}
     </div>
   );
 }
